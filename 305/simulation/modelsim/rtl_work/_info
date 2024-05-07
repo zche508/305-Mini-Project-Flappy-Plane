@@ -1,0 +1,45 @@
+m255
+K4
+z2
+!s11f vlog 2020.2 2020.04, Apr 19 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/aagg721/305/simulation/modelsim
+T_opt
+!s110 1714612510
+VHP3z^DF8:m[]9624CL[Co1
+04 17 4 work DE0_CV_golden_top fast 0
+=1-cc96e51e1d1b-6632e91e-296-1068
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OE;O;2020.2;71
+vDE0_CV_golden_top
+!s110 1714612483
+!i10b 1
+!s100 c2KDf>;C1SY0P5d@jKbfl0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+Ic@hQ4MG=<oH5eI`Zc=gGc1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1496686395
+8C:/Users/aagg721/305/DE0_CV_golden_top.v
+FC:/Users/aagg721/305/DE0_CV_golden_top.v
+!i122 0
+L0 54 102
+OE;L;2020.2;71
+r1
+!s85 0
+31
+!s108 1714612483.000000
+!s107 C:/Users/aagg721/305/DE0_CV_golden_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/aagg721/305|C:/Users/aagg721/305/DE0_CV_golden_top.v|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/Users/aagg721/305 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@d@e0_@c@v_golden_top
