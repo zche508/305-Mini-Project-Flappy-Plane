@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Tue May 07 17:26:34 2024
+Tue May 07 18:09:45 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 07 17:26:34 2024           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 07 18:09:45 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; flappyPlane                                     ;
 ; Top-level Entity Name           ; char_block_diagram                              ;
@@ -174,31 +174,30 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+-----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                           ; Library ;
-+-----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------+---------+
-; MiniprojectResources/vga_sync.vhd ; yes             ; User VHDL File                         ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd ;         ;
-; MiniprojectResources/char_rom.vhd ; yes             ; User VHDL File                         ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd ;         ;
-; DE0_CV_golden_top.v               ; yes             ; User Verilog HDL File                  ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v               ;         ;
-; pll/pll_0002.v                    ; yes             ; User Verilog HDL File                  ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                    ; pll     ;
-; pll2.vhd                          ; yes             ; User Wizard-Generated File             ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                          ; pll2    ;
-; pll2/pll2_0002.v                  ; yes             ; User Verilog HDL File                  ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                  ; pll2    ;
-; char_block_diagram.bdf            ; yes             ; User Block Diagram/Schematic File      ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/char_block_diagram.bdf            ;         ;
-; altera_pll.v                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                         ;         ;
-; altsyncram.tdf                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
-; stratix_ram_block.inc             ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
-; lpm_mux.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
-; lpm_decode.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
-; aglobal181.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                       ;         ;
-; a_rdenreg.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
-; altrom.inc                        ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                           ;         ;
-; altram.inc                        ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                           ;         ;
-; altdpram.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
-; db/altsyncram_d5g1.tdf            ; yes             ; Auto-Generated Megafunction            ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf            ;         ;
-; MiniprojectResources/tcgrom.mif   ; yes             ; Auto-Found Memory Initialization File  ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/tcgrom.mif   ;         ;
-+-----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                           ; Library ;
++-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; MiniprojectResources/vga_sync.vhd ; yes             ; User VHDL File                     ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd ;         ;
+; MiniprojectResources/char_rom.vhd ; yes             ; User VHDL File                     ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd ;         ;
+; DE0_CV_golden_top.v               ; yes             ; User Verilog HDL File              ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v               ;         ;
+; pll/pll_0002.v                    ; yes             ; User Verilog HDL File              ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                    ; pll     ;
+; pll2.vhd                          ; yes             ; User Wizard-Generated File         ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                          ; pll2    ;
+; pll2/pll2_0002.v                  ; yes             ; User Verilog HDL File              ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                  ; pll2    ;
+; char_block_diagram.bdf            ; yes             ; User Block Diagram/Schematic File  ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/char_block_diagram.bdf            ;         ;
+; altera_pll.v                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                         ;         ;
+; altsyncram.tdf                    ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
+; stratix_ram_block.inc             ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
+; lpm_mux.inc                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
+; lpm_decode.inc                    ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
+; aglobal181.inc                    ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                       ;         ;
+; a_rdenreg.inc                     ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
+; altrom.inc                        ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                           ;         ;
+; altram.inc                        ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                           ;         ;
+; altdpram.inc                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
+; db/altsyncram_d5g1.tdf            ; yes             ; Auto-Generated Megafunction        ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf            ;         ;
++-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -686,7 +685,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 07 17:26:12 2024
+    Info: Processing started: Tue May 07 18:09:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -721,6 +720,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll2/pl
     Info (12023): Found entity 1: pll2_0002 File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file char_block_diagram.bdf
     Info (12023): Found entity 1: char_block_diagram
+Info (12021): Found 1 design units, including 1 entities, in source file mouse_block_diagram.bdf
+    Info (12023): Found entity 1: mouse_block_diagram
 Info (12127): Elaborating entity "char_block_diagram" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst1"
@@ -855,9 +856,9 @@ Info (21057): Implemented 71 device resources after synthesis - the final resour
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4915 megabytes
-    Info: Processing ended: Tue May 07 17:26:34 2024
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4923 megabytes
+    Info: Processing ended: Tue May 07 18:09:45 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:04
 
 

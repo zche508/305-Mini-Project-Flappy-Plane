@@ -1,5 +1,5 @@
 Fitter report for flappyPlane
-Tue May 07 17:26:56 2024
+Tue May 07 18:10:04 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Tue May 07 17:26:56 2024           ;
+; Fitter Status                   ; Successful - Tue May 07 18:10:03 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; flappyPlane                                     ;
 ; Top-level Entity Name           ; char_block_diagram                              ;
@@ -161,11 +161,11 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
-;     Processor 5            ;   0.3%      ;
-;     Processor 6            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
+;     Processor 5            ;   0.2%      ;
+;     Processor 6            ;   0.2%      ;
 ;     Processors 7-16        ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -1919,10 +1919,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file H:/Github305/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 208 warnings
-    Info: Peak virtual memory: 7646 megabytes
-    Info: Processing ended: Tue May 07 17:27:01 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 7644 megabytes
+    Info: Processing ended: Tue May 07 18:10:09 2024
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +----------------------------+
