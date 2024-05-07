@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Tue May 07 13:13:46 2024
+Tue May 07 13:56:50 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -14,12 +14,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +46,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 07 13:13:46 2024           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 07 13:56:49 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; flappyPlane                                     ;
 ; Top-level Entity Name           ; toplevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 29                                              ;
-; Total pins                      ; 9                                               ;
+; Total registers                 ; 48                                              ;
+; Total pins                      ; 6                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -169,19 +170,20 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                   ; Library ;
-+-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------+---------+
-; MiniprojectResources/vga_sync.vhd ; yes             ; User VHDL File                     ; H:/305/MiniprojectResources/vga_sync.vhd                       ;         ;
-; DE0_CV_golden_top.v               ; yes             ; User Verilog HDL File              ; H:/305/DE0_CV_golden_top.v                                     ;         ;
-; toplevel.bdf                      ; yes             ; User Block Diagram/Schematic File  ; H:/305/toplevel.bdf                                            ;         ;
-; pll/pll_0002.v                    ; yes             ; User Verilog HDL File              ; H:/305/pll/pll_0002.v                                          ; pll     ;
-; pll2.vhd                          ; yes             ; User Wizard-Generated File         ; H:/305/pll2.vhd                                                ; pll2    ;
-; pll2/pll2_0002.v                  ; yes             ; User Verilog HDL File              ; H:/305/pll2/pll2_0002.v                                        ; pll2    ;
-; altera_pll.v                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v ;         ;
-+-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                           ; Library ;
++-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; MiniprojectResources/vga_sync.vhd ; yes             ; User VHDL File                     ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd ;         ;
+; MiniprojectResources/ball.vhd     ; yes             ; User VHDL File                     ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd     ;         ;
+; DE0_CV_golden_top.v               ; yes             ; User Verilog HDL File              ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v               ;         ;
+; toplevel.bdf                      ; yes             ; User Block Diagram/Schematic File  ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/toplevel.bdf                      ;         ;
+; pll/pll_0002.v                    ; yes             ; User Verilog HDL File              ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                    ; pll     ;
+; pll2.vhd                          ; yes             ; User Wizard-Generated File         ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                          ; pll2    ;
+; pll2/pll2_0002.v                  ; yes             ; User Verilog HDL File              ; H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                  ; pll2    ;
+; altera_pll.v                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                         ;         ;
++-----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -189,18 +191,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 24                                                                    ;
+; Estimate of Logic utilization (ALMs needed) ; 33                                                                    ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 39                                                                    ;
-;     -- 7 input functions                    ; 0                                                                     ;
-;     -- 6 input functions                    ; 7                                                                     ;
-;     -- 5 input functions                    ; 3                                                                     ;
-;     -- 4 input functions                    ; 1                                                                     ;
-;     -- <=3 input functions                  ; 28                                                                    ;
+; Combinational ALUT usage for logic          ; 51                                                                    ;
+;     -- 7 input functions                    ; 1                                                                     ;
+;     -- 6 input functions                    ; 9                                                                     ;
+;     -- 5 input functions                    ; 5                                                                     ;
+;     -- 4 input functions                    ; 2                                                                     ;
+;     -- <=3 input functions                  ; 34                                                                    ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 29                                                                    ;
+; Dedicated logic registers                   ; 48                                                                    ;
 ;                                             ;                                                                       ;
-; I/O pins                                    ; 9                                                                     ;
+; I/O pins                                    ; 6                                                                     ;
 ;                                             ;                                                                       ;
 ; Total DSP Blocks                            ; 0                                                                     ;
 ;                                             ;                                                                       ;
@@ -208,9 +210,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 30                                                                    ;
-; Total fan-out                               ; 224                                                                   ;
-; Average fan-out                             ; 2.57                                                                  ;
+; Maximum fan-out                             ; 49                                                                    ;
+; Total fan-out                               ; 323                                                                   ;
+; Average fan-out                             ; 2.88                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -219,8 +221,9 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------+--------------+
-; |toplevel                          ; 39 (0)              ; 29 (0)                    ; 0                 ; 0          ; 9    ; 0            ; |toplevel                                                        ; toplevel    ; work         ;
-;    |VGA_SYNC:inst2|                ; 39 (39)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                         ; VGA_SYNC    ; work         ;
+; |toplevel                          ; 51 (0)              ; 48 (0)                    ; 0                 ; 0          ; 6    ; 0            ; |toplevel                                                        ; toplevel    ; work         ;
+;    |VGA_SYNC:inst2|                ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                         ; VGA_SYNC    ; work         ;
+;    |ball:inst4|                    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ball:inst4                                             ; ball        ; work         ;
 ;    |pll2:inst1|                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                             ; pll2        ; pll2         ;
 ;       |pll2_0002:pll2_inst|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                         ; pll2_0002   ; pll2         ;
 ;          |altera_pll:altera_pll_i| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i ; altera_pll  ; work         ;
@@ -237,17 +240,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------+-----------------+
 
 
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; VGA_SYNC:inst2|pixel_row[9]           ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 48    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 29    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -513,24 +526,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 29                          ;
+; arriav_ff             ; 48                          ;
+;     ENA               ; 19                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 39                          ;
-;     arith             ; 20                          ;
-;         1 data inputs ; 20                          ;
-;     normal            ; 19                          ;
+; arriav_lcell_comb     ; 51                          ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 1                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 24                          ;
 ;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 5                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 7                           ;
-; boundary_port         ; 9                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 9                           ;
+; boundary_port         ; 6                           ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.80                        ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -549,47 +566,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 07 13:13:29 2024
+    Info: Processing started: Tue May 07 13:56:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: H:/305/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: H:/305/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: H:/305/MiniprojectResources/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: H:/305/MiniprojectResources/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: H:/305/MiniprojectResources/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: H:/305/MiniprojectResources/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: H:/305/MiniprojectResources/bouncy_ball.vhd Line: 14
-    Info (12023): Found entity 1: bouncy_ball File: H:/305/MiniprojectResources/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 14
+    Info (12023): Found entity 1: bouncy_ball File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: H:/305/MiniprojectResources/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: H:/305/MiniprojectResources/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file de0_cv_golden_top.v
-    Info (12023): Found entity 1: DE0_CV_golden_top File: H:/305/DE0_CV_golden_top.v Line: 54
+    Info (12023): Found entity 1: DE0_CV_golden_top File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
     Info (12023): Found entity 1: toplevel
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-rtl File: H:/305/pll.vhd Line: 20
-    Info (12023): Found entity 1: pll File: H:/305/pll.vhd Line: 11
+    Info (12022): Found design unit 1: pll-rtl File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 20
+    Info (12023): Found entity 1: pll File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: pll_0002 File: H:/305/pll/pll_0002.v Line: 2
+    Info (12023): Found entity 1: pll_0002 File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file pll2.vhd
-    Info (12022): Found design unit 1: pll2-rtl File: H:/305/pll2.vhd Line: 20
-    Info (12023): Found entity 1: pll2 File: H:/305/pll2.vhd Line: 11
+    Info (12022): Found design unit 1: pll2-rtl File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 20
+    Info (12023): Found entity 1: pll2 File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll2/pll2_0002.v
-    Info (12023): Found entity 1: pll2_0002 File: H:/305/pll2/pll2_0002.v Line: 2
+    Info (12023): Found entity 1: pll2_0002 File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 2
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst1"
-Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: H:/305/pll2.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: H:/305/pll2/pll2_0002.v Line: 85
+Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: H:/305/pll2/pll2_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: H:/305/pll2/pll2_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: H:/Github305/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -650,6 +667,7 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "ball" for hierarchy "ball:inst4"
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
@@ -685,15 +703,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 42 logic cells
+    Info (21061): Implemented 77 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4912 megabytes
-    Info: Processing ended: Tue May 07 13:13:46 2024
-    Info: Elapsed time: 00:00:17
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Tue May 07 13:56:50 2024
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:03
 
 

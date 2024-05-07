@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("H:/305/output_files/") File("flappyPlane.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("H:/Github305/305-Mini-Project-Flappy-Plane/305_files/output_files/") File("flappyPlane.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
