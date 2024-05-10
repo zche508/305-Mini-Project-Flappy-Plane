@@ -72,6 +72,6 @@ BEGIN
 	);
 
 	rom_address <= character_address & font_row;
-	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
+	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col));
 
 END SYN;
