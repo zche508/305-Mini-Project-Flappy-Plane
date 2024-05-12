@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri May 10 16:28:39 2024
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Analysis & Synthesis Status : Successful - Mon May 13 11:47:53 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : flappyPlane
 Top-level Entity Name : char_block_diagram
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 34
+Total registers : 42
 Total pins : 6
 Total virtual pins : 0
-Total block memory bits : 64
+Total block memory bits : 4,096
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

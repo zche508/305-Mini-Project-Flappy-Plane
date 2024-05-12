@@ -1,6 +1,6 @@
 Analysis & Synthesis report for flappyPlane
-Fri May 10 16:28:39 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Mon May 13 11:47:53 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -47,27 +47,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 10 16:28:39 2024           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name                   ; flappyPlane                                     ;
-; Top-level Entity Name           ; char_block_diagram                              ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 34                                              ;
-; Total pins                      ; 6                                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 64                                              ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May 13 11:47:53 2024       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; flappyPlane                                 ;
+; Top-level Entity Name           ; char_block_diagram                          ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 42                                          ;
+; Total pins                      ; 6                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 4,096                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -162,43 +162,43 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                        ;
-+-----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                                             ; Library ;
-+-----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; MiniprojectResources/vga_sync.vhd ; yes             ; User VHDL File                     ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd ;         ;
-; MiniprojectResources/char_rom.vhd ; yes             ; User VHDL File                     ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd ;         ;
-; DE0_CV_golden_top.v               ; yes             ; User Verilog HDL File              ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v               ;         ;
-; pll/pll_0002.v                    ; yes             ; User Verilog HDL File              ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                    ; pll     ;
-; pll2.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                          ; pll2    ;
-; pll2/pll2_0002.v                  ; yes             ; User Verilog HDL File              ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                  ; pll2    ;
-; char_block_diagram.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/char_block_diagram.bdf            ;         ;
-; text.vhd                          ; yes             ; User VHDL File                     ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/text.vhd                          ;         ;
-; altera_pll.v                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                                                                                                           ;         ;
-; altsyncram.tdf                    ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                                         ;         ;
-; stratix_ram_block.inc             ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                                  ;         ;
-; lpm_mux.inc                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                                            ;         ;
-; lpm_decode.inc                    ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                                         ;         ;
-; aglobal181.inc                    ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                                                         ;         ;
-; a_rdenreg.inc                     ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                                          ;         ;
-; altrom.inc                        ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                                                                             ;         ;
-; altram.inc                        ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                                                                             ;         ;
-; altdpram.inc                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                                                           ;         ;
-; db/altsyncram_d5g1.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf            ;         ;
-+-----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
++-----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                    ; Library ;
++-----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; MiniprojectResources/vga_sync.vhd ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd ;         ;
+; MiniprojectResources/char_rom.vhd ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd ;         ;
+; DE0_CV_golden_top.v               ; yes             ; User Verilog HDL File              ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v               ;         ;
+; pll/pll_0002.v                    ; yes             ; User Verilog HDL File              ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                    ; pll     ;
+; pll2.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                          ; pll2    ;
+; pll2/pll2_0002.v                  ; yes             ; User Verilog HDL File              ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                  ; pll2    ;
+; char_block_diagram.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/char_block_diagram.bdf            ;         ;
+; text.vhd                          ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/text.vhd                          ;         ;
+; altera_pll.v                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v                                             ;         ;
+; altsyncram.tdf                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                           ;         ;
+; stratix_ram_block.inc             ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                    ;         ;
+; lpm_mux.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                              ;         ;
+; lpm_decode.inc                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                           ;         ;
+; aglobal181.inc                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                           ;         ;
+; a_rdenreg.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                            ;         ;
+; altrom.inc                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                               ;         ;
+; altram.inc                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                               ;         ;
+; altdpram.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                             ;         ;
+; db/altsyncram_d5g1.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf            ;         ;
++-----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -206,20 +206,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 25                                                                    ;
+; Estimate of Logic utilization (ALMs needed) ; 36                                                                    ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 39                                                                    ;
-;     -- 7 input functions                    ; 2                                                                     ;
-;     -- 6 input functions                    ; 7                                                                     ;
-;     -- 5 input functions                    ; 3                                                                     ;
-;     -- 4 input functions                    ; 1                                                                     ;
-;     -- <=3 input functions                  ; 26                                                                    ;
+; Combinational ALUT usage for logic          ; 57                                                                    ;
+;     -- 7 input functions                    ; 4                                                                     ;
+;     -- 6 input functions                    ; 6                                                                     ;
+;     -- 5 input functions                    ; 12                                                                    ;
+;     -- 4 input functions                    ; 6                                                                     ;
+;     -- <=3 input functions                  ; 29                                                                    ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 34                                                                    ;
+; Dedicated logic registers                   ; 42                                                                    ;
 ;                                             ;                                                                       ;
 ; I/O pins                                    ; 6                                                                     ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
-; Total block memory bits                     ; 64                                                                    ;
+; Total block memory bits                     ; 4096                                                                  ;
 ;                                             ;                                                                       ;
 ; Total DSP Blocks                            ; 0                                                                     ;
 ;                                             ;                                                                       ;
@@ -227,9 +227,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 43                                                                    ;
-; Total fan-out                               ; 276                                                                   ;
-; Average fan-out                             ; 2.94                                                                  ;
+; Maximum fan-out                             ; 51                                                                    ;
+; Total fan-out                               ; 413                                                                   ;
+; Average fan-out                             ; 3.44                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -238,14 +238,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name        ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |char_block_diagram                       ; 39 (0)              ; 34 (0)                    ; 64                ; 0          ; 6    ; 0            ; |char_block_diagram                                                                               ; char_block_diagram ; work         ;
-;    |VGA_SYNC:inst2|                       ; 37 (37)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |char_block_diagram|VGA_SYNC:inst2                                                                ; VGA_SYNC           ; work         ;
-;    |char_rom:inst3|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |char_block_diagram|char_rom:inst3                                                                ; char_rom           ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |char_block_diagram|char_rom:inst3|altsyncram:altsyncram_component                                ; altsyncram         ; work         ;
-;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |char_block_diagram|char_rom:inst3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1    ; work         ;
+; |char_block_diagram                       ; 57 (1)              ; 42 (0)                    ; 4096              ; 0          ; 6    ; 0            ; |char_block_diagram                                                                               ; char_block_diagram ; work         ;
+;    |VGA_SYNC:inst2|                       ; 38 (38)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |char_block_diagram|VGA_SYNC:inst2                                                                ; VGA_SYNC           ; work         ;
+;    |char_rom:inst3|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |char_block_diagram|char_rom:inst3                                                                ; char_rom           ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |char_block_diagram|char_rom:inst3|altsyncram:altsyncram_component                                ; altsyncram         ; work         ;
+;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |char_block_diagram|char_rom:inst3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1    ; work         ;
 ;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |char_block_diagram|pll2:inst1                                                                    ; pll2               ; pll2         ;
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |char_block_diagram|pll2:inst1|pll2_0002:pll2_inst                                                ; pll2_0002          ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |char_block_diagram|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                        ; altera_pll         ; work         ;
+;    |textSelector:inst5|                   ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |char_block_diagram|textSelector:inst5                                                            ; textSelector       ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -274,7 +275,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; VGA_SYNC:inst2|blue_out               ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
+; VGA_SYNC:inst2|pixel_row[9]           ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -283,23 +285,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 42    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |char_block_diagram|VGA_SYNC:inst2|v_count[9] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |char_block_diagram|VGA_SYNC:inst2|v_count[9]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |char_block_diagram|textSelector:inst5|char_address[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |char_block_diagram|textSelector:inst5|text_row[0]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |char_block_diagram|textSelector:inst5|text_col[2]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -644,29 +649,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 34                          ;
-;     ENA               ; 6                           ;
+; arriav_ff             ; 42                          ;
+;     ENA               ; 14                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 40                          ;
+; arriav_lcell_comb     ; 57                          ;
 ;     arith             ; 20                          ;
 ;         1 data inputs ; 20                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 18                          ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 33                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 7                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 6                           ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.92                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 2.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -675,7 +680,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -684,63 +689,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri May 10 16:28:31 2024
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 13 11:47:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 12
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 7
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 12
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 14
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 14
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file de0_cv_golden_top.v
-    Info (12023): Found entity 1: DE0_CV_golden_top File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v Line: 54
+    Info (12023): Found entity 1: DE0_CV_golden_top File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
     Info (12023): Found entity 1: toplevel
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-rtl File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 20
-    Info (12023): Found entity 1: pll File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 11
+    Info (12022): Found design unit 1: pll-rtl File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 20
+    Info (12023): Found entity 1: pll File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: pll_0002 File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v Line: 2
+    Info (12023): Found entity 1: pll_0002 File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file pll2.vhd
-    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 20
-    Info (12023): Found entity 1: pll2 File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 11
+    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 20
+    Info (12023): Found entity 1: pll2 File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll2/pll2_0002.v
-    Info (12023): Found entity 1: pll2_0002 File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 2
+    Info (12023): Found entity 1: pll2_0002 File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file char_block_diagram.bdf
     Info (12023): Found entity 1: char_block_diagram
 Info (12021): Found 1 design units, including 1 entities, in source file mouse_block_diagram.bdf
     Info (12023): Found entity 1: mouse_block_diagram
-Info (12021): Found 2 design units, including 1 entities, in source file /users/zche508/onedrive - the university of auckland/compsys 305/mini_project/flappy_plane_3/305-mini-project-flappy-plane/pipe.vhd
-    Info (12022): Found design unit 1: Pipe-Behavioral File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/pipe.vhd Line: 16
-    Info (12023): Found entity 1: Pipe File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/pipe.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/zhife/documents/mini_project/305-mini-project-flappy-plane/pipe.vhd
+    Info (12022): Found design unit 1: Pipe-Behavioral File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/pipe.vhd Line: 16
+    Info (12023): Found entity 1: Pipe File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/pipe.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/pipes.bdf
     Info (12023): Found entity 1: pipes
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: text-Behaviour File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 15
-    Info (12023): Found entity 1: text File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 7
+    Info (12022): Found design unit 1: textSelector-Behaviour File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 15
+    Info (12023): Found entity 1: textSelector File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 7
 Info (12127): Elaborating entity "char_block_diagram" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst1"
-Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -802,9 +807,9 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst3|altsyncram:altsyncram_component" File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "char_rom:inst3|altsyncram:altsyncram_component" File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "char_rom:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
+Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst3|altsyncram:altsyncram_component" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "char_rom:inst3|altsyncram:altsyncram_component" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "char_rom:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -820,13 +825,12 @@ Info (12133): Instantiated megafunction "char_rom:inst3|altsyncram:altsyncram_co
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "char_rom:inst3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "text" for hierarchy "text:inst5"
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "char_rom:inst3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "textSelector" for hierarchy "textSelector:inst5"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "char_rom:inst3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/zche508/OneDrive - The University of Auckland/COMPSYS 305/Mini_Project/Flappy_Plane_3/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -859,18 +863,18 @@ Warning (20013): Ignored 16 assignments for entity "pll" -- entity does not exis
 Warning (20013): Ignored 317 assignments for entity "pll_0002" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
+Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 51 logic cells
+    Info (21061): Implemented 77 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Fri May 10 16:28:39 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Mon May 13 11:47:53 2024
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:50
 
 
