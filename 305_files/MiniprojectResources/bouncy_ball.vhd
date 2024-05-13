@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync	: IN std_logic;
+		( pb1, pb2, clk, vert_sync, showText	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic);		
 END bouncy_ball;
@@ -36,10 +36,35 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 --Green <= (not pb2) and (not ball_on);
 --Blue <=  not ball_on;
 
-Red <= ball_on;
-Green <= not ball_on;
-Blue <= not ball_on;
+--Red <= ball_on;
+--Green <= not ball_on;
+--Blue <= not ball_on;
 
+
+	Red <= '1' when ShowText = '1' else '0';
+	Green <= '1' when ShowText = '1' else not ball_on;	 
+	Blue <= '0' when ShowText = '1' else not ball_on;	 	 
+			 
+--	case showText is 
+--		when '1' =>
+--			Red <= '1';
+--			Green <= '1';
+--			Blue <= '0';
+--		when '0' =>
+--			Red <= ball_on;
+--			Green <= not ball_on;
+--			Blue <= not ball_on;
+--	end case;
+
+--		if (showText = '1') then
+--			Red <= '1';
+--			Green <= '1';
+--			Blue <= '0';
+--		else
+--			Red <= ball_on;
+--			Green <= not ball_on;
+--			Blue <= not ball_on;
+--		end if;
 
 Move_Ball: process (vert_sync)
 begin

@@ -18,22 +18,22 @@ begin
 --		text_row <= pixel_row(3 downto 1);
 --		text_col <= pixel_column(3 downto 1);
 		
-		char_address <= "000001" when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(90,10)) else		-- A
-							 "000010" when (CONV_STD_LOGIC_VECTOR(90,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(240,10)) else	-- B
-							 "000011" when (CONV_STD_LOGIC_VECTOR(240,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(320,10)) else	-- C
+		char_address <= "000001" when (CONV_STD_LOGIC_VECTOR(10,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(45,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else		-- A
+							 "000010" when (CONV_STD_LOGIC_VECTOR(45,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(70,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else	-- B
+							 "000011" when (CONV_STD_LOGIC_VECTOR(70,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(85,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else	-- C
 							 "100000";	-- SHOWS "NOTHING" 40 in octal
 		
 		
-		text_row <=  pixel_row(4 downto 2) when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(90,10)) else
-						 pixel_row(3 downto 1) when (CONV_STD_LOGIC_VECTOR(90,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(240,10)) else
-						 pixel_row(2 downto 0) when (CONV_STD_LOGIC_VECTOR(240,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(320,10)) else
+		text_row <=  pixel_row(4 downto 2) when (CONV_STD_LOGIC_VECTOR(10,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(45,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
+						 pixel_row(3 downto 1) when (CONV_STD_LOGIC_VECTOR(45,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(70,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
+						 pixel_row(2 downto 0) when (CONV_STD_LOGIC_VECTOR(70,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(85,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
 						 pixel_row(2 downto 0);
 							 
 		
 		
-		text_col <=  pixel_column(4 downto 2) when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(90,10)) else
-						 pixel_column(3 downto 1) when (CONV_STD_LOGIC_VECTOR(90,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(240,10)) else
-						 pixel_column(2 downto 0) when (CONV_STD_LOGIC_VECTOR(240,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(320,10)) else
+		text_col <=  pixel_column(4 downto 2) when (CONV_STD_LOGIC_VECTOR(10,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(45,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
+						 pixel_column(3 downto 1) when (CONV_STD_LOGIC_VECTOR(45,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(70,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
+						 pixel_column(2 downto 0) when (CONV_STD_LOGIC_VECTOR(70,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(85,10) and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
 						 pixel_row(2 downto 0);
 						 
 				
