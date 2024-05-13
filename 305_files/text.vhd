@@ -76,27 +76,10 @@ begin
 												
 							"100000" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- " " oct(40)
 												CONV_STD_LOGIC_VECTOR(288, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(320, 10) and
-												sw = "0000000001") else
-												
-							"001101" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- M oct(15)
-												CONV_STD_LOGIC_VECTOR(320, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(352, 10) and
-												sw = "0000000001") else
-							
-							"001111" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- O oct(17)
-												CONV_STD_LOGIC_VECTOR(352, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(384, 10) and
-												sw = "0000000001") else
-												
-							"000100" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- D oct(04)
-												CONV_STD_LOGIC_VECTOR(384, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(416, 10) and
-												sw = "0000000001") else
-							
-							"000101" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- E oct(05)
-												CONV_STD_LOGIC_VECTOR(416, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(448, 10) and
-												sw = "0000000001") else
-												
+												sw = "0000000001") else											
 												
 		---------------------------
-		-- Displays GAME MODE--
+		-- Displays SINGLEPLAYER MODE--
 		--------------------------- 
 		
 							"010011" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- S oct(23)
@@ -149,22 +132,6 @@ begin
 							
 							"100000" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- " " oct(40)
 												CONV_STD_LOGIC_VECTOR(416, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(448, 10) and
-												sw = "0000000010") else
-												
-							"001101" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- M oct(15)
-												CONV_STD_LOGIC_VECTOR(448, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(480, 10) and
-												sw = "0000000010") else
-							
-							"001111" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- O oct(17)
-												CONV_STD_LOGIC_VECTOR(480, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(512, 10) and
-												sw = "0000000010") else
-												
-							"000100" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- D oct(04)
-												CONV_STD_LOGIC_VECTOR(512, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(544, 10) and
-												sw = "0000000010") else
-							
-							"000101" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- E oct(05)
-												CONV_STD_LOGIC_VECTOR(544, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(576, 10) and
 												sw = "0000000010") else
 												
 							"100000";	-- SHOWS NOTHING
