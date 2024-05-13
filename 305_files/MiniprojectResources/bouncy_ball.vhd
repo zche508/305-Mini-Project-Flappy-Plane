@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync, showText	: IN std_logic;
+		( pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic);		
 END bouncy_ball;
@@ -41,8 +41,14 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 --Blue <= not ball_on;
 
 
-	Red <= '1' when ShowText = '1' else ball_on;
-	Green <= '1' when ShowText = '1' else not ball_on;	 
+	Red <=	ball_on when pb1 = '1' else
+				'1' when ShowText = '1' else 
+				ball_on;
+				
+	Green <= (not pb2) and (not ball_on) when pb2 = '1' else
+				'1' when ShowText = '1' else 
+				not ball_on;	 
+				
 	Blue <= '0' when ShowText = '1' else not ball_on;	 	 
 			 
 --	case showText is 
@@ -71,7 +77,7 @@ begin
 	-- Move ball once every vertical sync
 	if (rising_edge(vert_sync)) then
 
-		if (pb1 = '1') then
+		if (mb1 = '1') then
 			ball_y_motion <= - CONV_STD_LOGIC_VECTOR(7,10);
 			if(ball_y_pos <= size + CONV_STD_LOGIC_VECTOR(8,10)) then
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);

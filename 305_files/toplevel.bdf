@@ -37,6 +37,40 @@ refer to the applicable agreement for further details.
 	(annotation_block (location)(rect 224 160 280 184))
 )
 (pin
+	(input)
+	(rect 272 256 440 272)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "key[0]" (rect 5 0 37 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 216 272 272 296))
+)
+(pin
+	(input)
+	(rect 272 272 440 288)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "key[1]" (rect 5 0 36 17)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 216 288 272 312))
+)
+(pin
 	(output)
 	(rect 952 224 1128 240)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -717,7 +751,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -232 248 16 360)
+	(rect -336 248 -88 360)
 	(text "textSelector" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst8" (rect 8 96 30 113)(font "Intel Clear" ))
 	(port
@@ -760,7 +794,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 32 248 296 360)
+	(rect -40 248 224 360)
 	(text "char_rom" (rect 5 0 51 12)(font "Arial" ))
 	(text "inst9" (rect 8 96 30 113)(font "Intel Clear" ))
 	(port
@@ -803,9 +837,9 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 448 240 640 416)
+	(rect 448 240 640 448)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
-	(text "inst3" (rect 8 160 31 172)(font "Arial" ))
+	(text "inst3" (rect 8 192 31 204)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -823,37 +857,51 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 59 35 71)(font "Arial" ))
+		(text "mb1" (rect 0 0 21 12)(font "Arial" ))
+		(text "mb1" (rect 21 59 42 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
-		(text "vert_sync" (rect 21 75 71 87)(font "Arial" ))
+		(text "mb2" (rect 0 0 21 12)(font "Arial" ))
+		(text "mb2" (rect 21 75 42 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "showText" (rect 0 0 46 12)(font "Arial" ))
-		(text "showText" (rect 21 91 67 103)(font "Arial" ))
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 91 35 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "pixel_row[9..0]" (rect 21 107 91 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
+		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
+		(text "vert_sync" (rect 21 107 71 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
 	)
 	(port
 		(pt 0 128)
 		(input)
+		(text "showText" (rect 0 0 46 12)(font "Arial" ))
+		(text "showText" (rect 21 123 67 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 139 91 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
 		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
-		(text "pixel_column[9..0]" (rect 21 123 110 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
+		(text "pixel_column[9..0]" (rect 21 155 110 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
 	(port
 		(pt 192 32)
@@ -877,36 +925,12 @@ refer to the applicable agreement for further details.
 		(line (pt 192 64)(pt 176 64))
 	)
 	(drawing
-		(rectangle (rect 16 16 176 160))
+		(rectangle (rect 16 16 176 192))
 	)
 )
 (connector
 	(pt 552 184)
 	(pt 592 184)
-)
-(connector
-	(pt 696 144)
-	(pt 696 224)
-)
-(connector
-	(pt 696 224)
-	(pt 696 256)
-)
-(connector
-	(pt 376 304)
-	(pt 376 224)
-)
-(connector
-	(pt 376 304)
-	(pt 448 304)
-)
-(connector
-	(pt 336 320)
-	(pt 336 472)
-)
-(connector
-	(pt 336 320)
-	(pt 448 320)
 )
 (connector
 	(pt 640 304)
@@ -1065,10 +1089,6 @@ refer to the applicable agreement for further details.
 	(pt 328 184)
 )
 (connector
-	(pt 296 280)
-	(pt 328 280)
-)
-(connector
 	(text "pixel_row[9..0]" (rect 973 320 1042 337)(font "Intel Clear" ))
 	(pt 920 336)
 	(pt 984 336)
@@ -1105,79 +1125,6 @@ refer to the applicable agreement for further details.
 	(pt 696 288)
 )
 (connector
-	(text "pixel_column[9..0]" (rect 378 352 465 369)(font "Intel Clear" ))
-	(pt 448 368)
-	(pt 368 368)
-	(bus)
-)
-(connector
-	(text "pixel_row[9..0]" (rect 377 336 446 353)(font "Intel Clear" ))
-	(pt 368 352)
-	(pt 448 352)
-	(bus)
-)
-(connector
-	(text "right_button" (rect 384 272 441 289)(font "Intel Clear" ))
-	(pt 400 288)
-	(pt 448 288)
-)
-(connector
-	(text "left_button" (rect 384 256 437 273)(font "Intel Clear" ))
-	(pt 408 272)
-	(pt 448 272)
-)
-(connector
-	(pt 328 280)
-	(pt 328 336)
-)
-(connector
-	(pt 328 336)
-	(pt 448 336)
-)
-(connector
-	(pt 32 328)
-	(pt 24 328)
-)
-(connector
-	(pt 24 328)
-	(pt 24 224)
-)
-(connector
-	(pt 24 224)
-	(pt 376 224)
-)
-(connector
-	(pt 376 224)
-	(pt 696 224)
-)
-(connector
-	(pt 32 280)
-	(pt 16 280)
-	(bus)
-)
-(connector
-	(pt 32 296)
-	(pt 16 296)
-	(bus)
-)
-(connector
-	(pt 32 312)
-	(pt 16 312)
-	(bus)
-)
-(connector
-	(text "pixel_row[9..0]" (rect -320 264 -251 281)(font "Intel Clear" ))
-	(pt -328 280)
-	(pt -232 280)
-	(bus)
-)
-(connector
-	(text "pixel_column[9..0]" (rect -318 280 -231 297)(font "Intel Clear" ))
-	(pt -328 296)
-	(pt -232 296)
-	(bus)
-)
-(connector
 	(pt 920 272)
 	(pt 936 272)
 )
@@ -1201,7 +1148,124 @@ refer to the applicable agreement for further details.
 	(pt 928 232)
 	(pt 952 232)
 )
+(connector
+	(text "pixel_row[9..0]" (rect 377 368 446 385)(font "Intel Clear" ))
+	(pt 368 384)
+	(pt 448 384)
+	(bus)
+)
+(connector
+	(text "pixel_column[9..0]" (rect 378 384 465 401)(font "Intel Clear" ))
+	(pt 368 400)
+	(pt 448 400)
+	(bus)
+)
+(connector
+	(pt 336 472)
+	(pt 336 352)
+)
+(connector
+	(text "left_button" (rect 344 288 397 305)(font "Intel Clear" ))
+	(pt 360 304)
+	(pt 448 304)
+)
+(connector
+	(text "right_button" (rect 344 304 401 321)(font "Intel Clear" ))
+	(pt 448 320)
+	(pt 360 320)
+)
+(connector
+	(pt 336 352)
+	(pt 448 352)
+)
+(connector
+	(pt 696 144)
+	(pt 696 224)
+)
+(connector
+	(pt 696 224)
+	(pt 696 256)
+)
+(connector
+	(pt 448 368)
+	(pt 232 368)
+)
+(connector
+	(pt 232 368)
+	(pt 232 280)
+)
+(connector
+	(pt 224 280)
+	(pt 232 280)
+)
+(connector
+	(pt 248 224)
+	(pt 248 336)
+)
+(connector
+	(pt 448 336)
+	(pt 248 336)
+)
+(connector
+	(pt 448 272)
+	(pt 440 272)
+)
+(connector
+	(pt 448 288)
+	(pt 440 288)
+)
+(connector
+	(pt 440 288)
+	(pt 440 280)
+)
+(connector
+	(pt 440 264)
+	(pt 440 272)
+)
+(connector
+	(text "pixel_row[9..0]" (rect -424 264 -355 281)(font "Intel Clear" ))
+	(pt -432 280)
+	(pt -336 280)
+	(bus)
+)
+(connector
+	(text "pixel_column[9..0]" (rect -422 280 -335 297)(font "Intel Clear" ))
+	(pt -432 296)
+	(pt -336 296)
+	(bus)
+)
+(connector
+	(pt -88 280)
+	(pt -40 280)
+	(bus)
+)
+(connector
+	(pt -88 296)
+	(pt -40 296)
+	(bus)
+)
+(connector
+	(pt -88 312)
+	(pt -40 312)
+	(bus)
+)
+(connector
+	(pt -40 328)
+	(pt -64 328)
+)
+(connector
+	(pt -64 328)
+	(pt -64 224)
+)
+(connector
+	(pt -64 224)
+	(pt 248 224)
+)
+(connector
+	(pt 248 224)
+	(pt 696 224)
+)
 (junction (pt 696 224))
 (junction (pt 664 144))
-(junction (pt 376 224))
 (junction (pt 1088 336))
+(junction (pt 248 224))

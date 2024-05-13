@@ -1,6 +1,8 @@
 |toplevel
 VGA_VS <= VGA_SYNC:inst2.vert_sync_out
 CLOCK_50 => pll2:inst1.refclk
+key[0] => bouncy_ball:inst3.pb1
+key[1] => bouncy_ball:inst3.pb2
 PS2_DAT <> MOUSE:inst5.mouse_data
 PS2_CLK <> MOUSE:inst5.mouse_clk
 VGA_HS <= VGA_SYNC:inst2.horiz_sync_out
@@ -292,10 +294,13 @@ zdbfbclk <> <GND>
 
 
 |toplevel|bouncy_ball:inst3
-pb1 => ball_y_motion.OUTPUTSELECT
-pb1 => ball_y_motion.OUTPUTSELECT
-pb1 => ball_y_motion.OUTPUTSELECT
-pb2 => ~NO_FANOUT~
+pb1 => red.OUTPUTSELECT
+pb2 => green.OUTPUTSELECT
+pb2 => green.IN1
+mb1 => ball_y_motion.OUTPUTSELECT
+mb1 => ball_y_motion.OUTPUTSELECT
+mb1 => ball_y_motion.OUTPUTSELECT
+mb2 => ~NO_FANOUT~
 clk => ~NO_FANOUT~
 vert_sync => ball_y_pos[0].CLK
 vert_sync => ball_y_pos[1].CLK
