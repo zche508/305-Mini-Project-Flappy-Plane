@@ -41,7 +41,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 --Blue <= not ball_on;
 
 
-	Red <= '1' when ShowText = '1' else '0';
+	Red <= '1' when ShowText = '1' else ball_on;
 	Green <= '1' when ShowText = '1' else not ball_on;	 
 	Blue <= '0' when ShowText = '1' else not ball_on;	 	 
 			 
