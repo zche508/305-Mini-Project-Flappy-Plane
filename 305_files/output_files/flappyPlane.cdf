@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/zche508/OneDrive - The University of Auckland/Documents/COMPSYS305/Flappy_Plane_5/305-Mini-Project-Flappy-Plane/305_files/output_files/") File("flappyPlane.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/aagg721/OneDrive/flappy_plane6/305-Mini-Project-Flappy-Plane/305_files/output_files/") File("flappyPlane.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

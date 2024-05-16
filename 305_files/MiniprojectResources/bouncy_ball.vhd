@@ -33,6 +33,9 @@ SiGNAL bottom_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VEC
 SiGNAL bottom_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 SiGNAL bottom_cloud_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
+SIGNAL ball_flicker          : std_logic;
+SIGNAL flicker_counter       : std_logic;
+
 BEGIN
 
 size <= CONV_STD_LOGIC_VECTOR(16,10);
@@ -102,6 +105,28 @@ begin
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
 		end if;
+		
+		-- Check for collision with top cloud
+        if (top_cloud_on = '0') then
+            if (ball_y_pos <= top_cloud_y_pos + top_cloud_height and ball_y_pos >= top_cloud_y_pos) then
+                if (ball_x_pos <= top_cloud_x_pos + top_cloud_width and ball_x_pos >= top_cloud_x_pos) then
+                    -- Set a flag to indicate collision with top cloud
+                    --ball_flicker <= '1';
+						  ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+                end if;
+            end if;
+        end if;
+        
+        -- Check for collision with bottom cloud
+        if (bottom_cloud_on = '1') then
+            if (ball_y_pos <= bottom_cloud_y_pos + bottom_cloud_height and ball_y_pos >= bottom_cloud_y_pos) then
+                if (ball_x_pos <= bottom_cloud_x_pos + bottom_cloud_width and ball_x_pos >= bottom_cloud_x_pos) then
+                    -- Set a flag to indicate collision with bottom cloud
+                   -- ball_flicker <= '1';
+						 ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+                end if;
+            end if;
+        end if;
 		
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
