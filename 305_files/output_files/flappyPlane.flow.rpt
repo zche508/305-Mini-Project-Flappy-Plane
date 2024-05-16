@@ -1,5 +1,5 @@
 Flow report for flappyPlane
-Fri May 17 00:17:46 2024
+Fri May 17 01:03:41 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri May 17 00:17:46 2024       ;
+; Flow Status                     ; Successful - Fri May 17 01:03:41 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 4,181 / 18,480 ( 23 % )                     ;
-; Total registers                 ; 279                                         ;
+; Logic utilization (in ALMs)     ; 823 / 18,480 ( 4 % )                        ;
+; Total registers                 ; 249                                         ;
 ; Total pins                      ; 36 / 224 ( 16 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                 ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/17/2024 00:14:26 ;
+; Start date & time ; 05/17/2024 01:02:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; flappyPlane         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 4771263176010.171586166512352          ; --            ; --             ; --             ;
+; COMPILER_SIGNATURE_ID               ; 4771263176010.171586452418752          ; --            ; --             ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --             ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                        ; <None>        ; --             ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation ;
@@ -116,12 +116,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4991 MB             ; 00:00:30                           ;
-; Fitter               ; 00:02:35     ; 1.3                     ; 7159 MB             ; 00:13:41                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4863 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:10     ; 4.1                     ; 5301 MB             ; 00:00:35                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4881 MB             ; 00:00:03                           ;
-; Total                ; 00:03:14     ; --                      ; --                  ; 00:14:55                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4937 MB             ; 00:00:23                           ;
+; Fitter               ; 00:01:05     ; 1.1                     ; 7179 MB             ; 00:05:00                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4821 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.1                     ; 5229 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4806 MB             ; 00:00:02                           ;
+; Total                ; 00:01:32     ; --                      ; --                  ; 00:05:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

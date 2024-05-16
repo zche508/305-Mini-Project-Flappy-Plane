@@ -9,7 +9,7 @@ ENTITY bouncy_ball IS
 		( pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic;
-		  score 							: OUT integer);		
+		  score 							: OUT integer range 10000 downto 0);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -34,7 +34,7 @@ SiGNAL bottom_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VEC
 SiGNAL bottom_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 SiGNAL bottom_cloud_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
-SIGNAL current_score : integer := 0;
+SIGNAL current_score : integer range 10000 downto 0;
 
 BEGIN
 
