@@ -8,7 +8,8 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  red, green, blue 			: OUT std_logic);		
+		  red, green, blue 			: OUT std_logic;
+		  score 							: OUT integer);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -33,7 +34,11 @@ SiGNAL bottom_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VEC
 SiGNAL bottom_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 SiGNAL bottom_cloud_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
+SIGNAL current_score : integer := 0;
+
 BEGIN
+
+score <= current_score;
 
 size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
@@ -109,6 +114,13 @@ begin
 		top_cloud_x_pos <= top_cloud_x_pos + top_cloud_x_motion;
 		-- Compute next bottom cloud x position
 		bottom_cloud_x_pos <= bottom_cloud_x_pos + bottom_cloud_x_motion;
+		
+		-- Updates Score
+		if (current_score = 9999) then
+			current_score <= 0;
+		else 
+			current_score <= current_score + 1;
+		end if;
 		
 	end if;
 end process Move_Ball;
