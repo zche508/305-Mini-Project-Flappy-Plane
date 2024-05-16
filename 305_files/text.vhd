@@ -42,16 +42,16 @@ begin
 	----  Updates the SCORE   ----
 	-------------------------------
 	
-	current_score_digit <= (score mod 10) when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and		-- " " oct(60)
+	current_score_digit <= (score mod 10000)/1000 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and	-- Thousands
 											CONV_STD_LOGIC_VECTOR(112, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(128, 10)) else	
 											
-						(score mod 100)/10 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and		-- " " oct(60)
-											CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(144, 10)) else	
-											
-						(score mod 1000)/100 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and		-- " " oct(60)
-											CONV_STD_LOGIC_VECTOR(144, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else	
-						
-						(score mod 10000)/100 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and		-- " " oct(60)
+								(score mod 1000)/100 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and			-- Hundreds
+												CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(144, 10)) else	
+												
+								(score mod 100)/10 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and			-- Tens
+												CONV_STD_LOGIC_VECTOR(144, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
+							
+								(score mod 10) when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and					-- Ones
 											CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(176, 10));	
 											
 	-------------------------------
@@ -191,16 +191,16 @@ begin
 						"100000";	-- SHOWS NOTHING
 		
 		
-		text_row <=  pixel_row(3 downto 1) when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and 
-																pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and 
-																pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
-						 pixel_row(4 downto 2);
+		text_row <=  pixel_row(3 downto 1); --when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and 
+--																pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and 
+--																pixel_column < CONV_STD_LOGIC_VECTOR(640, 10)) else
+--						 pixel_row(4 downto 2);
 		
 		
-		text_col <=  pixel_column(3 downto 1) when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and 
-																pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and 
-																pixel_column < CONV_STD_LOGIC_VECTOR(640, 10)) else
-						 pixel_column(4 downto 2);
-						 
+		text_col <=  pixel_column(3 downto 1); --when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and 
+--																pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and 
+--																pixel_column < CONV_STD_LOGIC_VECTOR(640, 10)) else
+--						 pixel_column(4 downto 2);
+--						 
 				
 end architecture Behaviour;
