@@ -12,13 +12,13 @@ ARCHITECTURE LFSR_BEHAVIOR OF random_number_gen IS
 	SIGNAL current_state : std_logic_vector (7 DOWNTO 0) := "00000001"; -- starting seed is "0000 0001" (seed is team 1!)
  	SIGNAL next_state : std_logic_vector (7 DOWNTO 0);
  	SIGNAL feedback : std_logic := '1';
-	SIGNAL counter : integer RANGE 100000000 DOWNTO 0 := 0;
+	SIGNAL counter : integer RANGE 60 DOWNTO 0 := 0;
 BEGIN
 
 	PROCESS(Clk)
 	BEGIN
 		IF (Clk'EVENT AND Clk = '1') THEN
-			if (counter < 100000000) then
+			if (counter < 60) then
 				counter <= counter + 1;
 			else
 				if (next_state <= CONV_STD_LOGIC_VECTOR(70, 8)) then

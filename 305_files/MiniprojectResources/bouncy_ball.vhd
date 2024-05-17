@@ -21,19 +21,70 @@ SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 
-SIGNAL top_cloud_on			: std_logic;
-SIGNAL top_cloud_width		: std_logic_vector(9 DOWNTO 0);
-SIGNAL top_cloud_height		: std_logic_vector(9 DOWNTO 0);  
-SiGNAL top_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(360,11);
-SiGNAL top_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
-SiGNAL top_cloud_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
-SIGNAL bottom_cloud_on			: std_logic;
-SIGNAL bottom_cloud_width		: std_logic_vector(9 DOWNTO 0);
-SIGNAL bottom_cloud_height		: std_logic_vector(9 DOWNTO 0);  
-SiGNAL bottom_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
-SiGNAL bottom_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
-SiGNAL bottom_cloud_x_motion	: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+-- CLOUD 1
+
+SIGNAL top_cloud1_on			: std_logic;
+SIGNAL top_cloud1_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL top_cloud1_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL top_cloud1_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
+SiGNAL top_cloud1_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud1_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+SIGNAL bottom_cloud1_on			: std_logic;
+SIGNAL bottom_cloud1_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL bottom_cloud1_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL bottom_cloud1_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
+SiGNAL bottom_cloud1_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
+SiGNAL bottom_cloud1_x_motion	: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+-- CLOUD 2
+
+SIGNAL top_cloud2_on			: std_logic;
+SIGNAL top_cloud2_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL top_cloud2_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL top_cloud2_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(250,11);
+SiGNAL top_cloud2_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud2_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+SIGNAL bottom_cloud2_on			: std_logic;
+SIGNAL bottom_cloud2_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL bottom_cloud2_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL bottom_cloud2_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(250,11);
+SiGNAL bottom_cloud2_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
+SiGNAL bottom_cloud2_x_motion	: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+-- CLOUD 3
+
+SIGNAL top_cloud3_on			: std_logic;
+SIGNAL top_cloud3_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL top_cloud3_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL top_cloud3_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(500,11);
+SiGNAL top_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud3_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+SIGNAL bottom_cloud3_on			: std_logic;
+SIGNAL bottom_cloud3_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL bottom_cloud3_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL bottom_cloud3_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(500,11);
+SiGNAL bottom_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
+SiGNAL bottom_cloud3_x_motion	: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+-- CLOUD 4
+
+SIGNAL top_cloud4_on			: std_logic;
+SIGNAL top_cloud4_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL top_cloud4_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL top_cloud4_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(750,11);
+SiGNAL top_cloud4_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud4_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+
+SIGNAL bottom_cloud4_on			: std_logic;
+SIGNAL bottom_cloud4_width		: std_logic_vector(9 DOWNTO 0);
+SIGNAL bottom_cloud4_height		: std_logic_vector(9 DOWNTO 0);  
+SiGNAL bottom_cloud4_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(750,11);
+SiGNAL bottom_cloud4_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
+SiGNAL bottom_cloud4_x_motion	: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
 SIGNAL current_score : integer RANGE 10000 DOWNTO 0;
 
@@ -51,24 +102,66 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			
 			
 			
--- top_cloud_x_pos and top_cloud_y_pos show the (x,y) for the centre of cloud	
-top_cloud_width <= CONV_STD_LOGIC_VECTOR(32,10);
-top_cloud_height <= ("00" & random_number);-- CONV_STD_LOGIC_VECTOR(150,10);
+-- CLOUD 1
+top_cloud1_width <= CONV_STD_LOGIC_VECTOR(32,10);
+top_cloud1_height <= ("00" & random_number) when (bottom_cloud1_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
 
-top_cloud_on <= '1' when ( ('0' & top_cloud_x_pos <= '0' & pixel_column + top_cloud_width) and ('0' & pixel_column <= '0' & top_cloud_x_pos + top_cloud_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
-					and ('0' & top_cloud_y_pos <= pixel_row + top_cloud_height) and ('0' & pixel_row <= top_cloud_y_pos + top_cloud_height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+top_cloud1_on <= '1' when (('0' & top_cloud1_x_pos <= '0' & pixel_column + top_cloud1_width) and ('0' & pixel_column <= '0' & top_cloud1_x_pos + top_cloud1_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and ('0' & top_cloud1_y_pos <= pixel_row + top_cloud1_height) and ('0' & pixel_row <= top_cloud1_y_pos + top_cloud1_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
+bottom_cloud1_width <= CONV_STD_LOGIC_VECTOR(32,10);
+bottom_cloud1_height <= ("00" & random_number)  when (bottom_cloud2_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
 
-
--- bottom_cloud_x_pos and bottom_cloud_y_pos show the (x,y) for the centre of cloud	
-bottom_cloud_width <= CONV_STD_LOGIC_VECTOR(32,10);
-bottom_cloud_height <= ("00" & random_number);-- CONV_STD_LOGIC_VECTOR(200,10);
-
-bottom_cloud_on <= '1' when ( ('0' & bottom_cloud_x_pos <= '0' & pixel_column + bottom_cloud_width) and ('0' & pixel_column <= '0' & bottom_cloud_x_pos + bottom_cloud_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
-					and (pixel_row + bottom_cloud_height <= '0' & bottom_cloud_y_pos) and (bottom_cloud_y_pos + (CONV_STD_LOGIC_VECTOR(20,10) - top_cloud_height) <= '0' & pixel_row) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+bottom_cloud1_on <= '1' when (('0' & bottom_cloud1_x_pos <= '0' & pixel_column + bottom_cloud1_width) and ('0' & pixel_column <= '0' & bottom_cloud1_x_pos + bottom_cloud1_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and (pixel_row <= '0' & bottom_cloud1_y_pos) and (bottom_cloud1_y_pos - top_cloud1_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';			
-			
+
+-- CLOUD 2
+top_cloud2_width <= CONV_STD_LOGIC_VECTOR(32,10);
+top_cloud2_height <= ("00" & random_number) when (bottom_cloud3_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+
+top_cloud2_on <= '1' when (('0' & top_cloud2_x_pos <= '0' & pixel_column + top_cloud2_width) and ('0' & pixel_column <= '0' & top_cloud2_x_pos + top_cloud2_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and ('0' & top_cloud2_y_pos <= pixel_row + top_cloud2_height) and ('0' & pixel_row <= top_cloud2_y_pos + top_cloud2_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';
+
+bottom_cloud2_width <= CONV_STD_LOGIC_VECTOR(32,10);
+bottom_cloud2_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+
+bottom_cloud2_on <= '1' when (('0' & bottom_cloud2_x_pos <= '0' & pixel_column + bottom_cloud2_width) and ('0' & pixel_column <= '0' & bottom_cloud2_x_pos + bottom_cloud2_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and (pixel_row <= '0' & bottom_cloud2_y_pos) and (bottom_cloud2_y_pos - top_cloud2_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';			
+
+
+-- CLOUD 3
+top_cloud3_width <= CONV_STD_LOGIC_VECTOR(32,10);
+top_cloud3_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+
+top_cloud3_on <= '1' when (('0' & top_cloud3_x_pos <= '0' & pixel_column + top_cloud3_width) and ('0' & pixel_column <= '0' & top_cloud3_x_pos + top_cloud3_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and ('0' & top_cloud3_y_pos <= pixel_row + top_cloud3_height) and ('0' & pixel_row <= top_cloud3_y_pos + top_cloud3_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';
+
+bottom_cloud3_width <= CONV_STD_LOGIC_VECTOR(32,10);
+bottom_cloud3_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+
+bottom_cloud3_on <= '1' when (('0' & bottom_cloud3_x_pos <= '0' & pixel_column + bottom_cloud3_width) and ('0' & pixel_column <= '0' & bottom_cloud3_x_pos + bottom_cloud3_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and (pixel_row <= '0' & bottom_cloud3_y_pos) and (bottom_cloud3_y_pos - top_cloud3_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';	
+	
+-- CLOUD 4
+top_cloud4_width <= CONV_STD_LOGIC_VECTOR(32,10);
+top_cloud4_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+
+top_cloud4_on <= '1' when (('0' & top_cloud4_x_pos <= '0' & pixel_column + top_cloud4_width) and ('0' & pixel_column <= '0' & top_cloud4_x_pos + top_cloud4_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and ('0' & top_cloud4_y_pos <= pixel_row + top_cloud4_height) and ('0' & pixel_row <= top_cloud4_y_pos + top_cloud4_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';
+
+bottom_cloud4_width <= CONV_STD_LOGIC_VECTOR(32,10);
+bottom_cloud4_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+
+bottom_cloud4_on <= '1' when (('0' & bottom_cloud4_x_pos <= '0' & pixel_column + bottom_cloud4_width) and ('0' & pixel_column <= '0' & bottom_cloud4_x_pos + bottom_cloud4_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
+					and (pixel_row <= '0' & bottom_cloud4_y_pos) and (bottom_cloud4_y_pos - top_cloud4_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';			
 			
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
@@ -81,16 +174,34 @@ bottom_cloud_on <= '1' when ( ('0' & bottom_cloud_x_pos <= '0' & pixel_column + 
 --Blue <= not ball_on;
 
 
-	Red <=	'1' when pb1 = '1' else
-				(ball_on or top_cloud_on) when ShowText = '1' else 
-				ball_on or top_cloud_on or bottom_cloud_on;
+--	Red <=	'1' when pb1 = '1' else
+--				(ball_on or top_cloud_on) when ShowText = '1' else 
+--				ball_on or top_cloud_on or bottom_cloud_on;
+--				
+--	Green <= (not pb2) and (not ball_on) when pb2 = '1' else
+--				'1' when ShowText = '1' else 
+--				not ball_on or not top_cloud_on or not bottom_cloud_on;	 
+--				
+--	Blue <= '0' when ShowText = '1' else not top_cloud_on and not bottom_cloud_on and not ball_on; 
+		
+
+	Red <=	'1' when ShowText = '1' else 
+				'1' when ball_on = '1' else
+				'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
+							top_cloud3_on = '1' or bottom_cloud3_on = '1' or top_cloud4_on = '1' or bottom_cloud4_on = '1' else
+				'0';
 				
-	Green <= (not pb2) and (not ball_on) when pb2 = '1' else
-				'1' when ShowText = '1' else 
-				not ball_on or not top_cloud_on or not bottom_cloud_on;	 
+	Green <= '1' when ShowText = '1' else 
+				'0' when ball_on = '1' else
+				'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
+							top_cloud3_on = '1' or bottom_cloud3_on = '1' or top_cloud4_on = '1' or bottom_cloud4_on = '1' else
+				'1'; 
 				
-	Blue <= '0' when ShowText = '1' else not top_cloud_on and not bottom_cloud_on and not ball_on; 
-			 
+	Blue <=  '1' when ShowText = '1' else 
+				'0' when ball_on = '1' else
+				'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
+							top_cloud3_on = '1' or bottom_cloud3_on = '1' or top_cloud4_on = '1' or bottom_cloud4_on = '1' else
+				'1';	
 
 Move_Ball: process (vert_sync)
 begin
@@ -111,10 +222,28 @@ begin
 		
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
-		-- Compute next top cloud x position
-		top_cloud_x_pos <= top_cloud_x_pos + top_cloud_x_motion;
-		-- Compute next bottom cloud x position
-		bottom_cloud_x_pos <= bottom_cloud_x_pos + bottom_cloud_x_motion;
+		
+		-- Compute next top_cloud1 x position
+		top_cloud1_x_pos <= top_cloud1_x_pos + top_cloud1_x_motion;
+		-- Compute next bottom_cloud1 x position
+		bottom_cloud1_x_pos <= bottom_cloud1_x_pos + bottom_cloud1_x_motion;
+		
+		
+		-- Compute next top_cloud2 x position
+		top_cloud2_x_pos <= top_cloud2_x_pos + top_cloud2_x_motion;
+		-- Compute next bottom_cloud2 x position
+		bottom_cloud2_x_pos <= bottom_cloud2_x_pos + bottom_cloud2_x_motion;
+		
+		
+		-- Compute next top_cloud3 x position
+		top_cloud3_x_pos <= top_cloud3_x_pos + top_cloud3_x_motion;
+		-- Compute next bottom_cloud3 x position
+		bottom_cloud3_x_pos <= bottom_cloud3_x_pos + bottom_cloud3_x_motion;
+		
+		-- Compute next top_cloud4 x position
+		top_cloud4_x_pos <= top_cloud4_x_pos + top_cloud4_x_motion;
+		-- Compute next bottom_cloud4 x position
+		bottom_cloud4_x_pos <= bottom_cloud4_x_pos + bottom_cloud4_x_motion;
 		
 		-- Updates Score
 		if (current_score = 9999) then
