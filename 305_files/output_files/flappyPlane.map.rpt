@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Fri May 17 01:02:18 2024
+Sat May 18 00:46:11 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -60,13 +60,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 17 01:02:18 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat May 18 00:46:11 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 214                                         ;
+; Total registers                 ; 249                                         ;
 ; Total pins                      ; 36                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -207,6 +207,7 @@ refer to the applicable agreement for further details.
 ; pll2.vhd                             ; yes             ; User Wizard-Generated File         ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                             ; pll2    ;
 ; pll2/pll2_0002.v                     ; yes             ; User Verilog HDL File              ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                     ; pll2    ;
 ; text.vhd                             ; yes             ; User VHDL File                     ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd                             ;         ;
+; random_number_gen.vhd                ; yes             ; User VHDL File                     ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd                ;         ;
 ; altera_pll.v                         ; yes             ; Megafunction                       ; f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v                                                  ;         ;
 ; altsyncram.tdf                       ; yes             ; Megafunction                       ; f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                ;         ;
 ; stratix_ram_block.inc                ; yes             ; Megafunction                       ; f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                         ;         ;
@@ -236,36 +237,36 @@ refer to the applicable agreement for further details.
 +--------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                ;
-+---------------------------------------------+------------------------------+
-; Resource                                    ; Usage                        ;
-+---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 832                          ;
-;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 1534                         ;
-;     -- 7 input functions                    ; 3                            ;
-;     -- 6 input functions                    ; 119                          ;
-;     -- 5 input functions                    ; 94                           ;
-;     -- 4 input functions                    ; 304                          ;
-;     -- <=3 input functions                  ; 1014                         ;
-;                                             ;                              ;
-; Dedicated logic registers                   ; 214                          ;
-;                                             ;                              ;
-; I/O pins                                    ; 36                           ;
-; Total MLAB memory bits                      ; 0                            ;
-; Total block memory bits                     ; 4096                         ;
-;                                             ;                              ;
-; Total DSP Blocks                            ; 0                            ;
-;                                             ;                              ;
-; Total PLLs                                  ; 1                            ;
-;     -- PLLs                                 ; 1                            ;
-;                                             ;                              ;
-; Maximum fan-out node                        ; MOUSE:inst5|MOUSE_CLK_FILTER ;
-; Maximum fan-out                             ; 93                           ;
-; Total fan-out                               ; 5829                         ;
-; Average fan-out                             ; 3.18                         ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                         ;
++---------------------------------------------+-----------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                 ;
++---------------------------------------------+-----------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 878                                                                   ;
+;                                             ;                                                                       ;
+; Combinational ALUT usage for logic          ; 1606                                                                  ;
+;     -- 7 input functions                    ; 3                                                                     ;
+;     -- 6 input functions                    ; 138                                                                   ;
+;     -- 5 input functions                    ; 98                                                                    ;
+;     -- 4 input functions                    ; 303                                                                   ;
+;     -- <=3 input functions                  ; 1064                                                                  ;
+;                                             ;                                                                       ;
+; Dedicated logic registers                   ; 249                                                                   ;
+;                                             ;                                                                       ;
+; I/O pins                                    ; 36                                                                    ;
+; Total MLAB memory bits                      ; 0                                                                     ;
+; Total block memory bits                     ; 4096                                                                  ;
+;                                             ;                                                                       ;
+; Total DSP Blocks                            ; 0                                                                     ;
+;                                             ;                                                                       ;
+; Total PLLs                                  ; 1                                                                     ;
+;     -- PLLs                                 ; 1                                                                     ;
+;                                             ;                                                                       ;
+; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 120                                                                   ;
+; Total fan-out                               ; 6173                                                                  ;
+; Average fan-out                             ; 3.19                                                                  ;
++---------------------------------------------+-----------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -273,19 +274,20 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 1534 (1)            ; 214 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 1606 (1)            ; 249 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 105 (105)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
-;    |VGA_SYNC:inst2|                       ; 42 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 159 (159)           ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |VGA_SYNC:inst2|                       ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
+;    |bouncy_ball:inst3|                    ; 181 (181)           ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
 ;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                                                          ; pll2                ; pll2         ;
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
-;    |textSelector:inst10|                  ; 1210 (169)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
+;    |random_number_gen:inst8|              ; 53 (53)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                             ; random_number_gen   ; work         ;
+;    |textSelector:inst10|                  ; 1208 (170)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
 ;       |lpm_divide:Div0|                   ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_ibm:auto_generated|  ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
 ;             |sign_div_unsign_olh:divider| ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
@@ -298,10 +300,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_vcm:auto_generated|  ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
 ;             |sign_div_unsign_5nh:divider| ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
 ;                |alt_u_div_g2f:divider|    ; 107 (107)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
-;       |lpm_divide:Mod0|                   ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 239 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 239 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 239 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 239 (239)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
 ;       |lpm_divide:Mod1|                   ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_65m:auto_generated|  ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
@@ -403,36 +405,39 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 214   ;
-; Number of registers using Synchronous Clear  ; 37    ;
+; Total registers                              ; 249   ;
+; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 132   ;
+; Number of registers using Clock Enable       ; 140   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; bouncy_ball:inst3|top_cloud_x_pos[9]    ; 5       ;
-; bouncy_ball:inst3|top_cloud_x_pos[7]    ; 7       ;
-; MOUSE:inst5|send_char                   ; 3       ;
-; bouncy_ball:inst3|current_score[10]     ; 13      ;
-; bouncy_ball:inst3|current_score[9]      ; 13      ;
-; bouncy_ball:inst3|current_score[8]      ; 13      ;
-; bouncy_ball:inst3|current_score[4]      ; 14      ;
-; bouncy_ball:inst3|current_score[13]     ; 12      ;
-; MOUSE:inst5|SHIFTOUT[3]                 ; 1       ;
-; MOUSE:inst5|SHIFTOUT[5]                 ; 1       ;
-; MOUSE:inst5|SHIFTOUT[6]                 ; 1       ;
-; MOUSE:inst5|SHIFTOUT[7]                 ; 1       ;
-; MOUSE:inst5|SHIFTOUT[8]                 ; 1       ;
-; Total number of inverted registers = 13 ;         ;
-+-----------------------------------------+---------+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; bouncy_ball:inst3|top_cloud_x_pos[8]     ; 6       ;
+; bouncy_ball:inst3|top_cloud_x_pos[6]     ; 7       ;
+; bouncy_ball:inst3|top_cloud_x_pos[5]     ; 9       ;
+; bouncy_ball:inst3|top_cloud_x_pos[3]     ; 3       ;
+; random_number_gen:inst8|current_state[0] ; 17      ;
+; MOUSE:inst5|send_char                    ; 3       ;
+; bouncy_ball:inst3|current_score[10]      ; 13      ;
+; bouncy_ball:inst3|current_score[9]       ; 13      ;
+; bouncy_ball:inst3|current_score[8]       ; 13      ;
+; bouncy_ball:inst3|current_score[4]       ; 14      ;
+; bouncy_ball:inst3|current_score[13]      ; 12      ;
+; MOUSE:inst5|SHIFTOUT[3]                  ; 1       ;
+; MOUSE:inst5|SHIFTOUT[5]                  ; 1       ;
+; MOUSE:inst5|SHIFTOUT[6]                  ; 1       ;
+; MOUSE:inst5|SHIFTOUT[7]                  ; 1       ;
+; MOUSE:inst5|SHIFTOUT[8]                  ; 1       ;
+; Total number of inverted registers = 16  ;         ;
++------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -440,17 +445,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_row[0]              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[1]                  ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[0]                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[4]                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[5]               ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[5]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[7]                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[3]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[8]                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[6]                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[9]               ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[8] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[5]      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[2]      ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[3]      ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]     ;
-; 27:1               ; 3 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[0]        ;
+; 27:1               ; 3 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[2]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -957,32 +963,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 214                         ;
+; arriav_ff             ; 249                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 79                          ;
+;     ENA               ; 87                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 18                          ;
 ;     ENA SLD           ; 20                          ;
-;     SCLR              ; 19                          ;
+;     SCLR              ; 46                          ;
 ;     plain             ; 62                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1537                        ;
-;     arith             ; 583                         ;
+; arriav_lcell_comb     ; 1609                        ;
+;     arith             ; 618                         ;
 ;         0 data inputs ; 92                          ;
-;         1 data inputs ; 108                         ;
-;         2 data inputs ; 35                          ;
+;         1 data inputs ; 132                         ;
+;         2 data inputs ; 46                          ;
 ;         3 data inputs ; 181                         ;
 ;         4 data inputs ; 167                         ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 902                         ;
+;     normal            ; 939                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 358                         ;
-;         3 data inputs ; 182                         ;
-;         4 data inputs ; 137                         ;
-;         5 data inputs ; 94                          ;
-;         6 data inputs ; 119                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 367                         ;
+;         3 data inputs ; 185                         ;
+;         4 data inputs ; 136                         ;
+;         5 data inputs ; 98                          ;
+;         6 data inputs ; 138                         ;
 ;     shared            ; 49                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 36                          ;
@@ -992,7 +998,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 17.93                       ;
+; Average LUT depth     ; 17.10                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1011,7 +1017,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 17 01:02:04 2024
+    Info: Processing started: Sat May 18 00:45:57 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1028,7 +1034,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file minipro
     Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
     Info (12023): Found entity 1: char_rom File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 15
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 16
     Info (12023): Found entity 1: bouncy_ball File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
@@ -1057,6 +1063,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file output_
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
     Info (12022): Found design unit 1: textSelector-Behaviour File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 16
     Info (12023): Found entity 1: textSelector File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file random_number_gen.vhd
+    Info (12022): Found design unit 1: random_number_gen-LFSR_BEHAVIOR File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 11
+    Info (12023): Found entity 1: random_number_gen File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 6
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst1"
@@ -1126,10 +1135,10 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(27): used explicit default value for signal "top_cloud_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 27
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "top_cloud_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(34): used explicit default value for signal "bottom_cloud_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 34
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(35): used explicit default value for signal "bottom_cloud_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "top_cloud_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(29): used explicit default value for signal "top_cloud_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 29
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(35): used explicit default value for signal "bottom_cloud_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(36): used explicit default value for signal "bottom_cloud_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 36
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
@@ -1178,6 +1187,7 @@ Info (10041): Inferred latch for "score_character[2]" at text.vhd(28) File: C:/U
 Info (10041): Inferred latch for "score_character[3]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
 Info (10041): Inferred latch for "score_character[4]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
 Info (10041): Inferred latch for "score_character[5]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
+Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
 Info (278001): Inferred 7 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
@@ -1318,17 +1328,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 1648 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1720 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1603 logic cells
+    Info (21061): Implemented 1675 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 4937 megabytes
-    Info: Processing ended: Fri May 17 01:02:18 2024
+    Info: Peak virtual memory: 4939 megabytes
+    Info: Processing ended: Sat May 18 00:46:11 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:24
 
 

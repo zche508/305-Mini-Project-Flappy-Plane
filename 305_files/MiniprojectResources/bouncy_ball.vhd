@@ -8,8 +8,9 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  random_number				: IN std_logic_vector(7 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic;
-		  score 							: OUT integer range 10000 downto 0);		
+		  score 							: OUT integer RANGE 10000 DOWNTO 0);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -23,7 +24,7 @@ SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 SIGNAL top_cloud_on			: std_logic;
 SIGNAL top_cloud_width		: std_logic_vector(9 DOWNTO 0);
 SIGNAL top_cloud_height		: std_logic_vector(9 DOWNTO 0);  
-SiGNAL top_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(640,11);
+SiGNAL top_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(360,11);
 SiGNAL top_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
 SiGNAL top_cloud_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
@@ -32,9 +33,9 @@ SIGNAL bottom_cloud_width		: std_logic_vector(9 DOWNTO 0);
 SIGNAL bottom_cloud_height		: std_logic_vector(9 DOWNTO 0);  
 SiGNAL bottom_cloud_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
 SiGNAL bottom_cloud_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
-SiGNAL bottom_cloud_x_motion		: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
+SiGNAL bottom_cloud_x_motion	: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(10,11);
 
-SIGNAL current_score : integer range 10000 downto 0;
+SIGNAL current_score : integer RANGE 10000 DOWNTO 0;
 
 BEGIN
 
@@ -52,7 +53,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			
 -- top_cloud_x_pos and top_cloud_y_pos show the (x,y) for the centre of cloud	
 top_cloud_width <= CONV_STD_LOGIC_VECTOR(32,10);
-top_cloud_height <= CONV_STD_LOGIC_VECTOR(150,10);
+top_cloud_height <= ("00" & random_number);-- CONV_STD_LOGIC_VECTOR(150,10);
 
 top_cloud_on <= '1' when ( ('0' & top_cloud_x_pos <= '0' & pixel_column + top_cloud_width) and ('0' & pixel_column <= '0' & top_cloud_x_pos + top_cloud_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud_y_pos <= pixel_row + top_cloud_height) and ('0' & pixel_row <= top_cloud_y_pos + top_cloud_height) )  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -62,7 +63,7 @@ top_cloud_on <= '1' when ( ('0' & top_cloud_x_pos <= '0' & pixel_column + top_cl
 
 -- bottom_cloud_x_pos and bottom_cloud_y_pos show the (x,y) for the centre of cloud	
 bottom_cloud_width <= CONV_STD_LOGIC_VECTOR(32,10);
-bottom_cloud_height <= CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud_height <= ("00" & random_number);-- CONV_STD_LOGIC_VECTOR(200,10);
 
 bottom_cloud_on <= '1' when ( ('0' & bottom_cloud_x_pos <= '0' & pixel_column + bottom_cloud_width) and ('0' & pixel_column <= '0' & bottom_cloud_x_pos + bottom_cloud_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row + bottom_cloud_height <= '0' & bottom_cloud_y_pos) and (bottom_cloud_y_pos + (CONV_STD_LOGIC_VECTOR(20,10) - top_cloud_height) <= '0' & pixel_row) )  else	-- y_pos - size <= pixel_row <= y_pos + size
