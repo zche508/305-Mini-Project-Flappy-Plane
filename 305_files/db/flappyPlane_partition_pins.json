@@ -96,6 +96,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
 					"name" : "sw[9]",
 					"strict" : false
 				},

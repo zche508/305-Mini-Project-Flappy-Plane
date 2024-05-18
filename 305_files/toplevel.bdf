@@ -21,7 +21,7 @@ refer to the applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 224 136 392 152)
+	(rect 24 104 192 120)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CLOCK_50" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
@@ -34,7 +34,7 @@ refer to the applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 224 160 280 184))
+	(annotation_block (location)(rect 24 128 80 152))
 )
 (pin
 	(input)
@@ -967,28 +967,28 @@ refer to the applicable agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "red" (rect 0 0 15 12)(font "Arial" ))
-		(text "red" (rect 199 27 211 39)(font "Arial" ))
+		(text "red" (rect 199 27 214 39)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "green" (rect 0 0 27 12)(font "Arial" ))
-		(text "green" (rect 189 43 211 55)(font "Arial" ))
+		(text "green" (rect 189 43 216 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48))
 	)
 	(port
 		(pt 232 64)
 		(output)
 		(text "blue" (rect 0 0 20 12)(font "Arial" ))
-		(text "blue" (rect 195 59 211 71)(font "Arial" ))
+		(text "blue" (rect 195 59 215 71)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64))
 	)
 	(port
 		(pt 232 80)
 		(output)
 		(text "score[13..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "score[13..0]" (rect 162 75 211 87)(font "Arial" ))
+		(text "score[13..0]" (rect 162 75 221 87)(font "Arial" ))
 		(line (pt 232 80)(pt 216 80)(line_width 3))
 	)
 	(drawing
@@ -1359,26 +1359,29 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -408 136)
-	(pt -448 136)
-)
-(connector
-	(pt -448 136)
-	(pt -448 224)
-)
-(connector
-	(pt -616 224)
-	(pt -448 224)
-)
-(connector
-	(pt -448 224)
-	(pt 200 224)
-)
-(connector
 	(text "random_number[7..0]" (rect -206 120 -104 137)(font "Intel Clear" ))
 	(pt -248 136)
 	(pt -160 136)
 	(bus)
+)
+(connector
+	(pt -616 224)
+	(pt 200 224)
+)
+(connector
+	(text "clock_50Mhz" (rect 220 96 282 113)(font "Intel Clear" ))
+	(pt 192 112)
+	(pt 248 112)
+)
+(connector
+	(text "clock_50Mhz" (rect 310 128 372 145)(font "Intel Clear" ))
+	(pt 312 144)
+	(pt 392 144)
+)
+(connector
+	(text "clock_50Mhz" (rect -472 120 -410 137)(font "Intel Clear" ))
+	(pt -408 136)
+	(pt -488 136)
 )
 (junction (pt 696 224))
 (junction (pt 664 144))
@@ -1388,4 +1391,3 @@ refer to the applicable agreement for further details.
 (junction (pt 672 288))
 (junction (pt 672 304))
 (junction (pt 672 320))
-(junction (pt -448 224))

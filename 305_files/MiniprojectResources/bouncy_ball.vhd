@@ -104,14 +104,14 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			
 -- CLOUD 1
 top_cloud1_width <= CONV_STD_LOGIC_VECTOR(32,10);
-top_cloud1_height <= ("00" & random_number) when (bottom_cloud1_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+top_cloud1_height <= ("00" & random_number) when (bottom_cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(150,10);
 
 top_cloud1_on <= '1' when (('0' & top_cloud1_x_pos <= '0' & pixel_column + top_cloud1_width) and ('0' & pixel_column <= '0' & top_cloud1_x_pos + top_cloud1_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud1_y_pos <= pixel_row + top_cloud1_height) and ('0' & pixel_row <= top_cloud1_y_pos + top_cloud1_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
 bottom_cloud1_width <= CONV_STD_LOGIC_VECTOR(32,10);
-bottom_cloud1_height <= ("00" & random_number)  when (bottom_cloud2_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud1_height <= ("00" & random_number)  when (bottom_cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(200,10);
 
 bottom_cloud1_on <= '1' when (('0' & bottom_cloud1_x_pos <= '0' & pixel_column + bottom_cloud1_width) and ('0' & pixel_column <= '0' & bottom_cloud1_x_pos + bottom_cloud1_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud1_y_pos) and (bottom_cloud1_y_pos - top_cloud1_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -119,14 +119,14 @@ bottom_cloud1_on <= '1' when (('0' & bottom_cloud1_x_pos <= '0' & pixel_column +
 
 -- CLOUD 2
 top_cloud2_width <= CONV_STD_LOGIC_VECTOR(32,10);
-top_cloud2_height <= ("00" & random_number) when (bottom_cloud3_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+top_cloud2_height <= ("00" & random_number) when (bottom_cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(150,10);
 
 top_cloud2_on <= '1' when (('0' & top_cloud2_x_pos <= '0' & pixel_column + top_cloud2_width) and ('0' & pixel_column <= '0' & top_cloud2_x_pos + top_cloud2_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud2_y_pos <= pixel_row + top_cloud2_height) and ('0' & pixel_row <= top_cloud2_y_pos + top_cloud2_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
 bottom_cloud2_width <= CONV_STD_LOGIC_VECTOR(32,10);
-bottom_cloud2_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud2_height <= ("00" & random_number) when (bottom_cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(200,10);
 
 bottom_cloud2_on <= '1' when (('0' & bottom_cloud2_x_pos <= '0' & pixel_column + bottom_cloud2_width) and ('0' & pixel_column <= '0' & bottom_cloud2_x_pos + bottom_cloud2_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud2_y_pos) and (bottom_cloud2_y_pos - top_cloud2_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -135,14 +135,14 @@ bottom_cloud2_on <= '1' when (('0' & bottom_cloud2_x_pos <= '0' & pixel_column +
 
 -- CLOUD 3
 top_cloud3_width <= CONV_STD_LOGIC_VECTOR(32,10);
-top_cloud3_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+top_cloud3_height <= ("00" & random_number) when (bottom_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(150,10);
 
 top_cloud3_on <= '1' when (('0' & top_cloud3_x_pos <= '0' & pixel_column + top_cloud3_width) and ('0' & pixel_column <= '0' & top_cloud3_x_pos + top_cloud3_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud3_y_pos <= pixel_row + top_cloud3_height) and ('0' & pixel_row <= top_cloud3_y_pos + top_cloud3_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
 bottom_cloud3_width <= CONV_STD_LOGIC_VECTOR(32,10);
-bottom_cloud3_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud3_height <= ("00" & random_number) when (bottom_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(200,10);
 
 bottom_cloud3_on <= '1' when (('0' & bottom_cloud3_x_pos <= '0' & pixel_column + bottom_cloud3_width) and ('0' & pixel_column <= '0' & bottom_cloud3_x_pos + bottom_cloud3_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud3_y_pos) and (bottom_cloud3_y_pos - top_cloud3_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -150,14 +150,14 @@ bottom_cloud3_on <= '1' when (('0' & bottom_cloud3_x_pos <= '0' & pixel_column +
 	
 -- CLOUD 4
 top_cloud4_width <= CONV_STD_LOGIC_VECTOR(32,10);
-top_cloud4_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+top_cloud4_height <= ("00" & random_number) when (bottom_cloud4_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(150,10);
 
 top_cloud4_on <= '1' when (('0' & top_cloud4_x_pos <= '0' & pixel_column + top_cloud4_width) and ('0' & pixel_column <= '0' & top_cloud4_x_pos + top_cloud4_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud4_y_pos <= pixel_row + top_cloud4_height) and ('0' & pixel_row <= top_cloud4_y_pos + top_cloud4_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
 bottom_cloud4_width <= CONV_STD_LOGIC_VECTOR(32,10);
-bottom_cloud4_height <= ("00" & random_number) when (bottom_cloud4_x_pos = CONV_STD_LOGIC_VECTOR(0,11) and Clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud4_height <= ("00" & random_number) when (bottom_cloud4_x_pos <= CONV_STD_LOGIC_VECTOR(1,11));-- CONV_STD_LOGIC_VECTOR(200,10);
 
 bottom_cloud4_on <= '1' when (('0' & bottom_cloud4_x_pos <= '0' & pixel_column + bottom_cloud4_width) and ('0' & pixel_column <= '0' & bottom_cloud4_x_pos + bottom_cloud4_width) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud4_y_pos) and (bottom_cloud4_y_pos - top_cloud4_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -209,12 +209,12 @@ begin
 	if (rising_edge(vert_sync)) then
 
 		if (mb1 = '1') then
-			ball_y_motion <= - CONV_STD_LOGIC_VECTOR(7,10);
+			ball_y_motion <= - CONV_STD_LOGIC_VECTOR(8,10);
 			if(ball_y_pos <= size + CONV_STD_LOGIC_VECTOR(8,10)) then
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
 		else
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(7,10);
+			ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);
 			if ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size - CONV_STD_LOGIC_VECTOR(8,10)) then 		-- bottom
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
