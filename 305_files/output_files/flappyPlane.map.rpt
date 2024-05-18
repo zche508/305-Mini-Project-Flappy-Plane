@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Sat May 18 15:32:48 2024
+Sat May 18 19:54:17 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,24 +18,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. State Machine - |toplevel|MOUSE:inst5|mouse_state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 18. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
- 19. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
- 20. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3
- 21. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div2
- 22. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod2
- 23. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div1
- 24. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod0
- 25. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod1
- 26. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div0
- 27. altsyncram Parameter Settings by Entity Instance
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 17. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
+ 18. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
+ 19. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3
+ 20. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div2
+ 21. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod2
+ 22. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod0
+ 24. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod1
+ 25. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div0
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -61,7 +60,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May 18 15:32:48 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat May 18 19:54:17 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -238,36 +237,36 @@ refer to the applicable agreement for further details.
 +--------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                ;
-+---------------------------------------------+------------------------------+
-; Resource                                    ; Usage                        ;
-+---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 952                          ;
-;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 1729                         ;
-;     -- 7 input functions                    ; 3                            ;
-;     -- 6 input functions                    ; 164                          ;
-;     -- 5 input functions                    ; 112                          ;
-;     -- 4 input functions                    ; 308                          ;
-;     -- <=3 input functions                  ; 1142                         ;
-;                                             ;                              ;
-; Dedicated logic registers                   ; 238                          ;
-;                                             ;                              ;
-; I/O pins                                    ; 36                           ;
-; Total MLAB memory bits                      ; 0                            ;
-; Total block memory bits                     ; 4096                         ;
-;                                             ;                              ;
-; Total DSP Blocks                            ; 0                            ;
-;                                             ;                              ;
-; Total PLLs                                  ; 1                            ;
-;     -- PLLs                                 ; 1                            ;
-;                                             ;                              ;
-; Maximum fan-out node                        ; MOUSE:inst5|MOUSE_CLK_FILTER ;
-; Maximum fan-out                             ; 93                           ;
-; Total fan-out                               ; 6563                         ;
-; Average fan-out                             ; 3.20                         ;
-+---------------------------------------------+------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                         ;
++---------------------------------------------+-----------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                 ;
++---------------------------------------------+-----------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1019                                                                  ;
+;                                             ;                                                                       ;
+; Combinational ALUT usage for logic          ; 1840                                                                  ;
+;     -- 7 input functions                    ; 5                                                                     ;
+;     -- 6 input functions                    ; 184                                                                   ;
+;     -- 5 input functions                    ; 130                                                                   ;
+;     -- 4 input functions                    ; 322                                                                   ;
+;     -- <=3 input functions                  ; 1199                                                                  ;
+;                                             ;                                                                       ;
+; Dedicated logic registers                   ; 238                                                                   ;
+;                                             ;                                                                       ;
+; I/O pins                                    ; 36                                                                    ;
+; Total MLAB memory bits                      ; 0                                                                     ;
+; Total block memory bits                     ; 4096                                                                  ;
+;                                             ;                                                                       ;
+; Total DSP Blocks                            ; 0                                                                     ;
+;                                             ;                                                                       ;
+; Total PLLs                                  ; 1                                                                     ;
+;     -- PLLs                                 ; 1                                                                     ;
+;                                             ;                                                                       ;
+; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 93                                                                    ;
+; Total fan-out                               ; 6993                                                                  ;
+; Average fan-out                             ; 3.24                                                                  ;
++---------------------------------------------+-----------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -275,12 +274,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 1729 (1)            ; 238 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 1840 (1)            ; 238 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
-;    |MOUSE:inst5|                          ; 105 (105)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
+;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst2|                       ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 325 (325)           ; 62 (62)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |bouncy_ball:inst3|                    ; 433 (433)           ; 62 (62)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
@@ -288,7 +287,7 @@ refer to the applicable agreement for further details.
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
 ;    |random_number_gen:inst8|              ; 27 (27)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                             ; random_number_gen   ; work         ;
-;    |textSelector:inst10|                  ; 1207 (169)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
+;    |textSelector:inst10|                  ; 1209 (168)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
 ;       |lpm_divide:Div0|                   ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_ibm:auto_generated|  ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
 ;             |sign_div_unsign_olh:divider| ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
@@ -301,10 +300,10 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_vcm:auto_generated|  ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
 ;             |sign_div_unsign_5nh:divider| ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
 ;                |alt_u_div_g2f:divider|    ; 107 (107)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
-;       |lpm_divide:Mod0|                   ; 239 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 239 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 239 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 239 (239)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
 ;       |lpm_divide:Mod1|                   ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_65m:auto_generated|  ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
@@ -354,63 +353,87 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                             ;
-+-----------------------------------------------------+----------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal              ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------------+------------------------+
-; bouncy_ball:inst3|top_cloud1_height[7]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[6]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[5]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[4]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[3]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[2]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[1]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud1_height[0]              ; bouncy_ball:inst3|LessThan4      ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[7]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[6]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[5]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[4]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[3]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[2]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[1]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud2_height[0]              ; bouncy_ball:inst3|LessThan13     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[7]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[6]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[5]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[4]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[3]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[2]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[1]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud3_height[0]              ; bouncy_ball:inst3|LessThan21     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[7]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[6]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[5]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[4]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[3]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[2]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[1]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; bouncy_ball:inst3|top_cloud4_height[0]              ; bouncy_ball:inst3|LessThan29     ; yes                    ;
-; textSelector:inst10|score_character[0]              ; GND                              ; yes                    ;
-; textSelector:inst10|score_character[1]              ; GND                              ; yes                    ;
-; textSelector:inst10|score_character[2]              ; GND                              ; yes                    ;
-; textSelector:inst10|score_character[3]              ; GND                              ; yes                    ;
-; textSelector:inst10|current_score_digit[11]         ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[10]         ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[9]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[8]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[7]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[6]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[5]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[4]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[3]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[2]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[1]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[0]          ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[13]         ; textSelector:inst10|char_address ; yes                    ;
-; textSelector:inst10|current_score_digit[12]         ; textSelector:inst10|char_address ; yes                    ;
-; Number of user-specified and inferred latches = 50  ;                                  ;                        ;
-+-----------------------------------------------------+----------------------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                   ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                    ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------------+------------------------+
+; bouncy_ball:inst3|top_cloud1_height[7]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[6]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[5]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[4]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[3]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[2]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[1]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud1_height[0]              ; bouncy_ball:inst3|top_cloud1_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[7]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[6]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[5]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[4]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[3]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[2]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[1]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud2_height[0]              ; bouncy_ball:inst3|top_cloud2_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[7]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[6]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[5]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[4]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[3]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[2]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[1]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud3_height[0]              ; bouncy_ball:inst3|top_cloud3_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[7]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[6]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[5]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[4]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[3]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[2]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[1]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; bouncy_ball:inst3|top_cloud4_height[0]              ; bouncy_ball:inst3|top_cloud4_height    ; yes                    ;
+; textSelector:inst10|score_character[0]              ; GND                                    ; yes                    ;
+; textSelector:inst10|score_character[1]              ; GND                                    ; yes                    ;
+; textSelector:inst10|score_character[2]              ; GND                                    ; yes                    ;
+; textSelector:inst10|score_character[3]              ; GND                                    ; yes                    ;
+; textSelector:inst10|current_score_digit[11]         ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[10]         ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[9]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[8]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[7]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[6]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[5]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[4]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[3]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[2]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[1]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[0]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[13]         ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[12]         ; textSelector:inst10|char_address       ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud1_height[7]           ; bouncy_ball:inst3|bottom_cloud1_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud1_height[5]           ; bouncy_ball:inst3|bottom_cloud1_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud1_height[6]           ; bouncy_ball:inst3|bottom_cloud1_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud1_height[4]           ; bouncy_ball:inst3|bottom_cloud1_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud1_height[3]           ; bouncy_ball:inst3|bottom_cloud1_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud1_height[2]           ; bouncy_ball:inst3|bottom_cloud1_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud2_height[7]           ; bouncy_ball:inst3|bottom_cloud2_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud2_height[5]           ; bouncy_ball:inst3|bottom_cloud2_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud2_height[6]           ; bouncy_ball:inst3|bottom_cloud2_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud2_height[4]           ; bouncy_ball:inst3|bottom_cloud2_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud2_height[3]           ; bouncy_ball:inst3|bottom_cloud2_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud2_height[2]           ; bouncy_ball:inst3|bottom_cloud2_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud3_height[7]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud3_height[5]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud3_height[6]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud3_height[4]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud3_height[3]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud3_height[2]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud4_height[7]           ; bouncy_ball:inst3|bottom_cloud4_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud4_height[5]           ; bouncy_ball:inst3|bottom_cloud4_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud4_height[6]           ; bouncy_ball:inst3|bottom_cloud4_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud4_height[4]           ; bouncy_ball:inst3|bottom_cloud4_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud4_height[3]           ; bouncy_ball:inst3|bottom_cloud4_height ; yes                    ;
+; bouncy_ball:inst3|bottom_cloud4_height[2]           ; bouncy_ball:inst3|bottom_cloud4_height ; yes                    ;
+; Number of user-specified and inferred latches = 74  ;                                        ;                        ;
++-----------------------------------------------------+----------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -425,7 +448,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; MOUSE:inst5|CHAROUT[2]                   ; Stuck at VCC due to stuck port data_in                ;
 ; MOUSE:inst5|CHAROUT[0,1]                 ; Stuck at GND due to stuck port data_in                ;
 ; MOUSE:inst5|SHIFTOUT[10]                 ; Stuck at VCC due to stuck port data_in                ;
-; bouncy_ball:inst3|ball_y_pos[0]          ; Merged with bouncy_ball:inst3|ball_y_pos[1]           ;
+; bouncy_ball:inst3|ball_y_pos[1]          ; Merged with bouncy_ball:inst3|ball_y_pos[0]           ;
 ; bouncy_ball:inst3|top_cloud4_x_pos[10]   ; Merged with bouncy_ball:inst3|bottom_cloud4_x_pos[10] ;
 ; bouncy_ball:inst3|top_cloud4_x_pos[9]    ; Merged with bouncy_ball:inst3|bottom_cloud4_x_pos[9]  ;
 ; bouncy_ball:inst3|top_cloud4_x_pos[8]    ; Merged with bouncy_ball:inst3|bottom_cloud4_x_pos[8]  ;
@@ -467,23 +490,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bouncy_ball:inst3|top_cloud1_x_pos[3]    ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[3]  ;
 ; bouncy_ball:inst3|top_cloud1_x_pos[2]    ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[2]  ;
 ; bouncy_ball:inst3|top_cloud1_x_pos[1]    ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[1]  ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[1] ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[1]  ;
-; bouncy_ball:inst3|bottom_cloud4_x_pos[1] ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[1]  ;
-; bouncy_ball:inst3|ball_y_pos[1]          ; Stuck at GND due to stuck port data_in                ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; Merged with bouncy_ball:inst3|bottom_cloud4_x_pos[1]  ;
+; bouncy_ball:inst3|bottom_cloud1_x_pos[1] ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[1]  ;
+; bouncy_ball:inst3|ball_y_pos[0]          ; Stuck at GND due to stuck port data_in                ;
 ; MOUSE:inst5|cursor_row[9]                ; Stuck at GND due to stuck port data_in                ;
 ; VGA_SYNC:inst2|pixel_row[9]              ; Stuck at GND due to stuck port data_in                ;
 ; Total Number of Removed Registers = 63   ;                                                       ;
 +------------------------------------------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                             ;
-+------------------------------------+---------------------------+----------------------------------------+
-; Register name                      ; Reason for Removal        ; Registers Removed due to This Register ;
-+------------------------------------+---------------------------+----------------------------------------+
-; bouncy_ball:inst3|ball_y_motion[1] ; Stuck at GND              ; bouncy_ball:inst3|ball_y_pos[1]        ;
-;                                    ; due to stuck port data_in ;                                        ;
-+------------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -496,7 +509,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Synchronous Load   ; 27    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 132   ;
+; Number of registers using Clock Enable       ; 141   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -506,31 +519,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
-; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 7       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 8       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 10      ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[4] ; 4       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 4       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; 9       ;
-; bouncy_ball:inst3|bottom_cloud4_x_pos[9] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud4_x_pos[7] ; 7       ;
-; bouncy_ball:inst3|bottom_cloud4_x_pos[6] ; 8       ;
-; bouncy_ball:inst3|bottom_cloud4_x_pos[5] ; 10      ;
-; bouncy_ball:inst3|bottom_cloud4_x_pos[3] ; 4       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 11      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[4] ; 5       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 5       ;
+; bouncy_ball:inst3|bottom_cloud4_x_pos[1] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud4_x_pos[9] ; 7       ;
+; bouncy_ball:inst3|bottom_cloud4_x_pos[7] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud4_x_pos[5] ; 11      ;
+; bouncy_ball:inst3|bottom_cloud4_x_pos[6] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud4_x_pos[3] ; 5       ;
 ; bouncy_ball:inst3|bottom_cloud4_x_pos[2] ; 4       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 7       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 8       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 10      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 4       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 7       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 11      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 5       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 4       ;
 ; random_number_gen:inst8|current_state[0] ; 21      ;
 ; MOUSE:inst5|send_char                    ; 3       ;
-; bouncy_ball:inst3|current_score[10]      ; 13      ;
-; bouncy_ball:inst3|current_score[9]       ; 13      ;
-; bouncy_ball:inst3|current_score[8]       ; 13      ;
-; bouncy_ball:inst3|current_score[4]       ; 14      ;
-; bouncy_ball:inst3|current_score[13]      ; 12      ;
+; bouncy_ball:inst3|current_score[10]      ; 14      ;
+; bouncy_ball:inst3|current_score[9]       ; 14      ;
+; bouncy_ball:inst3|current_score[8]       ; 14      ;
+; bouncy_ball:inst3|current_score[4]       ; 15      ;
+; bouncy_ball:inst3|current_score[13]      ; 13      ;
 ; MOUSE:inst5|SHIFTOUT[3]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[5]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[6]                  ; 1       ;
@@ -545,13 +558,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[9]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[1]                  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[5]   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[2]                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[4]                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[1]               ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[6]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[2]                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |toplevel|bouncy_ball:inst3|current_score[2]         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[3]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[1]                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[7]                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[7]               ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|current_score[8]         ;
 ; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[2] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]      ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[3]      ;
@@ -1067,29 +1082,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 1                           ;
 ;     ENA               ; 79                          ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 18                          ;
+;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 20                          ;
-;     SCLR              ; 19                          ;
+;     SCLR              ; 10                          ;
 ;     SLD               ; 7                           ;
 ;     plain             ; 79                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1732                        ;
-;     arith             ; 646                         ;
+; arriav_lcell_comb     ; 1843                        ;
+;     arith             ; 652                         ;
 ;         0 data inputs ; 95                          ;
-;         1 data inputs ; 132                         ;
+;         1 data inputs ; 138                         ;
 ;         2 data inputs ; 71                          ;
 ;         3 data inputs ; 181                         ;
 ;         4 data inputs ; 167                         ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 1034                        ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 1137                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 28                          ;
-;         2 data inputs ; 375                         ;
-;         3 data inputs ; 213                         ;
-;         4 data inputs ; 141                         ;
-;         5 data inputs ; 112                         ;
-;         6 data inputs ; 164                         ;
+;         2 data inputs ; 398                         ;
+;         3 data inputs ; 241                         ;
+;         4 data inputs ; 155                         ;
+;         5 data inputs ; 130                         ;
+;         6 data inputs ; 184                         ;
 ;     shared            ; 49                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 36                          ;
@@ -1099,7 +1114,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 16.52                       ;
+; Average LUT depth     ; 15.94                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1108,7 +1123,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1118,7 +1133,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 18 15:32:34 2024
+    Info: Processing started: Sat May 18 19:53:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1238,24 +1253,30 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(31): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 31
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(32): used explicit default value for signal "top_cloud1_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 32
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(36): object "bottom_cloud1_height" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 36
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(38): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 38
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(39): used explicit default value for signal "bottom_cloud1_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 39
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(47): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 47
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(48): used explicit default value for signal "top_cloud2_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 48
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(52): object "bottom_cloud2_height" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 52
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(54): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 54
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(55): used explicit default value for signal "bottom_cloud2_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 55
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(63): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 63
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(64): used explicit default value for signal "top_cloud3_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 64
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(68): object "bottom_cloud3_height" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 68
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(70): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 70
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(71): used explicit default value for signal "bottom_cloud3_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 71
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(79): used explicit default value for signal "top_cloud4_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 79
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(80): used explicit default value for signal "top_cloud4_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 80
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(84): object "bottom_cloud4_height" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(86): used explicit default value for signal "bottom_cloud4_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 86
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(87): used explicit default value for signal "bottom_cloud4_x_motion" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 87
+Info (10041): Inferred latch for "bottom_cloud4_height[0]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[1]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[2]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[3]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[4]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[5]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[6]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[7]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[8]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
+Info (10041): Inferred latch for "bottom_cloud4_height[9]" at bouncy_ball.vhd(160) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 160
 Info (10041): Inferred latch for "top_cloud4_height[0]" at bouncy_ball.vhd(153) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 153
 Info (10041): Inferred latch for "top_cloud4_height[1]" at bouncy_ball.vhd(153) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 153
 Info (10041): Inferred latch for "top_cloud4_height[2]" at bouncy_ball.vhd(153) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 153
@@ -1266,6 +1287,16 @@ Info (10041): Inferred latch for "top_cloud4_height[6]" at bouncy_ball.vhd(153) 
 Info (10041): Inferred latch for "top_cloud4_height[7]" at bouncy_ball.vhd(153) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 153
 Info (10041): Inferred latch for "top_cloud4_height[8]" at bouncy_ball.vhd(153) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 153
 Info (10041): Inferred latch for "top_cloud4_height[9]" at bouncy_ball.vhd(153) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 153
+Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(145) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
 Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(138) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 138
 Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(138) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 138
 Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(138) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 138
@@ -1276,6 +1307,16 @@ Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(138) 
 Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(138) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 138
 Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(138) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 138
 Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(138) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 138
+Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
+Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(129) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 129
 Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(122) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
 Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(122) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
 Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(122) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
@@ -1286,6 +1327,16 @@ Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(122) 
 Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(122) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
 Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(122) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
 Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(122) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
+Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
+Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(114) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 114
 Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(107) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 107
 Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(107) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 107
 Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(107) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 107
@@ -1488,17 +1539,17 @@ Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pl
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key[1]"
     Warning (15610): No output dependent on input pin "key[0]"
-Info (21057): Implemented 1845 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1956 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1800 logic cells
+    Info (21061): Implemented 1911 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
-    Info: Peak virtual memory: 4944 megabytes
-    Info: Processing ended: Sat May 18 15:32:48 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 85 warnings
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Sat May 18 19:54:17 2024
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:25
 
 
