@@ -138,6 +138,14 @@
 				{
 					"name" : "sw[0]",
 					"strict" : false
+				},
+				{
+					"name" : "key[0]",
+					"strict" : false
+				},
+				{
+					"name" : "key[1]",
+					"strict" : false
 				}
 			]
 		}
