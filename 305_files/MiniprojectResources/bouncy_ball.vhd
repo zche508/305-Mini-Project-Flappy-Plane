@@ -5,73 +5,76 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY bouncy_ball IS
-	PORT
-		( pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
-        pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  random_number				: IN std_logic_vector(7 DOWNTO 0);
-		  red, green, blue 			: OUT std_logic;
-		  score 							: OUT integer RANGE 10000 DOWNTO 0;
-		  lives 							: OUT integer RANGE 30 DOWNTO 0);		
+	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
+	  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+	  random_number				: IN std_logic_vector(8 DOWNTO 0);
+	  red, green, blue 			: OUT std_logic;
+	  score 							: OUT integer RANGE 10000 DOWNTO 0;
+	  lives 							: OUT integer RANGE 30 DOWNTO 0);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
 
-SIGNAL ball_on					: std_logic;
-SIGNAL size 					: std_logic_vector(9 DOWNTO 0);  
-SIGNAL ball_y_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10) - size;
-SiGNAL ball_x_pos				: std_logic_vector(10 DOWNTO 0);
-SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
+SIGNAL ball_on						: std_logic;
+SIGNAL size 						: std_logic_vector(9 DOWNTO 0);  
+SIGNAL ball_y_pos					: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10) - size;
+SiGNAL ball_x_pos					: std_logic_vector(10 DOWNTO 0);
+SIGNAL ball_y_motion				: std_logic_vector(9 DOWNTO 0);
 
-SIGNAL cloud_width : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(32,10);
-SIGNAL cloud_drawing_width : std_logic_vector(9 DOWNTO 0) := cloud_width(8 DOWNTO 0) & '0';
-SiGNAL cloud_motion : std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(5,11);
-SiGNAL cloud_motion_integer : integer range 31 downto 0 := 5;
-SIGNAL cloud_inital_spacing : integer RANGE 511 DOWNTO 0 := 250; 
+SIGNAL cloud_width 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(32,10);
+SIGNAL cloud_drawing_width 	: std_logic_vector(9 DOWNTO 0) := cloud_width(8 DOWNTO 0) & '0';
+SiGNAL cloud_motion 				: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(5,11);
+SiGNAL cloud_motion_integer 	: integer range 31 downto 0 := 5;
+SIGNAL cloud_inital_spacing 	: integer RANGE 511 DOWNTO 0 := 250; 
+SIGNAL cloud_inital_height		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(10,10);
+
 -- CLOUD 1
 
-SIGNAL top_cloud1_on			: std_logic;
+SIGNAL top_cloud1_on				: std_logic;
 SIGNAL top_cloud1_height		: std_logic_vector(9 DOWNTO 0);  
-SiGNAL top_cloud1_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
-SiGNAL top_cloud1_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud1_x_pos			: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
+SiGNAL top_cloud1_y_pos			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
 
 SIGNAL bottom_cloud1_on			: std_logic;
-SIGNAL bottom_cloud1_height		: std_logic_vector(9 DOWNTO 0);  
+SIGNAL bottom_cloud1_height	: std_logic_vector(9 DOWNTO 0);  
 SiGNAL bottom_cloud1_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,11);
 SiGNAL bottom_cloud1_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 
 -- CLOUD 2
 
-SIGNAL top_cloud2_on			: std_logic;
+SIGNAL top_cloud2_on				: std_logic;
 SIGNAL top_cloud2_height		: std_logic_vector(9 DOWNTO 0);  
-SiGNAL top_cloud2_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(cloud_inital_spacing,11);
-SiGNAL top_cloud2_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud2_x_pos			: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(cloud_inital_spacing,11);
+SiGNAL top_cloud2_y_pos			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
 
 SIGNAL bottom_cloud2_on			: std_logic;
-SIGNAL bottom_cloud2_height		: std_logic_vector(9 DOWNTO 0);  
+SIGNAL bottom_cloud2_height	: std_logic_vector(9 DOWNTO 0);  
 SiGNAL bottom_cloud2_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(cloud_inital_spacing,11);
 SiGNAL bottom_cloud2_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 
 -- CLOUD 3
 
-SIGNAL top_cloud3_on			: std_logic;
+SIGNAL top_cloud3_on				: std_logic;
 SIGNAL top_cloud3_height		: std_logic_vector(9 DOWNTO 0);  
-SiGNAL top_cloud3_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2*cloud_inital_spacing,11);
-SiGNAL top_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
+SiGNAL top_cloud3_x_pos			: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2*cloud_inital_spacing,11);
+SiGNAL top_cloud3_y_pos			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(0,10);
 
 SIGNAL bottom_cloud3_on			: std_logic;
-SIGNAL bottom_cloud3_height		: std_logic_vector(9 DOWNTO 0);  
+SIGNAL bottom_cloud3_height	: std_logic_vector(9 DOWNTO 0);  
 SiGNAL bottom_cloud3_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2*cloud_inital_spacing,11);
 SiGNAL bottom_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 
 
-SIGNAL current_score : integer RANGE 10000 DOWNTO 0;
-SIGNAL allow_score_update : std_logic;
-SIGNAL score_time_buffer : integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
+SIGNAL current_score 			: integer RANGE 10000 DOWNTO 0;
+SIGNAL allow_score_update 		: std_logic;
+SIGNAL score_time_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
 
-SIGNAL current_lives : integer RANGE 100 DOWNTO 0;
-SIGNAL collision : std_logic := '0';
-SIGNAL game_running : std_logic := '0';
-SIGNAL collision_buffer : integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
+SIGNAL current_lives 			: integer RANGE 100 DOWNTO 0;
+SIGNAL collision 					: std_logic := '0';
+SIGNAL game_running 				: std_logic := '0';
+SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
+
+SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
 
 BEGIN
 
@@ -87,44 +90,46 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			'0';
 			
 -- CLOUD 1
-top_cloud1_height <= ("00" & random_number) when (top_cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
-
+top_cloud1_height <= ('0' & random_number) when (top_cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0'); -- CONV_STD_LOGIC_VECTOR(150,10);
+							
 top_cloud1_on <= '1' when (('0' & pixel_column <= '0' & top_cloud1_x_pos) and ('0' & top_cloud1_x_pos - cloud_drawing_width <= '0' & pixel_column) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud1_y_pos <= pixel_row + top_cloud1_height) and ('0' & pixel_row <= top_cloud1_y_pos + top_cloud1_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-bottom_cloud1_height <= ("00" & random_number)  when (bottom_cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(1,11)  and clk = '1');-- CONV_STD_LOGIC_VECTOR(200,10);
-
+bottom_cloud1_height <= (bottom_cloud1_y_pos - ('0' & random_number) - cloud_vertical_spacing)  when (bottom_cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0'); -- CONV_STD_LOGIC_VECTOR(200,10);
+								
 bottom_cloud1_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud1_x_pos) and ('0' & bottom_cloud1_x_pos - cloud_drawing_width <= '0' & pixel_column)  	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud1_y_pos) and (bottom_cloud1_y_pos - bottom_cloud1_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';			
 
 -- CLOUD 2
-top_cloud2_height <= ("00" & random_number) when (top_cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
+top_cloud2_height <= ('0' & random_number) when (top_cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0'); -- CONV_STD_LOGIC_VECTOR(150,10);
 
+							
 top_cloud2_on <= '1' when (('0' & pixel_column <= '0' & top_cloud2_x_pos) and ('0' & top_cloud2_x_pos - cloud_drawing_width <= '0' & pixel_column) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud2_y_pos <= pixel_row + top_cloud2_height) and ('0' & pixel_row <= top_cloud2_y_pos + top_cloud2_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-bottom_cloud2_height <= ("00" & random_number) when (bottom_cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0');-- CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud2_height <= (bottom_cloud2_y_pos - ('0' & random_number) - cloud_vertical_spacing) when (bottom_cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0'); -- CONV_STD_LOGIC_VECTOR(200,10);
 
+								
 bottom_cloud2_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud2_x_pos) and ('0' & bottom_cloud2_x_pos - cloud_drawing_width <= '0' & pixel_column) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud2_y_pos) and (bottom_cloud2_y_pos - bottom_cloud2_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';			
 
 
 -- CLOUD 3
-top_cloud3_height <= ("00" & random_number) when (top_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0');-- CONV_STD_LOGIC_VECTOR(150,10);
-
+top_cloud3_height <= ('0' & random_number) when (top_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0'); -- CONV_STD_LOGIC_VECTOR(150,10);
+							
 top_cloud3_on <= '1' when (('0' & pixel_column <= '0' & top_cloud3_x_pos) and ('0' & top_cloud3_x_pos - cloud_drawing_width <= '0' & pixel_column) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and ('0' & top_cloud3_y_pos <= pixel_row + top_cloud3_height) and ('0' & pixel_row <= top_cloud3_y_pos + top_cloud3_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
 
-bottom_cloud3_height <= ("00" & random_number) when (bottom_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '1');-- CONV_STD_LOGIC_VECTOR(200,10);
+bottom_cloud3_height <= (bottom_cloud3_y_pos - ('0' & random_number) - cloud_vertical_spacing) when (bottom_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(1,11) and clk = '0'); -- CONV_STD_LOGIC_VECTOR(200,10);
 
 bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) and ('0' & bottom_cloud3_x_pos - cloud_drawing_width <= '0' & pixel_column) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud3_y_pos) and (bottom_cloud3_y_pos - bottom_cloud3_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
-			'0';	
+			'0'; 
 			
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
@@ -155,6 +160,23 @@ Blue <=  '1' when ShowText = '1' else
 			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			'1';
+			
+			
+--Red <=	'1' when ShowText = '1' else 
+--			'1' when ball_on = '1' else
+--			'1' when top_cloud1_on = '1' or bottom_cloud1_on = '1' else
+--			'1' when collision = '1' else
+--			'0';
+--			
+--Green <= '1' when ShowText = '1' else 
+--			'0' when ball_on = '1' else
+--			'0' when top_cloud2_on = '1' or bottom_cloud2_on = '1' else
+--			'1'; 
+--			
+--Blue <=  '1' when ShowText = '1' else 
+--			'0' when ball_on = '1' else
+--			'0' when top_cloud3_on = '1' or bottom_cloud3_on = '1' else
+--			'1';
 
 ---------------------------
 ---- CHECK FOR COLLISION --

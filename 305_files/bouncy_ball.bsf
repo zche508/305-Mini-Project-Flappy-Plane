@@ -89,8 +89,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "random_number[7..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "random_number[7..0]" (rect 21 171 108 183)(font "Arial" ))
+		(text "random_number[8..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "random_number[8..0]" (rect 21 171 108 183)(font "Arial" ))
 		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
