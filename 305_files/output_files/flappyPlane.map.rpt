@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Sun May 19 20:27:19 2024
+Sun May 19 21:51:27 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -24,17 +24,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  16. Source assignments for char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
  17. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
  18. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
- 19. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3
- 20. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div2
- 21. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod2
- 22. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div1
- 23. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod0
- 24. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod1
- 25. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div0
- 26. altsyncram Parameter Settings by Entity Instance
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 19. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod7
+ 20. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div5
+ 21. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod6
+ 22. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div4
+ 23. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod4
+ 24. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod5
+ 25. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div3
+ 26. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3
+ 27. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div2
+ 28. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod2
+ 29. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div1
+ 30. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod0
+ 31. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod1
+ 32. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div0
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -60,13 +67,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 19 20:27:19 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 19 21:51:27 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 246                                         ;
+; Total registers                 ; 263                                         ;
 ; Total pins                      ; 36                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -234,6 +241,22 @@ refer to the applicable agreement for further details.
 ; db/lpm_divide_ibm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf                ;         ;
 ; db/sign_div_unsign_olh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf           ;         ;
 ; db/alt_u_div_mve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf                 ;         ;
+; db/lpm_divide_m3m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf                ;         ;
+; db/lpm_divide_i3m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf                ;         ;
+; db/sign_div_unsign_1nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf           ;         ;
+; db/alt_u_div_82f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf                 ;         ;
+; db/lpm_divide_hbm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf                ;         ;
+; db/sign_div_unsign_nlh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf           ;         ;
+; db/alt_u_div_kve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf                 ;         ;
+; db/lpm_divide_62m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf                ;         ;
+; db/sign_div_unsign_9kh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf           ;         ;
+; db/alt_u_div_ose.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf                 ;         ;
+; db/lpm_divide_82m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf                ;         ;
+; db/sign_div_unsign_dkh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf           ;         ;
+; db/alt_u_div_0te.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf                 ;         ;
+; db/lpm_divide_4am.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf                ;         ;
+; db/sign_div_unsign_akh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf           ;         ;
+; db/alt_u_div_qse.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf                 ;         ;
 +--------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -242,16 +265,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1030                         ;
+; Estimate of Logic utilization (ALMs needed) ; 1206                         ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 1835                         ;
+; Combinational ALUT usage for logic          ; 2177                         ;
 ;     -- 7 input functions                    ; 3                            ;
-;     -- 6 input functions                    ; 214                          ;
-;     -- 5 input functions                    ; 118                          ;
-;     -- 4 input functions                    ; 336                          ;
-;     -- <=3 input functions                  ; 1164                         ;
+;     -- 6 input functions                    ; 224                          ;
+;     -- 5 input functions                    ; 136                          ;
+;     -- 4 input functions                    ; 385                          ;
+;     -- <=3 input functions                  ; 1429                         ;
 ;                                             ;                              ;
-; Dedicated logic registers                   ; 246                          ;
+; Dedicated logic registers                   ; 263                          ;
 ;                                             ;                              ;
 ; I/O pins                                    ; 36                           ;
 ; Total MLAB memory bits                      ; 0                            ;
@@ -264,8 +287,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; MOUSE:inst5|MOUSE_CLK_FILTER ;
 ; Maximum fan-out                             ; 93                           ;
-; Total fan-out                               ; 7180                         ;
-; Average fan-out                             ; 3.32                         ;
+; Total fan-out                               ; 8208                         ;
+; Average fan-out                             ; 3.25                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -274,12 +297,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 1835 (1)            ; 246 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 2177 (1)            ; 263 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst2|                       ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 427 (427)           ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |bouncy_ball:inst3|                    ; 457 (457)           ; 87 (87)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
@@ -287,35 +310,63 @@ refer to the applicable agreement for further details.
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
 ;    |random_number_gen:inst8|              ; 27 (27)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                             ; random_number_gen   ; work         ;
-;    |textSelector:inst10|                  ; 1212 (171)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
-;       |lpm_divide:Div0|                   ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ibm:auto_generated|  ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
-;             |sign_div_unsign_olh:divider| ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
-;                |alt_u_div_mve:divider|    ; 113 (113)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
-;       |lpm_divide:Div1|                   ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_lbm:auto_generated|  ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm      ; work         ;
-;             |sign_div_unsign_rlh:divider| ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
-;                |alt_u_div_sve:divider|    ; 135 (135)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve       ; work         ;
-;       |lpm_divide:Div2|                   ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
-;             |sign_div_unsign_5nh:divider| ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
-;                |alt_u_div_g2f:divider|    ; 107 (107)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
-;       |lpm_divide:Mod0|                   ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod1|                   ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 236 (236)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod2|                   ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 169 (169)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod3|                   ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;    |textSelector:inst10|                  ; 1524 (212)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
+;       |lpm_divide:Div0|                   ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_4am:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_qse:divider|    ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider ; alt_u_div_qse       ; work         ;
+;       |lpm_divide:Div1|                   ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Div2|                   ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_g2f:divider|    ; 103 (103)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
+;       |lpm_divide:Div3|                   ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_ibm:auto_generated|  ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_mve:divider|    ; 113 (113)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;       |lpm_divide:Div4|                   ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_lbm:auto_generated|  ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_sve:divider|    ; 135 (135)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve       ; work         ;
+;       |lpm_divide:Div5|                   ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_g2f:divider|    ; 107 (107)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_62m:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod1|                   ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_82m:auto_generated|  ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_82m:auto_generated                                                   ; lpm_divide_82m      ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
+;                |alt_u_div_0te:divider|    ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider ; alt_u_div_0te       ; work         ;
+;       |lpm_divide:Mod2|                   ; 17 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 17 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_1nh:divider| ; 17 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_i3m:auto_generated|sign_div_unsign_1nh:divider                       ; sign_div_unsign_1nh ; work         ;
+;                |alt_u_div_82f:divider|    ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_i3m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_82f:divider ; alt_u_div_82f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m3m:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_m3m:auto_generated                                                   ; lpm_divide_m3m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_m3m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_m3m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;       |lpm_divide:Mod4|                   ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;       |lpm_divide:Mod5|                   ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 236 (236)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;       |lpm_divide:Mod6|                   ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 169 (169)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;       |lpm_divide:Mod7|                   ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_p2f:divider|    ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -407,9 +458,15 @@ Encoding Type:  One-Hot
 ; bouncy_ball:inst3|bottom_cloud3_height[1]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
 ; bouncy_ball:inst3|bottom_cloud3_height[0]           ; bouncy_ball:inst3|bottom_cloud3_height ; yes                    ;
 ; textSelector:inst10|score_character[0]              ; GND                                    ; yes                    ;
+; textSelector:inst10|lives_character[0]              ; GND                                    ; yes                    ;
 ; textSelector:inst10|score_character[1]              ; GND                                    ; yes                    ;
+; textSelector:inst10|lives_character[1]              ; GND                                    ; yes                    ;
 ; textSelector:inst10|score_character[2]              ; GND                                    ; yes                    ;
+; textSelector:inst10|lives_character[2]              ; GND                                    ; yes                    ;
+; textSelector:inst10|lives_character[3]              ; GND                                    ; yes                    ;
 ; textSelector:inst10|score_character[3]              ; GND                                    ; yes                    ;
+; textSelector:inst10|current_score_digit[13]         ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_score_digit[12]         ; textSelector:inst10|char_address       ; yes                    ;
 ; textSelector:inst10|current_score_digit[11]         ; textSelector:inst10|char_address       ; yes                    ;
 ; textSelector:inst10|current_score_digit[10]         ; textSelector:inst10|char_address       ; yes                    ;
 ; textSelector:inst10|current_score_digit[9]          ; textSelector:inst10|char_address       ; yes                    ;
@@ -422,9 +479,12 @@ Encoding Type:  One-Hot
 ; textSelector:inst10|current_score_digit[2]          ; textSelector:inst10|char_address       ; yes                    ;
 ; textSelector:inst10|current_score_digit[1]          ; textSelector:inst10|char_address       ; yes                    ;
 ; textSelector:inst10|current_score_digit[0]          ; textSelector:inst10|char_address       ; yes                    ;
-; textSelector:inst10|current_score_digit[13]         ; textSelector:inst10|char_address       ; yes                    ;
-; textSelector:inst10|current_score_digit[12]         ; textSelector:inst10|char_address       ; yes                    ;
-; Number of user-specified and inferred latches = 66  ;                                        ;                        ;
+; textSelector:inst10|current_lives_digit[0]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_lives_digit[1]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_lives_digit[2]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_lives_digit[3]          ; textSelector:inst10|char_address       ; yes                    ;
+; textSelector:inst10|current_lives_digit[4]          ; textSelector:inst10|char_address       ; yes                    ;
+; Number of user-specified and inferred latches = 75  ;                                        ;                        ;
 +-----------------------------------------------------+----------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -493,12 +553,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 246   ;
+; Total registers                              ; 263   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 38    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 195   ;
+; Number of registers using Clock Enable       ; 207   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -522,24 +582,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; 6       ;
 ; random_number_gen:inst8|current_state[0] ; 22      ;
 ; MOUSE:inst5|send_char                    ; 3       ;
-; bouncy_ball:inst3|cloud_motion[0]        ; 11      ;
-; bouncy_ball:inst3|current_score[10]      ; 13      ;
+; bouncy_ball:inst3|cloud_motion[0]        ; 15      ;
 ; bouncy_ball:inst3|current_score[9]       ; 13      ;
 ; bouncy_ball:inst3|current_score[8]       ; 13      ;
-; bouncy_ball:inst3|current_score[4]       ; 14      ;
 ; bouncy_ball:inst3|current_score[13]      ; 12      ;
+; bouncy_ball:inst3|current_score[10]      ; 13      ;
+; bouncy_ball:inst3|current_score[4]       ; 14      ;
+; bouncy_ball:inst3|current_lives[2]       ; 13      ;
 ; MOUSE:inst5|SHIFTOUT[3]                  ; 1       ;
 ; bouncy_ball:inst3|score_time_buffer[3]   ; 2       ;
 ; bouncy_ball:inst3|score_time_buffer[1]   ; 2       ;
-; bouncy_ball:inst3|score_time_buffer[4]   ; 4       ;
-; bouncy_ball:inst3|score_time_buffer[5]   ; 4       ;
-; bouncy_ball:inst3|score_time_buffer[6]   ; 4       ;
-; bouncy_ball:inst3|score_time_buffer[7]   ; 4       ;
+; bouncy_ball:inst3|score_time_buffer[4]   ; 3       ;
+; bouncy_ball:inst3|score_time_buffer[5]   ; 3       ;
+; bouncy_ball:inst3|score_time_buffer[6]   ; 3       ;
+; bouncy_ball:inst3|score_time_buffer[7]   ; 3       ;
+; bouncy_ball:inst3|current_lives[5]       ; 3       ;
+; bouncy_ball:inst3|current_lives[6]       ; 3       ;
+; bouncy_ball:inst3|collision_buffer[3]    ; 2       ;
+; bouncy_ball:inst3|collision_buffer[1]    ; 2       ;
+; bouncy_ball:inst3|collision_buffer[4]    ; 3       ;
+; bouncy_ball:inst3|collision_buffer[5]    ; 3       ;
+; bouncy_ball:inst3|collision_buffer[6]    ; 3       ;
+; bouncy_ball:inst3|collision_buffer[7]    ; 3       ;
 ; MOUSE:inst5|SHIFTOUT[5]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[6]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                  ; 1       ;
-; Total number of inverted registers = 31  ;         ;
+; Total number of inverted registers = 40  ;         ;
 +------------------------------------------+---------+
 
 
@@ -548,21 +617,27 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_row[2]              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[1]                  ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[7]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[8]     ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[0]                  ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_row[5]              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[9]                  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[4]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[0]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[2]     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[8]                  ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[5]                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[9]               ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[0]               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[8]               ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[0]          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[5]      ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[1]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[8] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[1] ;
 ; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[5] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[5]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]     ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]     ;
-; 27:1               ; 3 bits    ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[2]        ;
+; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[2]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -884,7 +959,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3 ;
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod7 ;
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
 +------------------------+----------------+--------------------------------------------+
@@ -896,6 +971,167 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
 ; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div5 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHD             ; 10             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod6 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div4 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod4 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod5 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div3 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHD             ; 4              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                    ;
+; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_m3m ; Untyped                                    ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
@@ -934,14 +1170,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
 +------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_WIDTHN             ; 5              ; Untyped                                    ;
+; LPM_WIDTHD             ; 10             ; Untyped                                    ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                    ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                    ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
@@ -957,14 +1193,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
 +------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHN             ; 10             ; Untyped                                    ;
 ; LPM_WIDTHD             ; 7              ; Untyped                                    ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                    ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                    ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
@@ -980,14 +1216,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
 +------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_WIDTHN             ; 5              ; Untyped                                    ;
+; LPM_WIDTHD             ; 5              ; Untyped                                    ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                    ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                                    ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
@@ -1003,14 +1239,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
 +------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
+; LPM_WIDTHN             ; 5              ; Untyped                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                    ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                    ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_82m ; Untyped                                    ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
@@ -1026,14 +1262,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+--------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                       ;
 +------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
+; LPM_WIDTHN             ; 7              ; Untyped                                    ;
 ; LPM_WIDTHD             ; 4              ; Untyped                                    ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
 ; LPM_PIPELINE           ; 0              ; Untyped                                    ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_4am ; Untyped                                    ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
@@ -1069,43 +1305,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 246                         ;
+; arriav_ff             ; 263                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 122                         ;
+;     ENA               ; 134                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 10                          ;
 ;     SLD               ; 7                           ;
-;     plain             ; 33                          ;
+;     plain             ; 38                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1838                        ;
-;     arith             ; 629                         ;
-;         0 data inputs ; 93                          ;
-;         1 data inputs ; 116                         ;
-;         2 data inputs ; 72                          ;
-;         3 data inputs ; 181                         ;
-;         4 data inputs ; 167                         ;
+; arriav_lcell_comb     ; 2180                        ;
+;     arith             ; 773                         ;
+;         0 data inputs ; 121                         ;
+;         1 data inputs ; 130                         ;
+;         2 data inputs ; 90                          ;
+;         3 data inputs ; 223                         ;
+;         4 data inputs ; 209                         ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 1147                        ;
+;     normal            ; 1296                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 411                         ;
-;         3 data inputs ; 225                         ;
-;         4 data inputs ; 169                         ;
-;         5 data inputs ; 118                         ;
-;         6 data inputs ; 214                         ;
-;     shared            ; 59                          ;
-;         0 data inputs ; 5                           ;
-;         1 data inputs ; 41                          ;
-;         2 data inputs ; 13                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 496                         ;
+;         3 data inputs ; 253                         ;
+;         4 data inputs ; 176                         ;
+;         5 data inputs ; 136                         ;
+;         6 data inputs ; 224                         ;
+;     shared            ; 108                         ;
+;         0 data inputs ; 26                          ;
+;         1 data inputs ; 65                          ;
+;         2 data inputs ; 17                          ;
 ; boundary_port         ; 36                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 15.88                       ;
+; Average LUT depth     ; 14.94                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1114,7 +1350,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1124,7 +1360,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 20:27:05 2024
+    Info: Processing started: Sun May 19 21:51:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1141,7 +1377,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file minipro
     Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
     Info (12023): Found entity 1: char_rom File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 16
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 17
     Info (12023): Found entity 1: bouncy_ball File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
@@ -1168,7 +1404,7 @@ Warning (12019): Can't analyze file -- file ../pipe.vhd is missing
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/pipes.bdf
     Info (12023): Found entity 1: pipes
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: textSelector-Behaviour File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 16
+    Info (12022): Found design unit 1: textSelector-Behaviour File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 17
     Info (12023): Found entity 1: textSelector File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file random_number_gen.vhd
     Info (12022): Found design unit 1: random_number_gen-LFSR_BEHAVIOR File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 11
@@ -1242,77 +1478,76 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(24): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(25): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(34): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 34
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(39): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 39
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(46): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 46
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(51): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 51
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(58): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 58
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(63): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 63
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(67): object "prev_allow_score_update" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(184): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 184
-Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
-Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
-Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
-Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
-Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
-Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(25): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(26): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(29): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 29
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(35): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(40): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 40
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(47): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(52): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 52
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(59): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 59
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(64): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(180): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 180
+Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(123) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
+Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(109) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(96) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
+Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
+Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
@@ -1341,38 +1576,65 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "textSelector" for hierarchy "textSelector:inst10"
-Info (10041): Inferred latch for "current_score_digit[0]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[1]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[2]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[3]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[4]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[5]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[6]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[7]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[8]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[9]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[10]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[11]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[12]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "current_score_digit[13]" at text.vhd(45) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (10041): Inferred latch for "score_character[0]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
-Info (10041): Inferred latch for "score_character[1]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
-Info (10041): Inferred latch for "score_character[2]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
-Info (10041): Inferred latch for "score_character[3]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
-Info (10041): Inferred latch for "score_character[4]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
-Info (10041): Inferred latch for "score_character[5]" at text.vhd(28) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 28
+Info (10041): Inferred latch for "current_score_digit[0]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[1]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[2]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[3]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[4]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[5]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[6]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[7]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[8]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[9]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[10]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[11]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[12]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[13]" at text.vhd(88) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "score_character[0]" at text.vhd(72) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[1]" at text.vhd(72) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[2]" at text.vhd(72) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[3]" at text.vhd(72) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[4]" at text.vhd(72) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[5]" at text.vhd(72) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "current_lives_digit[0]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[1]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[2]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[3]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[4]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[5]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[6]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[7]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[8]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[9]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[10]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[11]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[12]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[13]" at text.vhd(53) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "lives_character[0]" at text.vhd(38) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[1]" at text.vhd(38) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[2]" at text.vhd(38) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[3]" at text.vhd(38) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[4]" at text.vhd(38) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[5]" at text.vhd(38) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
 Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
-Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 48
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 48
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 54
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 51
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod3" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
+Info (278001): Inferred 14 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod7" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div5" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod6" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div4" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod4" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod5" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod7" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod7" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1383,8 +1645,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_p2f.tdf
     Info (12023): Found entity 1: alt_u_div_p2f File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div2" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div5" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div5" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1395,14 +1657,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
     Info (12023): Found entity 1: alt_u_div_g2f File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 48
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod2" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 48
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod6" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod6" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 48
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div1" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 48
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div4" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div4" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1413,20 +1675,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
     Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 54
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod0" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 54
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod4" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod4" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 51
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod1" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod5" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod5" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 51
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div0" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div3" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1437,42 +1699,120 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
     Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod3" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod3" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "14"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m3m.tdf
+    Info (12023): Found entity 1: lpm_divide_m3m File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod2" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod2" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
+    Info (12023): Found entity 1: lpm_divide_i3m File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_1nh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_82f.tdf
+    Info (12023): Found entity 1: alt_u_div_82f File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div1" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod0" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
+    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
+    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod1" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod1" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
+    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
+    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div0" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div0" with the following parameter: File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4am.tdf
+    Info (12023): Found entity 1: lpm_divide_4am File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
+    Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf Line: 22
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[7]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[7]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[6]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[6]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[5]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[5]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[4]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[4]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[3]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[3]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[2]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[2]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[1]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[1]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[0]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[0]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[7]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[7]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[6]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[6]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[5]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[5]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[4]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[4]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[3]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[3]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[2]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[2]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[1]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[1]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[0]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[0]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 109
+Warning (13012): Latch textSelector:inst10|current_score_digit[13] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[9] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[8] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[7] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[6] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[5] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[4] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[3] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[2] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[1] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[0] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[6] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[13] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
+Warning (13012): Latch textSelector:inst10|current_score_digit[12] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[12] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
+Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[9] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[8] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[7] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[6] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[5] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[4] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[3] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[2] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[1] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_score_digit[0] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_lives_digit[0] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_lives_digit[1] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_lives_digit[2] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_lives_digit[3] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+Warning (13012): Latch textSelector:inst10|current_lives_digit[4] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -1511,17 +1851,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 1950 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2292 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1905 logic cells
+    Info (21061): Implemented 2247 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 4942 megabytes
-    Info: Processing ended: Sun May 19 20:27:19 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
+    Info: Peak virtual memory: 4960 megabytes
+    Info: Processing ended: Sun May 19 21:51:27 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:26
 
 

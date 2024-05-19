@@ -10,7 +10,8 @@ ENTITY bouncy_ball IS
         pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  random_number				: IN std_logic_vector(7 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic;
-		  score 							: OUT integer RANGE 10000 DOWNTO 0);		
+		  score 							: OUT integer RANGE 10000 DOWNTO 0;
+		  lives 							: OUT integer RANGE 30 DOWNTO 0);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -64,14 +65,18 @@ SiGNAL bottom_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VEC
 
 
 SIGNAL current_score : integer RANGE 10000 DOWNTO 0;
-SIGNAL allow_score_update, prev_allow_score_update : std_logic;
-SIGNAL score_time_buffer : integer RANGE 511 DOWNTO 0 := 250; 
+SIGNAL allow_score_update : std_logic;
+SIGNAL score_time_buffer : integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
+
+SIGNAL current_lives : integer RANGE 100 DOWNTO 0;
 SIGNAL collision : std_logic := '0';
 SIGNAL game_running : std_logic := '0';
+SIGNAL collision_buffer : integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
 
 BEGIN
 
 score <= current_score;
+lives <= current_lives;
 
 size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
@@ -151,31 +156,22 @@ Blue <=  '1' when ShowText = '1' else
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			'1';
 
--------------------------
--- CHECK FOR COLLISION --
--------------------------
-	
-
---collision <= '1' when ((ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos) or 
---			
---	(ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos) or 
---		
---	(ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos)) else
+---------------------------
+---- CHECK FOR COLLISION --
+---------------------------
 --	
+--collision <= '1' when (((ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos) or 
+--	(ball_x_pos + size  <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
+--	(ball_y_pos <= top_cloud1_y_pos + top_cloud1_height or bottom_cloud1_y_pos - bottom_cloud1_height <= ball_y_pos + size)) or 
+--		
+--	(((ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos) or 
+--	(ball_x_pos + size  <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos)) and 	 	
+--	(ball_y_pos <= top_cloud2_y_pos + top_cloud2_height or bottom_cloud2_y_pos - bottom_cloud2_height <= ball_y_pos + size)) or 
+--		
+--	(((ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos) or 
+--	(ball_x_pos + size  <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
+--	(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) else
 --	'0';
-	
-collision <= '1' when (((ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos) or 
-	(ball_x_pos + size  <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
-	(ball_y_pos <= top_cloud1_y_pos + top_cloud1_height or bottom_cloud1_y_pos - bottom_cloud1_height <= ball_y_pos + size)) or 
-		
-	(((ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos) or 
-	(ball_x_pos + size  <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos)) and 	 	
-	(ball_y_pos <= top_cloud2_y_pos + top_cloud2_height or bottom_cloud2_y_pos - bottom_cloud2_height <= ball_y_pos + size)) or 
-		
-	(((ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos) or 
-	(ball_x_pos + size  <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
-	(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) else
-	'0';
 
 	
 Move_Ball: process (vert_sync)
@@ -266,7 +262,6 @@ begin
 		else
 				allow_score_update <= '0';
 		end if;
-		prev_allow_score_update <= allow_score_update;
 		
 		if (cloud_motion_integer <= score_time_buffer - cloud_motion_integer) then
 			score_time_buffer <= score_time_buffer - cloud_motion_integer;
@@ -288,34 +283,39 @@ begin
 		-------------------------
 		-- CHECK FOR COLLISION --
 		-------------------------
+	
+		if (((ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos) or 
+			(ball_x_pos + size  <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
+			(ball_y_pos <= top_cloud1_y_pos + top_cloud1_height or bottom_cloud1_y_pos - bottom_cloud1_height <= ball_y_pos + size)) or 
+				
+			(((ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos) or 
+			(ball_x_pos + size  <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos)) and 	 	
+			(ball_y_pos <= top_cloud2_y_pos + top_cloud2_height or bottom_cloud2_y_pos - bottom_cloud2_height <= ball_y_pos + size)) or 
+				
+			(((ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos) or 
+			(ball_x_pos + size  <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
+			(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) then
+			collision <= '1';
+		else
+			collision <= '0';
+		end if;
 		
---		if (((ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - '0' & cloud_drawing_width <= ball_x_pos) or 
---		   (ball_x_pos + size  <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - '0' & cloud_drawing_width <= ball_x_pos)) and 		
---			(ball_y_pos <= top_cloud1_y_pos + top_cloud1_height or bottom_cloud1_y_pos - bottom_cloud1_height <= ball_y_pos + size)) or 
---				
---			(((ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - '0' & cloud_drawing_width <= ball_x_pos) or 
---		   (ball_x_pos + size  <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - '0' & cloud_drawing_width <= ball_x_pos)) and 	 	
---			(ball_y_pos <= top_cloud2_y_pos + top_cloud2_height or bottom_cloud2_y_pos - bottom_cloud2_height <= ball_y_pos + size)) or 
---				
---			(((ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - '0' & cloud_drawing_width <= ball_x_pos) or 
---		   (ball_x_pos + size  <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - '0' & cloud_drawing_width <= ball_x_pos)) and 		
---			(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) then
---				collision <= '1';
---		else
---				collision <= '0';
---		end if;
+		if (cloud_motion_integer <= collision_buffer - cloud_motion_integer) then
+			collision_buffer <= collision_buffer - cloud_motion_integer;
+		end if;
 
---		if (ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - '0' & cloud_drawing_width <= ball_x_pos) or 
---				
---			(ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - '0' & cloud_drawing_width <= ball_x_pos) or 
---				
---			(ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - '0' & cloud_drawing_width <= ball_x_pos) then
---				collision <= '1';
---		else
---				collision <= '0';
---		end if;
 		
-		
+		-- If it is not touching then the score is updated by +1
+		if (collision_buffer <= cloud_motion_integer and collision = '1') then
+			-- Updates Score
+			if (current_lives = 0) then
+				current_lives <= 30;
+			else
+				current_lives <= current_lives - 1;
+				collision_buffer <= cloud_inital_spacing;
+			-- when (allow_score_update'event and allow_score_update = '1')
+			end if;
+		end if;
 		
 		-------------------------
 		-- UPDATING GAME SPEED --
