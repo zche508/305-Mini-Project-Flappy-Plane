@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Sun May 19 15:42:57 2024
+Sun May 19 17:51:04 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 19 15:42:57 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 19 17:51:04 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -242,14 +242,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 998                          ;
+; Estimate of Logic utilization (ALMs needed) ; 994                          ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 1795                         ;
+; Combinational ALUT usage for logic          ; 1789                         ;
 ;     -- 7 input functions                    ; 3                            ;
-;     -- 6 input functions                    ; 190                          ;
-;     -- 5 input functions                    ; 114                          ;
-;     -- 4 input functions                    ; 322                          ;
-;     -- <=3 input functions                  ; 1166                         ;
+;     -- 6 input functions                    ; 187                          ;
+;     -- 5 input functions                    ; 120                          ;
+;     -- 4 input functions                    ; 316                          ;
+;     -- <=3 input functions                  ; 1163                         ;
 ;                                             ;                              ;
 ; Dedicated logic registers                   ; 246                          ;
 ;                                             ;                              ;
@@ -264,7 +264,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; MOUSE:inst5|MOUSE_CLK_FILTER ;
 ; Maximum fan-out                             ; 93                           ;
-; Total fan-out                               ; 6970                         ;
+; Total fan-out                               ; 6949                         ;
 ; Average fan-out                             ; 3.28                         ;
 +---------------------------------------------+------------------------------+
 
@@ -274,12 +274,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 1795 (1)            ; 246 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 1789 (1)            ; 246 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst2|                       ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 388 (388)           ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |bouncy_ball:inst3|                    ; 382 (382)           ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
@@ -509,14 +509,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 7       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 10      ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 9       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 11      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 5       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 9       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 10      ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 9       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 11      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[4] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 5       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; 5       ;
@@ -1079,7 +1079,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 7                           ;
 ;     plain             ; 33                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1798                        ;
+; arriav_lcell_comb     ; 1792                        ;
 ;     arith             ; 629                         ;
 ;         0 data inputs ; 93                          ;
 ;         1 data inputs ; 116                         ;
@@ -1088,14 +1088,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 167                         ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 1107                        ;
+;     normal            ; 1101                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 407                         ;
-;         3 data inputs ; 231                         ;
-;         4 data inputs ; 155                         ;
-;         5 data inputs ; 114                         ;
-;         6 data inputs ; 190                         ;
+;         3 data inputs ; 228                         ;
+;         4 data inputs ; 149                         ;
+;         5 data inputs ; 120                         ;
+;         6 data inputs ; 187                         ;
 ;     shared            ; 59                          ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 41                          ;
@@ -1105,7 +1105,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 16.05                       ;
+; Average LUT depth     ; 16.06                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1124,7 +1124,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 15:42:43 2024
+    Info: Processing started: Sun May 19 17:50:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1243,75 +1243,76 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
 Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(24): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(27): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 27
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(33): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(38): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 38
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(45): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 45
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(50): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 50
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(57): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 57
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(62): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 62
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(66): object "prev_allow_score_update" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 66
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(183): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 183
-Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(117) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 117
-Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(111) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
-Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(103) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(97) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 97
-Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(90) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 90
-Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
-Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(84) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 84
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(25): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(34): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(39): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 39
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(46): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 46
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(51): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 51
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(58): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 58
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(63): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 63
+Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(67): object "prev_allow_score_update" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(184): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 184
+Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(118) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(112) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 112
+Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(104) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(98) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 98
+Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(91) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 91
+Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
+Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(85) File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 85
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
@@ -1437,14 +1438,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
     Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf Line: 22
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[7]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[7]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[6]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[6]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[5]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[5]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[4]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[4]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[3]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[3]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[2]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[2]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[1]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[1]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
-    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[0]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[0]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 103
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[7]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[7]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[6]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[6]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[5]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[5]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[4]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[4]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[3]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[3]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[2]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[2]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[1]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[1]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
+    Info (13026): Duplicate LATCH primitive "bouncy_ball:inst3|bottom_cloud2_height[0]" merged with LATCH primitive "bouncy_ball:inst3|top_cloud2_height[0]" File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
 Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 45
@@ -1510,17 +1511,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: f:/quartus/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 1910 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1904 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1865 logic cells
+    Info (21061): Implemented 1859 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 4944 megabytes
-    Info: Processing ended: Sun May 19 15:42:57 2024
-    Info: Elapsed time: 00:00:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Sun May 19 17:51:04 2024
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:24
 
 
