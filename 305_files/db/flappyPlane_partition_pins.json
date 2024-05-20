@@ -96,11 +96,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "key[1]",
-					"strict" : false
-				},
-				{
-					"name" : "key[0]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
@@ -141,6 +137,14 @@
 				},
 				{
 					"name" : "sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "key[0]",
+					"strict" : false
+				},
+				{
+					"name" : "key[1]",
 					"strict" : false
 				}
 			]

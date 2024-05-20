@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue May 14 10:25:50 2024
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Fitter Status : Successful - Mon May 20 04:20:17 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : flappyPlane
 Top-level Entity Name : toplevel
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 234 / 18,480 ( 1 % )
-Total registers : 215
+Logic utilization (in ALMs) : 1,211 / 18,480 ( 7 % )
+Total registers : 280
 Total pins : 36 / 224 ( 16 % )
 Total virtual pins : 0
 Total block memory bits : 4,096 / 3,153,920 ( < 1 % )
