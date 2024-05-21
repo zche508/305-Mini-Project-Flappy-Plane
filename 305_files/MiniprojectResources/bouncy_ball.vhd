@@ -5,7 +5,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY bouncy_ball IS
-	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
+	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText, showHeart: IN std_logic;
 	  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 	  random_number				: IN std_logic_vector(8 DOWNTO 0);
 	  red, green, blue 			: OUT std_logic;
@@ -142,7 +142,8 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 --Blue <= not ball_on;
 
 
-Red <=	'1' when ShowText = '1' else 
+Red <=	'1' when ShowText = '1' else
+			'1' when showHeart = '1' else 
 			'1' when ball_on = '1' else
 			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -150,12 +151,14 @@ Red <=	'1' when ShowText = '1' else
 			'0';
 			
 Green <= '1' when ShowText = '1' else 
+			'1' when showHeart = '1' else 
 			'0' when ball_on = '1' else
 			'1' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			'1'; 
 			
 Blue <=  '1' when ShowText = '1' else 
+			'1' when showHeart = '1' else 
 			'0' when ball_on = '1' else
 			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
