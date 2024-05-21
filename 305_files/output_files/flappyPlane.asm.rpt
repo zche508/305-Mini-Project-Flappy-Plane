@@ -1,6 +1,6 @@
 Assembler report for flappyPlane
-Mon May 20 04:20:24 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Tue May 21 13:28:34 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.sof
-  6. Assembler Device Options: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.pof
+  5. Assembler Device Options: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.sof
+  6. Assembler Device Options: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 20 04:20:24 2024 ;
+; Assembler Status      ; Successful - Tue May 21 13:28:34 2024 ;
 ; Revision Name         ; flappyPlane                           ;
 ; Top-level Entity Name ; toplevel                              ;
 ; Family                ; Cyclone V                             ;
@@ -53,35 +53,35 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                            ;
-+----------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                            ;
-+----------------------------------------------------------------------------------------------------------------------+
-; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.sof ;
-; C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.pof ;
-+----------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                      ;
++------------------------------------------------------------------------------------------------+
+; File Name                                                                                      ;
++------------------------------------------------------------------------------------------------+
+; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.sof ;
+; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.pof ;
++------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.sof ;
-+----------------+-------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                       ;
-+----------------+-------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x007B21B5                                                                                                                    ;
-; Checksum       ; 0x007B21B5                                                                                                                    ;
-+----------------+-------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.sof ;
++----------------+---------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                 ;
++----------------+---------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x007C618A                                                                                              ;
+; Checksum       ; 0x007C618A                                                                                              ;
++----------------+---------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Cino/Documents/COMPSYS305/FLAPPY_PLANE/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.pof ;
-+--------------------+---------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                   ;
-+--------------------+---------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode      ; 0x00000000                                                                                                                ;
-; Checksum           ; 0x74733F68                                                                                                                ;
-; Compression Ratio  ; 3                                                                                                                         ;
-+--------------------+---------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.pof ;
++--------------------+-----------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                             ;
++--------------------+-----------------------------------------------------------------------------------------------------+
+; JTAG usercode      ; 0x00000000                                                                                          ;
+; Checksum           ; 0x74618543                                                                                          ;
+; Compression Ratio  ; 3                                                                                                   ;
++--------------------+-----------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -89,15 +89,15 @@ refer to the applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 20 04:20:19 2024
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Tue May 21 13:28:31 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Mon May 20 04:20:24 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Tue May 21 13:28:34 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -76,10 +76,27 @@ SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing;
 
 SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
 
+-- trying code for toolbox
+SIGNAL toolbox_on             : std_logic;
+SIGNAL toolbox_size 				: std_logic_vector(9 DOWNTO 0);
+constant TOOLBOX_WIDTH        : integer := 10; -- Adjust as needed
+constant TOOLBOX_HEIGHT       : integer := 10; -- Adjust as needed
+constant TOOLBOX_SPEED        : integer := 1; -- Adjust as needed
+SIGNAL toolbox_pos_x			   : std_logic_vector(7 DOWNTO 0):= (others => '0');
+SiGNAL toolbox_pos_y				: std_logic_vector(7 DOWNTO 0):= (others => '0');
+
 BEGIN
 
 score <= current_score;
 lives <= current_lives;
+
+--toolbox visible
+toolbox_size <= CONV_STD_LOGIC_VECTOR(10,10);
+--toolbox_pos_x <= CONV_STD_LOGIC_VECTOR(20, 11);
+toolbox_on <= '1' when ( ('0' & toolbox_pos_x <= '0' & pixel_column + toolbox_size) and ('0' & pixel_column <= '0' & toolbox_pos_x + toolbox_size) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & toolbox_pos_y <= pixel_row + toolbox_size) and ('0' & pixel_row <= toolbox_pos_y + toolbox_size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';
+------------------
 
 size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
@@ -143,6 +160,7 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 
 
 Red <=	'1' when ShowText = '1' else 
+			'0' when toolbox_on = '1' else
 			'1' when ball_on = '1' else
 			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -150,12 +168,14 @@ Red <=	'1' when ShowText = '1' else
 			'0';
 			
 Green <= '1' when ShowText = '1' else 
+			'0' when toolbox_on = '1' else
 			'0' when ball_on = '1' else
 			'1' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			'1'; 
 			
 Blue <=  '1' when ShowText = '1' else 
+			'1' when toolbox_on = '1' else
 			'0' when ball_on = '1' else
 			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -265,6 +285,26 @@ begin
 		else
 			bottom_cloud3_x_pos <= bottom_cloud3_x_pos + cloud_motion;
 		end if;
+		
+		-----------------------------------------------------------------------------------------------
+		-- code for toolbox
+		
+		--if (toolbox_pos_x <= CONV_STD_LOGIC_VECTOR(0, 11)) then
+			--toolbox_pos_x <= CONV_STD_LOGIC_VECTOR(10, 11);
+		--else
+			--toolbox_pos_x <= toolbox_pos_x + cloud_motion;
+		--end if;
+		-- Move the toolbox horizontally
+		  toolbox_pos_x <= toolbox_pos_x + TOOLBOX_SPEED;
+
+		  -- Check for collision with the bird
+		  if (toolbox_pos_x >= ball_x_pos and toolbox_pos_x <= ball_x_pos + TOOLBOX_WIDTH) and
+			  (toolbox_pos_y >= ball_y_pos and toolbox_pos_y <= ball_y_pos + TOOLBOX_HEIGHT) then
+				current_lives <= current_lives + 1;
+		  else
+				current_lives <= 31;
+		  end if;
+		  ---------------------------------------------------------------------------------------------
 		
 		--------------------
 		-- UPDATING SCORE --
