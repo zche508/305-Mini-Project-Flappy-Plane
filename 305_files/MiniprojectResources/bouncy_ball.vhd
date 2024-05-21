@@ -76,6 +76,7 @@ SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing;
 
 SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
 
+SIGNAL prev_mb1 : std_logic;
 BEGIN
 
 score <= current_score;
@@ -195,34 +196,56 @@ Blue <=  '1' when ShowText = '1' else
 --	(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) else
 --	'0';
 
-	
-Move_Ball: process (vert_sync)
+
+move_plane: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync) and game_running = '1') then
-
-		-------------------------------
-		-- CHECKING FOR MOUSE CLICKS --
-		-------------------------------
+	if (rising_edge(vert_sync)) then
 		
-		if (mb1 = '1') then
-			ball_y_motion <= - CONV_STD_LOGIC_VECTOR(8,10);
-			if(ball_y_pos <= size + CONV_STD_LOGIC_VECTOR(8,10)) then
-				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-			end if;
-		else
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);
-			if ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size - CONV_STD_LOGIC_VECTOR(8,10)) then 		-- bottom
-				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+--		if (mb1 = '1' and prev_mb1 = '0') then
+--			
+--		elsif (mb1 = '0' and prev_mb1 = '1') then
+--			
+--		end if;
+		
+		
+		-------------------------------
+		---- UPDATES PLANE POSITION ---
+		-------------------------------
+		if (game_running = '1') then
+			if (mb1 = '1' and prev_mb1 = '0') then
+				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(32,10);				--- move plane up when mb1 is clicked
+				if(ball_y_pos <= size + CONV_STD_LOGIC_VECTOR(32,10)) then
+					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+				end if;
+			else
+				ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);				--- stops at the bottom of the screen
+				if ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size - CONV_STD_LOGIC_VECTOR(8,10)) then 		-- bottom
+					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+				end if;
 			end if;
 		end if;
 		
-		----------------------------------------------------
-		-- UPDATING THE NEXT POSITION OF PLANE AND CLOUDS --
-		----------------------------------------------------
-		
-		-- Compute next ball Y position
+		-----------------------------------------
+		-- UPDATING THE NEXT POSITION OF PLANE --
+		-----------------------------------------
 		ball_y_pos <= ball_y_pos + ball_y_motion;
+		
+		prev_mb1 <= mb1;
+
+	end if;
+	
+end process move_plane;
+
+
+clouds: process (vert_sync)
+begin
+	-- Move ball once every vertical sync
+	if (rising_edge(vert_sync) and game_running = '1') then
+		
+		------------------------------------------
+		-- UPDATING THE NEXT POSITION OF CLOUDS --
+		------------------------------------------
 		
 		
 		-- Compute next top_cloud1 x position
@@ -352,7 +375,7 @@ begin
 		end if;
 
 	end if;
-end process Move_Ball;
+end process clouds;
 
 start_game : process(pb1)
 begin
