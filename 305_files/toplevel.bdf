@@ -981,35 +981,35 @@ refer to the applicable agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "red" (rect 0 0 15 12)(font "Arial" ))
-		(text "red" (rect 199 27 211 39)(font "Arial" ))
+		(text "red" (rect 199 27 214 39)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "green" (rect 0 0 27 12)(font "Arial" ))
-		(text "green" (rect 189 43 211 55)(font "Arial" ))
+		(text "green" (rect 189 43 216 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48))
 	)
 	(port
 		(pt 232 64)
 		(output)
 		(text "blue" (rect 0 0 20 12)(font "Arial" ))
-		(text "blue" (rect 195 59 211 71)(font "Arial" ))
+		(text "blue" (rect 195 59 215 71)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64))
 	)
 	(port
 		(pt 232 80)
 		(output)
 		(text "score[13..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "score[13..0]" (rect 162 75 211 87)(font "Arial" ))
+		(text "score[13..0]" (rect 162 75 221 87)(font "Arial" ))
 		(line (pt 232 80)(pt 216 80)(line_width 3))
 	)
 	(port
 		(pt 232 96)
 		(output)
 		(text "lives[4..0]" (rect 0 0 49 12)(font "Arial" ))
-		(text "lives[4..0]" (rect 170 91 211 103)(font "Arial" ))
+		(text "lives[4..0]" (rect 170 91 219 103)(font "Arial" ))
 		(line (pt 232 96)(pt 216 96)(line_width 3))
 	)
 	(drawing
@@ -1019,7 +1019,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect -96 472 168 584)
 	(text "heart" (rect 5 0 29 12)(font "Arial" ))
-	(text "inst11" (rect 8 96 36 113)(font "Intel Clear" ))
+	(text "inst12" (rect 8 96 36 113)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1220,10 +1220,6 @@ refer to the applicable agreement for further details.
 	(pt 850 664)
 )
 (connector
-	(pt -616 224)
-	(pt -616 432)
-)
-(connector
 	(text "pixel_row[9..0]" (rect -440 280 -371 297)(font "Intel Clear" ))
 	(pt -448 296)
 	(pt -352 296)
@@ -1239,10 +1235,6 @@ refer to the applicable agreement for further details.
 	(pt -416 280)
 	(pt -352 280)
 	(bus)
-)
-(connector
-	(pt -616 432)
-	(pt -96 432)
 )
 (connector
 	(pt -104 280)
@@ -1470,7 +1462,42 @@ refer to the applicable agreement for further details.
 	(pt 168 504)
 	(pt 184 504)
 )
+(connector
+	(pt -96 552)
+	(pt -616 552)
+)
+(connector
+	(pt -616 432)
+	(pt -96 432)
+)
+(connector
+	(pt -616 224)
+	(pt -616 432)
+)
+(connector
+	(pt -616 432)
+	(pt -616 552)
+)
+(connector
+	(text "pixel_row[9..4]" (rect -216 488 -147 505)(font "Intel Clear" ))
+	(pt -96 504)
+	(pt -224 504)
+	(bus)
+)
+(connector
+	(text "pixel_row[3..1]" (rect -216 504 -147 521)(font "Intel Clear" ))
+	(pt -96 520)
+	(pt -224 520)
+	(bus)
+)
+(connector
+	(text "pixel_column[3..1]" (rect -216 520 -129 537)(font "Intel Clear" ))
+	(pt -96 536)
+	(pt -224 536)
+	(bus)
+)
 (junction (pt 696 224))
 (junction (pt 664 144))
 (junction (pt 200 224))
 (junction (pt 1032 320))
+(junction (pt -616 432))

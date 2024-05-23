@@ -53,16 +53,16 @@ BEGIN
 		address_aclr_a => "NONE",
 		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
-		init_file => "heart.mif",
+		init_file => "spritesMIF\heart.mif",
 		intended_device_family => "Cyclone III",
 		lpm_hint => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type => "altsyncram",
-		numwords_a => 29,
+		numwords_a => 256, --
 		operation_mode => "ROM",
 		outdata_aclr_a => "NONE",
 		outdata_reg_a => "UNREGISTERED",
-		widthad_a => 9,
-		width_a => 8,
+		widthad_a => 198, -- width of address, same as width in MIF file 2^5 = 32
+		width_a => 6, -- width of data
 		width_byteena_a => 1
 	)
 	PORT MAP (
