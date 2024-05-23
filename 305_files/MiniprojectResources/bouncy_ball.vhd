@@ -24,7 +24,7 @@ SIGNAL ball_y_motion				: std_logic_vector(9 DOWNTO 0);
 SIGNAL cloud_width 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(32,10);
 SIGNAL cloud_drawing_width 	: std_logic_vector(9 DOWNTO 0) := cloud_width(8 DOWNTO 0) & '0';
 SiGNAL cloud_motion 				: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(5,11);
-SiGNAL cloud_motion_integer 	: integer range 31 downto 0 := 5;
+SiGNAL cloud_motion_integer 	: integer RANGE 31 downto 0 := 5;
 SIGNAL cloud_inital_spacing 	: integer RANGE 511 DOWNTO 0 := 250; 
 SIGNAL cloud_inital_height		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(10,10);
 
@@ -64,20 +64,55 @@ SIGNAL bottom_cloud3_height	: std_logic_vector(9 DOWNTO 0);
 SiGNAL bottom_cloud3_x_pos		: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2*cloud_inital_spacing,11);
 SiGNAL bottom_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(479,10);
 
-
+-- SCORE
 SIGNAL current_score 			: integer RANGE 10000 DOWNTO 0;
 SIGNAL allow_score_update 		: std_logic;
 SIGNAL score_time_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
 
+-- LIVES
 SIGNAL current_lives 			: integer RANGE 100 DOWNTO 0;
 SIGNAL collision 					: std_logic := '0';
 SIGNAL game_running 				: std_logic := '0';
+
 SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
-
 SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
-
 SIGNAL prev_mb1 : std_logic;
+
+-- Plane motion
+type motion_array is array (0 to 11) of std_logic_vector(9 DOWNTO 0);
+SIGNAL ball_up_motion : motion_array;
+SIGNAL ball_down_motion : motion_array;
+
+SIGNAL ball_up_motion_counter, prev_ball_up_motion_counter : integer RANGE 11 DOWNTO 0;
+SIGNAL ball_down_motion_counter : integer RANGE 7 DOWNTO 0;
+
+
+
 BEGIN
+
+ball_up_motion(0) <= - CONV_STD_LOGIC_VECTOR(3, 10);
+ball_up_motion(1) <= - CONV_STD_LOGIC_VECTOR(6, 10);
+ball_up_motion(2) <= - CONV_STD_LOGIC_VECTOR(9, 10);
+ball_up_motion(3) <= - CONV_STD_LOGIC_VECTOR(12, 10);
+ball_up_motion(4) <= - CONV_STD_LOGIC_VECTOR(15, 10);
+ball_up_motion(6) <= - CONV_STD_LOGIC_VECTOR(12, 10);
+ball_up_motion(7) <= - CONV_STD_LOGIC_VECTOR(12, 10);
+ball_up_motion(8) <= - CONV_STD_LOGIC_VECTOR(9, 10);
+ball_up_motion(9) <= - CONV_STD_LOGIC_VECTOR(6, 10);
+ball_up_motion(10) <= - CONV_STD_LOGIC_VECTOR(3, 10);
+
+--ball_up_motion(0) <= - CONV_STD_LOGIC_VECTOR(6, 10);
+--ball_up_motion(1) <= - CONV_STD_LOGIC_VECTOR(10, 10);
+--ball_up_motion(2) <= - CONV_STD_LOGIC_VECTOR(16, 10);
+--ball_up_motion(3) <= - CONV_STD_LOGIC_VECTOR(10, 10);
+--ball_up_motion(4) <= - CONV_STD_LOGIC_VECTOR(6, 10);
+
+ball_down_motion(0) <= CONV_STD_LOGIC_VECTOR(0, 10);
+ball_down_motion(1) <= CONV_STD_LOGIC_VECTOR(2, 10);
+ball_down_motion(2) <= CONV_STD_LOGIC_VECTOR(4, 10);
+ball_down_motion(3) <= CONV_STD_LOGIC_VECTOR(6, 10);
+ball_down_motion(4) <= CONV_STD_LOGIC_VECTOR(8, 10);
+
 
 score <= current_score;
 lives <= current_lives;
@@ -196,45 +231,71 @@ Blue <=  '1' when ShowText = '1' else
 --	(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) else
 --	'0';
 
+--mouse_click : process(mb1)
+--begin
+--	if (game_running = '1') then
+--		if (rising_edge(mb1) and mb1 = '1') then
+--			-- Check for mouse clicks
+--			if (mb1 = '1' and prev_mb1 = '0') then
+--				ball_up_motion_counter <= 0;
+--			end if;
+--	end if;
+--
+--
+--end process mouse_click;
+
 
 move_plane: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then
-		
---		if (mb1 = '1' and prev_mb1 = '0') then
---			
---		elsif (mb1 = '0' and prev_mb1 = '1') then
---			
---		end if;
-		
-		
+	if (rising_edge(vert_sync) and vert_sync = '1') then
 		-------------------------------
 		---- UPDATES PLANE POSITION ---
 		-------------------------------
-		if (game_running = '1') then
-			if (mb1 = '1' and prev_mb1 = '0') then
-				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(32,10);				--- move plane up when mb1 is clicked
-				if(ball_y_pos <= size + CONV_STD_LOGIC_VECTOR(32,10)) then
-					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-				end if;
+		
+		-- Check for mouse clicks
+		if (mb1 = '1' and prev_mb1 = '0') then
+			ball_up_motion_counter <= 0;
+		end if;
+			
+			
+		-- Updates the index to change the index of the "motion" of the ball
+		
+		if (ball_down_motion_counter <= 4) then
+			-- motion down case
+			if (ball_y_pos + ball_down_motion(ball_down_motion_counter) < CONV_STD_LOGIC_VECTOR(479,10)) then
+				ball_y_motion <= ball_down_motion(ball_down_motion_counter);
 			else
-				ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);				--- stops at the bottom of the screen
-				if ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size - CONV_STD_LOGIC_VECTOR(8,10)) then 		-- bottom
-					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-				end if;
+				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
+			ball_down_motion_counter <= ball_down_motion_counter + 1;
+		else
+			if (ball_up_motion_counter = 11 and prev_ball_up_motion_counter = 10) then
+				ball_down_motion_counter <= 0;
+			end if;
+		end if;
+		
+		prev_ball_up_motion_counter <= ball_up_motion_counter;
+		if (ball_up_motion_counter <= 10) then
+			-- motion up case
+			if (ball_y_pos + ball_up_motion(ball_up_motion_counter) > size) then
+				ball_y_motion <= ball_up_motion(ball_up_motion_counter);
+			end if;
+			
+			ball_up_motion_counter <= ball_up_motion_counter + 1;
 		end if;
 		
 		-----------------------------------------
 		-- UPDATING THE NEXT POSITION OF PLANE --
 		-----------------------------------------
-		ball_y_pos <= ball_y_pos + ball_y_motion;
+		if ((size + ball_y_pos + ball_y_motion < CONV_STD_LOGIC_VECTOR(479,10)) or (size < ball_y_pos + ball_y_motion)) then
+			ball_y_pos <= ball_y_pos + ball_y_motion;
+		end if;
 		
 		prev_mb1 <= mb1;
 
 	end if;
-	
+
 end process move_plane;
 
 
@@ -368,10 +429,10 @@ begin
 				
 		if (pb1 = '0') then
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(5,11);
-			cloud_motion_integer <= 5;
+			cloud_motion_integer <= 2;
 		elsif (pb2 = '0') then
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(10,11);
-			cloud_motion_integer <= 10;
+			cloud_motion_integer <= 5;
 		end if;
 
 	end if;
