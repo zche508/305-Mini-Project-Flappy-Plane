@@ -25,8 +25,9 @@ SIGNAL cloud_width 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(3
 SIGNAL cloud_drawing_width 	: std_logic_vector(9 DOWNTO 0) := cloud_width(8 DOWNTO 0) & '0';
 SiGNAL cloud_motion 				: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(2,11);
 SiGNAL cloud_motion_integer 	: integer RANGE 31 downto 0 := 2;
-SIGNAL cloud_inital_spacing 	: integer RANGE 511 DOWNTO 0 := 250; 
+SIGNAL cloud_inital_spacing 	: integer RANGE 511 DOWNTO 0 := 250;
 SIGNAL cloud_inital_height		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(10,10);
+SIGNAL cloud_difficulty_spacing 	: integer RANGE 511 DOWNTO 0 := 250;
 
 -- CLOUD 1
 
@@ -425,7 +426,7 @@ begin
 				current_lives <= 30;
 			else
 				current_lives <= current_lives - 1;
-				collision_buffer <= cloud_inital_spacing;
+				collision_buffer <= cloud_difficulty_spacing;
 			end if;
 		end if;
 		
@@ -434,12 +435,15 @@ begin
 		-------------------------
 				
 		if (pb1 = '0') then
+			cloud_difficulty_spacing <= 250;
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(2,11);
 			cloud_motion_integer <= 2;
 		elsif (pb2 = '0') then
+			cloud_difficulty_spacing <= 150;
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(3,11);
 			cloud_motion_integer <= 3;
 		elsif (pb3 = '0') then
+			cloud_difficulty_spacing <= 80;
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(4,11);
 			cloud_motion_integer <= 4;
 		end if;
