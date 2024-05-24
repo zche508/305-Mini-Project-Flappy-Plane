@@ -144,6 +144,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "key[2]",
+					"strict" : false
+				},
+				{
 					"name" : "key[1]",
 					"strict" : false
 				}

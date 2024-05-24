@@ -1,5 +1,5 @@
 Flow report for flappyPlane
-Fri May 24 02:38:09 2024
+Fri May 24 16:10:02 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,25 +40,25 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri May 24 02:38:08 2024       ;
+; Flow Status                     ; Successful - Fri May 24 16:10:02 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,236 / 18,480 ( 7 % )                      ;
-; Total registers                 ; 303                                         ;
-; Total pins                      ; 36 / 224 ( 16 % )                           ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 283                                         ;
+; Total pins                      ; 37                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                 ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
+; Total block memory bits         ; 4,096                                       ;
+; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1 / 4 ( 25 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/24/2024 02:35:51 ;
+; Start date & time ; 05/24/2024 16:09:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; flappyPlane         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 4771263176010.171647495119024          ; --            ; --             ; --             ;
+; COMPILER_SIGNATURE_ID               ; 84084436960953.171652378228484         ; --            ; --             ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --             ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                        ; <None>        ; --             ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation ;
@@ -116,12 +116,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4951 MB             ; 00:00:25                           ;
-; Fitter               ; 00:01:41     ; 1.1                     ; 7392 MB             ; 00:07:54                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4827 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:10     ; 2.2                     ; 5358 MB             ; 00:00:16                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4816 MB             ; 00:00:02                           ;
-; Total                ; 00:02:13     ; --                      ; --                  ; 00:08:42                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4958 MB             ; 00:00:31                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -130,11 +126,7 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-D4OB35U  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-D4OB35U  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-D4OB35U  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-D4OB35U  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-D4OB35U  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -142,10 +134,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
-quartus_fit --read_settings_files=off --write_settings_files=off flappyPlane -c flappyPlane
-quartus_asm --read_settings_files=off --write_settings_files=off flappyPlane -c flappyPlane
-quartus_sta flappyPlane -c flappyPlane
-quartus_eda --read_settings_files=off --write_settings_files=off flappyPlane -c flappyPlane
 
 
 

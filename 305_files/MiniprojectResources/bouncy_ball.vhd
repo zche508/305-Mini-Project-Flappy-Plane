@@ -5,7 +5,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY bouncy_ball IS
-	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
+	PORT(pb1, pb2, pb3, mb1, mb2, clk, vert_sync, showText	: IN std_logic;
 	  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 	  random_number				: IN std_logic_vector(8 DOWNTO 0);
 	  red, green, blue 			: OUT std_logic;
@@ -23,8 +23,8 @@ SIGNAL ball_y_motion				: std_logic_vector(9 DOWNTO 0);
 
 SIGNAL cloud_width 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(32,10);
 SIGNAL cloud_drawing_width 	: std_logic_vector(9 DOWNTO 0) := cloud_width(8 DOWNTO 0) & '0';
-SiGNAL cloud_motion 				: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(5,11);
-SiGNAL cloud_motion_integer 	: integer RANGE 31 downto 0 := 5;
+SiGNAL cloud_motion 				: std_logic_vector(10 DOWNTO 0) := - CONV_STD_LOGIC_VECTOR(2,11);
+SiGNAL cloud_motion_integer 	: integer RANGE 31 downto 0 := 2;
 SIGNAL cloud_inital_spacing 	: integer RANGE 511 DOWNTO 0 := 250; 
 SIGNAL cloud_inital_height		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(10,10);
 
@@ -75,7 +75,7 @@ SIGNAL collision 					: std_logic := '0';
 SIGNAL game_running 				: std_logic := '0';
 
 SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
-SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
+SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(150,10);
 SIGNAL prev_mb1 : std_logic;
 
 -- Plane motion
@@ -96,10 +96,10 @@ ball_up_motion(2) <= - CONV_STD_LOGIC_VECTOR(9, 10);
 ball_up_motion(3) <= - CONV_STD_LOGIC_VECTOR(12, 10);
 ball_up_motion(4) <= - CONV_STD_LOGIC_VECTOR(15, 10);
 ball_up_motion(6) <= - CONV_STD_LOGIC_VECTOR(12, 10);
-ball_up_motion(7) <= - CONV_STD_LOGIC_VECTOR(12, 10);
-ball_up_motion(8) <= - CONV_STD_LOGIC_VECTOR(9, 10);
-ball_up_motion(9) <= - CONV_STD_LOGIC_VECTOR(6, 10);
-ball_up_motion(10) <= - CONV_STD_LOGIC_VECTOR(3, 10);
+ball_up_motion(7) <= - CONV_STD_LOGIC_VECTOR(9, 10);
+ball_up_motion(8) <= - CONV_STD_LOGIC_VECTOR(6, 10);
+ball_up_motion(9) <= - CONV_STD_LOGIC_VECTOR(3, 10);
+ball_up_motion(10) <= - CONV_STD_LOGIC_VECTOR(0, 10);
 
 --ball_up_motion(0) <= - CONV_STD_LOGIC_VECTOR(6, 10);
 --ball_up_motion(1) <= - CONV_STD_LOGIC_VECTOR(10, 10);
@@ -109,9 +109,9 @@ ball_up_motion(10) <= - CONV_STD_LOGIC_VECTOR(3, 10);
 
 ball_down_motion(0) <= CONV_STD_LOGIC_VECTOR(0, 10);
 ball_down_motion(1) <= CONV_STD_LOGIC_VECTOR(2, 10);
-ball_down_motion(2) <= CONV_STD_LOGIC_VECTOR(4, 10);
-ball_down_motion(3) <= CONV_STD_LOGIC_VECTOR(6, 10);
-ball_down_motion(4) <= CONV_STD_LOGIC_VECTOR(8, 10);
+ball_down_motion(2) <= CONV_STD_LOGIC_VECTOR(3, 10);
+ball_down_motion(3) <= CONV_STD_LOGIC_VECTOR(4, 10);
+ball_down_motion(4) <= CONV_STD_LOGIC_VECTOR(6, 10);
 
 
 score <= current_score;
@@ -356,33 +356,34 @@ begin
 		
 		-- Check that the plane is not touching the clouds in the x and y directions
 			-- If it is not touching then the score is updated by +1
-		if ((bottom_cloud1_x_pos <= ball_x_pos and ball_x_pos <= bottom_cloud1_x_pos + '0' & cloud_width and 		
+		if ((bottom_cloud1_x_pos <= ball_x_pos and 
 				top_cloud1_y_pos + top_cloud1_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud1_y_pos - bottom_cloud1_height) or 
 				
-			(bottom_cloud2_x_pos <= ball_x_pos and ball_x_pos <= bottom_cloud2_x_pos + '0' & cloud_width and 
+			(bottom_cloud2_x_pos <= ball_x_pos and
 				top_cloud2_y_pos + top_cloud2_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud2_y_pos - bottom_cloud2_height) or 
 				
-			(bottom_cloud3_x_pos <= ball_x_pos and ball_x_pos <= bottom_cloud3_x_pos + '0' & cloud_width and 
+			(bottom_cloud3_x_pos <= ball_x_pos and
 				top_cloud3_y_pos + top_cloud3_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud3_y_pos - bottom_cloud3_height)) then
 				allow_score_update <= '1';
 		else
 				allow_score_update <= '0';
 		end if;
 		
+		-- As long as the cloud buffer < cloud motion/displacement then it gets reduced
 		if (cloud_motion_integer <= score_time_buffer - cloud_motion_integer) then
 			score_time_buffer <= score_time_buffer - cloud_motion_integer;
 		end if;
 
 		
 		-- If it is not touching then the score is updated by +1
-		if (score_time_buffer <= cloud_motion_integer and allow_score_update = '1') then
+--		if (score_time_buffer <= cloud_motion_integer and allow_score_update = '1') then
+		if (allow_score_update = '1' and score_time_buffer <= cloud_motion_integer) then
 			-- Updates Score
 			if (current_score = 9999) then
 				current_score <= 0;
 			else
 				current_Score <= current_score + 1;
 				score_time_buffer <= cloud_inital_spacing;
-			-- when (allow_score_update'event and allow_score_update = '1')
 			end if;
 		end if;
 		
@@ -411,7 +412,13 @@ begin
 		end if;
 
 		
-		-- If it is not touching then the score is updated by +1
+--		-- If it is not touching then the score is updated by +1
+--		if (pb1 = '0') then
+--			
+--		elsif (pb2 = '1') then
+--			collision_buffer <= 30;
+--		end if;
+		
 		if (collision_buffer <= cloud_motion_integer and collision = '1') then
 			-- Updates Score
 			if (current_lives = 0) then
@@ -419,7 +426,6 @@ begin
 			else
 				current_lives <= current_lives - 1;
 				collision_buffer <= cloud_inital_spacing;
-			-- when (allow_score_update'event and allow_score_update = '1')
 			end if;
 		end if;
 		
@@ -428,11 +434,14 @@ begin
 		-------------------------
 				
 		if (pb1 = '0') then
-			cloud_motion <= - CONV_STD_LOGIC_VECTOR(5,11);
+			cloud_motion <= - CONV_STD_LOGIC_VECTOR(2,11);
 			cloud_motion_integer <= 2;
 		elsif (pb2 = '0') then
-			cloud_motion <= - CONV_STD_LOGIC_VECTOR(10,11);
-			cloud_motion_integer <= 5;
+			cloud_motion <= - CONV_STD_LOGIC_VECTOR(3,11);
+			cloud_motion_integer <= 3;
+		elsif (pb3 = '0') then
+			cloud_motion <= - CONV_STD_LOGIC_VECTOR(4,11);
+			cloud_motion_integer <= 4;
 		end if;
 
 	end if;
