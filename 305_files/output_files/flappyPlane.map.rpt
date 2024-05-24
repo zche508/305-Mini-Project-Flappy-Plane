@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Tue May 21 13:27:19 2024
+Fri May 24 20:56:34 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -67,13 +67,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 21 13:27:19 2024           ;
+; Analysis & Synthesis Status     ; Successful - Fri May 24 20:56:34 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; flappyPlane                                     ;
 ; Top-level Entity Name           ; toplevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 272                                             ;
+; Total registers                 ; 289                                             ;
 ; Total pins                      ; 36                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 4,096                                           ;
@@ -197,66 +197,66 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+--------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                           ; Library ;
-+--------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; BCD_to_7Seg.vhd                      ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd                      ;         ;
-; MiniprojectResources/vga_sync.vhd    ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd    ;         ;
-; MiniprojectResources/mouse.vhd       ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd       ;         ;
-; MiniprojectResources/char_rom.vhd    ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd    ;         ;
-; MiniprojectResources/bouncy_ball.vhd ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd ;         ;
-; DE0_CV_golden_top.v                  ; yes             ; User Verilog HDL File              ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v                  ;         ;
-; toplevel.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/toplevel.bdf                         ;         ;
-; pll/pll_0002.v                       ; yes             ; User Verilog HDL File              ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                       ; pll     ;
-; pll2.vhd                             ; yes             ; User Wizard-Generated File         ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                             ; pll2    ;
-; pll2/pll2_0002.v                     ; yes             ; User Verilog HDL File              ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                     ; pll2    ;
-; text.vhd                             ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd                             ;         ;
-; random_number_gen.vhd                ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd                ;         ;
-; altera_pll.v                         ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                                         ;         ;
-; altsyncram.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
-; stratix_ram_block.inc                ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
-; lpm_mux.inc                          ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
-; lpm_decode.inc                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                       ;         ;
-; aglobal181.inc                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                       ;         ;
-; a_rdenreg.inc                        ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;         ;
-; altrom.inc                           ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
-; altram.inc                           ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
-; altdpram.inc                         ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
-; db/altsyncram_d5g1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf               ;         ;
-; lpm_divide.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                       ;         ;
-; abs_divider.inc                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc                                      ;         ;
-; sign_div_unsign.inc                  ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                  ;         ;
-; db/lpm_divide_65m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_65m.tdf                ;         ;
-; db/sign_div_unsign_9nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf           ;         ;
-; db/alt_u_div_p2f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf                 ;         ;
-; db/lpm_divide_vcm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_vcm.tdf                ;         ;
-; db/sign_div_unsign_5nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf           ;         ;
-; db/alt_u_div_g2f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf                 ;         ;
-; db/lpm_divide_lbm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_lbm.tdf                ;         ;
-; db/sign_div_unsign_rlh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf           ;         ;
-; db/alt_u_div_sve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf                 ;         ;
-; db/lpm_divide_ibm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf                ;         ;
-; db/sign_div_unsign_olh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf           ;         ;
-; db/alt_u_div_mve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf                 ;         ;
-; db/lpm_divide_m3m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf                ;         ;
-; db/lpm_divide_i3m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf                ;         ;
-; db/sign_div_unsign_1nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf           ;         ;
-; db/alt_u_div_82f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf                 ;         ;
-; db/lpm_divide_hbm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf                ;         ;
-; db/sign_div_unsign_nlh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf           ;         ;
-; db/alt_u_div_kve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf                 ;         ;
-; db/lpm_divide_62m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf                ;         ;
-; db/sign_div_unsign_9kh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf           ;         ;
-; db/alt_u_div_ose.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf                 ;         ;
-; db/lpm_divide_82m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf                ;         ;
-; db/sign_div_unsign_dkh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf           ;         ;
-; db/alt_u_div_0te.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf                 ;         ;
-; db/lpm_divide_4am.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf                ;         ;
-; db/sign_div_unsign_akh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf           ;         ;
-; db/alt_u_div_qse.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf                 ;         ;
-+--------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
++--------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                  ; Library ;
++--------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; BCD_to_7Seg.vhd                      ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd                      ;         ;
+; MiniprojectResources/vga_sync.vhd    ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd    ;         ;
+; MiniprojectResources/mouse.vhd       ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd       ;         ;
+; MiniprojectResources/char_rom.vhd    ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd    ;         ;
+; MiniprojectResources/bouncy_ball.vhd ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd ;         ;
+; DE0_CV_golden_top.v                  ; yes             ; User Verilog HDL File              ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v                  ;         ;
+; toplevel.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/toplevel.bdf                         ;         ;
+; pll/pll_0002.v                       ; yes             ; User Verilog HDL File              ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v                       ; pll     ;
+; pll2.vhd                             ; yes             ; User Wizard-Generated File         ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd                             ; pll2    ;
+; pll2/pll2_0002.v                     ; yes             ; User Verilog HDL File              ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v                     ; pll2    ;
+; text.vhd                             ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd                             ;         ;
+; random_number_gen.vhd                ; yes             ; User VHDL File                     ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd                ;         ;
+; altera_pll.v                         ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                                                                                ;         ;
+; altsyncram.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                              ;         ;
+; stratix_ram_block.inc                ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                       ;         ;
+; lpm_mux.inc                          ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                 ;         ;
+; lpm_decode.inc                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                              ;         ;
+; aglobal181.inc                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                              ;         ;
+; a_rdenreg.inc                        ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                               ;         ;
+; altrom.inc                           ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                                                  ;         ;
+; altram.inc                           ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                                                  ;         ;
+; altdpram.inc                         ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                                                ;         ;
+; db/altsyncram_d5g1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf               ;         ;
+; lpm_divide.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                                              ;         ;
+; abs_divider.inc                      ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc                                                                             ;         ;
+; sign_div_unsign.inc                  ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                         ;         ;
+; db/lpm_divide_65m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_65m.tdf                ;         ;
+; db/sign_div_unsign_9nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf           ;         ;
+; db/alt_u_div_p2f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf                 ;         ;
+; db/lpm_divide_vcm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_vcm.tdf                ;         ;
+; db/sign_div_unsign_5nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf           ;         ;
+; db/alt_u_div_g2f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf                 ;         ;
+; db/lpm_divide_lbm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_lbm.tdf                ;         ;
+; db/sign_div_unsign_rlh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf           ;         ;
+; db/alt_u_div_sve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf                 ;         ;
+; db/lpm_divide_ibm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf                ;         ;
+; db/sign_div_unsign_olh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf           ;         ;
+; db/alt_u_div_mve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf                 ;         ;
+; db/lpm_divide_m3m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf                ;         ;
+; db/lpm_divide_i3m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf                ;         ;
+; db/sign_div_unsign_1nh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf           ;         ;
+; db/alt_u_div_82f.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf                 ;         ;
+; db/lpm_divide_hbm.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf                ;         ;
+; db/sign_div_unsign_nlh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf           ;         ;
+; db/alt_u_div_kve.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf                 ;         ;
+; db/lpm_divide_62m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf                ;         ;
+; db/sign_div_unsign_9kh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf           ;         ;
+; db/alt_u_div_ose.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf                 ;         ;
+; db/lpm_divide_82m.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf                ;         ;
+; db/sign_div_unsign_dkh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf           ;         ;
+; db/alt_u_div_0te.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf                 ;         ;
+; db/lpm_divide_4am.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf                ;         ;
+; db/sign_div_unsign_akh.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf           ;         ;
+; db/alt_u_div_qse.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf                 ;         ;
++--------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------+
@@ -264,16 +264,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1252                         ;
+; Estimate of Logic utilization (ALMs needed) ; 1314                         ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 2261                         ;
+; Combinational ALUT usage for logic          ; 2365                         ;
 ;     -- 7 input functions                    ; 3                            ;
-;     -- 6 input functions                    ; 231                          ;
-;     -- 5 input functions                    ; 144                          ;
-;     -- 4 input functions                    ; 401                          ;
-;     -- <=3 input functions                  ; 1482                         ;
+;     -- 6 input functions                    ; 252                          ;
+;     -- 5 input functions                    ; 161                          ;
+;     -- 4 input functions                    ; 410                          ;
+;     -- <=3 input functions                  ; 1539                         ;
 ;                                             ;                              ;
-; Dedicated logic registers                   ; 272                          ;
+; Dedicated logic registers                   ; 289                          ;
 ;                                             ;                              ;
 ; I/O pins                                    ; 36                           ;
 ; Total MLAB memory bits                      ; 0                            ;
@@ -285,9 +285,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst2|vert_sync_out ;
-; Maximum fan-out                             ; 95                           ;
-; Total fan-out                               ; 8500                         ;
-; Average fan-out                             ; 3.25                         ;
+; Maximum fan-out                             ; 112                          ;
+; Total fan-out                               ; 8910                         ;
+; Average fan-out                             ; 3.26                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -296,12 +296,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 2261 (1)            ; 272 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 2365 (1)            ; 289 (0)                   ; 4096              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst2|                       ; 46 (46)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 520 (520)           ; 95 (95)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |bouncy_ball:inst3|                    ; 623 (623)           ; 112 (112)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
@@ -309,7 +309,7 @@ refer to the applicable agreement for further details.
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
 ;    |random_number_gen:inst8|              ; 48 (48)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                             ; random_number_gen   ; work         ;
-;    |textSelector:inst10|                  ; 1523 (211)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
+;    |textSelector:inst10|                  ; 1524 (212)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
 ;       |lpm_divide:Div0|                   ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_4am:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am      ; work         ;
 ;             |sign_div_unsign_akh:divider| ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
@@ -561,12 +561,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 272   ;
+; Total registers                              ; 289   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 219   ;
+; Number of registers using Clock Enable       ; 234   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -576,18 +576,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
-; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 11      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 13      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 12      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 7       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 6       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 12      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 14      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 13      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 8       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 7       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 13      ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 12      ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[4] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; 6       ;
+; bouncy_ball:inst3|toolbox_pos_x[1]       ; 6       ;
+; bouncy_ball:inst3|toolbox_pos_x[9]       ; 5       ;
+; bouncy_ball:inst3|toolbox_pos_x[7]       ; 6       ;
+; bouncy_ball:inst3|toolbox_pos_x[6]       ; 5       ;
+; bouncy_ball:inst3|toolbox_pos_x[5]       ; 5       ;
+; bouncy_ball:inst3|toolbox_pos_x[3]       ; 5       ;
+; bouncy_ball:inst3|toolbox_pos_x[2]       ; 5       ;
 ; random_number_gen:inst8|current_state[0] ; 28      ;
 ; random_number_gen:inst8|current_state[8] ; 12      ;
 ; random_number_gen:inst8|current_state[6] ; 20      ;
@@ -612,14 +619,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bouncy_ball:inst3|collision_buffer[4]    ; 2       ;
 ; bouncy_ball:inst3|collision_buffer[5]    ; 2       ;
 ; bouncy_ball:inst3|collision_buffer[6]    ; 2       ;
-; bouncy_ball:inst3|collision_buffer[7]    ; 2       ;
 ; bouncy_ball:inst3|collision_buffer[3]    ; 2       ;
 ; bouncy_ball:inst3|collision_buffer[1]    ; 2       ;
+; bouncy_ball:inst3|collision_buffer[7]    ; 9       ;
 ; MOUSE:inst5|SHIFTOUT[5]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[6]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                  ; 1       ;
-; Total number of inverted registers = 43  ;         ;
+; Total number of inverted registers = 50  ;         ;
 +------------------------------------------+---------+
 
 
@@ -628,30 +635,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_row[1]              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[8]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[2]      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[0]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|current_lives[1]         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[5]   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[9]                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[5]                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[5]               ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[10]         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[1]      ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[9]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[3]                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[8]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[8]     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|current_lives[3]         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[3]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[3]                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[7]                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[9]               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[8]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[0]          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[3]      ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[7]     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|current_lives[6]         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|current_lives[2]         ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[4]   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[9] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[7] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[4] ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[4] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[2]      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]      ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[1] ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[7] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[5]      ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]     ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]     ;
-; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[0]        ;
+; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[1]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
@@ -1319,32 +1326,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 272                         ;
+; arriav_ff             ; 289                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 146                         ;
+;     ENA               ; 161                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 42                          ;
+;     plain             ; 44                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2264                        ;
-;     arith             ; 823                         ;
-;         0 data inputs ; 125                         ;
-;         1 data inputs ; 166                         ;
-;         2 data inputs ; 94                          ;
+; arriav_lcell_comb     ; 2368                        ;
+;     arith             ; 866                         ;
+;         0 data inputs ; 126                         ;
+;         1 data inputs ; 201                         ;
+;         2 data inputs ; 95                          ;
 ;         3 data inputs ; 229                         ;
 ;         4 data inputs ; 209                         ;
+;         5 data inputs ; 6                           ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 1330                        ;
+;     normal            ; 1391                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 483                         ;
-;         3 data inputs ; 270                         ;
-;         4 data inputs ; 192                         ;
-;         5 data inputs ; 144                         ;
-;         6 data inputs ; 231                         ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 491                         ;
+;         3 data inputs ; 275                         ;
+;         4 data inputs ; 201                         ;
+;         5 data inputs ; 155                         ;
+;         6 data inputs ; 252                         ;
 ;     shared            ; 108                         ;
 ;         0 data inputs ; 26                          ;
 ;         1 data inputs ; 65                          ;
@@ -1354,7 +1362,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 14.52                       ;
+; Average LUT depth     ; 14.07                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1373,42 +1381,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 21 13:27:09 2024
+    Info: Processing started: Fri May 24 20:56:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 12
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 7
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 12
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 16
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 16
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file de0_cv_golden_top.v
-    Info (12023): Found entity 1: DE0_CV_golden_top File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v Line: 54
+    Info (12023): Found entity 1: DE0_CV_golden_top File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/DE0_CV_golden_top.v Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
     Info (12023): Found entity 1: toplevel
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-rtl File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 20
-    Info (12023): Found entity 1: pll File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 11
+    Info (12022): Found design unit 1: pll-rtl File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 20
+    Info (12023): Found entity 1: pll File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: pll_0002 File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v Line: 2
+    Info (12023): Found entity 1: pll_0002 File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll/pll_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file pll2.vhd
-    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 20
-    Info (12023): Found entity 1: pll2 File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 11
+    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 20
+    Info (12023): Found entity 1: pll2 File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll2/pll2_0002.v
-    Info (12023): Found entity 1: pll2_0002 File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 2
+    Info (12023): Found entity 1: pll2_0002 File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file char_block_diagram.bdf
     Info (12023): Found entity 1: char_block_diagram
 Info (12021): Found 1 design units, including 1 entities, in source file mouse_block_diagram.bdf
@@ -1417,22 +1425,27 @@ Warning (12019): Can't analyze file -- file ../pipe.vhd is missing
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/pipes.bdf
     Info (12023): Found entity 1: pipes
 Info (12021): Found 2 design units, including 1 entities, in source file text.vhd
-    Info (12022): Found design unit 1: textSelector-Behaviour File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 17
-    Info (12023): Found entity 1: textSelector File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 7
+    Info (12022): Found design unit 1: textSelector-Behaviour File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 17
+    Info (12023): Found entity 1: textSelector File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file random_number_gen.vhd
-    Info (12022): Found design unit 1: random_number_gen-LFSR_BEHAVIOR File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 11
-    Info (12023): Found entity 1: random_number_gen File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 6
+    Info (12022): Found design unit 1: random_number_gen-LFSR_BEHAVIOR File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 11
+    Info (12023): Found entity 1: random_number_gen File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/tool_box.vhd
-    Info (12022): Found design unit 1: tool_box-behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/tool_box.vhd Line: 16
-    Info (12023): Found entity 1: tool_box File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/tool_box.vhd Line: 6
+    Info (12022): Found design unit 1: tool_box-behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/tool_box.vhd Line: 16
+    Info (12023): Found entity 1: tool_box File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/tool_box.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/home_screen.vhd
+    Info (12022): Found design unit 1: home_screen-behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 16
+    Info (12023): Found entity 1: home_screen File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file home_screen_block_diagram.bdf
+    Info (12023): Found entity 1: home_screen_block_diagram
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst1"
-Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/pll2/pll2_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1494,88 +1507,87 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(24): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(25): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(36): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(41): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 41
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(48): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(53): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 53
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(60): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 60
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(65): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 65
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(77): used explicit default value for signal "cloud_vertical_spacing" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 77
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(86): used explicit default value for signal "toolbox_pos_y" because signal was never assigned a value File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(222): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 222
-Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
-Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
-Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
-Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
-Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
-Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
-Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(24): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(25): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(36): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(41): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 41
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(48): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(53): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 53
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(60): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 60
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(65): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 65
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(77): used explicit default value for signal "cloud_vertical_spacing" because signal was never assigned a value File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(178): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 178
+Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(145) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 145
+Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(139) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 139
+Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(130) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 130
+Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(123) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 123
+Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(116) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 116
+Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
+Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(110) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 110
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 157
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 157
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst9"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "char_rom:inst9|altsyncram:altsyncram_component" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "char_rom:inst9|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
+Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "char_rom:inst9|altsyncram:altsyncram_component" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "char_rom:inst9|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1591,239 +1603,239 @@ Info (12133): Instantiated megafunction "char_rom:inst9|altsyncram:altsyncram_co
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "textSelector" for hierarchy "textSelector:inst10"
-Info (10041): Inferred latch for "current_score_digit[0]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[1]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[2]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[3]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[4]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[5]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[6]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[7]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[8]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[9]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[10]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[11]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[12]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "current_score_digit[13]" at text.vhd(88) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (10041): Inferred latch for "score_character[0]" at text.vhd(72) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
-Info (10041): Inferred latch for "score_character[1]" at text.vhd(72) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
-Info (10041): Inferred latch for "score_character[2]" at text.vhd(72) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
-Info (10041): Inferred latch for "score_character[3]" at text.vhd(72) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
-Info (10041): Inferred latch for "score_character[4]" at text.vhd(72) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
-Info (10041): Inferred latch for "score_character[5]" at text.vhd(72) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
-Info (10041): Inferred latch for "current_lives_digit[0]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[1]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[2]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[3]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[4]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[5]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[6]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[7]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[8]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[9]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[10]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[11]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[12]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "current_lives_digit[13]" at text.vhd(53) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (10041): Inferred latch for "lives_character[0]" at text.vhd(38) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
-Info (10041): Inferred latch for "lives_character[1]" at text.vhd(38) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
-Info (10041): Inferred latch for "lives_character[2]" at text.vhd(38) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
-Info (10041): Inferred latch for "lives_character[3]" at text.vhd(38) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
-Info (10041): Inferred latch for "lives_character[4]" at text.vhd(38) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
-Info (10041): Inferred latch for "lives_character[5]" at text.vhd(38) File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "current_score_digit[0]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[1]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[2]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[3]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[4]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[5]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[6]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[7]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[8]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[9]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[10]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[11]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[12]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "current_score_digit[13]" at text.vhd(88) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (10041): Inferred latch for "score_character[0]" at text.vhd(72) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[1]" at text.vhd(72) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[2]" at text.vhd(72) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[3]" at text.vhd(72) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[4]" at text.vhd(72) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "score_character[5]" at text.vhd(72) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 72
+Info (10041): Inferred latch for "current_lives_digit[0]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[1]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[2]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[3]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[4]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[5]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[6]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[7]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[8]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[9]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[10]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[11]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[12]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "current_lives_digit[13]" at text.vhd(53) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (10041): Inferred latch for "lives_character[0]" at text.vhd(38) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[1]" at text.vhd(38) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[2]" at text.vhd(38) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[3]" at text.vhd(38) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[4]" at text.vhd(38) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
+Info (10041): Inferred latch for "lives_character[5]" at text.vhd(38) File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
 Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
 Info (278001): Inferred 14 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod7" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div5" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod6" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div4" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod4" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod5" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div3" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod3" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div2" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod2" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div1" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod0" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod1" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div0" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod7" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod7" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod7" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div5" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod6" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div4" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod4" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod5" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div3" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod3" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div2" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod2" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div1" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod0" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod1" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div0" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod7" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod7" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_65m.tdf
-    Info (12023): Found entity 1: lpm_divide_65m File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_65m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_65m File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_65m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_p2f.tdf
-    Info (12023): Found entity 1: alt_u_div_p2f File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div5" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div5" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Info (12023): Found entity 1: alt_u_div_p2f File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div5" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div5" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
-    Info (12023): Found entity 1: lpm_divide_vcm File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_vcm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_vcm File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_vcm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
-    Info (12023): Found entity 1: alt_u_div_g2f File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod6" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod6" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+    Info (12023): Found entity 1: alt_u_div_g2f File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod6" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod6" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div4" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div4" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div4" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div4" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lbm.tdf
-    Info (12023): Found entity 1: lpm_divide_lbm File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_lbm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_lbm File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_lbm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
-    Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod4" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod4" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
+    Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod4" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod4" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod5" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod5" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod5" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod5" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div3" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div3" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div3" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div3" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
     Info (12134): Parameter "LPM_WIDTHN" = "14"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod3" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod3" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod3" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod3" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "14"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m3m.tdf
-    Info (12023): Found entity 1: lpm_divide_m3m File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod2" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod2" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (12023): Found entity 1: lpm_divide_m3m File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod2" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod2" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
-    Info (12023): Found entity 1: lpm_divide_i3m File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_i3m File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_1nh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_1nh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_82f.tdf
-    Info (12023): Found entity 1: alt_u_div_82f File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div1" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div1" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+    Info (12023): Found entity 1: alt_u_div_82f File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div1" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div1" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod0" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod0" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod0" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod0" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
-    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
-    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod1" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod1" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod1" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod1" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
-    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
-    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div0" File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div0" with the following parameter: File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div0" File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
+Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div0" with the following parameter: File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4am.tdf
-    Info (12023): Found entity 1: lpm_divide_4am File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_4am File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
-    Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf Line: 22
-Warning (13012): Latch textSelector:inst10|current_score_digit[13] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[12] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[9] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[8] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[7] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[6] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[5] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[4] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[3] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[2] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[1] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_score_digit[0] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_lives_digit[0] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_lives_digit[1] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_lives_digit[2] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_lives_digit[3] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Warning (13012): Latch textSelector:inst10|current_lives_digit[4] has unsafe behavior File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
-Info (13000): Registers with preset signals will power-up high File: C:/Users/aagg721/OneDrive/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
+    Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf Line: 22
+Warning (13012): Latch textSelector:inst10|current_score_digit[13] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[12] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[9] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[8] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[7] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[6] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[5] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[4] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[3] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[2] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[1] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_score_digit[0] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_lives_digit[0] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_lives_digit[1] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_lives_digit[2] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_lives_digit[3] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Warning (13012): Latch textSelector:inst10|current_lives_digit[4] has unsafe behavior File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 86
+Info (13000): Registers with preset signals will power-up high File: C:/Users/aagg721/OneDrive - The University of Auckland/Documents/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -1860,16 +1872,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 2376 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2480 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2331 logic cells
+    Info (21061): Implemented 2435 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 88 warnings
-    Info: Peak virtual memory: 5012 megabytes
-    Info: Processing ended: Tue May 21 13:27:19 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 87 warnings
+    Info: Peak virtual memory: 5019 megabytes
+    Info: Processing ended: Fri May 24 20:56:34 2024
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:06
 
