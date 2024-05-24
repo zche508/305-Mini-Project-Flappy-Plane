@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri May 24 16:03:15 2024
+Analysis & Synthesis Status : Successful - Fri May 24 20:42:00 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : flappyPlane
 Top-level Entity Name : toplevel
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 264
-Total pins : 36
+Total registers : 273
+Total pins : 45
 Total virtual pins : 0
-Total block memory bits : 4,736
+Total block memory bits : 16,896
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

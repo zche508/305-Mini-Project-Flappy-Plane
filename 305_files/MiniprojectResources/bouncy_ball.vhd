@@ -8,9 +8,11 @@ ENTITY bouncy_ball IS
 	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText, showHeart: IN std_logic;
 	  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 	  random_number				: IN std_logic_vector(8 DOWNTO 0);
-	  red, green, blue 			: OUT std_logic;
+	  rom_pixel_data				: IN std_logic_vector(23 downto 0);
+	  red, green, blue 			: OUT std_logic_vector(3 DOWNTO 0);
 	  score 							: OUT integer RANGE 10000 DOWNTO 0;
-	  lives 							: OUT integer RANGE 30 DOWNTO 0);		
+	  lives 							: OUT integer RANGE 30 DOWNTO 0
+	);
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -74,9 +76,19 @@ SIGNAL collision 					: std_logic := '0';
 SIGNAL game_running 				: std_logic := '0';
 SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
 
-SiGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
+SIGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100,10);
+
+-- HEART	
+
+SIGNAL heart_r						: std_logic_vector(3 DOWNTO 0);
+SIGNAL heart_g						: std_logic_vector(3 DOWNTO 0);
+SIGNAL heart_b						: std_logic_vector(3 DOWNTO 0);
 
 BEGIN
+
+heart_r <= rom_pixel_data(19 downto 16);
+heart_g <= rom_pixel_data(11 DOWNTO 8);
+heart_b <= rom_pixel_data(3 DOWNTO 0);
 
 score <= current_score;
 lives <= current_lives;
@@ -142,27 +154,27 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 --Blue <= not ball_on;
 
 
-Red <=	'1' when ShowText = '1' else
-			'1' when showHeart = '1' else 
-			'1' when ball_on = '1' else
-			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
+Red <=	"1111" when ShowText = '1' else
+			heart_r when showHeart = '1' else 
+			"1111" when ball_on = '1' else
+			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
-			'1' when collision = '1' else
-			'0';
+			"1111" when collision = '1' else
+			"0000";
 			
-Green <= '1' when ShowText = '1' else 
-			'1' when showHeart = '1' else 
-			'0' when ball_on = '1' else
-			'1' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
+Green <= "1111" when ShowText = '1' else 
+			heart_g when showHeart = '1' else 
+			"0000" when ball_on = '1' else
+			"1111" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
-			'1'; 
+			"1111"; 
 			
-Blue <=  '1' when ShowText = '1' else 
-			'1' when showHeart = '1' else 
-			'0' when ball_on = '1' else
-			'0' when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
+Blue <=  "1111" when ShowText = '1' else 
+			heart_b when showHeart = '1' else 
+			"0000" when ball_on = '1' else
+			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
-			'1';
+			"1111";
 			
 			
 --Red <=	'1' when ShowText = '1' else 

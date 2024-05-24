@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Fri May 24 16:03:15 2024
+Fri May 24 20:42:01 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,16 +69,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 24 16:03:15 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 24 20:42:00 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 264                                         ;
-; Total pins                      ; 36                                          ;
+; Total registers                 ; 273                                         ;
+; Total pins                      ; 45                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 4,736                                       ;
+; Total block memory bits         ; 16,896                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -265,20 +265,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1236                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 1303                                                                  ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 2223                                                                  ;
-;     -- 7 input functions                    ; 7                                                                     ;
-;     -- 6 input functions                    ; 233                                                                   ;
-;     -- 5 input functions                    ; 141                                                                   ;
-;     -- 4 input functions                    ; 398                                                                   ;
-;     -- <=3 input functions                  ; 1444                                                                  ;
+; Combinational ALUT usage for logic          ; 2296                                                                  ;
+;     -- 7 input functions                    ; 21                                                                    ;
+;     -- 6 input functions                    ; 281                                                                   ;
+;     -- 5 input functions                    ; 143                                                                   ;
+;     -- 4 input functions                    ; 395                                                                   ;
+;     -- <=3 input functions                  ; 1456                                                                  ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 264                                                                   ;
+; Dedicated logic registers                   ; 273                                                                   ;
 ;                                             ;                                                                       ;
-; I/O pins                                    ; 36                                                                    ;
+; I/O pins                                    ; 45                                                                    ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
-; Total block memory bits                     ; 4736                                                                  ;
+; Total block memory bits                     ; 16896                                                                 ;
 ;                                             ;                                                                       ;
 ; Total DSP Blocks                            ; 0                                                                     ;
 ;                                             ;                                                                       ;
@@ -286,9 +286,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 108                                                                   ;
-; Total fan-out                               ; 8533                                                                  ;
-; Average fan-out                             ; 3.29                                                                  ;
+; Maximum fan-out                             ; 197                                                                   ;
+; Total fan-out                               ; 9663                                                                  ;
+; Average fan-out                             ; 3.49                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -297,18 +297,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 2223 (1)            ; 264 (0)                   ; 4736              ; 0          ; 36   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 2296 (1)            ; 273 (0)                   ; 16896             ; 0          ; 45   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
-;    |VGA_SYNC:inst2|                       ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 472 (472)           ; 87 (87)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |VGA_SYNC:inst2|                       ; 62 (62)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
+;    |bouncy_ball:inst3|                    ; 522 (522)           ; 87 (87)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
-;    |heart:inst12|                         ; 8 (8)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                                                        ; heart               ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                                                        ; altsyncram          ; work         ;
-;          |altsyncram_q9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 640               ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated                                         ; altsyncram_q9h1     ; work         ;
+;    |heart:inst12|                         ; 16 (16)             ; 0 (0)                     ; 12800             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                                                        ; heart               ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 12800             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                                                        ; altsyncram          ; work         ;
+;          |altsyncram_q9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 12800             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated                                         ; altsyncram_q9h1     ; work         ;
 ;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                                                          ; pll2                ; pll2         ;
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
@@ -566,7 +566,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 264   ;
+; Total registers                              ; 273   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
@@ -581,14 +581,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
-; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 11      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 13      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 12      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 10      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 12      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 11      ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 13      ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 12      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 12      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 10      ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[4] ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 6       ;
@@ -628,34 +628,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_row[2]               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[2]                   ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[2]       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[8]      ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[7]    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[1]                   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[5]                   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[2]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[8]                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[10]          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[1]       ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[7]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[8]    ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[9]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6]  ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[0]  ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[10] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[3]       ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]      ;
-; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[1]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[6]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[4]                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[8]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[2]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[5]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[9]                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[6]                  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[1]               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[10]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[4]      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[7]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[8]   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux24                         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[9] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[4] ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[8] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[2]      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[1]     ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|green[3]                 ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[3]                  ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|red[3]                   ;
+; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[0]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -1403,42 +1407,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 264                         ;
+; arriav_ff             ; 273                         ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 134                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 46                          ;
+;     plain             ; 55                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2226                        ;
+; arriav_lcell_comb     ; 2299                        ;
 ;     arith             ; 792                         ;
 ;         0 data inputs ; 122                         ;
 ;         1 data inputs ; 142                         ;
 ;         2 data inputs ; 90                          ;
 ;         3 data inputs ; 229                         ;
 ;         4 data inputs ; 209                         ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 1319                        ;
+;     extend            ; 21                          ;
+;         7 data inputs ; 21                          ;
+;     normal            ; 1378                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 475                         ;
-;         3 data inputs ; 271                         ;
-;         4 data inputs ; 189                         ;
-;         5 data inputs ; 141                         ;
-;         6 data inputs ; 233                         ;
+;         2 data inputs ; 481                         ;
+;         3 data inputs ; 277                         ;
+;         4 data inputs ; 186                         ;
+;         5 data inputs ; 143                         ;
+;         6 data inputs ; 281                         ;
 ;     shared            ; 108                         ;
 ;         0 data inputs ; 26                          ;
 ;         1 data inputs ; 65                          ;
 ;         2 data inputs ; 17                          ;
-; boundary_port         ; 36                          ;
+; boundary_port         ; 45                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 28                          ;
+; stratixv_ram_block    ; 108                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 14.62                       ;
+; Average LUT depth     ; 14.19                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1447,7 +1451,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:01:04     ;
 +----------------+--------------+
 
 
@@ -1457,7 +1461,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 24 16:02:00 2024
+    Info: Processing started: Fri May 24 20:39:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1465,7 +1469,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_
     Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 12
     Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/BCD_to_7Seg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 13
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 17
     Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/mouse.vhd
     Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 18
@@ -1474,7 +1478,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file minipro
     Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 20
     Info (12023): Found entity 1: char_rom File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 16
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 18
     Info (12023): Found entity 1: bouncy_ball File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file miniprojectresources/ball.vhd
     Info (12022): Found design unit 1: ball-behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/ball.vhd Line: 14
@@ -1507,7 +1511,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file random_
     Info (12022): Found design unit 1: random_number_gen-LFSR_BEHAVIOR File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 11
     Info (12023): Found entity 1: random_number_gen File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/random_number_gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file heart.vhd
-    Info (12022): Found design unit 1: heart-SYN File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 18
+    Info (12022): Found design unit 1: heart-SYN File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 19
     Info (12023): Found entity 1: heart File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 9
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
@@ -1578,77 +1582,77 @@ Info (12133): Instantiated megafunction "pll2:inst1|pll2_0002:pll2_inst|altera_p
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst3"
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(24): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(25): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(28): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(36): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(41): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 41
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(48): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(53): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 53
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(60): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 60
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(65): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 65
-Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(77): used explicit default value for signal "cloud_vertical_spacing" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(205): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(128) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 128
-Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(122) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 122
-Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(113) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 113
-Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(106) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 106
-Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(99) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 99
-Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
-Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(93) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 93
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(26): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(27): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 27
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(30): used explicit default value for signal "cloud_inital_spacing" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 30
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(38): used explicit default value for signal "top_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 38
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(43): used explicit default value for signal "bottom_cloud1_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 43
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(50): used explicit default value for signal "top_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 50
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(55): used explicit default value for signal "bottom_cloud2_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 55
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(62): used explicit default value for signal "top_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 62
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(67): used explicit default value for signal "bottom_cloud3_y_pos" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 67
+Warning (10540): VHDL Signal Declaration warning at bouncy_ball.vhd(79): used explicit default value for signal "cloud_vertical_spacing" because signal was never assigned a value File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(217): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 217
+Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(140) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 140
+Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(134) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 134
+Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(125) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
+Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(118) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 118
+Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(111) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 111
+Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
+Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(105) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 105
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
@@ -1718,9 +1722,9 @@ Info (10041): Inferred latch for "lives_character[3]" at text.vhd(38) File: C:/U
 Info (10041): Inferred latch for "lives_character[4]" at text.vhd(38) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
 Info (10041): Inferred latch for "lives_character[5]" at text.vhd(38) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 38
 Info (12128): Elaborating entity "heart" for hierarchy "heart:inst12"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "heart:inst12|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 49
-Info (12130): Elaborated megafunction instantiation "heart:inst12|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 49
-Info (12133): Instantiated megafunction "heart:inst12|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 49
+Info (12128): Elaborating entity "altsyncram" for hierarchy "heart:inst12|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 50
+Info (12130): Elaborated megafunction instantiation "heart:inst12|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 50
+Info (12133): Instantiated megafunction "heart:inst12|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 50
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1742,143 +1746,63 @@ Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_numbe
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[0]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 34
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[1]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 55
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[2]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 76
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[3]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 97
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[4]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 118
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[5]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 139
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[6]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 160
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[8]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 202
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[9]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 223
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[10]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 244
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[11]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 265
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[12]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 286
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[13]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 307
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[14]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 328
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[16]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 370
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[17]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 391
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[18]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 412
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[19]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 433
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[20]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 454
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[21]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 475
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[22]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 496
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[24]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 538
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[25]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 559
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[26]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 580
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[27]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 601
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[28]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 622
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[29]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 643
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[30]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 664
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[32]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 706
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[33]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 727
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[34]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 748
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[35]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 769
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[36]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 790
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[37]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 811
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[38]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 832
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[40]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 874
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[41]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 895
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[42]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 916
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[43]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 937
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[44]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 958
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[45]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 979
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[46]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1000
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[48]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1042
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[49]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1063
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[50]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1084
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[51]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1105
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[52]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1126
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[53]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1147
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[54]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1168
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[56]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1210
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[57]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1231
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[58]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1252
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[59]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1273
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[60]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1294
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[61]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1315
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[62]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1336
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[64]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1378
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[65]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1399
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[66]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1420
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[67]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1441
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[68]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1462
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[69]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1483
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[70]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1504
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[72]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1546
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[73]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1567
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[74]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1588
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[75]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1609
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[76]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1630
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[77]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1651
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[78]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1672
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[80]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1714
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[81]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1735
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[82]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1756
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[83]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1777
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[84]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1798
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[85]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1819
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[86]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1840
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[88]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1882
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[89]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1903
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[90]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1924
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[91]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1945
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[92]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1966
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[93]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1987
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[94]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2008
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[96]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2050
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[97]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2071
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[98]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2092
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[99]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2113
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[100]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2134
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[101]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2155
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[102]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2176
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[104]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2218
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[105]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2239
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[106]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2260
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[107]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2281
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[108]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2302
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[109]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2323
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[110]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2344
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[112]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2386
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[113]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2407
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[114]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2428
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[115]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2449
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[116]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2470
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[117]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2491
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[118]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2512
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[120]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2554
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[121]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2575
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[122]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2596
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[123]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2617
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[124]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2638
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[125]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2659
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[126]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2680
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[128]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2722
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[129]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2743
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[130]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2764
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[131]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2785
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[132]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2806
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[133]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2827
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[134]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2848
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[136]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2890
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[137]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2911
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[138]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2932
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[139]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2953
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[140]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2974
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[141]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2995
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[142]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3016
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[144]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3058
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[145]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3079
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[146]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3100
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[147]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3121
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[148]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3142
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[149]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3163
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[150]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3184
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[152]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3226
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[153]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3247
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[154]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3268
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[155]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3289
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[156]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3310
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[157]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3331
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[158]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3352
@@ -2032,47 +1956,47 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
     Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf Line: 22
 Warning (13012): Latch textSelector:inst10|current_score_digit[13] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[12] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[9] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[8] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[7] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[6] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[5] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[4] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[3] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[2] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[1] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_score_digit[0] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_lives_digit[0] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_lives_digit[1] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_lives_digit[2] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_lives_digit[3] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Warning (13012): Latch textSelector:inst10|current_lives_digit[4] has unsafe behavior File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 88
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 3 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 31
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -2107,17 +2031,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 2358 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2520 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 21 output pins
+    Info (21059): Implemented 30 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2293 logic cells
-    Info (21064): Implemented 28 RAM segments
+    Info (21061): Implemented 2366 logic cells
+    Info (21064): Implemented 108 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 229 warnings
-    Info: Peak virtual memory: 4938 megabytes
-    Info: Processing ended: Fri May 24 16:03:16 2024
-    Info: Elapsed time: 00:01:16
-    Info: Total CPU time (on all processors): 00:01:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 149 warnings
+    Info: Peak virtual memory: 4948 megabytes
+    Info: Processing ended: Fri May 24 20:42:01 2024
+    Info: Elapsed time: 00:02:33
+    Info: Total CPU time (on all processors): 00:02:53
 
 
