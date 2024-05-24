@@ -67,7 +67,7 @@ SiGNAL bottom_cloud3_y_pos		: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VEC
 
 -- SCORE
 SIGNAL current_score 			: integer RANGE 10000 DOWNTO 0;
-SIGNAL allow_score_update 		: std_logic;
+SIGNAL allow_score_update, prev_allow_score_update : std_logic;
 SIGNAL score_time_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
 
 -- LIVES
@@ -357,37 +357,39 @@ begin
 		
 		-- Check that the plane is not touching the clouds in the x and y directions
 			-- If it is not touching then the score is updated by +1
-		if ((bottom_cloud1_x_pos <= ball_x_pos and 
+		if ((bottom_cloud1_x_pos -  cloud_drawing_width <= ball_x_pos and 
 				top_cloud1_y_pos + top_cloud1_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud1_y_pos - bottom_cloud1_height) or 
 				
-			(bottom_cloud2_x_pos <= ball_x_pos and
+			(bottom_cloud2_x_pos - cloud_drawing_width  <= ball_x_pos and
 				top_cloud2_y_pos + top_cloud2_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud2_y_pos - bottom_cloud2_height) or 
 				
-			(bottom_cloud3_x_pos <= ball_x_pos and
+			(bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos and
 				top_cloud3_y_pos + top_cloud3_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud3_y_pos - bottom_cloud3_height)) then
 				allow_score_update <= '1';
 		else
 				allow_score_update <= '0';
 		end if;
 		
+		
 		-- As long as the cloud buffer < cloud motion/displacement then it gets reduced
-		if (cloud_motion_integer <= score_time_buffer - cloud_motion_integer) then
-			score_time_buffer <= score_time_buffer - cloud_motion_integer;
-		end if;
+--		if (cloud_motion_integer <= score_time_buffer - cloud_motion_integer) then
+--			score_time_buffer <= score_time_buffer - cloud_motion_integer;
+--		end if;
 
 		
 		-- If it is not touching then the score is updated by +1
 --		if (score_time_buffer <= cloud_motion_integer and allow_score_update = '1') then
-		if (allow_score_update = '1' and score_time_buffer <= cloud_motion_integer) then
+		if (allow_score_update = '1' and prev_allow_score_update = '0') then
 			-- Updates Score
 			if (current_score = 9999) then
 				current_score <= 0;
 			else
 				current_Score <= current_score + 1;
-				score_time_buffer <= cloud_inital_spacing;
+--				score_time_buffer <= cloud_inital_spacing;
 			end if;
 		end if;
 		
+		prev_allow_score_update <= allow_score_update;
 		-------------------------
 		-- CHECK FOR COLLISION --
 		-------------------------
@@ -426,7 +428,7 @@ begin
 				current_lives <= 30;
 			else
 				current_lives <= current_lives - 1;
-				collision_buffer <= cloud_difficulty_spacing;
+				collision_buffer <= cloud_inital_spacing;
 			end if;
 		end if;
 		
@@ -435,15 +437,12 @@ begin
 		-------------------------
 				
 		if (pb1 = '0') then
-			cloud_difficulty_spacing <= 250;
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(2,11);
 			cloud_motion_integer <= 2;
 		elsif (pb2 = '0') then
-			cloud_difficulty_spacing <= 150;
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(3,11);
 			cloud_motion_integer <= 3;
 		elsif (pb3 = '0') then
-			cloud_difficulty_spacing <= 80;
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(4,11);
 			cloud_motion_integer <= 4;
 		end if;

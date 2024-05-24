@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Fri May 24 16:42:27 2024
+Fri May 24 17:10:13 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -67,13 +67,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 24 16:42:27 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 24 17:10:13 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 284                                         ;
+; Total registers                 ; 275                                         ;
 ; Total pins                      ; 37                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -265,16 +265,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1249                         ;
+; Estimate of Logic utilization (ALMs needed) ; 1224                         ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 2270                         ;
-;     -- 7 input functions                    ; 7                            ;
-;     -- 6 input functions                    ; 211                          ;
-;     -- 5 input functions                    ; 179                          ;
-;     -- 4 input functions                    ; 398                          ;
-;     -- <=3 input functions                  ; 1475                         ;
+; Combinational ALUT usage for logic          ; 2237                         ;
+;     -- 7 input functions                    ; 3                            ;
+;     -- 6 input functions                    ; 198                          ;
+;     -- 5 input functions                    ; 183                          ;
+;     -- 4 input functions                    ; 394                          ;
+;     -- <=3 input functions                  ; 1459                         ;
 ;                                             ;                              ;
-; Dedicated logic registers                   ; 284                          ;
+; Dedicated logic registers                   ; 275                          ;
 ;                                             ;                              ;
 ; I/O pins                                    ; 37                           ;
 ; Total MLAB memory bits                      ; 0                            ;
@@ -286,9 +286,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst2|vert_sync_out ;
-; Maximum fan-out                             ; 107                          ;
-; Total fan-out                               ; 8604                         ;
-; Average fan-out                             ; 3.26                         ;
+; Maximum fan-out                             ; 98                           ;
+; Total fan-out                               ; 8450                         ;
+; Average fan-out                             ; 3.25                         ;
 +---------------------------------------------+------------------------------+
 
 
@@ -297,12 +297,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 2270 (1)            ; 284 (0)                   ; 4096              ; 0          ; 37   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 2237 (1)            ; 275 (0)                   ; 4096              ; 0          ; 37   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst2|                       ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 529 (529)           ; 107 (107)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |bouncy_ball:inst3|                    ; 496 (496)           ; 98 (98)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
@@ -498,65 +498,59 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                        ;
-+-----------------------------------------------+-----------------------------------------------------------+
-; Register name                                 ; Reason for Removal                                        ;
-+-----------------------------------------------+-----------------------------------------------------------+
-; MOUSE:inst5|CHAROUT[4..7]                     ; Stuck at VCC due to stuck port data_in                    ;
-; MOUSE:inst5|CHAROUT[3]                        ; Stuck at GND due to stuck port data_in                    ;
-; MOUSE:inst5|CHAROUT[2]                        ; Stuck at VCC due to stuck port data_in                    ;
-; MOUSE:inst5|CHAROUT[0,1]                      ; Stuck at GND due to stuck port data_in                    ;
-; MOUSE:inst5|SHIFTOUT[10]                      ; Stuck at VCC due to stuck port data_in                    ;
-; bouncy_ball:inst3|ball_y_motion[5..9]         ; Merged with bouncy_ball:inst3|ball_y_motion[4]            ;
-; bouncy_ball:inst3|top_cloud3_x_pos[10]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[10]     ;
-; bouncy_ball:inst3|top_cloud3_x_pos[9]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[9]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[8]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[8]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[7]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[7]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[6]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[6]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[5]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[5]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[4]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[4]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[3]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[3]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[2]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[2]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[1]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[1]      ;
-; bouncy_ball:inst3|top_cloud3_x_pos[0]         ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[0]      ;
-; bouncy_ball:inst3|cloud_motion[2..10]         ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[4] ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[5] ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[3] ;
-; bouncy_ball:inst3|cloud_motion[1]             ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[3] ;
-; bouncy_ball:inst3|cloud_motion[0]             ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[2] ;
-; bouncy_ball:inst3|cloud_motion_integer[0]     ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[2] ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[8] ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[0] ;
-; bouncy_ball:inst3|cloud_motion_integer[3,4]   ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[0] ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[7] ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[1] ;
-; bouncy_ball:inst3|cloud_motion_integer[1]     ; Merged with bouncy_ball:inst3|cloud_difficulty_spacing[1] ;
-; bouncy_ball:inst3|top_cloud2_x_pos[8]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[8]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[3]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[3]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[2]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[2]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[1]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[1]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[7]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[7]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[6]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[6]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[5]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[5]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[4]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[4]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[10]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[10]     ;
-; bouncy_ball:inst3|top_cloud2_x_pos[9]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[9]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[7]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[7]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[6]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[6]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[5]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[5]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[4]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[4]      ;
-; bouncy_ball:inst3|top_cloud2_x_pos[0]         ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[0]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[10]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[10]     ;
-; bouncy_ball:inst3|top_cloud1_x_pos[9]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[9]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[8]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[8]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[3]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[3]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[2]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[2]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[1]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[1]      ;
-; bouncy_ball:inst3|top_cloud1_x_pos[0]         ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[0]      ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[0] ; Stuck at GND due to stuck port data_in                    ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[4] ; Stuck at VCC due to stuck port data_in                    ;
-; MOUSE:inst5|cursor_row[9]                     ; Stuck at GND due to stuck port data_in                    ;
-; VGA_SYNC:inst2|pixel_row[9]                   ; Stuck at GND due to stuck port data_in                    ;
-; Total Number of Removed Registers = 69        ;                                                           ;
-+-----------------------------------------------+-----------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++-------------------------------------------+-------------------------------------------------------+
+; Register name                             ; Reason for Removal                                    ;
++-------------------------------------------+-------------------------------------------------------+
+; MOUSE:inst5|CHAROUT[4..7]                 ; Stuck at VCC due to stuck port data_in                ;
+; MOUSE:inst5|CHAROUT[3]                    ; Stuck at GND due to stuck port data_in                ;
+; MOUSE:inst5|CHAROUT[2]                    ; Stuck at VCC due to stuck port data_in                ;
+; MOUSE:inst5|CHAROUT[0,1]                  ; Stuck at GND due to stuck port data_in                ;
+; MOUSE:inst5|SHIFTOUT[10]                  ; Stuck at VCC due to stuck port data_in                ;
+; bouncy_ball:inst3|ball_y_motion[5..9]     ; Merged with bouncy_ball:inst3|ball_y_motion[4]        ;
+; bouncy_ball:inst3|top_cloud3_x_pos[10]    ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[10] ;
+; bouncy_ball:inst3|top_cloud3_x_pos[9]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[9]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[8]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[8]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[7]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[7]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[6]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[6]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[5]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[5]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[4]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[4]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[3]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[3]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[2]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[2]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[1]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[1]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[0]     ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[0]  ;
+; bouncy_ball:inst3|cloud_motion[2..9]      ; Merged with bouncy_ball:inst3|cloud_motion[10]        ;
+; bouncy_ball:inst3|cloud_motion_integer[0] ; Merged with bouncy_ball:inst3|cloud_motion[0]         ;
+; bouncy_ball:inst3|cloud_motion_integer[4] ; Merged with bouncy_ball:inst3|cloud_motion_integer[3] ;
+; bouncy_ball:inst3|top_cloud2_x_pos[8]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[8]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[3]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[3]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[2]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[2]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[1]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[1]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[7]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[7]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[6]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[6]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[5]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[5]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[4]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[4]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[10]    ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[10] ;
+; bouncy_ball:inst3|top_cloud2_x_pos[9]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[9]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[7]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[7]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[6]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[6]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[5]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[5]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[4]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[4]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[0]     ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[0]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[10]    ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[10] ;
+; bouncy_ball:inst3|top_cloud1_x_pos[9]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[9]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[8]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[8]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[3]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[3]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[2]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[2]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[1]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[1]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[0]     ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[0]  ;
+; bouncy_ball:inst3|cloud_motion_integer[3] ; Stuck at GND due to stuck port data_in                ;
+; bouncy_ball:inst3|cloud_motion[10]        ; Stuck at VCC due to stuck port data_in                ;
+; MOUSE:inst5|cursor_row[9]                 ; Stuck at GND due to stuck port data_in                ;
+; VGA_SYNC:inst2|pixel_row[9]               ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 61    ;                                                       ;
++-------------------------------------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -564,12 +558,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 284   ;
+; Total registers                              ; 275   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 214   ;
+; Number of registers using Clock Enable       ; 211   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -579,14 +573,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------+---------+
 ; Inverted Register                                ; Fan out ;
 +--------------------------------------------------+---------+
-; bouncy_ball:inst3|bottom_cloud3_x_pos[8]         ; 10      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[7]         ; 11      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[6]         ; 12      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[8]         ; 9       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[7]         ; 10      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[6]         ; 11      ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[5]         ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[4]         ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[2]         ; 6       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[7]         ; 11      ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[6]         ; 12      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[7]         ; 10      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[6]         ; 11      ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[5]         ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[4]         ; 6       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[3]         ; 6       ;
@@ -596,7 +590,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; random_number_gen:inst8|current_state[6]         ; 20      ;
 ; random_number_gen:inst8|current_state[4]         ; 11      ;
 ; MOUSE:inst5|send_char                            ; 3       ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[3]    ; 5       ;
+; bouncy_ball:inst3|cloud_motion[1]                ; 3       ;
 ; bouncy_ball:inst3|ball_up_motion_counter[0]      ; 20      ;
 ; bouncy_ball:inst3|ball_up_motion_counter[1]      ; 22      ;
 ; bouncy_ball:inst3|ball_up_motion_counter[3]      ; 20      ;
@@ -613,27 +607,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bouncy_ball:inst3|prev_ball_up_motion_counter[1] ; 1       ;
 ; bouncy_ball:inst3|prev_ball_up_motion_counter[3] ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[3]                          ; 1       ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[1]    ; 10      ;
-; bouncy_ball:inst3|score_time_buffer[1]           ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[3]           ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[4]           ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[5]           ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[6]           ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[7]           ; 3       ;
 ; bouncy_ball:inst3|current_lives[6]               ; 3       ;
 ; bouncy_ball:inst3|current_lives[5]               ; 2       ;
+; bouncy_ball:inst3|cloud_motion_integer[1]        ; 4       ;
 ; bouncy_ball:inst3|collision_buffer[1]            ; 3       ;
 ; bouncy_ball:inst3|collision_buffer[3]            ; 3       ;
 ; bouncy_ball:inst3|collision_buffer[4]            ; 3       ;
 ; bouncy_ball:inst3|collision_buffer[5]            ; 3       ;
 ; bouncy_ball:inst3|collision_buffer[6]            ; 3       ;
 ; bouncy_ball:inst3|collision_buffer[7]            ; 3       ;
-; bouncy_ball:inst3|cloud_difficulty_spacing[6]    ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[5]                          ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[6]                          ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                          ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                          ; 1       ;
-; Total number of inverted registers = 54          ;         ;
+; Total number of inverted registers = 47          ;         ;
 +--------------------------------------------------+---------+
 
 
@@ -642,33 +629,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[7]              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[5]                     ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[9]              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[9]                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|ball_y_motion[3]            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[0]         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[2]        ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|ball_y_motion[1]            ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[7]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_difficulty_spacing[2] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[3]                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[6]                     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[8]         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|ball_y_motion[0]            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[1]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[0]             ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[1]                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[4]                     ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[0]                  ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|ball_down_motion_counter[2] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|ball_down_motion_counter[1] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|ball_up_motion_counter[0]   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[5]         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[4]        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[3]         ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[8]      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_difficulty_spacing[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[8]    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[10]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[9]    ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[5]    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[0]    ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[9]    ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[2]         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]        ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]        ;
-; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[0]           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[1]    ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[13]   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[5]         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[5]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[1]        ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[1]        ;
+; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[2]           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -1336,16 +1321,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 284                         ;
+; arriav_ff             ; 275                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 141                         ;
+;     ENA               ; 138                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 59                          ;
+;     plain             ; 53                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2273                        ;
+; arriav_lcell_comb     ; 2240                        ;
 ;     arith             ; 825                         ;
 ;         0 data inputs ; 122                         ;
 ;         1 data inputs ; 153                         ;
@@ -1353,26 +1338,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 230                         ;
 ;         4 data inputs ; 211                         ;
 ;         5 data inputs ; 9                           ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 1333                        ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 1314                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 13                          ;
+;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 471                         ;
-;         3 data inputs ; 280                         ;
-;         4 data inputs ; 187                         ;
-;         5 data inputs ; 170                         ;
-;         6 data inputs ; 211                         ;
-;     shared            ; 108                         ;
-;         0 data inputs ; 26                          ;
-;         1 data inputs ; 67                          ;
-;         2 data inputs ; 15                          ;
+;         3 data inputs ; 278                         ;
+;         4 data inputs ; 183                         ;
+;         5 data inputs ; 174                         ;
+;         6 data inputs ; 198                         ;
+;     shared            ; 98                          ;
+;         0 data inputs ; 25                          ;
+;         1 data inputs ; 61                          ;
+;         2 data inputs ; 12                          ;
 ; boundary_port         ; 37                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 14.42                       ;
+; Average LUT depth     ; 14.59                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1391,7 +1376,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 24 16:42:07 2024
+    Info: Processing started: Fri May 24 17:09:53 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1877,16 +1862,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 2406 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2372 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2360 logic cells
+    Info (21061): Implemented 2326 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
-    Info: Peak virtual memory: 4958 megabytes
-    Info: Processing ended: Fri May 24 16:42:27 2024
+    Info: Peak virtual memory: 4956 megabytes
+    Info: Processing ended: Fri May 24 17:10:13 2024
     Info: Elapsed time: 00:00:20
     Info: Total CPU time (on all processors): 00:00:32
 
