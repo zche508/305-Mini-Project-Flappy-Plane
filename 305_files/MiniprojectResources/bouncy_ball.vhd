@@ -95,6 +95,18 @@ SIGNAL plane_y_offset 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR
 
 BEGIN
 
+-- HEART
+
+heart_r <= heart_pixel_data(11 downto 8);
+heart_g <= heart_pixel_data(7 DOWNTO 4);
+heart_b <= heart_pixel_data(3 DOWNTO 0);
+
+-- PLANE
+
+plane_r <= plane_pixel_data(11 downto 8);
+plane_g <= plane_pixel_data(7 DOWNTO 4);
+plane_b <= plane_pixel_data(3 DOWNTO 0);
+
 score <= current_score;
 lives <= current_lives;
 
@@ -158,21 +170,10 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 --Green <= not ball_on;
 --Blue <= not ball_on;
 
--- HEART
-
-heart_r <= heart_pixel_data(11 downto 8);
-heart_g <= heart_pixel_data(7 DOWNTO 4);
-heart_b <= heart_pixel_data(3 DOWNTO 0);
-
--- PLANE
-
-plane_r <= plane_pixel_data(11 downto 8);
-plane_g <= plane_pixel_data(7 DOWNTO 4);
-plane_b <= plane_pixel_data(3 DOWNTO 0);
-
 
 Red <=	"1111" when ShowText = '1' else
-			heart_r when showHeart = '1' and pixel_row >= heart_y_offset else  
+			heart_r when showHeart = '1' and pixel_row <= heart_y_offset else
+			plane_r when showPlane = '1' and pixel_row <= plane_y_offset else
 			"1111" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -180,14 +181,16 @@ Red <=	"1111" when ShowText = '1' else
 			"0000";
 			
 Green <= "1111" when ShowText = '1' else 
-			heart_g when showHeart = '1' and pixel_row >= heart_y_offset else  
+			heart_g when showHeart = '1' and pixel_row <= heart_y_offset else
+			plane_g when showPlane = '1' and pixel_row <= plane_y_offset else
 			"0000" when ball_on = '1' else
 			"1111" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			"1111"; 
 			
 Blue <=  "1111" when ShowText = '1' else 
-			heart_b when showHeart = '1' and pixel_row >= heart_y_offset else  
+			heart_b when showHeart = '1' and pixel_row <= heart_y_offset else
+			plane_b when showPlane = '1' and pixel_row <= plane_y_offset else
 			"0000" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
