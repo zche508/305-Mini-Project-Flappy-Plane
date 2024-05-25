@@ -71,7 +71,9 @@ BEGIN
 	);
 
 	rom_address <= character_address; -- removed "& font_row" for now idk what it does
-	rom_mux_output <= rom_data((CONV_INTEGER(font_col) + 1) * 12 - 1);
-	rom_pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
+	-- rom_mux_output <= rom_data((CONV_INTEGER(font_col) + 1) * 12 - 1);
+	-- rom_pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
+	rom_mux_output <= rom_data(72 - (CONV_INTEGER(font_col) + 1) * 12);
+   rom_pixel_data <= rom_data(71 - CONV_INTEGER(font_col) * 12 downto 72 - (CONV_INTEGER(font_col) + 1) * 12);
 	
 END SYN;
