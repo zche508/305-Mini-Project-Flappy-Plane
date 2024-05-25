@@ -76,10 +76,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[3]",
-					"strict" : false
-				},
-				{
 					"name" : "VGA_G[3]",
 					"strict" : false
 				},
@@ -93,58 +89,6 @@
 				},
 				{
 					"name" : "PS2_CLK",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK_50",
-					"strict" : false
-				},
-				{
-					"name" : "key[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[9]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[8]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[7]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[6]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[5]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[4]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[3]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[2]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[1]",
-					"strict" : false
-				},
-				{
-					"name" : "sw[0]",
-					"strict" : false
-				},
-				{
-					"name" : "key[1]",
 					"strict" : false
 				}
 			]
