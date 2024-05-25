@@ -340,8 +340,8 @@ begin
 					cloud_count <= cloud_count + 1;
 				END IF;
         ELSE
-            toolbox_pos_x <= top_cloud3_x_pos - 35;
-				toolbox_pos_y <= top_cloud3_height + 55;
+            toolbox_pos_x <= top_cloud3_x_pos - 45;
+				toolbox_pos_y <= top_cloud3_height + 60;
         END IF;
 
 		  -- Check for collision with the bird
