@@ -61,8 +61,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 280 48)
 		(output)
-		(text "rom_pixel_data[23..0]" (rect 0 0 86 12)(font "Arial" ))
-		(text "rom_pixel_data[23..0]" (rect 173 43 259 55)(font "Arial" ))
+		(text "rom_pixel_data[11..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "rom_pixel_data[11..0]" (rect 176 43 259 55)(font "Arial" ))
 		(line (pt 280 48)(pt 264 48)(line_width 3))
 	)
 	(drawing

@@ -18,7 +18,7 @@ END heart;
 
 ARCHITECTURE SYN OF heart IS
 
-	SIGNAL rom_data	 : STD_LOGIC_VECTOR (159 DOWNTO 0); -- MIF width 
+	SIGNAL rom_data	 : STD_LOGIC_VECTOR (71 DOWNTO 0); -- MIF width 
 	SIGNAL rom_address  : STD_LOGIC_VECTOR (7 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
 
 	COMPONENT altsyncram
@@ -41,7 +41,7 @@ ARCHITECTURE SYN OF heart IS
 	PORT (
 		clock0	   : IN STD_LOGIC;
 		address_a	: IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
-		q_a		  : OUT STD_LOGIC_VECTOR (159 DOWNTO 0) -- MIF width
+		q_a		  : OUT STD_LOGIC_VECTOR (71 DOWNTO 0) -- MIF width
 	);
 	END COMPONENT;
 
@@ -61,7 +61,7 @@ BEGIN
 		outdata_aclr_a => "NONE",
 		outdata_reg_a => "UNREGISTERED",
 		widthad_a => 8, -- max depth from 2^8
-		width_a => 160, -- data/MIF width
+		width_a => 72, -- data/MIF width
 		width_byteena_a => 1
 	)
 	PORT MAP (

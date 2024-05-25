@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 256)
+	(rect 16 16 248 288)
 	(text "bouncy_ball" (rect 5 0 52 12)(font "Arial" ))
-	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -82,30 +82,44 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 160)
 		(input)
-		(text "pixel_row[9..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "pixel_row[9..0]" (rect 21 155 77 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
+		(text "showPlane" (rect 0 0 41 12)(font "Arial" ))
+		(text "showPlane" (rect 21 155 62 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
 	)
 	(port
 		(pt 0 176)
 		(input)
-		(text "pixel_column[9..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "pixel_column[9..0]" (rect 21 171 91 183)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 171 77 183)(font "Arial" ))
 		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
 		(pt 0 192)
 		(input)
-		(text "random_number[8..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "random_number[8..0]" (rect 21 187 108 199)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 21 187 91 199)(font "Arial" ))
 		(line (pt 0 192)(pt 16 192)(line_width 3))
 	)
 	(port
 		(pt 0 208)
 		(input)
-		(text "rom_pixel_data[23..0]" (rect 0 0 86 12)(font "Arial" ))
-		(text "rom_pixel_data[23..0]" (rect 21 203 107 215)(font "Arial" ))
+		(text "random_number[8..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "random_number[8..0]" (rect 21 203 108 215)(font "Arial" ))
 		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "heart_pixel_data[11..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "heart_pixel_data[11..0]" (rect 21 219 108 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "plane_pixel_data[11..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "plane_pixel_data[11..0]" (rect 21 235 108 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
 	)
 	(port
 		(pt 232 32)
@@ -143,6 +157,6 @@ refer to the applicable agreement for further details.
 		(line (pt 232 96)(pt 216 96)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 224)(line_width 1))
+		(rectangle (rect 16 16 216 256)(line_width 1))
 	)
 )
