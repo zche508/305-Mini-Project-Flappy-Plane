@@ -8,7 +8,7 @@ ENTITY bouncy_ball IS
 	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText, showHeart: IN std_logic;
 	  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 	  random_number				: IN std_logic_vector(8 DOWNTO 0);
-	  rom_pixel_data				: IN std_logic_vector(23 downto 0);
+	  rom_pixel_data				: IN std_logic_vector(11 downto 0);
 	  red, green, blue 			: OUT std_logic_vector(3 DOWNTO 0);
 	  score 							: OUT integer RANGE 10000 DOWNTO 0;
 	  lives 							: OUT integer RANGE 30 DOWNTO 0
@@ -86,8 +86,8 @@ SIGNAL heart_b						: std_logic_vector(3 DOWNTO 0);
 
 BEGIN
 
-heart_r <= rom_pixel_data(19 downto 16);
-heart_g <= rom_pixel_data(11 DOWNTO 8);
+heart_r <= rom_pixel_data(11 downto 8);
+heart_g <= rom_pixel_data(7 DOWNTO 4);
 heart_b <= rom_pixel_data(3 DOWNTO 0);
 
 score <= current_score;

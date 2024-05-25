@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Fri May 24 20:42:01 2024
+Sat May 25 16:39:41 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 24 20:42:00 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat May 25 16:39:41 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 ; Total registers                 ; 273                                         ;
 ; Total pins                      ; 45                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 16,896                                      ;
+; Total block memory bits         ; 17,280                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -225,7 +225,7 @@ refer to the applicable agreement for further details.
 ; altdpram.inc                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
 ; db/altsyncram_d5g1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf               ;         ;
 ; db/altsyncram_q9h1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf               ;         ;
-; spritesmif/heart.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesmif/heart.mif                 ;         ;
+; spritesMIF/heart.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/heart.mif                 ;         ;
 ; lpm_divide.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                       ;         ;
 ; abs_divider.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                                      ;         ;
 ; sign_div_unsign.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                  ;         ;
@@ -265,20 +265,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1303                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 1313                                                                  ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 2296                                                                  ;
-;     -- 7 input functions                    ; 21                                                                    ;
-;     -- 6 input functions                    ; 281                                                                   ;
-;     -- 5 input functions                    ; 143                                                                   ;
-;     -- 4 input functions                    ; 395                                                                   ;
-;     -- <=3 input functions                  ; 1456                                                                  ;
+; Combinational ALUT usage for logic          ; 2324                                                                  ;
+;     -- 7 input functions                    ; 37                                                                    ;
+;     -- 6 input functions                    ; 257                                                                   ;
+;     -- 5 input functions                    ; 167                                                                   ;
+;     -- 4 input functions                    ; 401                                                                   ;
+;     -- <=3 input functions                  ; 1462                                                                  ;
 ;                                             ;                                                                       ;
 ; Dedicated logic registers                   ; 273                                                                   ;
 ;                                             ;                                                                       ;
 ; I/O pins                                    ; 45                                                                    ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
-; Total block memory bits                     ; 16896                                                                 ;
+; Total block memory bits                     ; 17280                                                                 ;
 ;                                             ;                                                                       ;
 ; Total DSP Blocks                            ; 0                                                                     ;
 ;                                             ;                                                                       ;
@@ -286,9 +286,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 197                                                                   ;
-; Total fan-out                               ; 9663                                                                  ;
-; Average fan-out                             ; 3.49                                                                  ;
+; Maximum fan-out                             ; 200                                                                   ;
+; Total fan-out                               ; 9819                                                                  ;
+; Average fan-out                             ; 3.51                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -297,23 +297,23 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 2296 (1)            ; 273 (0)                   ; 16896             ; 0          ; 45   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
+; |toplevel                                 ; 2324 (1)            ; 273 (0)                   ; 17280             ; 0          ; 45   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
-;    |VGA_SYNC:inst2|                       ; 62 (62)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 522 (522)           ; 87 (87)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
+;    |VGA_SYNC:inst2|                       ; 66 (66)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
+;    |bouncy_ball:inst3|                    ; 535 (535)           ; 87 (87)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
-;    |heart:inst12|                         ; 16 (16)             ; 0 (0)                     ; 12800             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                                                        ; heart               ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 12800             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                                                        ; altsyncram          ; work         ;
-;          |altsyncram_q9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 12800             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated                                         ; altsyncram_q9h1     ; work         ;
+;    |heart:inst12|                         ; 28 (28)             ; 0 (0)                     ; 13184             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                                                        ; heart               ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 13184             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                                                        ; altsyncram          ; work         ;
+;          |altsyncram_q9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 13184             ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated                                         ; altsyncram_q9h1     ; work         ;
 ;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                                                          ; pll2                ; pll2         ;
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
 ;    |random_number_gen:inst8|              ; 48 (48)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                             ; random_number_gen   ; work         ;
-;    |textSelector:inst10|                  ; 1524 (212)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
+;    |textSelector:inst10|                  ; 1523 (211)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
 ;       |lpm_divide:Div0|                   ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_4am:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am      ; work         ;
 ;             |sign_div_unsign_akh:divider| ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
@@ -628,38 +628,40 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[6]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[4]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[8]      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[2]     ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[5]   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[9]                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[6]                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[1]               ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[10]         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[4]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[7]     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[8]   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux24                         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[9] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[4] ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[8] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[2]      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]     ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[1]     ;
-; 14:1               ; 4 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|green[3]                 ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[3]                  ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|red[3]                   ;
-; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[0]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[2]            ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[8]                   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[2]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[2]      ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[2]    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[2]                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[5]                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[9]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[10]          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[3]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[7]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[4]    ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux10                          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[7]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux9                           ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux12                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6]  ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[2]  ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[10] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[2]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[2]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]      ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|green[3]                  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[0]                   ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|red[0]                    ;
+; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[1]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -1416,33 +1418,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 10                          ;
 ;     plain             ; 55                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2299                        ;
+; arriav_lcell_comb     ; 2327                        ;
 ;     arith             ; 792                         ;
 ;         0 data inputs ; 122                         ;
 ;         1 data inputs ; 142                         ;
 ;         2 data inputs ; 90                          ;
 ;         3 data inputs ; 229                         ;
 ;         4 data inputs ; 209                         ;
-;     extend            ; 21                          ;
-;         7 data inputs ; 21                          ;
-;     normal            ; 1378                        ;
+;     extend            ; 37                          ;
+;         7 data inputs ; 37                          ;
+;     normal            ; 1390                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 481                         ;
-;         3 data inputs ; 277                         ;
-;         4 data inputs ; 186                         ;
-;         5 data inputs ; 143                         ;
-;         6 data inputs ; 281                         ;
+;         2 data inputs ; 479                         ;
+;         3 data inputs ; 285                         ;
+;         4 data inputs ; 192                         ;
+;         5 data inputs ; 167                         ;
+;         6 data inputs ; 257                         ;
 ;     shared            ; 108                         ;
 ;         0 data inputs ; 26                          ;
 ;         1 data inputs ; 65                          ;
 ;         2 data inputs ; 17                          ;
 ; boundary_port         ; 45                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 108                         ;
+; stratixv_ram_block    ; 111                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 14.19                       ;
+; Average LUT depth     ; 14.17                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1451,7 +1453,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:04     ;
+; Top            ; 00:00:26     ;
 +----------------+--------------+
 
 
@@ -1461,7 +1463,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 24 20:39:28 2024
+    Info: Processing started: Sat May 25 16:38:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1742,70 +1744,91 @@ Info (12133): Instantiated megafunction "heart:inst12|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q9h1.tdf
     Info (12023): Found entity 1: altsyncram_q9h1 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_q9h1" for hierarchy "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113016): Width of data items in "heart.mif" is smaller than the memory width. Padding data items with 0 on MSB to fit in memory.  File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/heart.mif Line: 6
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (6) in the Memory Initialization File "C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/heart.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 50
 Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
+Warning (12001): Port "rom_pixel_data[12]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[13]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[14]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[15]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[16]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[17]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[18]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[19]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[20]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[21]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[22]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[23]" does not exist in entity definition of "heart".  The port's range differs between the entity definition and its actual instantiation, "heart:inst12".
+Warning (12001): Port "rom_pixel_data[12]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[13]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[14]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[15]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[16]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[17]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[18]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[19]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[20]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[21]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[22]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
+Warning (12001): Port "rom_pixel_data[23]" does not exist in entity definition of "bouncy_ball".  The port's range differs between the entity definition and its actual instantiation, "bouncy_ball:inst3".
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[4]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 118
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[5]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 139
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[6]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 160
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[12]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 286
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[13]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 307
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[14]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 328
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[20]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 454
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[21]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 475
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[22]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 496
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[28]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 622
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[29]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 643
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[30]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 664
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[36]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 790
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[37]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 811
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[38]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 832
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[44]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 958
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[45]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 979
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[46]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1000
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[52]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1126
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[53]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1147
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[54]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1168
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[60]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1294
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[61]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1315
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[62]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1336
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[68]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1462
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[69]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1483
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[70]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1504
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[76]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1630
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[77]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1651
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[78]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1672
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[84]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1798
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[85]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1819
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[86]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1840
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[92]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1966
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[93]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 1987
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[94]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2008
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[100]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2134
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[101]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2155
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[102]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2176
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[108]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2302
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[109]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2323
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[110]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2344
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[116]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2470
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[117]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2491
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[118]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2512
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[124]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2638
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[125]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2659
-        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[126]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2680
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[128]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2722
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[129]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2743
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[130]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2764
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[132]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2806
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[133]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2827
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[134]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2848
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[136]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2890
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[137]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2911
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[138]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2932
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[140]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2974
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[141]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2995
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[142]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3016
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[144]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3058
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[145]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3079
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[146]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3100
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[148]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3142
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[149]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3163
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[150]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3184
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[152]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3226
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[153]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3247
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[154]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3268
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[156]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3310
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[157]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3331
         Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[158]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3352
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[131]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2785
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[135]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2869
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[139]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2953
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[143]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3037
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[147]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3121
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[151]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3205
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[155]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3289
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[159]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 3373
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[110]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2344
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[98]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2092
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[118]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2512
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[114]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2428
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[106]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2260
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[109]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2323
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[97]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2071
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[117]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2491
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[113]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2407
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[105]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2239
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[108]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2302
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[96]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2050
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[116]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2470
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[112]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2386
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[104]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2218
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[127]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2701
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[126]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2680
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[125]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2659
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[124]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2638
 Info (278001): Inferred 14 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod7" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div5" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
@@ -1995,6 +2018,14 @@ Warning (13012): Latch textSelector:inst10|current_lives_digit[4] has unsafe beh
     Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[102]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2176
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[101]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2155
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[100]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2134
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[122]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2596
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[121]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2575
+        Warning (14320): Synthesized away node "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|q_a[120]" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 2554
 Info (286030): Timing-Driven Synthesis is running
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_q9h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_q9h1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -2031,17 +2062,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 2520 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2551 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2366 logic cells
-    Info (21064): Implemented 108 RAM segments
+    Info (21061): Implemented 2394 logic cells
+    Info (21064): Implemented 111 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 149 warnings
-    Info: Peak virtual memory: 4948 megabytes
-    Info: Processing ended: Fri May 24 20:42:01 2024
-    Info: Elapsed time: 00:02:33
-    Info: Total CPU time (on all processors): 00:02:53
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 178 warnings
+    Info: Peak virtual memory: 4944 megabytes
+    Info: Processing ended: Sat May 25 16:39:41 2024
+    Info: Elapsed time: 00:01:18
+    Info: Total CPU time (on all processors): 00:01:17
 
 
