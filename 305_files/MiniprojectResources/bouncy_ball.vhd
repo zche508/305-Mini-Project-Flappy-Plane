@@ -72,7 +72,7 @@ SIGNAL score_time_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing;
 
 -- LIVES
 SIGNAL current_lives 			: integer RANGE 100 DOWNTO 0;
-SIGNAL collision 					: std_logic := '0';
+SIGNAL collision, prev_collision : std_logic := '0';
 SIGNAL game_running 				: std_logic := '0';
 
 SIGNAL collision_buffer 		: integer RANGE 511 DOWNTO 0 := cloud_inital_spacing; 
@@ -336,8 +336,8 @@ begin
 		else
 			bottom_cloud2_x_pos <= bottom_cloud2_x_pos + cloud_motion;
 		end if;
-		
-		
+
+
 		-- Compute next top_cloud3 x position
 		if (top_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(0, 11)) then
 			top_cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(750, 11);
@@ -350,42 +350,35 @@ begin
 		else
 			bottom_cloud3_x_pos <= bottom_cloud3_x_pos + cloud_motion;
 		end if;
-		
+
 		--------------------
 		-- UPDATING SCORE --
 		--------------------
-		
+
 		-- Check that the plane is not touching the clouds in the x and y directions
 			-- If it is not touching then the score is updated by +1
-		if ((bottom_cloud1_x_pos -  cloud_drawing_width <= ball_x_pos and 
+		if ((bottom_cloud1_x_pos -  cloud_drawing_width <= ball_x_pos and ball_x_pos <= bottom_cloud1_x_pos and 
 				top_cloud1_y_pos + top_cloud1_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud1_y_pos - bottom_cloud1_height) or 
 				
-			(bottom_cloud2_x_pos - cloud_drawing_width  <= ball_x_pos and
+			(bottom_cloud2_x_pos - cloud_drawing_width  <= ball_x_pos and ball_x_pos <= bottom_cloud2_x_pos and
 				top_cloud2_y_pos + top_cloud2_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud2_y_pos - bottom_cloud2_height) or 
 				
-			(bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos and
+			(bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= bottom_cloud3_x_pos and
 				top_cloud3_y_pos + top_cloud3_height <= ball_y_pos and ball_y_pos + size <= bottom_cloud3_y_pos - bottom_cloud3_height)) then
 				allow_score_update <= '1';
 		else
 				allow_score_update <= '0';
 		end if;
 		
-		
-		-- As long as the cloud buffer < cloud motion/displacement then it gets reduced
---		if (cloud_motion_integer <= score_time_buffer - cloud_motion_integer) then
---			score_time_buffer <= score_time_buffer - cloud_motion_integer;
---		end if;
 
 		
 		-- If it is not touching then the score is updated by +1
---		if (score_time_buffer <= cloud_motion_integer and allow_score_update = '1') then
 		if (allow_score_update = '1' and prev_allow_score_update = '0') then
 			-- Updates Score
 			if (current_score = 9999) then
 				current_score <= 0;
 			else
 				current_Score <= current_score + 1;
---				score_time_buffer <= cloud_inital_spacing;
 			end if;
 		end if;
 		
@@ -394,44 +387,30 @@ begin
 		-- CHECK FOR COLLISION --
 		-------------------------
 	
-		if (((ball_x_pos <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos) or 
-			(ball_x_pos + size  <= bottom_cloud1_x_pos and bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
+		if (((bottom_cloud1_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= bottom_cloud1_x_pos)) and 		
 			(ball_y_pos <= top_cloud1_y_pos + top_cloud1_height or bottom_cloud1_y_pos - bottom_cloud1_height <= ball_y_pos + size)) or 
 				
-			(((ball_x_pos <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos) or 
-			(ball_x_pos + size  <= bottom_cloud2_x_pos and bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos)) and 	 	
+			(((bottom_cloud2_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= bottom_cloud2_x_pos)) and 	 	
 			(ball_y_pos <= top_cloud2_y_pos + top_cloud2_height or bottom_cloud2_y_pos - bottom_cloud2_height <= ball_y_pos + size)) or 
 				
-			(((ball_x_pos <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos) or 
-			(ball_x_pos + size  <= bottom_cloud3_x_pos and bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos)) and 		
+			(((bottom_cloud3_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= bottom_cloud3_x_pos)) and 		
 			(ball_y_pos <= top_cloud3_y_pos + top_cloud3_height or bottom_cloud3_y_pos - bottom_cloud3_height <= ball_y_pos + size)) then
 			collision <= '1';
 		else
 			collision <= '0';
 		end if;
 		
-		if (cloud_motion_integer <= collision_buffer - cloud_motion_integer) then
-			collision_buffer <= collision_buffer - cloud_motion_integer;
-		end if;
-
 		
---		-- If it is not touching then the score is updated by +1
---		if (pb1 = '0') then
---			
---		elsif (pb2 = '1') then
---			collision_buffer <= 30;
---		end if;
-		
-		if (collision_buffer <= cloud_motion_integer and collision = '1') then
+		if (collision = '1' and prev_collision = '0') then
 			-- Updates Score
 			if (current_lives = 0) then
 				current_lives <= 30;
 			else
 				current_lives <= current_lives - 1;
-				collision_buffer <= cloud_inital_spacing;
 			end if;
 		end if;
 		
+		prev_collision <= collision;
 		-------------------------
 		-- UPDATING GAME SPEED --
 		-------------------------
