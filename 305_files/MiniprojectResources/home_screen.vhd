@@ -16,10 +16,10 @@ END ENTITY home_screen;
 
 ARCHITECTURE behavior OF home_screen IS
 	 
-	 SIGNAL ball_on						: std_logic;
-	 SIGNAL size 							: std_logic_vector(9 DOWNTO 0);  
-	 SIGNAL ball_y_pos					: std_logic_vector(9 DOWNTO 0);
-	 SiGNAL ball_x_pos					: std_logic_vector(9 DOWNTO 0);
+	 SIGNAL ball_on							: std_logic;
+	 SIGNAL size 								: std_logic_vector(9 DOWNTO 0);  
+	 SIGNAL ball_y_pos						: std_logic_vector(9 DOWNTO 0);
+	 SiGNAL ball_x_pos						: std_logic_vector(9 DOWNTO 0);
 	 
 	 SIGNAL box1_on							: std_logic;
 	 SIGNAL box1_size 						: std_logic_vector(9 DOWNTO 0);  
@@ -35,6 +35,9 @@ ARCHITECTURE behavior OF home_screen IS
 	 SIGNAL box3_size 						: std_logic_vector(9 DOWNTO 0);  
 	 SIGNAL box3_y_pos						: std_logic_vector(9 DOWNTO 0);
 	 SiGNAL box3_x_pos						: std_logic_vector(9 DOWNTO 0);
+	 
+	 SIGNAL in_single_player  				: std_logic;
+	 SIGNAL in_training_mode 				: std_logic;
 	 
 begin 
 		
@@ -53,7 +56,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 box1_size <= CONV_STD_LOGIC_VECTOR(50,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
-box1_x_pos <= CONV_STD_LOGIC_VECTOR(250, 10);
+box1_x_pos <= CONV_STD_LOGIC_VECTOR(320, 10);
 box1_y_pos <= CONV_STD_LOGIC_VECTOR(150, 10);
 
 box1_on <= '1' when ( ('0' & box1_x_pos <= '0' & pixel_column + box1_size) and ('0' & pixel_column <= '0' & box1_x_pos + box1_size) 	-- x_pos - size <= pixel_column <= x_pos + size
@@ -102,5 +105,16 @@ Blue <=  '0' when ball_on = '1' else
 			'0' when box2_on = '1' else
 			'0' when box3_on = '1' else
 			'1';
+
+in_single_player <= '1' 
+				  when cursor_row >= box2_y_pos 
+				  and cursor_row <= box2_y_pos + box2_size 
+				  and cursor_column >= box2_x_pos 
+				  and cursor_column <= box2_x_pos + box2_size else '0';
+in_training_mode <= '1' 
+				  when cursor_row >= box3_y_pos 
+				  and cursor_row <= box3_y_pos + box3_size 
+				  and cursor_column >= box3_x_pos 
+				  and cursor_column <= box3_x_pos + box3_size else '0';
 
 END ARCHITECTURE behavior;
