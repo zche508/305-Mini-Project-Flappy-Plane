@@ -1,6 +1,6 @@
 Flow report for flappyPlane
-Sat May 25 15:21:38 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Sat May 25 15:19:25 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -37,29 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Sat May 25 15:21:38 2024           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name                   ; flappyPlane                                     ;
-; Top-level Entity Name           ; home_screen_block_diagram                       ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CEBA4F23C7                                     ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 103 / 18,480 ( < 1 % )                          ;
-; Total registers                 ; 173                                             ;
-; Total pins                      ; 36 / 224 ( 16 % )                               ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                           ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                                  ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1 / 4 ( 25 % )                                  ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Sat May 25 15:19:25 2024       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; flappyPlane                                 ;
+; Top-level Entity Name           ; toplevel                                    ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CEBA4F23C7                                 ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 1,191 / 18,480 ( 6 % )                      ;
+; Total registers                 ; 284                                         ;
+; Total pins                      ; 37 / 224 ( 17 % )                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                 ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1 / 4 ( 25 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,48 +67,48 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/25/2024 15:20:57 ;
+; Start date & time ; 05/25/2024 15:16:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; flappyPlane         ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                          ;
-+-------------------------------------+----------------------------------------+---------------+---------------------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name               ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+---------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 224948462350457.171660725623604        ; --            ; --                        ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --                        ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                        ; <None>        ; --                        ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --                        ; eda_simulation ;
-; FITTER_EFFORT                       ; Fast Fit                               ; Auto Fit      ; --                        ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                        ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                        ; --             ;
-; MISC_FILE                           ; pll.cmp                                ; --            ; --                        ; --             ;
-; MISC_FILE                           ; pll_sim/pll.vho                        ; --            ; --                        ; --             ;
-; MISC_FILE                           ; pll2.cmp                               ; --            ; --                        ; --             ;
-; MISC_FILE                           ; pll2_sim/pll2.vho                      ; --            ; --                        ; --             ;
-; OPTIMIZATION_TECHNIQUE              ; Speed                                  ; Balanced      ; --                        ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                        ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                        ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                        ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                        ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default            ; Top            ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; home_screen_block_diagram ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default            ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; home_screen_block_diagram ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default            ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; home_screen_block_diagram ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                        ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                        ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                        ; --             ;
-; SPD_FILE                            ; pll.spd                                ; --            ; --                        ; --             ;
-; SPD_FILE                            ; pll2.spd                               ; --            ; --                        ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --                        ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --                        ; --             ;
-; TOP_LEVEL_ENTITY                    ; home_screen_block_diagram              ; flappyPlane   ; --                        ; --             ;
-+-------------------------------------+----------------------------------------+---------------+---------------------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                               ;
++-------------------------------------+----------------------------------------+---------------+----------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 84084436960953.171660701126028         ; --            ; --             ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --             ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                        ; <None>        ; --             ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation ;
+; FITTER_EFFORT                       ; Fast Fit                               ; Auto Fit      ; --             ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --             ;
+; MISC_FILE                           ; pll.cmp                                ; --            ; --             ; --             ;
+; MISC_FILE                           ; pll_sim/pll.vho                        ; --            ; --             ; --             ;
+; MISC_FILE                           ; pll2.cmp                               ; --            ; --             ; --             ;
+; MISC_FILE                           ; pll2_sim/pll2.vho                      ; --            ; --             ; --             ;
+; OPTIMIZATION_TECHNIQUE              ; Speed                                  ; Balanced      ; --             ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --             ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --             ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --             ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --             ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; toplevel       ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; toplevel       ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; toplevel       ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --             ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --             ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --             ; --             ;
+; SPD_FILE                            ; pll.spd                                ; --            ; --             ; --             ;
+; SPD_FILE                            ; pll2.spd                               ; --            ; --             ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --             ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --             ; --             ;
+; TOP_LEVEL_ENTITY                    ; toplevel                               ; flappyPlane   ; --             ; --             ;
++-------------------------------------+----------------------------------------+---------------+----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -116,12 +116,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4978 MB             ; 00:00:04                           ;
-; Fitter               ; 00:00:18     ; 1.1                     ; 7672 MB             ; 00:00:17                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4820 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.4                     ; 5249 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4800 MB             ; 00:00:00                           ;
-; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4955 MB             ; 00:00:33                           ;
+; Fitter               ; 00:01:56     ; 1.1                     ; 7103 MB             ; 00:09:20                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4823 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:07     ; 2.4                     ; 5240 MB             ; 00:00:15                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4814 MB             ; 00:00:02                           ;
+; Total                ; 00:02:30     ; --                      ; --                  ; 00:10:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -130,11 +130,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EN453060         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; EN453060         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; EN453060         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; EN453060         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN453060         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
