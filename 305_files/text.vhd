@@ -2,69 +2,67 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.all;
 USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
+USE IEEE.NUMERIC_STD.all;
 
-
-ENTITY textSelector IS
+ENTITY textSelectorV1 IS
 	PORT(sw, pixel_row, pixel_column: in STD_LOGIC_VECTOR(9 DOWNTO 0);
 		score : in integer range 10000 downto 0; -- Score is has a max value of 16384 (14 bits)
 		lives : in integer range 30 downto 0; -- Score is has a max value of 16384 (14 bits)
 		char_address : OUT std_logic_vector(5 downto 0);
 		text_row : OUT std_logic_vector(2 downto 0);
 		text_col : OUT std_logic_vector(2 downto 0));
-END textSelector;
+END textSelectorV1;
 
 
-architecture Behaviour of textSelector is
+architecture Behaviour of textSelectorV1 is
 	signal current_score_digit : integer range 10000 downto 0;
 	signal score_character : std_logic_vector(5 downto 0) := "110000";
 	
-	signal current_lives_digit : integer range 10000 downto 0;
+	signal current_lives_digit : std_logic_vector(3 downto 0);
 	signal lives_character : std_logic_vector(5 downto 0) := "110000";
 	
 --	type arr_type is array (0 to 1) of string(1 to 6);
 --	signal score_character : arr_type;
+
 begin
 --		char_address <= "000001";
 --		text_row <= pixel_row(3 downto 1);
 --		text_col <= pixel_column(3 downto 1);
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+------ LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES -----
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-	------------------------------------------------------------------------------------------------------------------------------------------------
-	------ LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES LIVES -----
-	------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	lives_character <= "110000" when (current_lives_digit = "0000") else-- "0" oct(60)
+								"110001" when (current_lives_digit = "0001") else-- "1" oct(61)
+								"110010" when (current_lives_digit = "0010") else-- "2" oct(62)
+								"110011" when (current_lives_digit = "0011") else-- "3" oct(63)
+								"110100" when (current_lives_digit = "0100") else-- "4" oct(64)
+								"110101" when (current_lives_digit = "0101") else-- "5" oct(65)
+								"110110" when (current_lives_digit = "0110") else-- "6" oct(66)
+								"110111" when (current_lives_digit = "0111") else-- "7" oct(67)
+								"111000" when (current_lives_digit = "1000") else-- "8" oct(70)
+								"111001" when (current_lives_digit = "1001");-- "9" oct(71)
+
+-------------------------------
+-- Updates the LIVES --
+------------------------------- 
+
+	current_lives_digit <= STD_LOGIC_VECTOR(TO_UNSIGNED(lives / 1000, 4)) when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and-- Thousands
+													CONV_STD_LOGIC_VECTOR(112, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(128, 10)) else
+
+									STD_LOGIC_VECTOR(TO_UNSIGNED((lives / 100) - (lives / 1000) * 10, 4)) when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and-- Hundreds
+									CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(144, 10)) else
+
+									STD_LOGIC_VECTOR(TO_UNSIGNED((lives / 10) - (lives / 100) * 10, 4)) when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and-- Tens
+									CONV_STD_LOGIC_VECTOR(144, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
+
+									STD_LOGIC_VECTOR(TO_UNSIGNED(lives - (lives / 10) * 10, 4)) when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and-- Ones
+									CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(176, 10));
 	
-	
-	
-	lives_character <= 	"110000" when (current_lives_digit = 0) else		-- "0" oct(60)
-								"110001" when (current_lives_digit = 1) else		-- "1" oct(61)
-								"110010" when (current_lives_digit = 2) else		-- "2" oct(62)
-								"110011" when (current_lives_digit = 3) else		-- "3" oct(63)
-								"110100" when (current_lives_digit = 4) else		-- "4" oct(64)
-								"110101" when (current_lives_digit = 5) else		-- "5" oct(65)
-								"110110" when (current_lives_digit = 6) else		-- "6" oct(66)
-								"110111" when (current_lives_digit = 7) else		-- "7" oct(67)
-								"111000" when (current_lives_digit = 8) else		-- "8" oct(70)
-								"111001" when (current_lives_digit = 9);		-- "9" oct(71)
-								
-	-------------------------------
-	-- Updates the LIVES --
-	------------------------------- 
-	
-	current_lives_digit <= (lives mod 10000)/1000 when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and	-- Thousands
-											CONV_STD_LOGIC_VECTOR(112, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(128, 10)) else	
-											
-								(lives mod 1000)/100 when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and			-- Hundreds
-												CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(144, 10)) else	
-												
-								(lives mod 100)/10 when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and			-- Tens
-												CONV_STD_LOGIC_VECTOR(144, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
-							
-								(lives mod 10) when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(48,10) and					-- Ones
-											CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(176, 10));	
-											
-	
-	
-	
+
 	------------------------------------------------------------------------------------------------------------------------------------------------
 	------ SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE SCORE -----
 	------------------------------------------------------------------------------------------------------------------------------------------------
@@ -84,18 +82,18 @@ begin
 	-------------------------------
 	----  Updates the SCORE   ----
 	-------------------------------
-	
-	current_score_digit <= (score mod 10000)/1000 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and	-- Thousands
+	current_score_digit <= (score mod 10000) / 1000 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and	-- Thousands
 											CONV_STD_LOGIC_VECTOR(112, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(128, 10)) else	
 											
-								(score mod 1000)/100 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and			-- Hundreds
+								(score mod 1000) / 100 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and			-- Hundreds
 												CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(144, 10)) else	
 												
-								(score mod 100)/10 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and			-- Tens
+								(score mod 100) / 10 when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and			-- Tens
 												CONV_STD_LOGIC_VECTOR(144, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10)) else
 							
 								(score mod 10) when (CONV_STD_LOGIC_VECTOR(14,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(32,10) and					-- Ones
-											CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(176, 10));	
+											CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(176, 10));
+											
 											
 	-------------------------------
 	-------- TEXT SELECTOR --------

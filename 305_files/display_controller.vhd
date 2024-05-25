@@ -1,14 +1,20 @@
-entity display_controller
-	port(ShowText, toolbox_on, plane_on : in std_logic;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.all;
+USE IEEE.STD_LOGIC_ARITH.all;
+USE IEEE.STD_LOGIC_SIGNED.all;
+
+entity display_controller is
+	port(	ShowText, toolbox_on, plane_on, collision : in std_logic;
 			top_cloud1_on, top_cloud2_on, top_cloud3_on : in std_logic;
-			bottom_cloud1_on, bottom_cloud2_on bottom_cloud3_on : in std_logic;
-			red_out, green_out, blue_out : out std_logic;
+			bottom_cloud1_on, bottom_cloud2_on, bottom_cloud3_on : in std_logic;
+			red_out, green_out, blue_out : out std_logic
 	);
 end entity display_controller;
 
 architecture behaviour of display_controller is
 
-signal red, green, blue
+signal red, green, blue : std_logic;
+
 begin
 	-- Colours for the screen, ball, and everything else
 	red <=	'1' when ShowText = '1' else 

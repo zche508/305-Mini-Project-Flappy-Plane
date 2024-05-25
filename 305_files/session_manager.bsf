@@ -1,0 +1,169 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 280 352)
+	(text "session_manager" (rect 5 0 75 12)(font "Arial" ))
+	(text "inst" (rect 8 320 20 332)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pb1" (rect 0 0 12 12)(font "Arial" ))
+		(text "pb1" (rect 21 27 33 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "vert_sync" (rect 0 0 42 12)(font "Arial" ))
+		(text "vert_sync" (rect 21 43 63 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "size[9..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "size[9..0]" (rect 21 59 55 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ball_y_pos[9..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "ball_y_pos[9..0]" (rect 21 75 84 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ball_x_pos[10..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "ball_x_pos[10..0]" (rect 21 91 87 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "cloud_drawing_width[9..0]" (rect 0 0 100 12)(font "Arial" ))
+		(text "cloud_drawing_width[9..0]" (rect 21 107 121 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "top_clouds_y_pos[9..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "top_clouds_y_pos[9..0]" (rect 21 123 115 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "bottom_clouds_y_pos[9..0]" (rect 0 0 109 12)(font "Arial" ))
+		(text "bottom_clouds_y_pos[9..0]" (rect 21 139 130 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "cloud1_x_pos[10..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "cloud1_x_pos[10..0]" (rect 21 155 98 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "cloud1_top_height[9..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "cloud1_top_height[9..0]" (rect 21 171 110 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "cloud1_bottom_height[9..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "cloud1_bottom_height[9..0]" (rect 21 187 126 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "cloud2_x_pos[10..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "cloud2_x_pos[10..0]" (rect 21 203 100 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "cloud2_top_height[9..0]" (rect 0 0 90 12)(font "Arial" ))
+		(text "cloud2_top_height[9..0]" (rect 21 219 111 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "cloud2_bottom_height[9..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "cloud2_bottom_height[9..0]" (rect 21 235 127 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "cloud3_x_pos[10..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "cloud3_x_pos[10..0]" (rect 21 251 100 263)(font "Arial" ))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "cloud3_top_height[9..0]" (rect 0 0 90 12)(font "Arial" ))
+		(text "cloud3_top_height[9..0]" (rect 21 267 111 279)(font "Arial" ))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "cloud3_bottom_height[9..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "cloud3_bottom_height[9..0]" (rect 21 283 127 295)(font "Arial" ))
+		(line (pt 0 288)(pt 16 288)(line_width 3))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "game_running" (rect 0 0 56 12)(font "Arial" ))
+		(text "game_running" (rect 187 27 243 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32)(line_width 1))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "score[13..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "score[13..0]" (rect 197 43 243 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48)(line_width 3))
+	)
+	(port
+		(pt 264 64)
+		(output)
+		(text "lives[4..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "lives[4..0]" (rect 205 59 243 71)(font "Arial" ))
+		(line (pt 264 64)(pt 248 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 248 320)(line_width 1))
+	)
+)
