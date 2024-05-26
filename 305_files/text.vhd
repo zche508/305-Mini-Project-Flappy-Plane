@@ -4,17 +4,17 @@ USE  IEEE.STD_LOGIC_ARITH.all;
 USE  IEEE.STD_LOGIC_SIGNED.all;
 USE IEEE.NUMERIC_STD.all;
 
-ENTITY textSelectorV1 IS
+ENTITY textSelector IS
 	PORT(sw, pixel_row, pixel_column: in STD_LOGIC_VECTOR(9 DOWNTO 0);
 		score : in integer range 10000 downto 0; -- Score is has a max value of 16384 (14 bits)
 		lives : in integer range 30 downto 0; -- Score is has a max value of 16384 (14 bits)
 		char_address : OUT std_logic_vector(5 downto 0);
 		text_row : OUT std_logic_vector(2 downto 0);
 		text_col : OUT std_logic_vector(2 downto 0));
-END textSelectorV1;
+END textSelector;
 
 
-architecture Behaviour of textSelectorV1 is
+architecture Behaviour of textSelector is
 	signal current_score_digit : integer range 10000 downto 0;
 	signal score_character : std_logic_vector(5 downto 0) := "110000";
 	

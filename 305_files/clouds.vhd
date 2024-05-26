@@ -5,7 +5,7 @@ USE IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY clouds IS
-	PORT(	pb1, pb2, pb3, clk, vert_sync, game_running	: IN std_logic;
+	PORT(	pb1, pb2, pb3, clk, vert_sync, game_running, reset: IN std_logic;
 			pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
 			random_number					: IN std_logic_vector(8 DOWNTO 0);
 			
@@ -125,8 +125,19 @@ cloud3_bottom_on <= '1' when (('0' & pixel_column <= '0' & cloud3_x_pos) and ('0
 clouds: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync) and game_running = '1') then
+	if (rising_edge(vert_sync)) then
+	
+		-- reset the cloud positions
+		if (reset = '1') then
+			-- CLOUD 1 
+			cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(0,11);
+			-- CLOUD 2  
+			cloud2_x_pos <= CONV_STD_LOGIC_VECTOR(cloud_horizontal_spacing,11);
+			-- CLOUD 3 
+			cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(2*cloud_horizontal_spacing,11);
+		end if;
 		
+		prev_game_running <= game_running;
 		------------------------------------------
 		-- UPDATING THE NEXT POSITION OF CLOUDS --
 		------------------------------------------

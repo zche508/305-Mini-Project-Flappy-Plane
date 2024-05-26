@@ -21,7 +21,7 @@ SIGNAL ball_y_pos					: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(24
 SiGNAL ball_x_pos					: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion				: std_logic_vector(9 DOWNTO 0);
 
-SIGNAL prev_mb1 : std_logic;
+SIGNAL prev_mb1, mb1_clicked : std_logic;
 
 -- Plane motion
 type motion_array is array (0 to 11) of std_logic_vector(9 DOWNTO 0);
@@ -44,8 +44,8 @@ SIGNAL ball_down_motion_counter : integer RANGE 7 DOWNTO 0;
 BEGIN
 
 -- Values for the ball up motion
-ball_up_motion(0) <= - CONV_STD_LOGIC_VECTOR(3, 10);
-ball_up_motion(1) <= - CONV_STD_LOGIC_VECTOR(6, 10);
+ball_up_motion(0) <= - CONV_STD_LOGIC_VECTOR(15, 10);
+ball_up_motion(1) <= - CONV_STD_LOGIC_VECTOR(15, 10);
 ball_up_motion(2) <= - CONV_STD_LOGIC_VECTOR(9, 10);
 ball_up_motion(3) <= - CONV_STD_LOGIC_VECTOR(12, 10);
 ball_up_motion(4) <= - CONV_STD_LOGIC_VECTOR(15, 10);
@@ -85,21 +85,32 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			'0';
 			
 
+mouse_click : process(mb1, vert_sync)
+begin
+	-- Check for mouse clicks
+
+	if (mb1 = '1' and prev_mb1 = '0') then
+		mb1_clicked <= '1';
+	elsif (mb1 = '1' and prev_mb1 = '1') then
+		mb1_clicked <= '0';
+	elsif (mb1 = '0' and prev_mb1 = '1') then
+		mb1_clicked <= '0';
+	end if;
+
+end process mouse_click;
+			
 
 move_plane: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync) and vert_sync = '1') then
+	if (rising_edge(vert_sync) and vert_sync = '1' and game_running = '1') then
 		-------------------------------
 		---- UPDATES PLANE POSITION ---
 		-------------------------------
-		
-		-- Check for mouse clicks
-		if (mb1 = '1' and prev_mb1 = '0') then
+		if (mb1_clicked = '1') then
 			ball_up_motion_counter <= 0;
 		end if;
-			
-			
+		
 		-- Updates the index to change the index of the "motion" of the ball
 		
 		if (ball_down_motion_counter <= 4) then
