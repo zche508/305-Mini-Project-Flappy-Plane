@@ -5,11 +5,13 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY bouncy_ball IS
-	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText, showHeart, showPlane: IN std_logic;
+	PORT(pb1, pb2, mb1, mb2, clk, vert_sync, showText, showHeart, showPlane, showToolbox, showClouds: IN std_logic;
 	  pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 	  random_number				: IN std_logic_vector(8 DOWNTO 0);
 	  heart_pixel_data			: IN std_logic_vector(11 downto 0);
 	  plane_pixel_data			: IN std_logic_vector(11 downto 0);
+	  toolbox_pixel_data			: IN std_logic_vector(11 downto 0);
+	  clouds_pixel_data			: IN std_logic_vector(11 downto 0);
 	  red, green, blue 			: OUT std_logic_vector(3 DOWNTO 0);
 	  score 							: OUT integer RANGE 10000 DOWNTO 0;
 	  lives 							: OUT integer RANGE 30 DOWNTO 0
@@ -99,11 +101,31 @@ SIGNAL plane_x_pos 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2
 SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(60, 10); -- 60 pixels down
 SIGNAL plane_size					: std_logic_vector(9 DOWNTO 0);
 
+-- TOOLBOX
+
+SIGNAL toolbox_on					: std_logic;
+SIGNAL toolbox_r					: std_logic_vector(3 DOWNTO 0);
+SIGNAL toolbox_g					: std_logic_vector(3 DOWNTO 0);
+SIGNAL toolbox_b					: std_logic_vector(3 DOWNTO 0);
+SIGNAL toolbox_x_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 20 pixels right?
+SIGNAL toolbox_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(60, 10); -- 60 pixels down
+SIGNAL toolbox_size				: std_logic_vector(9 DOWNTO 0);
+
+-- CLOUD (LIGHTNING FOR NOW)
+
+SIGNAL clouds_on					: std_logic;
+SIGNAL clouds_r					: std_logic_vector(3 DOWNTO 0);
+SIGNAL clouds_g					: std_logic_vector(3 DOWNTO 0);
+SIGNAL clouds_b					: std_logic_vector(3 DOWNTO 0);
+SIGNAL clouds_x_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 20 pixels right?
+SIGNAL clouds_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(60, 10); -- 60 pixels down
+SIGNAL clouds_size				: std_logic_vector(9 DOWNTO 0);
+
 BEGIN
 
 -- HEART
 
-heart_size <= CONV_STD_LOGIC_VECTOR(6,10);
+heart_size <= CONV_STD_LOGIC_VECTOR(6,10); -- this size doesn't do anything right now
 heart_r <= heart_pixel_data(11 downto 8);
 heart_g <= heart_pixel_data(7 DOWNTO 4);
 heart_b <= heart_pixel_data(3 DOWNTO 0);
@@ -119,6 +141,26 @@ plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
 plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
 							CONV_STD_LOGIC_VECTOR(100, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(200, 10)) else -- width
+				'0';
+
+-- TOOLBOX
+
+toolbox_size <= CONV_STD_LOGIC_VECTOR(20,10);
+toolbox_r <= plane_pixel_data(11 downto 8);
+toolbox_g <= plane_pixel_data(7 DOWNTO 4);
+toolbox_b <= plane_pixel_data(3 DOWNTO 0);
+toolbox_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+							CONV_STD_LOGIC_VECTOR(200, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(300, 10)) else -- width
+				'0';
+
+-- CLOUDS
+
+clouds_size <= CONV_STD_LOGIC_VECTOR(20,10);
+clouds_r <= plane_pixel_data(11 downto 8);
+clouds_g <= plane_pixel_data(7 DOWNTO 4);
+clouds_b <= plane_pixel_data(3 DOWNTO 0);
+clouds_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+							CONV_STD_LOGIC_VECTOR(200, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(300, 10)) else -- width
 				'0';
 
 score <= current_score;
@@ -188,6 +230,8 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 Red <=	"1111" when ShowText = '1' else
 			heart_r when heart_on = '1' else
 			plane_r when plane_on = '1' else
+			toolbox_r when toolbox_on = '1' else
+			clouds_r when clouds_on = '1' else
 			"1111" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -197,6 +241,8 @@ Red <=	"1111" when ShowText = '1' else
 Green <= "1111" when ShowText = '1' else 
 			heart_g when heart_on = '1' else
 			plane_g when plane_on = '1' else
+			toolbox_g when toolbox_on = '1' else
+			clouds_g when clouds_on = '1' else
 			"0000" when ball_on = '1' else
 			"1111" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -205,6 +251,8 @@ Green <= "1111" when ShowText = '1' else
 Blue <=  "1111" when ShowText = '1' else 
 			heart_b when heart_on = '1' else
 			plane_b when plane_on = '1' else
+			toolbox_b when toolbox_on = '1' else
+			clouds_b when clouds_on = '1' else
 			"0000" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
