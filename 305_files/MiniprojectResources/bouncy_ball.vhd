@@ -118,7 +118,7 @@ plane_r <= plane_pixel_data(11 downto 8);
 plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
 plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
-							CONV_STD_LOGIC_VECTOR(0, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(100, 10)) else -- width
+							CONV_STD_LOGIC_VECTOR(100, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(200, 10)) else -- width
 				'0';
 
 score <= current_score;
