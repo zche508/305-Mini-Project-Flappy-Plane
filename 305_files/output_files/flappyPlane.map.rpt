@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Sun May 26 22:36:04 2024
+Sun May 26 23:43:49 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 26 22:36:04 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 26 23:43:49 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; home_screen_block_diagram                   ;
@@ -790,7 +790,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -800,7 +800,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 26 22:35:48 2024
+    Info: Processing started: Sun May 26 23:43:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -934,33 +934,33 @@ Warning (10492): VHDL Process Statement warning at home_screen.vhd(138): signal 
 Warning (10492): VHDL Process Statement warning at home_screen.vhd(138): signal "box2_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 138
 Warning (10492): VHDL Process Statement warning at home_screen.vhd(138): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 138
 Warning (10492): VHDL Process Statement warning at home_screen.vhd(138): signal "box2_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(141): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(141): signal "box3_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(141): signal "box3_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(141): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(141): signal "box3_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(152): signal "pb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(153): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(153): signal "box2_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(153): signal "box2_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(153): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(153): signal "box2_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(154): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(154): signal "box3_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(154): signal "box3_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(154): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(154): signal "box3_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 154
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(162): signal "pb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 162
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(163): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(163): signal "box2_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(163): signal "box2_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(163): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(163): signal "box2_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 163
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(164): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(164): signal "box3_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(164): signal "box3_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(164): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at home_screen.vhd(164): signal "box3_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 164
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(142): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(142): signal "box3_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(142): signal "box3_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(142): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(142): signal "box3_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(158): signal "pb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 158
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(159): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(159): signal "box2_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(159): signal "box2_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(159): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(159): signal "box2_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 159
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(160): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(160): signal "box3_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(160): signal "box3_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(160): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(160): signal "box3_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(172): signal "pb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(173): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(173): signal "box2_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(173): signal "box2_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(173): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(173): signal "box2_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(174): signal "cursor_row" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(174): signal "box3_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(174): signal "box3_size" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(174): signal "cursor_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 174
+Warning (10492): VHDL Process Statement warning at home_screen.vhd(174): signal "box3_y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 174
 Warning (10631): VHDL Process Statement warning at home_screen.vhd(133): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
 Warning (10631): VHDL Process Statement warning at home_screen.vhd(133): inferring latch(es) for signal or variable "led3", which holds its previous value in one or more paths through the process File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
 Warning (10631): VHDL Process Statement warning at home_screen.vhd(133): inferring latch(es) for signal or variable "led4", which holds its previous value in one or more paths through the process File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
@@ -1188,9 +1188,9 @@ Info (21057): Implemented 400 device resources after synthesis - the final resou
     Info (21061): Implemented 363 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 117 warnings
-    Info: Peak virtual memory: 4876 megabytes
-    Info: Processing ended: Sun May 26 22:36:04 2024
-    Info: Elapsed time: 00:00:16
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Sun May 26 23:43:49 2024
+    Info: Elapsed time: 00:00:43
     Info: Total CPU time (on all processors): 00:00:36
 
 
