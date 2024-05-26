@@ -99,22 +99,6 @@ SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(4
 
 BEGIN
 
--- HEART
-
-heart_r <= heart_pixel_data(11 downto 8);
-heart_g <= heart_pixel_data(7 DOWNTO 4);
-heart_b <= heart_pixel_data(3 DOWNTO 0);
-heart_on <= '1' when ((pixel_row >= heart_y_pos) and (pixel_row < heart_y_pos + 6) and (pixel_column >= heart_x_pos) and (pixel_column < heart_x_pos + 6)) else
-			'0';
-
--- PLANE
-
-plane_r <= plane_pixel_data(11 downto 8);
-plane_g <= plane_pixel_data(7 DOWNTO 4);
-plane_b <= plane_pixel_data(3 DOWNTO 0);
-plane_on <= '1' when ((pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + 10) and (pixel_column >= plane_x_pos) and (pixel_column < plane_x_pos + 20)) else
-			'0';
-
 score <= current_score;
 lives <= current_lives;
 
@@ -166,7 +150,24 @@ bottom_cloud3_height <= (bottom_cloud3_y_pos - ('0' & random_number) - cloud_ver
 
 bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) and ('0' & bottom_cloud3_x_pos - cloud_drawing_width <= '0' & pixel_column) 	-- x_pos - size <= pixel_column <= x_pos + size 
 					and (pixel_row <= '0' & bottom_cloud3_y_pos) and (bottom_cloud3_y_pos - bottom_cloud3_height) <= '0' & pixel_row)  else	-- y_pos - size <= pixel_row <= y_pos + size
-			'0';	
+			'0';
+	
+
+-- HEART
+
+heart_r <= heart_pixel_data(11 downto 8);
+heart_g <= heart_pixel_data(7 DOWNTO 4);
+heart_b <= heart_pixel_data(3 DOWNTO 0);
+heart_on <= '1' when ((pixel_row >= heart_y_pos) and (pixel_row < heart_y_pos + 6) and (pixel_column >= heart_x_pos) and (pixel_column < heart_x_pos + 6)) else
+			'0';
+
+-- PLANE
+
+plane_r <= plane_pixel_data(11 downto 8);
+plane_g <= plane_pixel_data(7 DOWNTO 4);
+plane_b <= plane_pixel_data(3 DOWNTO 0);
+plane_on <= '1' when ((pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + 10) and (pixel_column >= plane_x_pos) and (pixel_column < plane_x_pos + 20)) else
+			'0';
 
 
 -- Colours for pixel data on video signal

@@ -70,12 +70,8 @@ BEGIN
 		q_a => rom_data
 	);
 
-	rom_address <= character_address; -- removed "& font_row" for now idk what it does
-	-- rom_mux_output <= rom_data((CONV_INTEGER(font_col) + 1) * 12 - 1);
-	-- rom_pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
-	
-	-- take 12 bits for each pixel (4 red bits, 4 green bits and 4 blue bits, in MSB
-	rom_mux_output <= rom_data(240 - (CONV_INTEGER(font_col) + 1) * 12);
-	rom_pixel_data <= rom_data(239 - (CONV_INTEGER(font_col) * 12) downto 239 - (CONV_INTEGER(font_col) * 12 + 11));
+	rom_address <= character_address & font_row;
+	rom_mux_output <= rom_data((CONV_INTEGER(font_col) + 1) * 12 - 1);
+	rom_pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
 	
 END SYN;
