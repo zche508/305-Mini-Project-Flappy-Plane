@@ -160,7 +160,7 @@ clouds_r <= clouds_pixel_data(11 downto 8);
 clouds_g <= clouds_pixel_data(7 DOWNTO 4);
 clouds_b <= clouds_pixel_data(3 DOWNTO 0);
 clouds_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
-							CONV_STD_LOGIC_VECTOR(200, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(300, 10)) else -- width
+							CONV_STD_LOGIC_VECTOR(300, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(400, 10)) else -- width
 				'0';
 
 score <= current_score;
