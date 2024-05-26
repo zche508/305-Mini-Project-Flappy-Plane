@@ -65,10 +65,10 @@ box1_on <= '1' when ( ('0' & box1_x_pos <= '0' & pixel_column + box1_size) and (
 			
 		--------------------------------------------------------------
 			
-box2_size <= CONV_STD_LOGIC_VECTOR(15,10);
+box2_size <= CONV_STD_LOGIC_VECTOR(20,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
-box2_x_pos <= CONV_STD_LOGIC_VECTOR(250, 10);
+box2_x_pos <= CONV_STD_LOGIC_VECTOR(320, 10);
 box2_y_pos <= CONV_STD_LOGIC_VECTOR(250, 10);
 
 box2_on <= '1' when ( ('0' & box2_x_pos <= '0' & pixel_column + box2_size) and ('0' & pixel_column <= '0' & box2_x_pos + box2_size) 	-- x_pos - size <= pixel_column <= x_pos + size
@@ -80,7 +80,7 @@ box2_on <= '1' when ( ('0' & box2_x_pos <= '0' & pixel_column + box2_size) and (
 box3_size <= CONV_STD_LOGIC_VECTOR(10,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 
-box3_x_pos <= CONV_STD_LOGIC_VECTOR(350, 10);
+box3_x_pos <= CONV_STD_LOGIC_VECTOR(320, 10);
 box3_y_pos <= CONV_STD_LOGIC_VECTOR(350, 10);
 
 box3_on <= '1' when ( ('0' & box3_x_pos <= '0' & pixel_column + box3_size) and ('0' & pixel_column <= '0' & box3_x_pos + box3_size) 	-- x_pos - size <= pixel_column <= x_pos + size
