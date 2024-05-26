@@ -2,33 +2,57 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'MOUSE:inst5|left_button'
+Slack : -10.939
+TNS   : -48.667
+
+Type  : Slow 1100mV 85C Model Setup 'MOUSE:inst5|cursor_column[0]'
+Slack : -9.201
+TNS   : -25.980
+
 Type  : Slow 1100mV 85C Model Setup 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -7.959
-TNS   : -710.497
+Slack : -9.153
+TNS   : -777.475
 
 Type  : Slow 1100mV 85C Model Setup 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -5.970
-TNS   : -29.599
+Slack : -6.839
+TNS   : -52.806
 
-Type  : Slow 1100mV 85C Model Hold 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 0.255
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Hold 'MOUSE:inst5|cursor_column[0]'
+Slack : -0.169
+TNS   : -0.169
 
 Type  : Slow 1100mV 85C Model Hold 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.323
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'MOUSE:inst5|MOUSE_CLK_FILTER'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'MOUSE:inst5|left_button'
+Slack : 0.528
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -6.675
-TNS   : -105.191
+Slack : -7.221
+TNS   : -112.460
 
 Type  : Slow 1100mV 85C Model Removal 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 5.412
+Slack : 5.703
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MOUSE:inst5|MOUSE_CLK_FILTER'
 Slack : -0.538
-TNS   : -75.022
+TNS   : -75.196
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MOUSE:inst5|cursor_column[0]'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MOUSE:inst5|left_button'
+Slack : 0.209
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -39,36 +63,60 @@ Slack : 9.731
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.307
+Slack : 19.284
 TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'MOUSE:inst5|left_button'
+Slack : -10.889
+TNS   : -48.536
+
+Type  : Slow 1100mV 0C Model Setup 'MOUSE:inst5|cursor_column[0]'
+Slack : -9.150
+TNS   : -25.823
 
 Type  : Slow 1100mV 0C Model Setup 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -7.902
-TNS   : -701.634
+Slack : -8.935
+TNS   : -762.108
 
 Type  : Slow 1100mV 0C Model Setup 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -5.692
-TNS   : -26.784
+Slack : -6.406
+TNS   : -47.958
+
+Type  : Slow 1100mV 0C Model Hold 'MOUSE:inst5|cursor_column[0]'
+Slack : -0.266
+TNS   : -0.266
 
 Type  : Slow 1100mV 0C Model Hold 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.303
-TNS   : 0.000
+Slack : -0.093
+TNS   : -0.093
 
 Type  : Slow 1100mV 0C Model Hold 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 0.333
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'MOUSE:inst5|left_button'
+Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -6.613
-TNS   : -104.468
+Slack : -7.159
+TNS   : -111.187
 
 Type  : Slow 1100mV 0C Model Removal 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 5.591
+Slack : 5.825
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MOUSE:inst5|MOUSE_CLK_FILTER'
 Slack : -0.538
-TNS   : -73.073
+TNS   : -73.204
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MOUSE:inst5|cursor_column[0]'
+Slack : 0.228
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MOUSE:inst5|left_button'
+Slack : 0.238
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -79,36 +127,60 @@ Slack : 9.741
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.200
+Slack : 19.193
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -3.824
-TNS   : -330.326
+Type  : Fast 1100mV 85C Model Setup 'MOUSE:inst5|left_button'
+Slack : -5.448
+TNS   : -23.349
 
 Type  : Fast 1100mV 85C Model Setup 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -3.722
-TNS   : -19.883
+Slack : -4.511
+TNS   : -35.635
+
+Type  : Fast 1100mV 85C Model Setup 'MOUSE:inst5|cursor_column[0]'
+Slack : -4.312
+TNS   : -11.912
+
+Type  : Fast 1100mV 85C Model Setup 'MOUSE:inst5|MOUSE_CLK_FILTER'
+Slack : -4.270
+TNS   : -357.764
+
+Type  : Fast 1100mV 85C Model Hold 'MOUSE:inst5|cursor_column[0]'
+Slack : -0.011
+TNS   : -0.011
+
+Type  : Fast 1100mV 85C Model Hold 'MOUSE:inst5|left_button'
+Slack : 0.043
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 0.092
+Slack : 0.113
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.171
+Slack : 0.195
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -3.068
-TNS   : -48.542
+Slack : -3.262
+TNS   : -50.656
 
 Type  : Fast 1100mV 85C Model Removal 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 2.716
+Slack : 2.937
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -0.025
-TNS   : -0.183
+Slack : 0.002
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MOUSE:inst5|cursor_column[0]'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MOUSE:inst5|left_button'
+Slack : 0.308
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 1.666
@@ -119,35 +191,59 @@ Slack : 9.336
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.556
+Slack : 19.545
 TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'MOUSE:inst5|left_button'
+Slack : -5.114
+TNS   : -22.090
 
 Type  : Fast 1100mV 0C Model Setup 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -3.658
-TNS   : -316.490
+Slack : -4.039
+TNS   : -340.786
+
+Type  : Fast 1100mV 0C Model Setup 'MOUSE:inst5|cursor_column[0]'
+Slack : -4.037
+TNS   : -11.170
 
 Type  : Fast 1100mV 0C Model Setup 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -2.917
-TNS   : -15.581
-
-Type  : Fast 1100mV 0C Model Hold 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 0.123
-TNS   : 0.000
+Slack : -3.526
+TNS   : -27.744
 
 Type  : Fast 1100mV 0C Model Hold 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.154
+Slack : -0.041
+TNS   : -0.041
+
+Type  : Fast 1100mV 0C Model Hold 'MOUSE:inst5|cursor_column[0]'
+Slack : -0.019
+TNS   : -0.019
+
+Type  : Fast 1100mV 0C Model Hold 'MOUSE:inst5|left_button'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'MOUSE:inst5|MOUSE_CLK_FILTER'
+Slack : 0.124
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : -2.971
-TNS   : -47.038
+Slack : -3.152
+TNS   : -49.067
 
 Type  : Fast 1100mV 0C Model Removal 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 2.696
+Slack : 2.921
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MOUSE:inst5|MOUSE_CLK_FILTER'
-Slack : 0.004
+Slack : 0.019
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MOUSE:inst5|cursor_column[0]'
+Slack : 0.319
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MOUSE:inst5|left_button'
+Slack : 0.346
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
@@ -159,7 +255,7 @@ Slack : 9.286
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inst3|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.551
+Slack : 19.538
 TNS   : 0.000
 
 ------------------------------------------------------------

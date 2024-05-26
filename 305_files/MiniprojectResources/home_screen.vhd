@@ -9,9 +9,9 @@ ENTITY home_screen IS
         pixel_row, pixel_column : IN std_logic_vector(9 DOWNTO 0);
 		  cursor_row, cursor_column : IN std_logic_vector(9 DOWNTO 0);
         pb1 : IN std_logic;  -- Button input for selecting modes
-		  led3, led4 : OUT std_logic;
         red, green, blue : OUT std_logic;
-        mode : OUT std_logic_vector(1 DOWNTO 0) -- 00: Home, 01: Training, 10: Single Player
+        mode : OUT std_logic_vector(1 DOWNTO 0); -- 00: Home, 01: Training, 10: Single Player
+		  led3, led4 : OUT std_logic
     );
 END ENTITY home_screen;
 
