@@ -137,51 +137,51 @@ begin
 			 if pb1 = '1' then
 				if (cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size) then
 				  next_state <= TRAINING_MODE;
-				  led3 <= '1';
-              led4 <= '0';
+				  --led3 <= '1';
+              ----led4 <= '0';
 				elsif (cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size) then
 				  next_state <= SINGLE_PLAYER_MODE;
-				  led3 <= '0';
-              led4 <= '1';
+				  --led3 <= '0';
+             -- led4 <= '1';
 				else
 				  next_state <= HOME_SCREEN;
-				  led3 <= '0';
-              led4 <= '0';
+				  --led3 <= '0';
+              --led4 <= '0';
 				 end if;
 			 end if;
 
 		when TRAINING_MODE =>
 			 -- Implement Training Mode Logic
 			 mode <= "01";  -- Indicate Training Mode
-			 led3 <= '1';
-          led4 <= '0';
+			 --led3 <= '1';
+          --led4 <= '0';
 			 if pb1 = '1' then
 				if ((cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size)) or
 					((cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size)) then
 				  next_state <= HOME_SCREEN;
-				  led3 <= '0';
-              led4 <= '0';
+				  --led3 <= '0';
+             -- led4 <= '0';
 				end if;
 			 end if;
 
 		when SINGLE_PLAYER_MODE =>
 			 -- Implement Single Player Mode Logic
 			 mode <= "10";  -- Indicate Single Player Mode
-			 led3 <= '0';
-          led4 <= '1';
+			 --led3 <= '0';
+          --led4 <= '1';
 			 if pb1 = '1'then
 				if ((cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size)) or
 					((cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size)) then
 				  next_state <= HOME_SCREEN;
-				  led3 <= '0';
-              led4 <= '0';
+				  --led3 <= '0';
+              --led4 <= '0';
 				end if;
 			 end if;
 
 		when others =>
 			 next_state <= HOME_SCREEN;
-			 led3 <= '0';
-          led4 <= '0';
+			 --led3 <= '0';
+          --led4 <= '0';
   end case;
 end process;
 
