@@ -174,8 +174,8 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 
 
 Red <=	"1111" when ShowText = '1' else
-			heart_r when showHeart = '1' and pixel_row <= heart_y_pos and pixel_column <= heart_x_pos else
-			plane_r when showPlane = '1' and pixel_row <= plane_y_pos and pixel_column <= plane_x_pos else
+			heart_r when showHeart = '1' and pixel_row <= heart_y_pos else
+			plane_r when showPlane = '1' and pixel_row <= plane_y_pos else
 			"1111" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -183,16 +183,16 @@ Red <=	"1111" when ShowText = '1' else
 			"0000";
 			
 Green <= "1111" when ShowText = '1' else 
-			heart_g when showHeart = '1' and pixel_row <= heart_y_pos and pixel_column <= heart_x_pos else
-			plane_g when showPlane = '1' and pixel_row <= plane_y_pos and pixel_column <= plane_x_pos else
+			heart_g when showHeart = '1' and pixel_row <= heart_y_pos else
+			plane_g when showPlane = '1' and pixel_row <= plane_y_pos else
 			"0000" when ball_on = '1' else
 			"1111" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			"1111"; 
 			
 Blue <=  "1111" when ShowText = '1' else 
-			heart_b when showHeart = '1' and pixel_row <= heart_y_pos and pixel_column <= heart_x_pos else
-			plane_b when showPlane = '1' and pixel_row <= plane_y_pos and pixel_column <= plane_x_pos else
+			heart_b when showHeart = '1' and pixel_row <= heart_y_pos else
+			plane_b when showPlane = '1' and pixel_row <= plane_y_pos else
 			"0000" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
