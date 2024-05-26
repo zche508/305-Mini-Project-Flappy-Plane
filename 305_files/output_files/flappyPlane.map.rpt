@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Mon May 27 00:06:08 2024
+Mon May 27 00:29:05 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 27 00:06:07 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 27 00:29:05 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; home_screen_block_diagram                   ;
@@ -174,7 +174,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -299,11 +300,11 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+----------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal        ; Free of Timing Hazards ;
 +----------------------------------------------------+----------------------------+------------------------+
-; home_screen:inst|led4                              ; home_screen:inst|Selector2 ; yes                    ;
 ; home_screen:inst|led3                              ; home_screen:inst|Selector2 ; yes                    ;
-; home_screen:inst|next_state.SINGLE_PLAYER_MODE_498 ; home_screen:inst|Selector0 ; yes                    ;
-; home_screen:inst|next_state.HOME_SCREEN_528        ; home_screen:inst|Selector0 ; yes                    ;
+; home_screen:inst|led4                              ; home_screen:inst|Selector2 ; yes                    ;
 ; home_screen:inst|next_state.TRAINING_MODE_513      ; home_screen:inst|Selector0 ; yes                    ;
+; home_screen:inst|next_state.HOME_SCREEN_528        ; home_screen:inst|Selector0 ; yes                    ;
+; home_screen:inst|next_state.SINGLE_PLAYER_MODE_498 ; home_screen:inst|Selector0 ; yes                    ;
 ; Number of user-specified and inferred latches = 5  ;                            ;                        ;
 +----------------------------------------------------+----------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -812,7 +813,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 27 00:05:51 2024
+    Info: Processing started: Mon May 27 00:28:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -872,11 +873,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file home_sc
 Info (12127): Elaborating entity "home_screen_block_diagram" for the top level hierarchy
 Warning (275011): Block or symbol "VGA_SYNC" of instance "inst2" overlaps another block or symbol
 Warning (275011): Block or symbol "bouncy_ball" of instance "inst6" overlaps another block or symbol
-Warning (275089): Not all bits in bus "LEDR[3..0]" are used
+Warning (275089): Not all bits in bus "LEDR[4..0]" are used
 Warning (275080): Converted elements in bus name "LEDR" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "LEDR[0]" to "LEDR0"
     Warning (275081): Converted element name(s) from "LEDR[1]" to "LEDR1"
     Warning (275081): Converted element name(s) from "LEDR[3]" to "LEDR3"
+    Warning (275081): Converted element name(s) from "LEDR[4]" to "LEDR4"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst3"
 Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst3|pll2_0002:pll2_inst" File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
@@ -1147,15 +1149,15 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[5]" File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 139
         Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[6]" File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 160
         Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[7]" File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 181
-Warning (13012): Latch home_screen:inst|led4 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 14
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal home_screen:inst|state.HOME_SCREEN File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 44
 Warning (13012): Latch home_screen:inst|led3 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 14
     Warning (13013): Ports D and ENA on the latch are fed by the same signal home_screen:inst|state.HOME_SCREEN File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 44
-Warning (13012): Latch home_screen:inst|next_state.SINGLE_PLAYER_MODE_498 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
+Warning (13012): Latch home_screen:inst|led4 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal home_screen:inst|state.HOME_SCREEN File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 44
+Warning (13012): Latch home_screen:inst|next_state.TRAINING_MODE_513 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
     Warning (13013): Ports D and ENA on the latch are fed by the same signal home_screen:inst|state.HOME_SCREEN File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 44
 Warning (13012): Latch home_screen:inst|next_state.HOME_SCREEN_528 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
     Warning (13013): Ports D and ENA on the latch are fed by the same signal home_screen:inst|state.HOME_SCREEN File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 44
-Warning (13012): Latch home_screen:inst|next_state.TRAINING_MODE_513 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
+Warning (13012): Latch home_screen:inst|next_state.SINGLE_PLAYER_MODE_498 has unsafe behavior File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 133
     Warning (13013): Ports D and ENA on the latch are fed by the same signal home_screen:inst|state.HOME_SCREEN File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/home_screen.vhd Line: 44
 Info (13000): Registers with preset signals will power-up high File: E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -1216,10 +1218,10 @@ Info (21057): Implemented 428 device resources after synthesis - the final resou
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 389 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 134 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Mon May 27 00:06:08 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:36
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 135 warnings
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Mon May 27 00:29:05 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:35
 
 

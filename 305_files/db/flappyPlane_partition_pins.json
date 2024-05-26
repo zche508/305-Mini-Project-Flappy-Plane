@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LED[4]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR0",
 					"strict" : false
 				},
@@ -81,6 +77,10 @@
 				},
 				{
 					"name" : "LEDR3",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR4",
 					"strict" : false
 				},
 				{
