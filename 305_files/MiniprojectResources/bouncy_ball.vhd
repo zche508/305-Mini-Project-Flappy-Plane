@@ -107,8 +107,8 @@ heart_size <= CONV_STD_LOGIC_VECTOR(6,10);
 heart_r <= heart_pixel_data(11 downto 8);
 heart_g <= heart_pixel_data(7 DOWNTO 4);
 heart_b <= heart_pixel_data(3 DOWNTO 0);
-heart_on <= '1' when (CONV_STD_LOGIC_VECTOR(100,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(106,10) and -- height
-							CONV_STD_LOGIC_VECTOR(60, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(66, 10)) else -- width
+heart_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+							CONV_STD_LOGIC_VECTOR(0, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(100, 10)) else -- width
 				'0';
 
 -- PLANE
@@ -117,8 +117,8 @@ plane_size <= CONV_STD_LOGIC_VECTOR(20,10);
 plane_r <= plane_pixel_data(11 downto 8);
 plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
-plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(200,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(210,10) and -- height
-							CONV_STD_LOGIC_VECTOR(60, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(80, 10)) else -- width
+plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+							CONV_STD_LOGIC_VECTOR(0, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(100, 10)) else -- width
 				'0';
 
 score <= current_score;
