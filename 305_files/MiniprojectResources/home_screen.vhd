@@ -5,7 +5,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY home_screen IS
     PORT (
-        showText : IN std_logic;
+        clk, reset, showText : IN std_logic;
         pixel_row, pixel_column : IN std_logic_vector(9 DOWNTO 0);
 		  cursor_row, cursor_column : IN std_logic_vector(9 DOWNTO 0);
         pb1 : IN std_logic;  -- Button input for selecting modes
@@ -38,6 +38,9 @@ ARCHITECTURE behavior OF home_screen IS
 	 
 	 SIGNAL in_single_player  				: std_logic;
 	 SIGNAL in_training_mode 				: std_logic;
+	 
+	 type state_type is (HOME_SCREEN, TRAINING_MODE, SINGLE_PLAYER_MODE);
+    SIGNAL state, next_state				: state_type;
 	 
 begin 
 		
@@ -116,5 +119,53 @@ in_training_mode <= '1'
 				  and cursor_row <= box3_y_pos + box3_size 
 				  and cursor_column >= box3_x_pos 
 				  and cursor_column <= box3_x_pos + box3_size else '0';
+				  
+process(clk, reset)
+begin
+  if reset = '1' then
+		state <= HOME_SCREEN;
+  elsif rising_edge(clk) then
+		state <= next_state;
+  end if;
+end process;
+
+process(state)
+begin
+  case state is
+		when HOME_SCREEN =>
+			 if pb1 = '1' then
+				if (cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size) then
+				  next_state <= TRAINING_MODE;
+				elsif (cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size) then
+				  next_state <= SINGLE_PLAYER_MODE;
+				else
+				  next_state <= HOME_SCREEN;
+				 end if;
+			 end if;
+
+		when TRAINING_MODE =>
+			 -- Implement Training Mode Logic
+			 mode <= "01";  -- Indicate Training Mode
+			 if pb1 = '1' then
+				if ((cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size)) or
+					((cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size)) then
+				  next_state <= HOME_SCREEN;
+				end if;
+			 end if;
+
+		when SINGLE_PLAYER_MODE =>
+			 -- Implement Single Player Mode Logic
+			 mode <= "10";  -- Indicate Single Player Mode
+			 if pb1 = '1'then
+				if ((cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size)) or
+					((cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size)) then
+				  next_state <= HOME_SCREEN;
+				end if;
+			 end if;
+
+		when others =>
+			 next_state <= HOME_SCREEN;
+  end case;
+end process;
 
 END ARCHITECTURE behavior;
