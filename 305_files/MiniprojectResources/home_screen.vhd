@@ -9,6 +9,7 @@ ENTITY home_screen IS
         pixel_row, pixel_column : IN std_logic_vector(9 DOWNTO 0);
 		  cursor_row, cursor_column : IN std_logic_vector(9 DOWNTO 0);
         pb1 : IN std_logic;  -- Button input for selecting modes
+		  led3, led4 : OUT std_logic;
         red, green, blue : OUT std_logic;
         mode : OUT std_logic_vector(1 DOWNTO 0) -- 00: Home, 01: Training, 10: Single Player
     );
@@ -136,8 +137,10 @@ begin
 			 if pb1 = '1' then
 				if (cursor_row = box2_x_pos + box2_size) and (cursor_column = box2_y_pos + box2_size) then
 				  next_state <= TRAINING_MODE;
+				  led3 <= '1';
 				elsif (cursor_row = box3_x_pos + box3_size) and (cursor_column = box3_y_pos + box3_size) then
 				  next_state <= SINGLE_PLAYER_MODE;
+				  led4 <= '1';
 				else
 				  next_state <= HOME_SCREEN;
 				 end if;

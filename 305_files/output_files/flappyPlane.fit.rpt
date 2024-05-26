@@ -1,5 +1,5 @@
 Fitter report for flappyPlane
-Sun May 26 21:48:52 2024
+Sun May 26 22:36:40 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun May 26 21:48:52 2024       ;
+; Fitter Status                   ; Successful - Sun May 26 22:36:40 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; home_screen_block_diagram                   ;
@@ -156,14 +156,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.7%      ;
-;     Processor 3            ;   1.7%      ;
-;     Processor 4            ;   1.6%      ;
+;     Processor 2            ;   3.1%      ;
+;     Processor 3            ;   2.9%      ;
+;     Processor 4            ;   2.9%      ;
 +----------------------------+-------------+
 
 
@@ -2020,7 +2020,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
@@ -2031,19 +2031,19 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 7% of the available device resources in the region that extends from location X33_Y11 to location X43_Y22
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 1.19 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.34 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file E:/Auckland_UNIVERSITY_Stuff/305/305-Mini-Project-Flappy-Plane/305_files/output_files/flappyPlane.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 179 warnings
-    Info: Peak virtual memory: 6370 megabytes
-    Info: Processing ended: Sun May 26 21:48:53 2024
-    Info: Elapsed time: 00:00:56
-    Info: Total CPU time (on all processors): 00:00:58
+    Info: Peak virtual memory: 6311 megabytes
+    Info: Processing ended: Sun May 26 22:36:41 2024
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:01:11
 
 
 +----------------------------+

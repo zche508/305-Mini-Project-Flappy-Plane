@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "05/26/2024 21:49:24"
+-- DATE "05/26/2024 22:37:05"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -459,20 +459,20 @@ SIGNAL \inst2|LessThan7~1_combout\ : std_logic;
 SIGNAL \inst2|pixel_row[2]~feeder_combout\ : std_logic;
 SIGNAL \inst2|v_count[3]~DUPLICATE_q\ : std_logic;
 SIGNAL \inst2|pixel_row[3]~feeder_combout\ : std_logic;
-SIGNAL \inst|Add10~2\ : std_logic;
-SIGNAL \inst|Add10~5_sumout\ : std_logic;
-SIGNAL \inst|Add10~6\ : std_logic;
-SIGNAL \inst|Add10~9_sumout\ : std_logic;
+SIGNAL \inst|Add9~2\ : std_logic;
+SIGNAL \inst|Add9~5_sumout\ : std_logic;
+SIGNAL \inst|Add9~6\ : std_logic;
+SIGNAL \inst|Add9~9_sumout\ : std_logic;
 SIGNAL \inst2|v_count[1]~DUPLICATE_q\ : std_logic;
 SIGNAL \inst|box2_on~2_combout\ : std_logic;
 SIGNAL \inst2|pixel_row[7]~feeder_combout\ : std_logic;
 SIGNAL \inst2|pixel_row[7]~DUPLICATE_q\ : std_logic;
 SIGNAL \inst2|v_count[6]~DUPLICATE_q\ : std_logic;
-SIGNAL \inst|Add10~10\ : std_logic;
-SIGNAL \inst|Add10~14\ : std_logic;
-SIGNAL \inst|Add10~17_sumout\ : std_logic;
-SIGNAL \inst|Add10~1_sumout\ : std_logic;
-SIGNAL \inst|Add10~13_sumout\ : std_logic;
+SIGNAL \inst|Add9~10\ : std_logic;
+SIGNAL \inst|Add9~14\ : std_logic;
+SIGNAL \inst|Add9~17_sumout\ : std_logic;
+SIGNAL \inst|Add9~1_sumout\ : std_logic;
+SIGNAL \inst|Add9~13_sumout\ : std_logic;
 SIGNAL \inst|box2_on~3_combout\ : std_logic;
 SIGNAL \inst2|video_on_v~q\ : std_logic;
 SIGNAL \inst2|video_on_h~q\ : std_logic;
@@ -496,10 +496,10 @@ SIGNAL \inst|Add8~2\ : std_logic;
 SIGNAL \inst|Add8~5_sumout\ : std_logic;
 SIGNAL \inst|Add8~17_sumout\ : std_logic;
 SIGNAL \inst|box2_on~5_combout\ : std_logic;
-SIGNAL \inst|Add10~18\ : std_logic;
-SIGNAL \inst|Add10~22\ : std_logic;
-SIGNAL \inst|Add10~25_sumout\ : std_logic;
-SIGNAL \inst|Add10~21_sumout\ : std_logic;
+SIGNAL \inst|Add9~18\ : std_logic;
+SIGNAL \inst|Add9~22\ : std_logic;
+SIGNAL \inst|Add9~25_sumout\ : std_logic;
+SIGNAL \inst|Add9~21_sumout\ : std_logic;
 SIGNAL \inst|box2_on~4_combout\ : std_logic;
 SIGNAL \inst2|blue_out~1_combout\ : std_logic;
 SIGNAL \inst|LessThan15~0_combout\ : std_logic;
@@ -507,36 +507,36 @@ SIGNAL \inst|box3_on~3_combout\ : std_logic;
 SIGNAL \inst|box3_on~4_combout\ : std_logic;
 SIGNAL \inst|box3_on~5_combout\ : std_logic;
 SIGNAL \inst|box3_on~6_combout\ : std_logic;
-SIGNAL \inst|Add14~22\ : std_logic;
-SIGNAL \inst|Add14~26\ : std_logic;
-SIGNAL \inst|Add14~30\ : std_logic;
-SIGNAL \inst|Add14~18\ : std_logic;
-SIGNAL \inst|Add14~10\ : std_logic;
-SIGNAL \inst|Add14~14\ : std_logic;
-SIGNAL \inst|Add14~5_sumout\ : std_logic;
-SIGNAL \inst|Add14~17_sumout\ : std_logic;
-SIGNAL \inst|Add14~6\ : std_logic;
-SIGNAL \inst|Add14~1_sumout\ : std_logic;
-SIGNAL \inst|Add14~9_sumout\ : std_logic;
-SIGNAL \inst|Add14~13_sumout\ : std_logic;
-SIGNAL \inst|Add14~25_sumout\ : std_logic;
-SIGNAL \inst|Add14~29_sumout\ : std_logic;
-SIGNAL \inst|Add14~21_sumout\ : std_logic;
+SIGNAL \inst|Add11~22\ : std_logic;
+SIGNAL \inst|Add11~26\ : std_logic;
+SIGNAL \inst|Add11~30\ : std_logic;
+SIGNAL \inst|Add11~18\ : std_logic;
+SIGNAL \inst|Add11~10\ : std_logic;
+SIGNAL \inst|Add11~14\ : std_logic;
+SIGNAL \inst|Add11~5_sumout\ : std_logic;
+SIGNAL \inst|Add11~17_sumout\ : std_logic;
+SIGNAL \inst|Add11~6\ : std_logic;
+SIGNAL \inst|Add11~1_sumout\ : std_logic;
+SIGNAL \inst|Add11~9_sumout\ : std_logic;
+SIGNAL \inst|Add11~13_sumout\ : std_logic;
+SIGNAL \inst|Add11~25_sumout\ : std_logic;
+SIGNAL \inst|Add11~29_sumout\ : std_logic;
+SIGNAL \inst|Add11~21_sumout\ : std_logic;
 SIGNAL \inst|box3_on~0_combout\ : std_logic;
 SIGNAL \inst|box3_on~1_combout\ : std_logic;
-SIGNAL \inst|Add12~34_cout\ : std_logic;
-SIGNAL \inst|Add12~30_cout\ : std_logic;
-SIGNAL \inst|Add12~26_cout\ : std_logic;
-SIGNAL \inst|Add12~22_cout\ : std_logic;
-SIGNAL \inst|Add12~14\ : std_logic;
-SIGNAL \inst|Add12~18\ : std_logic;
-SIGNAL \inst|Add12~10\ : std_logic;
-SIGNAL \inst|Add12~2\ : std_logic;
-SIGNAL \inst|Add12~5_sumout\ : std_logic;
-SIGNAL \inst|Add12~17_sumout\ : std_logic;
-SIGNAL \inst|Add12~9_sumout\ : std_logic;
-SIGNAL \inst|Add12~1_sumout\ : std_logic;
-SIGNAL \inst|Add12~13_sumout\ : std_logic;
+SIGNAL \inst|Add10~34_cout\ : std_logic;
+SIGNAL \inst|Add10~30_cout\ : std_logic;
+SIGNAL \inst|Add10~26_cout\ : std_logic;
+SIGNAL \inst|Add10~22_cout\ : std_logic;
+SIGNAL \inst|Add10~14\ : std_logic;
+SIGNAL \inst|Add10~18\ : std_logic;
+SIGNAL \inst|Add10~10\ : std_logic;
+SIGNAL \inst|Add10~2\ : std_logic;
+SIGNAL \inst|Add10~5_sumout\ : std_logic;
+SIGNAL \inst|Add10~17_sumout\ : std_logic;
+SIGNAL \inst|Add10~9_sumout\ : std_logic;
+SIGNAL \inst|Add10~1_sumout\ : std_logic;
+SIGNAL \inst|Add10~13_sumout\ : std_logic;
 SIGNAL \inst|box3_on~2_combout\ : std_logic;
 SIGNAL \inst|box1_on~5_combout\ : std_logic;
 SIGNAL \inst|box1_on~3_combout\ : std_logic;
@@ -637,11 +637,11 @@ SIGNAL \inst3|pll2_inst|altera_pll_i|fboutclk_wire\ : std_logic_vector(0 DOWNTO 
 SIGNAL \inst3|pll2_inst|altera_pll_i|outclk_wire\ : std_logic_vector(0 DOWNTO 0);
 SIGNAL \inst2|ALT_INV_h_count\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \inst2|ALT_INV_v_count\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \inst|ALT_INV_Add12~17_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add12~13_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add12~9_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add12~5_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add12~1_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add10~17_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add10~13_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add10~9_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add10~5_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add10~1_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add6~29_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add6~25_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add6~21_sumout\ : std_logic;
@@ -655,26 +655,26 @@ SIGNAL \inst|ALT_INV_Add4~13_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add4~9_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add4~5_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add4~1_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~29_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~25_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~21_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~17_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~13_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~9_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~5_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add14~1_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~29_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~25_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~21_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~17_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~13_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~9_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~5_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add11~1_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add8~17_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add8~13_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add8~9_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add8~5_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add8~1_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~25_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~21_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~17_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~13_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~9_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~5_sumout\ : std_logic;
-SIGNAL \inst|ALT_INV_Add10~1_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~25_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~21_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~17_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~13_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~9_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~5_sumout\ : std_logic;
+SIGNAL \inst|ALT_INV_Add9~1_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add1~29_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add1~25_sumout\ : std_logic;
 SIGNAL \inst|ALT_INV_Add1~21_sumout\ : std_logic;
@@ -904,11 +904,11 @@ ww_devpor <= devpor;
 \inst2|ALT_INV_v_count\(7) <= NOT \inst2|v_count\(7);
 \inst2|ALT_INV_v_count\(2) <= NOT \inst2|v_count\(2);
 \inst2|ALT_INV_v_count\(3) <= NOT \inst2|v_count\(3);
-\inst|ALT_INV_Add12~17_sumout\ <= NOT \inst|Add12~17_sumout\;
-\inst|ALT_INV_Add12~13_sumout\ <= NOT \inst|Add12~13_sumout\;
-\inst|ALT_INV_Add12~9_sumout\ <= NOT \inst|Add12~9_sumout\;
-\inst|ALT_INV_Add12~5_sumout\ <= NOT \inst|Add12~5_sumout\;
-\inst|ALT_INV_Add12~1_sumout\ <= NOT \inst|Add12~1_sumout\;
+\inst|ALT_INV_Add10~17_sumout\ <= NOT \inst|Add10~17_sumout\;
+\inst|ALT_INV_Add10~13_sumout\ <= NOT \inst|Add10~13_sumout\;
+\inst|ALT_INV_Add10~9_sumout\ <= NOT \inst|Add10~9_sumout\;
+\inst|ALT_INV_Add10~5_sumout\ <= NOT \inst|Add10~5_sumout\;
+\inst|ALT_INV_Add10~1_sumout\ <= NOT \inst|Add10~1_sumout\;
 \inst|ALT_INV_Add6~29_sumout\ <= NOT \inst|Add6~29_sumout\;
 \inst|ALT_INV_Add6~25_sumout\ <= NOT \inst|Add6~25_sumout\;
 \inst|ALT_INV_Add6~21_sumout\ <= NOT \inst|Add6~21_sumout\;
@@ -922,26 +922,26 @@ ww_devpor <= devpor;
 \inst|ALT_INV_Add4~9_sumout\ <= NOT \inst|Add4~9_sumout\;
 \inst|ALT_INV_Add4~5_sumout\ <= NOT \inst|Add4~5_sumout\;
 \inst|ALT_INV_Add4~1_sumout\ <= NOT \inst|Add4~1_sumout\;
-\inst|ALT_INV_Add14~29_sumout\ <= NOT \inst|Add14~29_sumout\;
-\inst|ALT_INV_Add14~25_sumout\ <= NOT \inst|Add14~25_sumout\;
-\inst|ALT_INV_Add14~21_sumout\ <= NOT \inst|Add14~21_sumout\;
-\inst|ALT_INV_Add14~17_sumout\ <= NOT \inst|Add14~17_sumout\;
-\inst|ALT_INV_Add14~13_sumout\ <= NOT \inst|Add14~13_sumout\;
-\inst|ALT_INV_Add14~9_sumout\ <= NOT \inst|Add14~9_sumout\;
-\inst|ALT_INV_Add14~5_sumout\ <= NOT \inst|Add14~5_sumout\;
-\inst|ALT_INV_Add14~1_sumout\ <= NOT \inst|Add14~1_sumout\;
+\inst|ALT_INV_Add11~29_sumout\ <= NOT \inst|Add11~29_sumout\;
+\inst|ALT_INV_Add11~25_sumout\ <= NOT \inst|Add11~25_sumout\;
+\inst|ALT_INV_Add11~21_sumout\ <= NOT \inst|Add11~21_sumout\;
+\inst|ALT_INV_Add11~17_sumout\ <= NOT \inst|Add11~17_sumout\;
+\inst|ALT_INV_Add11~13_sumout\ <= NOT \inst|Add11~13_sumout\;
+\inst|ALT_INV_Add11~9_sumout\ <= NOT \inst|Add11~9_sumout\;
+\inst|ALT_INV_Add11~5_sumout\ <= NOT \inst|Add11~5_sumout\;
+\inst|ALT_INV_Add11~1_sumout\ <= NOT \inst|Add11~1_sumout\;
 \inst|ALT_INV_Add8~17_sumout\ <= NOT \inst|Add8~17_sumout\;
 \inst|ALT_INV_Add8~13_sumout\ <= NOT \inst|Add8~13_sumout\;
 \inst|ALT_INV_Add8~9_sumout\ <= NOT \inst|Add8~9_sumout\;
 \inst|ALT_INV_Add8~5_sumout\ <= NOT \inst|Add8~5_sumout\;
 \inst|ALT_INV_Add8~1_sumout\ <= NOT \inst|Add8~1_sumout\;
-\inst|ALT_INV_Add10~25_sumout\ <= NOT \inst|Add10~25_sumout\;
-\inst|ALT_INV_Add10~21_sumout\ <= NOT \inst|Add10~21_sumout\;
-\inst|ALT_INV_Add10~17_sumout\ <= NOT \inst|Add10~17_sumout\;
-\inst|ALT_INV_Add10~13_sumout\ <= NOT \inst|Add10~13_sumout\;
-\inst|ALT_INV_Add10~9_sumout\ <= NOT \inst|Add10~9_sumout\;
-\inst|ALT_INV_Add10~5_sumout\ <= NOT \inst|Add10~5_sumout\;
-\inst|ALT_INV_Add10~1_sumout\ <= NOT \inst|Add10~1_sumout\;
+\inst|ALT_INV_Add9~25_sumout\ <= NOT \inst|Add9~25_sumout\;
+\inst|ALT_INV_Add9~21_sumout\ <= NOT \inst|Add9~21_sumout\;
+\inst|ALT_INV_Add9~17_sumout\ <= NOT \inst|Add9~17_sumout\;
+\inst|ALT_INV_Add9~13_sumout\ <= NOT \inst|Add9~13_sumout\;
+\inst|ALT_INV_Add9~9_sumout\ <= NOT \inst|Add9~9_sumout\;
+\inst|ALT_INV_Add9~5_sumout\ <= NOT \inst|Add9~5_sumout\;
+\inst|ALT_INV_Add9~1_sumout\ <= NOT \inst|Add9~1_sumout\;
 \inst|ALT_INV_Add1~29_sumout\ <= NOT \inst|Add1~29_sumout\;
 \inst|ALT_INV_Add1~25_sumout\ <= NOT \inst|Add1~25_sumout\;
 \inst|ALT_INV_Add1~21_sumout\ <= NOT \inst|Add1~21_sumout\;
@@ -8028,10 +8028,10 @@ PORT MAP (
 	q => \inst2|pixel_row\(3));
 
 -- Location: MLABCELL_X42_Y11_N0
-\inst|Add10~1\ : cyclonev_lcell_comb
+\inst|Add9~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~1_sumout\ = SUM(( \inst2|pixel_row\(3) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
--- \inst|Add10~2\ = CARRY(( \inst2|pixel_row\(3) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
+-- \inst|Add9~1_sumout\ = SUM(( \inst2|pixel_row\(3) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
+-- \inst|Add9~2\ = CARRY(( \inst2|pixel_row\(3) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8043,14 +8043,14 @@ PORT MAP (
 	datab => \inst2|ALT_INV_pixel_row\(2),
 	datac => \inst2|ALT_INV_pixel_row\(3),
 	cin => GND,
-	sumout => \inst|Add10~1_sumout\,
-	cout => \inst|Add10~2\);
+	sumout => \inst|Add9~1_sumout\,
+	cout => \inst|Add9~2\);
 
 -- Location: MLABCELL_X42_Y11_N3
-\inst|Add10~5\ : cyclonev_lcell_comb
+\inst|Add9~5\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~5_sumout\ = SUM(( \inst2|pixel_row\(4) ) + ( VCC ) + ( \inst|Add10~2\ ))
--- \inst|Add10~6\ = CARRY(( \inst2|pixel_row\(4) ) + ( VCC ) + ( \inst|Add10~2\ ))
+-- \inst|Add9~5_sumout\ = SUM(( \inst2|pixel_row\(4) ) + ( VCC ) + ( \inst|Add9~2\ ))
+-- \inst|Add9~6\ = CARRY(( \inst2|pixel_row\(4) ) + ( VCC ) + ( \inst|Add9~2\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8060,9 +8060,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_row\(4),
-	cin => \inst|Add10~2\,
-	sumout => \inst|Add10~5_sumout\,
-	cout => \inst|Add10~6\);
+	cin => \inst|Add9~2\,
+	sumout => \inst|Add9~5_sumout\,
+	cout => \inst|Add9~6\);
 
 -- Location: FF_X41_Y15_N41
 \inst2|pixel_row[5]\ : dffeas
@@ -8081,10 +8081,10 @@ PORT MAP (
 	q => \inst2|pixel_row\(5));
 
 -- Location: MLABCELL_X42_Y11_N6
-\inst|Add10~9\ : cyclonev_lcell_comb
+\inst|Add9~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~9_sumout\ = SUM(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add10~6\ ))
--- \inst|Add10~10\ = CARRY(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add10~6\ ))
+-- \inst|Add9~9_sumout\ = SUM(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add9~6\ ))
+-- \inst|Add9~10\ = CARRY(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add9~6\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8094,9 +8094,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \inst2|ALT_INV_pixel_row\(5),
-	cin => \inst|Add10~6\,
-	sumout => \inst|Add10~9_sumout\,
-	cout => \inst|Add10~10\);
+	cin => \inst|Add9~6\,
+	sumout => \inst|Add9~9_sumout\,
+	cout => \inst|Add9~10\);
 
 -- Location: FF_X36_Y14_N34
 \inst2|v_count[1]~DUPLICATE\ : dffeas
@@ -8209,10 +8209,10 @@ PORT MAP (
 	q => \inst2|pixel_row\(6));
 
 -- Location: MLABCELL_X42_Y11_N9
-\inst|Add10~13\ : cyclonev_lcell_comb
+\inst|Add9~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~13_sumout\ = SUM(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add10~10\ ))
--- \inst|Add10~14\ = CARRY(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add10~10\ ))
+-- \inst|Add9~13_sumout\ = SUM(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add9~10\ ))
+-- \inst|Add9~14\ = CARRY(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add9~10\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8222,15 +8222,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst2|ALT_INV_pixel_row\(6),
-	cin => \inst|Add10~10\,
-	sumout => \inst|Add10~13_sumout\,
-	cout => \inst|Add10~14\);
+	cin => \inst|Add9~10\,
+	sumout => \inst|Add9~13_sumout\,
+	cout => \inst|Add9~14\);
 
 -- Location: MLABCELL_X42_Y11_N12
-\inst|Add10~17\ : cyclonev_lcell_comb
+\inst|Add9~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~17_sumout\ = SUM(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add10~14\ ))
--- \inst|Add10~18\ = CARRY(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add10~14\ ))
+-- \inst|Add9~17_sumout\ = SUM(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add9~14\ ))
+-- \inst|Add9~18\ = CARRY(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add9~14\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8240,14 +8240,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_row[7]~DUPLICATE_q\,
-	cin => \inst|Add10~14\,
-	sumout => \inst|Add10~17_sumout\,
-	cout => \inst|Add10~18\);
+	cin => \inst|Add9~14\,
+	sumout => \inst|Add9~17_sumout\,
+	cout => \inst|Add9~18\);
 
 -- Location: MLABCELL_X42_Y11_N48
 \inst|box2_on~3\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|box2_on~3_combout\ = ( \inst|Add10~1_sumout\ & ( \inst|Add10~13_sumout\ & ( (\inst|Add10~5_sumout\ & (\inst|Add10~9_sumout\ & (!\inst|box2_on~2_combout\ & \inst|Add10~17_sumout\))) ) ) )
+-- \inst|box2_on~3_combout\ = ( \inst|Add9~1_sumout\ & ( \inst|Add9~13_sumout\ & ( (\inst|Add9~5_sumout\ & (\inst|Add9~9_sumout\ & (!\inst|box2_on~2_combout\ & \inst|Add9~17_sumout\))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8256,12 +8256,12 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst|ALT_INV_Add10~5_sumout\,
-	datab => \inst|ALT_INV_Add10~9_sumout\,
+	dataa => \inst|ALT_INV_Add9~5_sumout\,
+	datab => \inst|ALT_INV_Add9~9_sumout\,
 	datac => \inst|ALT_INV_box2_on~2_combout\,
-	datad => \inst|ALT_INV_Add10~17_sumout\,
-	datae => \inst|ALT_INV_Add10~1_sumout\,
-	dataf => \inst|ALT_INV_Add10~13_sumout\,
+	datad => \inst|ALT_INV_Add9~17_sumout\,
+	datae => \inst|ALT_INV_Add9~1_sumout\,
+	dataf => \inst|ALT_INV_Add9~13_sumout\,
 	combout => \inst|box2_on~3_combout\);
 
 -- Location: FF_X36_Y14_N17
@@ -8608,10 +8608,10 @@ PORT MAP (
 	combout => \inst|box2_on~5_combout\);
 
 -- Location: MLABCELL_X42_Y11_N15
-\inst|Add10~21\ : cyclonev_lcell_comb
+\inst|Add9~21\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~21_sumout\ = SUM(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add10~18\ ))
--- \inst|Add10~22\ = CARRY(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add10~18\ ))
+-- \inst|Add9~21_sumout\ = SUM(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add9~18\ ))
+-- \inst|Add9~22\ = CARRY(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add9~18\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8621,14 +8621,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst2|ALT_INV_pixel_row\(8),
-	cin => \inst|Add10~18\,
-	sumout => \inst|Add10~21_sumout\,
-	cout => \inst|Add10~22\);
+	cin => \inst|Add9~18\,
+	sumout => \inst|Add9~21_sumout\,
+	cout => \inst|Add9~22\);
 
 -- Location: MLABCELL_X42_Y11_N18
-\inst|Add10~25\ : cyclonev_lcell_comb
+\inst|Add9~25\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add10~25_sumout\ = SUM(( GND ) + ( GND ) + ( \inst|Add10~22\ ))
+-- \inst|Add9~25_sumout\ = SUM(( GND ) + ( GND ) + ( \inst|Add9~22\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8637,13 +8637,13 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	cin => \inst|Add10~22\,
-	sumout => \inst|Add10~25_sumout\);
+	cin => \inst|Add9~22\,
+	sumout => \inst|Add9~25_sumout\);
 
 -- Location: LABCELL_X43_Y11_N18
 \inst|box2_on~4\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|box2_on~4_combout\ = ( !\inst|Add10~21_sumout\ & ( !\inst|Add10~25_sumout\ ) )
+-- \inst|box2_on~4_combout\ = ( !\inst|Add9~21_sumout\ & ( !\inst|Add9~25_sumout\ ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8652,8 +8652,8 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	datad => \inst|ALT_INV_Add10~25_sumout\,
-	dataf => \inst|ALT_INV_Add10~21_sumout\,
+	datad => \inst|ALT_INV_Add9~25_sumout\,
+	dataf => \inst|ALT_INV_Add9~21_sumout\,
 	combout => \inst|box2_on~4_combout\);
 
 -- Location: MLABCELL_X37_Y12_N6
@@ -8791,10 +8791,10 @@ PORT MAP (
 	combout => \inst|box3_on~6_combout\);
 
 -- Location: LABCELL_X40_Y12_N30
-\inst|Add14~21\ : cyclonev_lcell_comb
+\inst|Add11~21\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~21_sumout\ = SUM(( \inst2|pixel_row\(1) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
--- \inst|Add14~22\ = CARRY(( \inst2|pixel_row\(1) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
+-- \inst|Add11~21_sumout\ = SUM(( \inst2|pixel_row\(1) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
+-- \inst|Add11~22\ = CARRY(( \inst2|pixel_row\(1) ) + ( \inst2|pixel_row\(2) ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8806,14 +8806,14 @@ PORT MAP (
 	datab => \inst2|ALT_INV_pixel_row\(2),
 	datac => \inst2|ALT_INV_pixel_row\(1),
 	cin => GND,
-	sumout => \inst|Add14~21_sumout\,
-	cout => \inst|Add14~22\);
+	sumout => \inst|Add11~21_sumout\,
+	cout => \inst|Add11~22\);
 
 -- Location: LABCELL_X40_Y12_N33
-\inst|Add14~25\ : cyclonev_lcell_comb
+\inst|Add11~25\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~25_sumout\ = SUM(( \inst2|pixel_row\(3) ) + ( VCC ) + ( \inst|Add14~22\ ))
--- \inst|Add14~26\ = CARRY(( \inst2|pixel_row\(3) ) + ( VCC ) + ( \inst|Add14~22\ ))
+-- \inst|Add11~25_sumout\ = SUM(( \inst2|pixel_row\(3) ) + ( VCC ) + ( \inst|Add11~22\ ))
+-- \inst|Add11~26\ = CARRY(( \inst2|pixel_row\(3) ) + ( VCC ) + ( \inst|Add11~22\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8823,15 +8823,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_row\(3),
-	cin => \inst|Add14~22\,
-	sumout => \inst|Add14~25_sumout\,
-	cout => \inst|Add14~26\);
+	cin => \inst|Add11~22\,
+	sumout => \inst|Add11~25_sumout\,
+	cout => \inst|Add11~26\);
 
 -- Location: LABCELL_X40_Y12_N36
-\inst|Add14~29\ : cyclonev_lcell_comb
+\inst|Add11~29\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~29_sumout\ = SUM(( \inst2|pixel_row\(4) ) + ( GND ) + ( \inst|Add14~26\ ))
--- \inst|Add14~30\ = CARRY(( \inst2|pixel_row\(4) ) + ( GND ) + ( \inst|Add14~26\ ))
+-- \inst|Add11~29_sumout\ = SUM(( \inst2|pixel_row\(4) ) + ( GND ) + ( \inst|Add11~26\ ))
+-- \inst|Add11~30\ = CARRY(( \inst2|pixel_row\(4) ) + ( GND ) + ( \inst|Add11~26\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8841,15 +8841,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_row\(4),
-	cin => \inst|Add14~26\,
-	sumout => \inst|Add14~29_sumout\,
-	cout => \inst|Add14~30\);
+	cin => \inst|Add11~26\,
+	sumout => \inst|Add11~29_sumout\,
+	cout => \inst|Add11~30\);
 
 -- Location: LABCELL_X40_Y12_N39
-\inst|Add14~17\ : cyclonev_lcell_comb
+\inst|Add11~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~17_sumout\ = SUM(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add14~30\ ))
--- \inst|Add14~18\ = CARRY(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add14~30\ ))
+-- \inst|Add11~17_sumout\ = SUM(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add11~30\ ))
+-- \inst|Add11~18\ = CARRY(( \inst2|pixel_row\(5) ) + ( GND ) + ( \inst|Add11~30\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8859,15 +8859,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst2|ALT_INV_pixel_row\(5),
-	cin => \inst|Add14~30\,
-	sumout => \inst|Add14~17_sumout\,
-	cout => \inst|Add14~18\);
+	cin => \inst|Add11~30\,
+	sumout => \inst|Add11~17_sumout\,
+	cout => \inst|Add11~18\);
 
 -- Location: LABCELL_X40_Y12_N42
-\inst|Add14~9\ : cyclonev_lcell_comb
+\inst|Add11~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~9_sumout\ = SUM(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add14~18\ ))
--- \inst|Add14~10\ = CARRY(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add14~18\ ))
+-- \inst|Add11~9_sumout\ = SUM(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add11~18\ ))
+-- \inst|Add11~10\ = CARRY(( \inst2|pixel_row\(6) ) + ( GND ) + ( \inst|Add11~18\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8877,15 +8877,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \inst2|ALT_INV_pixel_row\(6),
-	cin => \inst|Add14~18\,
-	sumout => \inst|Add14~9_sumout\,
-	cout => \inst|Add14~10\);
+	cin => \inst|Add11~18\,
+	sumout => \inst|Add11~9_sumout\,
+	cout => \inst|Add11~10\);
 
 -- Location: LABCELL_X40_Y12_N45
-\inst|Add14~13\ : cyclonev_lcell_comb
+\inst|Add11~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~13_sumout\ = SUM(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add14~10\ ))
--- \inst|Add14~14\ = CARRY(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add14~10\ ))
+-- \inst|Add11~13_sumout\ = SUM(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add11~10\ ))
+-- \inst|Add11~14\ = CARRY(( \inst2|pixel_row[7]~DUPLICATE_q\ ) + ( GND ) + ( \inst|Add11~10\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8895,15 +8895,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_row[7]~DUPLICATE_q\,
-	cin => \inst|Add14~10\,
-	sumout => \inst|Add14~13_sumout\,
-	cout => \inst|Add14~14\);
+	cin => \inst|Add11~10\,
+	sumout => \inst|Add11~13_sumout\,
+	cout => \inst|Add11~14\);
 
 -- Location: LABCELL_X40_Y12_N48
-\inst|Add14~5\ : cyclonev_lcell_comb
+\inst|Add11~5\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~5_sumout\ = SUM(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add14~14\ ))
--- \inst|Add14~6\ = CARRY(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add14~14\ ))
+-- \inst|Add11~5_sumout\ = SUM(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add11~14\ ))
+-- \inst|Add11~6\ = CARRY(( \inst2|pixel_row\(8) ) + ( GND ) + ( \inst|Add11~14\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8913,14 +8913,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \inst2|ALT_INV_pixel_row\(8),
-	cin => \inst|Add14~14\,
-	sumout => \inst|Add14~5_sumout\,
-	cout => \inst|Add14~6\);
+	cin => \inst|Add11~14\,
+	sumout => \inst|Add11~5_sumout\,
+	cout => \inst|Add11~6\);
 
 -- Location: LABCELL_X40_Y12_N51
-\inst|Add14~1\ : cyclonev_lcell_comb
+\inst|Add11~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add14~1_sumout\ = SUM(( GND ) + ( GND ) + ( \inst|Add14~6\ ))
+-- \inst|Add11~1_sumout\ = SUM(( GND ) + ( GND ) + ( \inst|Add11~6\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8929,13 +8929,13 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	cin => \inst|Add14~6\,
-	sumout => \inst|Add14~1_sumout\);
+	cin => \inst|Add11~6\,
+	sumout => \inst|Add11~1_sumout\);
 
 -- Location: LABCELL_X40_Y12_N24
 \inst|box3_on~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|box3_on~0_combout\ = ( !\inst2|pixel_row\(1) & ( (\inst|Add14~25_sumout\ & (\inst|Add14~29_sumout\ & \inst|Add14~21_sumout\)) ) )
+-- \inst|box3_on~0_combout\ = ( !\inst2|pixel_row\(1) & ( (\inst|Add11~25_sumout\ & (\inst|Add11~29_sumout\ & \inst|Add11~21_sumout\)) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8944,18 +8944,18 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst|ALT_INV_Add14~25_sumout\,
-	datac => \inst|ALT_INV_Add14~29_sumout\,
-	datad => \inst|ALT_INV_Add14~21_sumout\,
+	dataa => \inst|ALT_INV_Add11~25_sumout\,
+	datac => \inst|ALT_INV_Add11~29_sumout\,
+	datad => \inst|ALT_INV_Add11~21_sumout\,
 	dataf => \inst2|ALT_INV_pixel_row\(1),
 	combout => \inst|box3_on~0_combout\);
 
 -- Location: LABCELL_X40_Y12_N6
 \inst|box3_on~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|box3_on~1_combout\ = ( \inst|Add14~13_sumout\ & ( \inst|box3_on~0_combout\ & ( (!\inst|Add14~5_sumout\ & !\inst|Add14~1_sumout\) ) ) ) # ( !\inst|Add14~13_sumout\ & ( \inst|box3_on~0_combout\ & ( (!\inst|Add14~1_sumout\ & ((!\inst|Add14~5_sumout\) # 
--- (!\inst|Add14~9_sumout\))) ) ) ) # ( \inst|Add14~13_sumout\ & ( !\inst|box3_on~0_combout\ & ( (!\inst|Add14~5_sumout\ & !\inst|Add14~1_sumout\) ) ) ) # ( !\inst|Add14~13_sumout\ & ( !\inst|box3_on~0_combout\ & ( (!\inst|Add14~1_sumout\ & 
--- ((!\inst|Add14~5_sumout\) # ((!\inst|Add14~17_sumout\) # (!\inst|Add14~9_sumout\)))) ) ) )
+-- \inst|box3_on~1_combout\ = ( \inst|Add11~13_sumout\ & ( \inst|box3_on~0_combout\ & ( (!\inst|Add11~5_sumout\ & !\inst|Add11~1_sumout\) ) ) ) # ( !\inst|Add11~13_sumout\ & ( \inst|box3_on~0_combout\ & ( (!\inst|Add11~1_sumout\ & ((!\inst|Add11~5_sumout\) # 
+-- (!\inst|Add11~9_sumout\))) ) ) ) # ( \inst|Add11~13_sumout\ & ( !\inst|box3_on~0_combout\ & ( (!\inst|Add11~5_sumout\ & !\inst|Add11~1_sumout\) ) ) ) # ( !\inst|Add11~13_sumout\ & ( !\inst|box3_on~0_combout\ & ( (!\inst|Add11~1_sumout\ & 
+-- ((!\inst|Add11~5_sumout\) # ((!\inst|Add11~17_sumout\) # (!\inst|Add11~9_sumout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8964,18 +8964,18 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst|ALT_INV_Add14~5_sumout\,
-	datab => \inst|ALT_INV_Add14~17_sumout\,
-	datac => \inst|ALT_INV_Add14~1_sumout\,
-	datad => \inst|ALT_INV_Add14~9_sumout\,
-	datae => \inst|ALT_INV_Add14~13_sumout\,
+	dataa => \inst|ALT_INV_Add11~5_sumout\,
+	datab => \inst|ALT_INV_Add11~17_sumout\,
+	datac => \inst|ALT_INV_Add11~1_sumout\,
+	datad => \inst|ALT_INV_Add11~9_sumout\,
+	datae => \inst|ALT_INV_Add11~13_sumout\,
 	dataf => \inst|ALT_INV_box3_on~0_combout\,
 	combout => \inst|box3_on~1_combout\);
 
 -- Location: LABCELL_X36_Y15_N0
-\inst|Add12~34\ : cyclonev_lcell_comb
+\inst|Add10~34\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~34_cout\ = CARRY(( \inst2|pixel_column\(1) ) + ( \inst2|pixel_column\(2) ) + ( !VCC ))
+-- \inst|Add10~34_cout\ = CARRY(( \inst2|pixel_column\(1) ) + ( \inst2|pixel_column\(2) ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8987,12 +8987,12 @@ PORT MAP (
 	datac => \inst2|ALT_INV_pixel_column\(1),
 	dataf => \inst2|ALT_INV_pixel_column\(2),
 	cin => GND,
-	cout => \inst|Add12~34_cout\);
+	cout => \inst|Add10~34_cout\);
 
 -- Location: LABCELL_X36_Y15_N3
-\inst|Add12~30\ : cyclonev_lcell_comb
+\inst|Add10~30\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~30_cout\ = CARRY(( \inst2|pixel_column\(3) ) + ( VCC ) + ( \inst|Add12~34_cout\ ))
+-- \inst|Add10~30_cout\ = CARRY(( \inst2|pixel_column\(3) ) + ( VCC ) + ( \inst|Add10~34_cout\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9002,13 +9002,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst2|ALT_INV_pixel_column\(3),
-	cin => \inst|Add12~34_cout\,
-	cout => \inst|Add12~30_cout\);
+	cin => \inst|Add10~34_cout\,
+	cout => \inst|Add10~30_cout\);
 
 -- Location: LABCELL_X36_Y15_N6
-\inst|Add12~26\ : cyclonev_lcell_comb
+\inst|Add10~26\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~26_cout\ = CARRY(( \inst2|pixel_column\(4) ) + ( GND ) + ( \inst|Add12~30_cout\ ))
+-- \inst|Add10~26_cout\ = CARRY(( \inst2|pixel_column\(4) ) + ( GND ) + ( \inst|Add10~30_cout\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9018,13 +9018,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_column\(4),
-	cin => \inst|Add12~30_cout\,
-	cout => \inst|Add12~26_cout\);
+	cin => \inst|Add10~30_cout\,
+	cout => \inst|Add10~26_cout\);
 
 -- Location: LABCELL_X36_Y15_N9
-\inst|Add12~22\ : cyclonev_lcell_comb
+\inst|Add10~22\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~22_cout\ = CARRY(( \inst2|pixel_column\(5) ) + ( GND ) + ( \inst|Add12~26_cout\ ))
+-- \inst|Add10~22_cout\ = CARRY(( \inst2|pixel_column\(5) ) + ( GND ) + ( \inst|Add10~26_cout\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9034,14 +9034,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst2|ALT_INV_pixel_column\(5),
-	cin => \inst|Add12~26_cout\,
-	cout => \inst|Add12~22_cout\);
+	cin => \inst|Add10~26_cout\,
+	cout => \inst|Add10~22_cout\);
 
 -- Location: LABCELL_X36_Y15_N12
-\inst|Add12~13\ : cyclonev_lcell_comb
+\inst|Add10~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~13_sumout\ = SUM(( \inst2|pixel_column\(6) ) + ( GND ) + ( \inst|Add12~22_cout\ ))
--- \inst|Add12~14\ = CARRY(( \inst2|pixel_column\(6) ) + ( GND ) + ( \inst|Add12~22_cout\ ))
+-- \inst|Add10~13_sumout\ = SUM(( \inst2|pixel_column\(6) ) + ( GND ) + ( \inst|Add10~22_cout\ ))
+-- \inst|Add10~14\ = CARRY(( \inst2|pixel_column\(6) ) + ( GND ) + ( \inst|Add10~22_cout\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9051,15 +9051,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \inst2|ALT_INV_pixel_column\(6),
-	cin => \inst|Add12~22_cout\,
-	sumout => \inst|Add12~13_sumout\,
-	cout => \inst|Add12~14\);
+	cin => \inst|Add10~22_cout\,
+	sumout => \inst|Add10~13_sumout\,
+	cout => \inst|Add10~14\);
 
 -- Location: LABCELL_X36_Y15_N15
-\inst|Add12~17\ : cyclonev_lcell_comb
+\inst|Add10~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~17_sumout\ = SUM(( \inst2|pixel_column\(7) ) + ( GND ) + ( \inst|Add12~14\ ))
--- \inst|Add12~18\ = CARRY(( \inst2|pixel_column\(7) ) + ( GND ) + ( \inst|Add12~14\ ))
+-- \inst|Add10~17_sumout\ = SUM(( \inst2|pixel_column\(7) ) + ( GND ) + ( \inst|Add10~14\ ))
+-- \inst|Add10~18\ = CARRY(( \inst2|pixel_column\(7) ) + ( GND ) + ( \inst|Add10~14\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9069,15 +9069,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \inst2|ALT_INV_pixel_column\(7),
-	cin => \inst|Add12~14\,
-	sumout => \inst|Add12~17_sumout\,
-	cout => \inst|Add12~18\);
+	cin => \inst|Add10~14\,
+	sumout => \inst|Add10~17_sumout\,
+	cout => \inst|Add10~18\);
 
 -- Location: LABCELL_X36_Y15_N18
-\inst|Add12~9\ : cyclonev_lcell_comb
+\inst|Add10~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~9_sumout\ = SUM(( \inst2|pixel_column\(8) ) + ( GND ) + ( \inst|Add12~18\ ))
--- \inst|Add12~10\ = CARRY(( \inst2|pixel_column\(8) ) + ( GND ) + ( \inst|Add12~18\ ))
+-- \inst|Add10~9_sumout\ = SUM(( \inst2|pixel_column\(8) ) + ( GND ) + ( \inst|Add10~18\ ))
+-- \inst|Add10~10\ = CARRY(( \inst2|pixel_column\(8) ) + ( GND ) + ( \inst|Add10~18\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9087,15 +9087,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \inst2|ALT_INV_pixel_column\(8),
-	cin => \inst|Add12~18\,
-	sumout => \inst|Add12~9_sumout\,
-	cout => \inst|Add12~10\);
+	cin => \inst|Add10~18\,
+	sumout => \inst|Add10~9_sumout\,
+	cout => \inst|Add10~10\);
 
 -- Location: LABCELL_X36_Y15_N21
-\inst|Add12~1\ : cyclonev_lcell_comb
+\inst|Add10~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~1_sumout\ = SUM(( \inst2|pixel_column\(9) ) + ( GND ) + ( \inst|Add12~10\ ))
--- \inst|Add12~2\ = CARRY(( \inst2|pixel_column\(9) ) + ( GND ) + ( \inst|Add12~10\ ))
+-- \inst|Add10~1_sumout\ = SUM(( \inst2|pixel_column\(9) ) + ( GND ) + ( \inst|Add10~10\ ))
+-- \inst|Add10~2\ = CARRY(( \inst2|pixel_column\(9) ) + ( GND ) + ( \inst|Add10~10\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9105,14 +9105,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst2|ALT_INV_pixel_column\(9),
-	cin => \inst|Add12~10\,
-	sumout => \inst|Add12~1_sumout\,
-	cout => \inst|Add12~2\);
+	cin => \inst|Add10~10\,
+	sumout => \inst|Add10~1_sumout\,
+	cout => \inst|Add10~2\);
 
 -- Location: LABCELL_X36_Y15_N24
-\inst|Add12~5\ : cyclonev_lcell_comb
+\inst|Add10~5\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|Add12~5_sumout\ = SUM(( GND ) + ( GND ) + ( \inst|Add12~2\ ))
+-- \inst|Add10~5_sumout\ = SUM(( GND ) + ( GND ) + ( \inst|Add10~2\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9121,14 +9121,14 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	cin => \inst|Add12~2\,
-	sumout => \inst|Add12~5_sumout\);
+	cin => \inst|Add10~2\,
+	sumout => \inst|Add10~5_sumout\);
 
 -- Location: LABCELL_X36_Y15_N30
 \inst|box3_on~2\ : cyclonev_lcell_comb
 -- Equation(s):
--- \inst|box3_on~2_combout\ = ( !\inst|Add12~1_sumout\ & ( \inst|Add12~13_sumout\ & ( (!\inst|Add12~5_sumout\ & !\inst|Add12~9_sumout\) ) ) ) # ( !\inst|Add12~1_sumout\ & ( !\inst|Add12~13_sumout\ & ( (!\inst|Add12~5_sumout\ & ((!\inst|Add12~17_sumout\) # 
--- (!\inst|Add12~9_sumout\))) ) ) )
+-- \inst|box3_on~2_combout\ = ( !\inst|Add10~1_sumout\ & ( \inst|Add10~13_sumout\ & ( (!\inst|Add10~5_sumout\ & !\inst|Add10~9_sumout\) ) ) ) # ( !\inst|Add10~1_sumout\ & ( !\inst|Add10~13_sumout\ & ( (!\inst|Add10~5_sumout\ & ((!\inst|Add10~17_sumout\) # 
+-- (!\inst|Add10~9_sumout\))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -9137,11 +9137,11 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst|ALT_INV_Add12~5_sumout\,
-	datab => \inst|ALT_INV_Add12~17_sumout\,
-	datac => \inst|ALT_INV_Add12~9_sumout\,
-	datae => \inst|ALT_INV_Add12~1_sumout\,
-	dataf => \inst|ALT_INV_Add12~13_sumout\,
+	dataa => \inst|ALT_INV_Add10~5_sumout\,
+	datab => \inst|ALT_INV_Add10~17_sumout\,
+	datac => \inst|ALT_INV_Add10~9_sumout\,
+	datae => \inst|ALT_INV_Add10~1_sumout\,
+	dataf => \inst|ALT_INV_Add10~13_sumout\,
 	combout => \inst|box3_on~2_combout\);
 
 -- Location: MLABCELL_X34_Y14_N6
