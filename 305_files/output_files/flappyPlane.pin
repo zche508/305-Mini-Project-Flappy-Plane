@@ -432,7 +432,7 @@ GND                          : R3        : gnd    :                   :         
 nCSO, DATA4                  : R4        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3A        :                
-LEDR1                        : R7        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3A        :                
 VCCIO3B                      : R8        : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 3B        :                
@@ -464,12 +464,12 @@ sw[2]                        : T13       : input  : 3.3-V LVTTL       :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 5A        :                
 GND                          : T16       : gnd    :                   :         :           :                
-LEDR3                        : T17       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :         : 5A        :                
-LEDR4                        : T20       : output : 2.5 V             :         : 5A        : N              
+LEDR4                        : T19       : output : 2.5 V             :         : 5A        : N              
+LEDR1                        : T20       : output : 2.5 V             :         : 5A        : N              
 GND                          : T21       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5A        :                
+LEDR3                        : T22       : output : 2.5 V             :         : 5A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2A        :                
 GND                          : U3        : gnd    :                   :         :           :                

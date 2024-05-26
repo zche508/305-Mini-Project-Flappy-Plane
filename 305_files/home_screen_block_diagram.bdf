@@ -459,7 +459,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 560 120 616 144))
+	(annotation_block (location)(rect 552 120 608 144))
 )
 (pin
 	(output)
@@ -476,7 +476,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 576 152 632 176))
+	(annotation_block (location)(rect 568 152 624 176))
 )
 (pin
 	(bidir)
