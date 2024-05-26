@@ -81,33 +81,45 @@ SIGNAL cloud_vertical_spacing : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_V
 
 -- HEART	
 
+SIGNAL heart_on					: std_logic;
 SIGNAL heart_r						: std_logic_vector(3 DOWNTO 0);
 SIGNAL heart_g						: std_logic_vector(3 DOWNTO 0);
 SIGNAL heart_b						: std_logic_vector(3 DOWNTO 0);
 SIGNAL heart_x_pos 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 20 pixels right?
 SIGNAL heart_y_pos 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 20 pixels down
+SIGNAL heart_size					: std_logic_vector(9 DOWNTO 0);
 
 -- PLANE
 
+SIGNAL plane_on					: std_logic;
 SIGNAL plane_r						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_g						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_b						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_x_pos 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 20 pixels right?
-SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 40 pixels down
+SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(60, 10); -- 60 pixels down
+SIGNAL plane_size					: std_logic_vector(9 DOWNTO 0);
 
 BEGIN
 
 -- HEART
 
+heart_size <= CONV_STD_LOGIC_VECTOR(6,10);
 heart_r <= heart_pixel_data(11 downto 8);
 heart_g <= heart_pixel_data(7 DOWNTO 4);
 heart_b <= heart_pixel_data(3 DOWNTO 0);
+heart_on <= '1' when (CONV_STD_LOGIC_VECTOR(100,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(106,10) and -- height
+							CONV_STD_LOGIC_VECTOR(60, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(66, 10)) else -- width
+				'0';
 
 -- PLANE
 
+plane_size <= CONV_STD_LOGIC_VECTOR(20,10);
 plane_r <= plane_pixel_data(11 downto 8);
 plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
+plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(200,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(210,10) and -- height
+							CONV_STD_LOGIC_VECTOR(60, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(80, 10)) else -- width
+				'0';
 
 score <= current_score;
 lives <= current_lives;
@@ -174,8 +186,8 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 
 
 Red <=	"1111" when ShowText = '1' else
-			heart_r when showHeart = '1' and pixel_row <= heart_y_pos else
-			plane_r when showPlane = '1' and pixel_row <= plane_y_pos else
+			heart_r when heart_on = '1' else
+			plane_r when plane_on = '1' else
 			"1111" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -183,16 +195,16 @@ Red <=	"1111" when ShowText = '1' else
 			"0000";
 			
 Green <= "1111" when ShowText = '1' else 
-			heart_g when showHeart = '1' and pixel_row <= heart_y_pos else
-			plane_g when showPlane = '1' and pixel_row <= plane_y_pos else
+			heart_g when heart_on = '1' else
+			plane_g when plane_on = '1' else
 			"0000" when ball_on = '1' else
 			"1111" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			"1111"; 
 			
 Blue <=  "1111" when ShowText = '1' else 
-			heart_b when showHeart = '1' and pixel_row <= heart_y_pos else
-			plane_b when showPlane = '1' and pixel_row <= plane_y_pos else
+			heart_b when heart_on = '1' else
+			plane_b when plane_on = '1' else
 			"0000" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else

@@ -1,5 +1,5 @@
 Flow report for flappyPlane
-Sun May 26 15:32:14 2024
+Sun May 26 16:31:06 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun May 26 15:32:14 2024       ;
+; Flow Status                     ; Successful - Sun May 26 16:31:06 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 ; Total registers                 ; 273                                         ;
 ; Total pins                      ; 45                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 26,496                                      ;
+; Total block memory bits         ; 25,600                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/26/2024 15:31:32 ;
+; Start date & time ; 05/26/2024 16:30:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; flappyPlane         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 193569095432136.171669429211292        ; --            ; --             ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193569095432136.171669782612832        ; --            ; --             ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --             ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                        ; <None>        ; --             ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation ;
@@ -116,8 +116,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:43     ; 1.0                     ; 4949 MB             ; 00:00:53                           ;
-; Total                ; 00:00:43     ; --                      ; --                  ; 00:00:53                           ;
+; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4934 MB             ; 00:00:48                           ;
+; Total                ; 00:00:41     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
