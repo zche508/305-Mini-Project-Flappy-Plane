@@ -44,7 +44,7 @@ begin
 								"110110" when (current_lives_digit = 6) else		-- "6" oct(66)
 								"110111" when (current_lives_digit = 7) else		-- "7" oct(67)
 								"111000" when (current_lives_digit = 8) else		-- "8" oct(70)
-								"111001" when (current_lives_digit = 9);		-- "9" oct(71)
+								"111001" when (current_lives_digit = 9);			-- "9" oct(71)
 								
 	-------------------------------
 	-- Updates the LIVES --

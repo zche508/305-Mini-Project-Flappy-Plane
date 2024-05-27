@@ -97,9 +97,11 @@ SIGNAL plane_on					: std_logic;
 SIGNAL plane_r						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_g						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_b						: std_logic_vector(3 DOWNTO 0);
-SIGNAL plane_x_pos 				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(20, 10); -- 20 pixels right?
-SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(60, 10); -- 60 pixels down
-SIGNAL plane_size					: std_logic_vector(9 DOWNTO 0);
+SIGNAL plane_x_size				: std_logic_vector(9 DOWNTO 0);
+SIGNAL plane_y_size				: std_logic_vector(9 DOWNTO 0);
+SIGNAL plane_y_pos				: std_logic_vector(9 DOWNTO 0);
+SiGNAL plane_x_pos				: std_logic_vector(10 DOWNTO 0);
+SIGNAL plane_y_motion			: std_logic_vector(9 DOWNTO 0);
 
 -- TOOLBOX
 
@@ -135,13 +137,18 @@ heart_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CO
 
 -- PLANE
 
-plane_size <= CONV_STD_LOGIC_VECTOR(20,10);
+plane_x_size <= CONV_STD_LOGIC_VECTOR(42,10); -- 1 pixel offset
+plane_y_size <= CONV_STD_LOGIC_VECTOR(22,10);
+plane_x_pos <= CONV_STD_LOGIC_VECTOR(150, 11);
 plane_r <= plane_pixel_data(11 downto 8);
 plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
-plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
-							CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
-				'0';
+--plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+--							CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
+--				'0';
+plane_on <= '1' when ( ('0' & plane_x_pos <= '0' & pixel_column + plane_x_size) and ('0' & pixel_column <= '0' & plane_x_pos + plane_x_size) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & plane_x_pos <= pixel_row + plane_y_size) and ('0' & pixel_row <= plane_x_pos + plane_y_size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+			'0';
 
 -- TOOLBOX
 
@@ -159,8 +166,8 @@ clouds_size <= CONV_STD_LOGIC_VECTOR(20,10);
 clouds_r <= clouds_pixel_data(11 downto 8);
 clouds_g <= clouds_pixel_data(7 DOWNTO 4);
 clouds_b <= clouds_pixel_data(3 DOWNTO 0);
-clouds_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(200,10) and -- height
-							CONV_STD_LOGIC_VECTOR(380, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(460, 10)) else -- width
+clouds_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and pixel_row < CONV_STD_LOGIC_VECTOR(200,10) and -- height
+							CONV_STD_LOGIC_VECTOR(383, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(424, 10)) else -- width
 				'0';
 
 score <= current_score;
@@ -231,7 +238,7 @@ Red <=	--"1111" when ShowText = '1' else
 			heart_r when heart_on = '1' and showHeart = '1' else
 			plane_r when plane_on = '1' and showPlane = '1' else
 			toolbox_r when toolbox_on = '1' and showToolbox = '1' else
-			clouds_r when clouds_on = '1' else
+			clouds_r when clouds_on = '1' and showClouds = '1' else
 			"1111" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -242,7 +249,7 @@ Green <= --"1111" when ShowText = '1' else
 			heart_g when heart_on = '1' and showHeart = '1' else
 			plane_g when plane_on = '1' and showPlane = '1' else
 			toolbox_g when toolbox_on = '1' and showToolbox = '1' else
-			clouds_g when clouds_on = '1' else
+			clouds_g when clouds_on = '1' and showClouds = '1' else
 			"0000" when ball_on = '1' else
 			"1111" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
@@ -252,7 +259,7 @@ Blue <=  --"1111" when ShowText = '1' else
 			heart_b when heart_on = '1' and showHeart = '1' else
 			plane_b when plane_on = '1' and showPlane = '1' else
 			toolbox_b when toolbox_on = '1' and showToolbox = '1' else
-			clouds_b when clouds_on = '1' else
+			clouds_b when clouds_on = '1' and showClouds = '1' else
 			"0000" when ball_on = '1' else
 			"0000" when top_cloud1_on = '1' or bottom_cloud1_on = '1' or top_cloud2_on = '1' or bottom_cloud2_on = '1'  or 
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
