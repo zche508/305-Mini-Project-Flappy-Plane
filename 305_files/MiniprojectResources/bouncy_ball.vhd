@@ -129,7 +129,7 @@ lives <= current_lives;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --toolbox visible and size
-toolbox_size <= CONV_STD_LOGIC_VECTOR(12,10);
+toolbox_size <= CONV_STD_LOGIC_VECTOR(10,10);
 toolbox_on <= '1' when ( ('0' & toolbox_pos_x <= '0' & pixel_column + toolbox_size) and ('0' & pixel_column <= '0' & toolbox_pos_x + toolbox_size) -- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & toolbox_pos_y <= pixel_row + toolbox_size) and ('0' & pixel_row <= toolbox_pos_y + toolbox_size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
 			'0';
@@ -345,8 +345,8 @@ begin
         END IF;
 
 		  -- Check for collision with the bird
-		  if ((ball_x_pos <= toolbox_pos_x and ball_x_pos >= toolbox_pos_x - TOOLBOX_WIDTH) and
-			  (ball_y_pos <= toolbox_pos_y + TOOLBOX_HEIGHT and ball_y_pos >= toolbox_pos_y)) then
+		  if ((ball_x_pos <= toolbox_pos_x + toolbox_size and toolbox_pos_x + TOOLBOX_WIDTH <= ball_x_pos) or
+			  (ball_y_pos <= toolbox_pos_y + toolbox_size and toolbox_pos_y  + TOOLBOX_HEIGHT <= ball_y_pos)) then
 				current_lives <= current_lives + 1;
 		  --else
 				--current_lives <= 30;
