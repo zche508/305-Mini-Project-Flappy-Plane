@@ -9,7 +9,7 @@ USE altera_mf.all;
 ENTITY heart IS
 	PORT (
 		character_address   : IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
-		font_row, font_col  : IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		font_row, font_col  : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		clock			   : IN STD_LOGIC;
 		rom_mux_output	  : OUT STD_LOGIC;
 		rom_pixel_data		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0) -- Output 12 bit pixel data for RGB values
