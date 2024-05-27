@@ -1,5 +1,5 @@
 
-State Machine - |home_screen_block_diagram|MOUSE:inst5|mouse_state
+State Machine - |toplevel|MOUSE:inst5|mouse_state
 Name mouse_state.INPUT_PACKETS mouse_state.WAIT_CMD_ACK mouse_state.WAIT_OUTPUT_READY mouse_state.LOAD_COMMAND2 mouse_state.LOAD_COMMAND mouse_state.INHIBIT_TRANS 
 mouse_state.INHIBIT_TRANS 0 0 0 0 0 0 
 mouse_state.LOAD_COMMAND 0 0 0 0 1 1 
@@ -7,9 +7,3 @@ mouse_state.LOAD_COMMAND2 0 0 0 1 0 1
 mouse_state.WAIT_OUTPUT_READY 0 0 1 0 0 1 
 mouse_state.WAIT_CMD_ACK 0 1 0 0 0 1 
 mouse_state.INPUT_PACKETS 1 0 0 0 0 1 
-
-State Machine - |home_screen_block_diagram|home_screen:inst|state
-Name state.SINGLE_PLAYER_MODE state.TRAINING_MODE state.HOME_SCREEN 
-state.HOME_SCREEN 0 0 0 
-state.TRAINING_MODE 0 1 1 
-state.SINGLE_PLAYER_MODE 1 0 1 

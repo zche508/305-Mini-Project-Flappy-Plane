@@ -90,6 +90,7 @@ SIGNAL ball_down_motion_counter : integer RANGE 7 DOWNTO 0;
 
 
 -- trying code for toolbox
+SIGNAL toolbox_hit, pre_toolbox_hit				: std_logic;
 SIGNAL toolbox_on             : std_logic;
 SIGNAL toolbox_size 				: std_logic_vector(9 DOWNTO 0);
 constant TOOLBOX_WIDTH        : integer := 10;
@@ -340,17 +341,23 @@ begin
 					cloud_count <= cloud_count + 1;
 				END IF;
         ELSE
-            toolbox_pos_x <= top_cloud3_x_pos - 45;
+            toolbox_pos_x <= top_cloud3_x_pos - 35;
 				toolbox_pos_y <= top_cloud3_height + 60;
         END IF;
 
 		  -- Check for collision with the bird
-		  if ((ball_x_pos <= toolbox_pos_x + toolbox_size and toolbox_pos_x + TOOLBOX_WIDTH <= ball_x_pos) or
-			  (ball_y_pos <= toolbox_pos_y + toolbox_size and toolbox_pos_y  + TOOLBOX_HEIGHT <= ball_y_pos)) then
-				current_lives <= current_lives + 1;
-		  --else
-				--current_lives <= 30;
+		  if ((ball_x_pos <= toolbox_pos_x and toolbox_pos_x <= ball_x_pos + size) and
+			  (ball_y_pos <= toolbox_pos_y and toolbox_pos_y <= ball_y_pos + size)) then 
+			  toolbox_hit <= '1';
+		  else
+			  toolbox_hit <= '0';
 		  end if;
+		  
+		  if (toolbox_hit = '1' and pre_toolbox_hit = '0') then
+				current_lives <= current_lives + 1;
+		  end if;
+		  
+		  pre_toolbox_hit <= toolbox_hit;
 		-----------------------------------------------------------------------------------------------
 		
 
