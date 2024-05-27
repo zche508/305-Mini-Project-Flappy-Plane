@@ -94,13 +94,13 @@ SIGNAL heart_size					: std_logic_vector(9 DOWNTO 0);
 -- PLANE
 
 SIGNAL plane_on					: std_logic;
-SIGNAL plane_shift				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(127, 10);
+-- SIGNAL plane_shift				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(127, 10);
 SIGNAL plane_r						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_g						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_b						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_x_size				: std_logic_vector(9 DOWNTO 0);
 SIGNAL plane_y_size				: std_logic_vector(9 DOWNTO 0);
-SIGNAL plane_y_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(200, 10); -- 200 pixels down
+SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(60, 10); -- 200 pixels down
 SiGNAL plane_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL plane_y_motion			: std_logic_vector(9 DOWNTO 0);
 
@@ -326,17 +326,17 @@ begin
 			end if;
 		end if;
 		
-		if (mb1 = '1') then
-			plane_y_motion <= - CONV_STD_LOGIC_VECTOR(8,10);
-			if(plane_y_pos <= plane_y_size + CONV_STD_LOGIC_VECTOR(8,10)) then
-				plane_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-			end if;
-		else
-			plane_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);
-			if ('0' & plane_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - plane_y_size - CONV_STD_LOGIC_VECTOR(8,10)) then 		-- bottom
-				plane_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
-			end if;
-		end if;
+--		if (mb1 = '1') then
+--			plane_y_motion <= - CONV_STD_LOGIC_VECTOR(8,10);
+--			if(plane_y_pos <= plane_y_size + CONV_STD_LOGIC_VECTOR(8,10)) then
+--				plane_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+--			end if;
+--		else
+--			plane_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);
+--			if ('0' & plane_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - plane_y_size - CONV_STD_LOGIC_VECTOR(8,10)) then 		-- bottom
+--				plane_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+--			end if;
+--		end if;
 		
 		----------------------------------------------------
 		-- UPDATING THE NEXT POSITION OF PLANE AND CLOUDS --
@@ -344,7 +344,7 @@ begin
 		
 		-- Compute next ball Y position
 		ball_y_pos <= ball_y_pos + ball_y_motion;
-		plane_y_pos <= plane_y_pos + plane_y_motion;
+--		plane_y_pos <= plane_y_pos + plane_y_motion;
 		
 		
 		-- Compute next top_cloud1 x position
