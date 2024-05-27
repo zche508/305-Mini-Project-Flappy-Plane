@@ -20,6 +20,7 @@ ARCHITECTURE SYN OF plane IS
 
 	SIGNAL rom_data	 : STD_LOGIC_VECTOR (239 DOWNTO 0); -- MIF width 
 	SIGNAL rom_address  : STD_LOGIC_VECTOR (7 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
+	SIGNAL pixel_data : STD_LOGIC_VECTOR (11 DOWNTO 0);
 
 	COMPONENT altsyncram
 	GENERIC (
@@ -71,7 +72,9 @@ BEGIN
 	);
 
 	rom_address <= character_address; -- removed "& font_row" for now idk what it does
-	rom_mux_output <= rom_data(CONV_INTEGER(font_col) * 12 + 11);
-	rom_pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
+	-- rom_mux_output <= rom_data(CONV_INTEGER(font_col) * 12 + 11);
+	pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
+	rom_pixel_data <= pixel_data;
+	rom_mux_output <= '0' when pixel_data = "000000000000" else '1';
 	
 END SYN;

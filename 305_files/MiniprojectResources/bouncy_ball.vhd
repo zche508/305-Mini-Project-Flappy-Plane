@@ -140,7 +140,7 @@ plane_r <= plane_pixel_data(11 downto 8);
 plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
 plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
-							CONV_STD_LOGIC_VECTOR(100, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(200, 10)) else -- width
+							CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
 				'0';
 
 -- TOOLBOX
@@ -227,9 +227,9 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 --Blue <= not ball_on;
 
 
-Red <=	"1111" when ShowText = '1' else
+Red <=	--"1111" when ShowText = '1' else
 			heart_r when heart_on = '1' else
-			plane_r when plane_on = '1' else
+			plane_r when plane_on = '1' and showPlane = '1' else
 			toolbox_r when toolbox_on = '1' else
 			clouds_r when clouds_on = '1' else
 			"1111" when ball_on = '1' else
@@ -238,9 +238,9 @@ Red <=	"1111" when ShowText = '1' else
 			"1111" when collision = '1' else
 			"0000";
 			
-Green <= "1111" when ShowText = '1' else 
+Green <= --"1111" when ShowText = '1' else 
 			heart_g when heart_on = '1' else
-			plane_g when plane_on = '1' else
+			plane_g when plane_on = '1' and showPlane = '1' else
 			toolbox_g when toolbox_on = '1' else
 			clouds_g when clouds_on = '1' else
 			"0000" when ball_on = '1' else
@@ -248,9 +248,9 @@ Green <= "1111" when ShowText = '1' else
 						top_cloud3_on = '1' or bottom_cloud3_on = '1' else
 			"1111"; 
 			
-Blue <=  "1111" when ShowText = '1' else 
+Blue <=  --"1111" when ShowText = '1' else 
 			heart_b when heart_on = '1' else
-			plane_b when plane_on = '1' else
+			plane_b when plane_on = '1' and showPlane = '1' else
 			toolbox_b when toolbox_on = '1' else
 			clouds_b when clouds_on = '1' else
 			"0000" when ball_on = '1' else

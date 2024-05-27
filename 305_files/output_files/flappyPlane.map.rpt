@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Mon May 27 13:25:31 2024
+Mon May 27 14:38:21 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -18,38 +18,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  10. State Machine - |toplevel|MOUSE:inst5|mouse_state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 17. Source assignments for heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated
- 18. Source assignments for plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated
- 19. Source assignments for toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated
- 20. Source assignments for clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated
- 21. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
- 22. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: heart:inst12|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: plane:inst11|altsyncram:altsyncram_component
- 25. Parameter Settings for User Entity Instance: toolbox:inst13|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: clouds:inst14|altsyncram:altsyncram_component
- 27. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod7
- 28. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div5
- 29. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod6
- 30. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div4
- 31. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod4
- 32. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod5
- 33. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div3
- 34. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3
- 35. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div2
- 36. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod2
- 37. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div1
- 38. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod0
- 39. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod1
- 40. Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div0
- 41. altsyncram Parameter Settings by Entity Instance
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 18. Source assignments for heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated
+ 19. Source assignments for plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated
+ 20. Source assignments for toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated
+ 21. Source assignments for clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated
+ 22. Parameter Settings for User Entity Instance: pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i
+ 23. Parameter Settings for User Entity Instance: char_rom:inst9|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: heart:inst12|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: plane:inst11|altsyncram:altsyncram_component
+ 26. Parameter Settings for User Entity Instance: toolbox:inst13|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: clouds:inst14|altsyncram:altsyncram_component
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -75,16 +62,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 27 13:25:31 2024           ;
+; Analysis & Synthesis Status     ; Successful - Mon May 27 14:38:21 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; flappyPlane                                     ;
 ; Top-level Entity Name           ; toplevel                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 273                                             ;
+; Total registers                 ; 233                                             ;
 ; Total pins                      ; 45                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 97,664                                          ;
+; Total block memory bits         ; 93,568                                          ;
 ; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -246,37 +233,6 @@ refer to the applicable agreement for further details.
 ; spritesmif/toolbox.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/spritesmif/toolbox.mif               ;         ;
 ; db/altsyncram_vai1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_vai1.tdf               ;         ;
 ; spritesmif/cloud_lightning.mif       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/spritesmif/cloud_lightning.mif       ;         ;
-; lpm_divide.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                    ;         ;
-; abs_divider.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc                                                   ;         ;
-; sign_div_unsign.inc                  ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                               ;         ;
-; db/lpm_divide_65m.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_65m.tdf                ;         ;
-; db/sign_div_unsign_9nh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf           ;         ;
-; db/alt_u_div_p2f.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf                 ;         ;
-; db/lpm_divide_vcm.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_vcm.tdf                ;         ;
-; db/sign_div_unsign_5nh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf           ;         ;
-; db/alt_u_div_g2f.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf                 ;         ;
-; db/lpm_divide_lbm.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_lbm.tdf                ;         ;
-; db/sign_div_unsign_rlh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf           ;         ;
-; db/alt_u_div_sve.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf                 ;         ;
-; db/lpm_divide_ibm.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf                ;         ;
-; db/sign_div_unsign_olh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf           ;         ;
-; db/alt_u_div_mve.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf                 ;         ;
-; db/lpm_divide_m3m.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf                ;         ;
-; db/lpm_divide_i3m.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf                ;         ;
-; db/sign_div_unsign_1nh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf           ;         ;
-; db/alt_u_div_82f.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf                 ;         ;
-; db/lpm_divide_hbm.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf                ;         ;
-; db/sign_div_unsign_nlh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf           ;         ;
-; db/alt_u_div_kve.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf                 ;         ;
-; db/lpm_divide_62m.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf                ;         ;
-; db/sign_div_unsign_9kh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf           ;         ;
-; db/alt_u_div_ose.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf                 ;         ;
-; db/lpm_divide_82m.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf                ;         ;
-; db/sign_div_unsign_dkh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf           ;         ;
-; db/alt_u_div_0te.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf                 ;         ;
-; db/lpm_divide_4am.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf                ;         ;
-; db/sign_div_unsign_akh.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf           ;         ;
-; db/alt_u_div_qse.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf                 ;         ;
 +--------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -285,20 +241,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1709                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 808                                                                   ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 2788                                                                  ;
-;     -- 7 input functions                    ; 20                                                                    ;
-;     -- 6 input functions                    ; 602                                                                   ;
-;     -- 5 input functions                    ; 254                                                                   ;
-;     -- 4 input functions                    ; 414                                                                   ;
-;     -- <=3 input functions                  ; 1498                                                                  ;
+; Combinational ALUT usage for logic          ; 1137                                                                  ;
+;     -- 7 input functions                    ; 16                                                                    ;
+;     -- 6 input functions                    ; 455                                                                   ;
+;     -- 5 input functions                    ; 189                                                                   ;
+;     -- 4 input functions                    ; 116                                                                   ;
+;     -- <=3 input functions                  ; 361                                                                   ;
 ;                                             ;                                                                       ;
-; Dedicated logic registers                   ; 273                                                                   ;
+; Dedicated logic registers                   ; 233                                                                   ;
 ;                                             ;                                                                       ;
 ; I/O pins                                    ; 45                                                                    ;
 ; Total MLAB memory bits                      ; 0                                                                     ;
-; Total block memory bits                     ; 97664                                                                 ;
+; Total block memory bits                     ; 93568                                                                 ;
 ;                                             ;                                                                       ;
 ; Total DSP Blocks                            ; 0                                                                     ;
 ;                                             ;                                                                       ;
@@ -306,100 +262,40 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                     ;
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 828                                                                   ;
-; Total fan-out                               ; 17390                                                                 ;
-; Average fan-out                             ; 4.47                                                                  ;
+; Maximum fan-out                             ; 820                                                                   ;
+; Total fan-out                               ; 11823                                                                 ;
+; Average fan-out                             ; 5.39                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 2788 (1)            ; 273 (0)                   ; 97664             ; 0          ; 45   ; 0            ; |toplevel                                                                                                                     ; toplevel            ; work         ;
-;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                                                               ; BCD_to_SevenSeg     ; work         ;
-;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                                                               ; BCD_to_SevenSeg     ; work         ;
-;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                         ; MOUSE               ; work         ;
-;    |VGA_SYNC:inst2|                       ; 61 (61)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                      ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst3|                    ; 833 (833)           ; 87 (87)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                                                                   ; bouncy_ball         ; work         ;
-;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                      ; char_rom            ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
-;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                       ; altsyncram_d5g1     ; work         ;
-;    |clouds:inst14|                        ; 70 (70)             ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14                                                                                                       ; clouds              ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component                                                                       ; altsyncram          ; work         ;
-;          |altsyncram_vai1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated                                        ; altsyncram_vai1     ; work         ;
-;    |heart:inst12|                         ; 22 (22)             ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                                                        ; heart               ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                                                        ; altsyncram          ; work         ;
-;          |altsyncram_c8h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated                                         ; altsyncram_c8h1     ; work         ;
-;    |plane:inst11|                         ; 67 (67)             ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11                                                                                                        ; plane               ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11|altsyncram:altsyncram_component                                                                        ; altsyncram          ; work         ;
-;          |altsyncram_l9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated                                         ; altsyncram_l9h1     ; work         ;
-;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                                                          ; pll2                ; pll2         ;
-;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                      ; pll2_0002           ; pll2         ;
-;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                              ; altera_pll          ; work         ;
-;    |random_number_gen:inst8|              ; 48 (48)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                             ; random_number_gen   ; work         ;
-;    |textSelector:inst10|                  ; 1519 (207)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10                                                                                                 ; textSelector        ; work         ;
-;       |lpm_divide:Div0|                   ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_4am:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am      ; work         ;
-;             |sign_div_unsign_akh:divider| ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
-;                |alt_u_div_qse:divider|    ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider ; alt_u_div_qse       ; work         ;
-;       |lpm_divide:Div1|                   ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_hbm:auto_generated|  ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
-;                |alt_u_div_kve:divider|    ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
-;       |lpm_divide:Div2|                   ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
-;             |sign_div_unsign_5nh:divider| ; 103 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
-;                |alt_u_div_g2f:divider|    ; 103 (103)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
-;       |lpm_divide:Div3|                   ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_ibm:auto_generated|  ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm      ; work         ;
-;             |sign_div_unsign_olh:divider| ; 113 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
-;                |alt_u_div_mve:divider|    ; 113 (113)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div3|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
-;       |lpm_divide:Div4|                   ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_lbm:auto_generated|  ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm      ; work         ;
-;             |sign_div_unsign_rlh:divider| ; 135 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
-;                |alt_u_div_sve:divider|    ; 135 (135)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div4|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve       ; work         ;
-;       |lpm_divide:Div5|                   ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
-;             |sign_div_unsign_5nh:divider| ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
-;                |alt_u_div_g2f:divider|    ; 107 (107)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Div5|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
-;       |lpm_divide:Mod0|                   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_62m:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
-;                |alt_u_div_ose:divider|    ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
-;       |lpm_divide:Mod1|                   ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_82m:auto_generated|  ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_82m:auto_generated                                                   ; lpm_divide_82m      ; work         ;
-;             |sign_div_unsign_dkh:divider| ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_dkh:divider                       ; sign_div_unsign_dkh ; work         ;
-;                |alt_u_div_0te:divider|    ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod1|lpm_divide_82m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider ; alt_u_div_0te       ; work         ;
-;       |lpm_divide:Mod2|                   ; 17 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_i3m:auto_generated|  ; 17 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
-;             |sign_div_unsign_1nh:divider| ; 17 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_i3m:auto_generated|sign_div_unsign_1nh:divider                       ; sign_div_unsign_1nh ; work         ;
-;                |alt_u_div_82f:divider|    ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod2|lpm_divide_i3m:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_82f:divider ; alt_u_div_82f       ; work         ;
-;       |lpm_divide:Mod3|                   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_m3m:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_m3m:auto_generated                                                   ; lpm_divide_m3m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_m3m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod3|lpm_divide_m3m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod4|                   ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 242 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 242 (242)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod4|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod5|                   ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 236 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 236 (236)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod5|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod6|                   ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 169 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 169 (169)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod6|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;       |lpm_divide:Mod7|                   ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_65m:auto_generated|  ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
-;                |alt_u_div_p2f:divider|    ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst10|lpm_divide:Mod7|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
-;    |toolbox:inst13|                       ; 44 (44)             ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13                                                                                                      ; toolbox             ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13|altsyncram:altsyncram_component                                                                      ; altsyncram          ; work         ;
-;          |altsyncram_nhh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated                                       ; altsyncram_nhh1     ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name       ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
+; |toplevel                                 ; 1137 (1)            ; 233 (0)                   ; 93568             ; 0          ; 45   ; 0            ; |toplevel                                                                               ; toplevel          ; work         ;
+;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                         ; BCD_to_SevenSeg   ; work         ;
+;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                         ; BCD_to_SevenSeg   ; work         ;
+;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                   ; MOUSE             ; work         ;
+;    |VGA_SYNC:inst2|                       ; 75 (75)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                ; VGA_SYNC          ; work         ;
+;    |bouncy_ball:inst3|                    ; 596 (596)           ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                             ; bouncy_ball       ; work         ;
+;    |clouds:inst14|                        ; 72 (72)             ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14                                                                 ; clouds            ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component                                 ; altsyncram        ; work         ;
+;          |altsyncram_vai1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated  ; altsyncram_vai1   ; work         ;
+;    |heart:inst12|                         ; 19 (19)             ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                  ; heart             ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                  ; altsyncram        ; work         ;
+;          |altsyncram_c8h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated   ; altsyncram_c8h1   ; work         ;
+;    |plane:inst11|                         ; 161 (161)           ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11                                                                  ; plane             ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11|altsyncram:altsyncram_component                                  ; altsyncram        ; work         ;
+;          |altsyncram_l9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated   ; altsyncram_l9h1   ; work         ;
+;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                    ; pll2              ; pll2         ;
+;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                ; pll2_0002         ; pll2         ;
+;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                        ; altera_pll        ; work         ;
+;    |random_number_gen:inst8|              ; 48 (48)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                       ; random_number_gen ; work         ;
+;    |toolbox:inst13|                       ; 44 (44)             ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13                                                                ; toolbox           ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
+;          |altsyncram_nhh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated ; altsyncram_nhh1   ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -408,7 +304,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------------+
 ; Name                                                                                     ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                            ;
 +------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------------+
-; char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096  ; tcgrom.mif                     ;
 ; clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated|ALTSYNCRAM  ; AUTO ; ROM  ; 256          ; 240          ; --           ; --           ; 61440 ; spritesMIF\cloud_lightning.mif ;
 ; heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 256          ; 72           ; --           ; --           ; 18432 ; spritesMIF\heart.mif           ;
 ; plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 256          ; 240          ; --           ; --           ; 61440 ; spritesMIF\plane.mif           ;
@@ -502,95 +397,82 @@ Encoding Type:  One-Hot
 ; bouncy_ball:inst3|bottom_cloud3_height[2]           ; bouncy_ball:inst3|top_cloud3_height ; yes                    ;
 ; bouncy_ball:inst3|bottom_cloud3_height[1]           ; bouncy_ball:inst3|top_cloud3_height ; yes                    ;
 ; bouncy_ball:inst3|bottom_cloud3_height[0]           ; bouncy_ball:inst3|top_cloud3_height ; yes                    ;
-; textSelector:inst10|score_character[0]              ; GND                                 ; yes                    ;
-; textSelector:inst10|lives_character[0]              ; GND                                 ; yes                    ;
-; textSelector:inst10|score_character[1]              ; GND                                 ; yes                    ;
-; textSelector:inst10|lives_character[1]              ; GND                                 ; yes                    ;
-; textSelector:inst10|score_character[2]              ; GND                                 ; yes                    ;
-; textSelector:inst10|lives_character[2]              ; GND                                 ; yes                    ;
-; textSelector:inst10|lives_character[3]              ; GND                                 ; yes                    ;
-; textSelector:inst10|score_character[3]              ; GND                                 ; yes                    ;
-; textSelector:inst10|current_score_digit[13]         ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[12]         ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[11]         ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[10]         ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[9]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[8]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[7]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[6]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[5]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[4]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[3]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[2]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[1]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_score_digit[0]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_lives_digit[0]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_lives_digit[1]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_lives_digit[2]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_lives_digit[3]          ; textSelector:inst10|char_address    ; yes                    ;
-; textSelector:inst10|current_lives_digit[4]          ; textSelector:inst10|char_address    ; yes                    ;
-; Number of user-specified and inferred latches = 84  ;                                     ;                        ;
+; Number of user-specified and inferred latches = 57  ;                                     ;                        ;
 +-----------------------------------------------------+-------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+---------------------------------------------+-------------------------------------------------------+
-; Register name                               ; Reason for Removal                                    ;
-+---------------------------------------------+-------------------------------------------------------+
-; bouncy_ball:inst3|ball_y_motion[0,1]        ; Stuck at GND due to stuck port data_in                ;
-; MOUSE:inst5|CHAROUT[4..7]                   ; Stuck at VCC due to stuck port data_in                ;
-; MOUSE:inst5|CHAROUT[3]                      ; Stuck at GND due to stuck port data_in                ;
-; MOUSE:inst5|CHAROUT[2]                      ; Stuck at VCC due to stuck port data_in                ;
-; MOUSE:inst5|CHAROUT[0,1]                    ; Stuck at GND due to stuck port data_in                ;
-; MOUSE:inst5|SHIFTOUT[10]                    ; Stuck at VCC due to stuck port data_in                ;
-; bouncy_ball:inst3|top_cloud3_x_pos[10]      ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[10] ;
-; bouncy_ball:inst3|top_cloud3_x_pos[9]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[9]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[8]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[8]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[7]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[7]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[6]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[6]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[5]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[5]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[4]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[4]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[3]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[3]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[2]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[2]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[1]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[1]  ;
-; bouncy_ball:inst3|top_cloud3_x_pos[0]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[0]  ;
-; bouncy_ball:inst3|ball_y_pos[1]             ; Merged with bouncy_ball:inst3|ball_y_pos[0]           ;
-; bouncy_ball:inst3|cloud_motion[1,4..9]      ; Merged with bouncy_ball:inst3|cloud_motion[10]        ;
-; bouncy_ball:inst3|cloud_motion[3]           ; Merged with bouncy_ball:inst3|cloud_motion[0]         ;
-; bouncy_ball:inst3|cloud_motion_integer[0,2] ; Merged with bouncy_ball:inst3|cloud_motion[0]         ;
-; bouncy_ball:inst3|cloud_motion_integer[1,3] ; Merged with bouncy_ball:inst3|cloud_motion[2]         ;
-; bouncy_ball:inst3|ball_y_motion[4..9]       ; Merged with bouncy_ball:inst3|ball_y_motion[3]        ;
-; bouncy_ball:inst3|top_cloud2_x_pos[8]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[8]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[3]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[3]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[2]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[2]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[1]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[1]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[7]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[7]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[6]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[6]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[5]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[5]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[4]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[4]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[10]      ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[10] ;
-; bouncy_ball:inst3|top_cloud2_x_pos[9]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[9]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[7]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[7]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[6]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[6]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[5]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[5]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[4]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[4]  ;
-; bouncy_ball:inst3|top_cloud2_x_pos[0]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[0]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[10]      ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[10] ;
-; bouncy_ball:inst3|top_cloud1_x_pos[9]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[9]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[8]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[8]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[3]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[3]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[2]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[2]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[1]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[1]  ;
-; bouncy_ball:inst3|top_cloud1_x_pos[0]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[0]  ;
-; bouncy_ball:inst3|cloud_motion_integer[4]   ; Stuck at GND due to stuck port data_in                ;
-; bouncy_ball:inst3|ball_y_pos[0]             ; Stuck at GND due to stuck port data_in                ;
-; bouncy_ball:inst3|cloud_motion[10]          ; Stuck at VCC due to stuck port data_in                ;
-; MOUSE:inst5|cursor_row[9]                   ; Stuck at GND due to stuck port data_in                ;
-; VGA_SYNC:inst2|pixel_row[9]                 ; Stuck at GND due to stuck port data_in                ;
-; Total Number of Removed Registers = 68      ;                                                       ;
-+---------------------------------------------+-------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++----------------------------------------------+-------------------------------------------------------+
+; Register name                                ; Reason for Removal                                    ;
++----------------------------------------------+-------------------------------------------------------+
+; bouncy_ball:inst3|ball_y_motion[0,1]         ; Stuck at GND due to stuck port data_in                ;
+; bouncy_ball:inst3|current_lives[0,1]         ; Lost fanout                                           ;
+; bouncy_ball:inst3|cloud_motion_integer[0..4] ; Lost fanout                                           ;
+; bouncy_ball:inst3|current_lives[2..6]        ; Lost fanout                                           ;
+; bouncy_ball:inst3|collision_buffer[0..8]     ; Lost fanout                                           ;
+; bouncy_ball:inst3|current_score[0..13]       ; Lost fanout                                           ;
+; bouncy_ball:inst3|score_time_buffer[0..8]    ; Lost fanout                                           ;
+; bouncy_ball:inst3|allow_score_update         ; Lost fanout                                           ;
+; MOUSE:inst5|CHAROUT[4..7]                    ; Stuck at VCC due to stuck port data_in                ;
+; MOUSE:inst5|CHAROUT[3]                       ; Stuck at GND due to stuck port data_in                ;
+; MOUSE:inst5|CHAROUT[2]                       ; Stuck at VCC due to stuck port data_in                ;
+; MOUSE:inst5|CHAROUT[0,1]                     ; Stuck at GND due to stuck port data_in                ;
+; MOUSE:inst5|SHIFTOUT[10]                     ; Stuck at VCC due to stuck port data_in                ;
+; bouncy_ball:inst3|top_cloud3_x_pos[10]       ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[10] ;
+; bouncy_ball:inst3|top_cloud3_x_pos[9]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[9]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[8]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[8]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[7]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[7]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[6]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[6]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[5]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[5]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[4]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[4]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[3]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[3]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[2]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[2]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[1]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[1]  ;
+; bouncy_ball:inst3|top_cloud3_x_pos[0]        ; Merged with bouncy_ball:inst3|bottom_cloud3_x_pos[0]  ;
+; bouncy_ball:inst3|ball_y_pos[1]              ; Merged with bouncy_ball:inst3|ball_y_pos[0]           ;
+; bouncy_ball:inst3|cloud_motion[1,4..9]       ; Merged with bouncy_ball:inst3|cloud_motion[10]        ;
+; bouncy_ball:inst3|cloud_motion[3]            ; Merged with bouncy_ball:inst3|cloud_motion[0]         ;
+; bouncy_ball:inst3|ball_y_motion[4..9]        ; Merged with bouncy_ball:inst3|ball_y_motion[3]        ;
+; bouncy_ball:inst3|top_cloud2_x_pos[8]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[8]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[3]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[3]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[2]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[2]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[1]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[1]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[7]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[7]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[6]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[6]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[5]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[5]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[4]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[4]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[10]       ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[10] ;
+; bouncy_ball:inst3|top_cloud2_x_pos[9]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[9]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[7]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[7]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[6]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[6]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[5]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[5]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[4]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[4]  ;
+; bouncy_ball:inst3|top_cloud2_x_pos[0]        ; Merged with bouncy_ball:inst3|bottom_cloud2_x_pos[0]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[10]       ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[10] ;
+; bouncy_ball:inst3|top_cloud1_x_pos[9]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[9]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[8]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[8]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[3]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[3]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[2]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[2]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[1]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[1]  ;
+; bouncy_ball:inst3|top_cloud1_x_pos[0]        ; Merged with bouncy_ball:inst3|bottom_cloud1_x_pos[0]  ;
+; bouncy_ball:inst3|ball_y_pos[0]              ; Stuck at GND due to stuck port data_in                ;
+; bouncy_ball:inst3|cloud_motion[10]           ; Stuck at VCC due to stuck port data_in                ;
+; MOUSE:inst5|cursor_row[9]                    ; Stuck at GND due to stuck port data_in                ;
+; VGA_SYNC:inst2|pixel_row[9]                  ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 108      ;                                                       ;
++----------------------------------------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                       ;
++------------------------------------+--------------------+-------------------------------------------------------------------------+
+; Register name                      ; Reason for Removal ; Registers Removed due to This Register                                  ;
++------------------------------------+--------------------+-------------------------------------------------------------------------+
+; bouncy_ball:inst3|current_lives[1] ; Lost Fanouts       ; bouncy_ball:inst3|current_lives[3], bouncy_ball:inst3|current_lives[4], ;
+;                                    ;                    ; bouncy_ball:inst3|current_lives[5], bouncy_ball:inst3|current_lives[6]  ;
++------------------------------------+--------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -598,12 +480,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 273   ;
-; Number of registers using Synchronous Clear  ; 37    ;
+; Total registers                              ; 233   ;
+; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 207   ;
+; Number of registers using Clock Enable       ; 177   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -613,90 +495,62 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------+
 ; Inverted Register                        ; Fan out ;
 +------------------------------------------+---------+
-; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 10      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 12      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 10      ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 7       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 12      ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 10      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 6       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; 5       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[5] ; 7       ;
 ; bouncy_ball:inst3|bottom_cloud2_x_pos[4] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[3] ; 6       ;
-; bouncy_ball:inst3|bottom_cloud2_x_pos[1] ; 6       ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[7] ; 10      ;
+; bouncy_ball:inst3|bottom_cloud2_x_pos[6] ; 11      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[8] ; 7       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 6       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[5] ; 7       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[4] ; 6       ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 10      ;
+; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 11      ;
 ; random_number_gen:inst8|current_state[8] ; 12      ;
 ; random_number_gen:inst8|current_state[6] ; 20      ;
 ; random_number_gen:inst8|current_state[4] ; 11      ;
 ; random_number_gen:inst8|current_state[0] ; 28      ;
 ; MOUSE:inst5|send_char                    ; 3       ;
-; bouncy_ball:inst3|cloud_motion[0]        ; 15      ;
-; bouncy_ball:inst3|current_score[9]       ; 13      ;
-; bouncy_ball:inst3|current_score[8]       ; 13      ;
-; bouncy_ball:inst3|current_score[13]      ; 12      ;
-; bouncy_ball:inst3|current_score[10]      ; 13      ;
-; bouncy_ball:inst3|current_score[4]       ; 14      ;
-; bouncy_ball:inst3|current_lives[2]       ; 13      ;
+; bouncy_ball:inst3|cloud_motion[0]        ; 7       ;
 ; MOUSE:inst5|SHIFTOUT[3]                  ; 1       ;
-; bouncy_ball:inst3|score_time_buffer[3]   ; 2       ;
-; bouncy_ball:inst3|score_time_buffer[1]   ; 2       ;
-; bouncy_ball:inst3|score_time_buffer[4]   ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[5]   ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[6]   ; 3       ;
-; bouncy_ball:inst3|score_time_buffer[7]   ; 3       ;
-; bouncy_ball:inst3|current_lives[5]       ; 3       ;
-; bouncy_ball:inst3|current_lives[6]       ; 3       ;
-; bouncy_ball:inst3|collision_buffer[3]    ; 2       ;
-; bouncy_ball:inst3|collision_buffer[1]    ; 2       ;
-; bouncy_ball:inst3|collision_buffer[4]    ; 3       ;
-; bouncy_ball:inst3|collision_buffer[5]    ; 3       ;
-; bouncy_ball:inst3|collision_buffer[6]    ; 3       ;
-; bouncy_ball:inst3|collision_buffer[7]    ; 3       ;
 ; MOUSE:inst5|SHIFTOUT[5]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[6]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                  ; 1       ;
-; Total number of inverted registers = 43  ;         ;
+; Total number of inverted registers = 23  ;         ;
 +------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[1]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[7]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[0]      ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[0]     ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[1]   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[9]                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[6]                  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[7]               ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[0]          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|collision_buffer[3]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|score_time_buffer[3]     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[4]   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|toolbox:inst13|Mux10                       ;
-; 4:1                ; 72 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux9                          ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux9                          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[7] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|toolbox:inst13|Mux12                       ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|toolbox:inst13|Mux9                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux9                          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[6] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_lives_digit[1] ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|current_score_digit[2] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[0]      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|lives_character[1]     ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|score_character[2]     ;
-; 34:1               ; 3 bits    ; 66 LEs        ; 66 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst10|char_address[1]        ;
-; 77:1               ; 4 bits    ; 204 LEs       ; 204 LEs              ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|green[1]                 ;
-; 97:1               ; 3 bits    ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|red[2]                   ;
-; 97:1               ; 4 bits    ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[3]                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[1]         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[5]                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[1] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[2]                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[6]                ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[7]             ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[6]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst3|cloud_motion[0]        ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[4] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|toolbox:inst13|Mux10                     ;
+; 4:1                ; 72 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux3                        ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux12                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|toolbox:inst13|Mux10                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|toolbox:inst13|Mux9                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|clouds:inst14|Mux10                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[2]    ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux4                        ;
+; 29:1               ; 4 bits    ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux0                        ;
+; 29:1               ; 4 bits    ; 76 LEs        ; 76 LEs               ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux11                       ;
+; 53:1               ; 4 bits    ; 140 LEs       ; 140 LEs              ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|green[0]               ;
+; 68:1               ; 3 bits    ; 135 LEs       ; 135 LEs              ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|red[2]                 ;
+; 68:1               ; 4 bits    ; 180 LEs       ; 180 LEs              ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[0]                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -1296,328 +1150,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod7 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div5 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 10             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod6 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div4 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 7              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod4 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod5 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div3 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 4              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod3 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 5              ; Untyped                                    ;
-; LPM_WIDTHD             ; 14             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_m3m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div2 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                    ;
-; LPM_WIDTHD             ; 10             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod2 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 5              ; Untyped                                    ;
-; LPM_WIDTHD             ; 10             ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div1 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                    ;
-; LPM_WIDTHD             ; 7              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod0 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 5              ; Untyped                                    ;
-; LPM_WIDTHD             ; 5              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Mod1 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 5              ; Untyped                                    ;
-; LPM_WIDTHD             ; 7              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_82m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: textSelector:inst10|lpm_divide:Div0 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                    ;
-; LPM_WIDTHD             ; 4              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_4am ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                           ;
 +-------------------------------------------+------------------------------------------------+
@@ -1687,42 +1219,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 273                         ;
+; arriav_ff             ; 233                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 134                         ;
+;     ENA               ; 113                         ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 27                          ;
+;     ENA SCLR          ; 18                          ;
 ;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 55                          ;
+;     plain             ; 45                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2791                        ;
-;     arith             ; 792                         ;
-;         0 data inputs ; 122                         ;
-;         1 data inputs ; 142                         ;
-;         2 data inputs ; 90                          ;
-;         3 data inputs ; 229                         ;
-;         4 data inputs ; 209                         ;
-;     extend            ; 20                          ;
-;         7 data inputs ; 20                          ;
-;     normal            ; 1871                        ;
+; arriav_lcell_comb     ; 1140                        ;
+;     arith             ; 151                         ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 83                          ;
+;         2 data inputs ; 58                          ;
+;         3 data inputs ; 6                           ;
+;     extend            ; 16                          ;
+;         7 data inputs ; 16                          ;
+;     normal            ; 963                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 478                         ;
-;         3 data inputs ; 322                         ;
-;         4 data inputs ; 205                         ;
-;         5 data inputs ; 254                         ;
-;         6 data inputs ; 602                         ;
-;     shared            ; 108                         ;
-;         0 data inputs ; 26                          ;
-;         1 data inputs ; 65                          ;
-;         2 data inputs ; 17                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 60                          ;
+;         3 data inputs ; 134                         ;
+;         4 data inputs ; 116                         ;
+;         5 data inputs ; 189                         ;
+;         6 data inputs ; 455                         ;
+;     shared            ; 10                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 9                           ;
 ; boundary_port         ; 45                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 739                         ;
+; stratixv_ram_block    ; 731                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 12.31                       ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1731,7 +1261,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1741,7 +1271,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon May 27 13:25:11 2024
+    Info: Processing started: Mon May 27 14:38:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -2036,9 +1566,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_c8h1 File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_c8h1" for hierarchy "heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "plane" for hierarchy "plane:inst11"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "plane:inst11|altsyncram:altsyncram_component" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 50
-Info (12130): Elaborated megafunction instantiation "plane:inst11|altsyncram:altsyncram_component" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 50
-Info (12133): Instantiated megafunction "plane:inst11|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 50
+Info (12128): Elaborating entity "altsyncram" for hierarchy "plane:inst11|altsyncram:altsyncram_component" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "plane:inst11|altsyncram:altsyncram_component" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 51
+Info (12133): Instantiated megafunction "plane:inst11|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -2101,199 +1631,23 @@ Info (12128): Elaborating entity "altsyncram_vai1" for hierarchy "clouds:inst14|
 Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
 Warning (12001): Port "q_a[179]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "toolbox:inst13|altsyncram:altsyncram_component". File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 50
-Info (278001): Inferred 14 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod7" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div5" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod6" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div4" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod4" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod5" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div3" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod3" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div2" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod2" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div1" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod0" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Mod1" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "textSelector:inst10|Div0" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod7" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod7" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_65m.tdf
-    Info (12023): Found entity 1: lpm_divide_65m File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_65m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9nh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_p2f.tdf
-    Info (12023): Found entity 1: alt_u_div_p2f File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_p2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div5" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div5" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "10"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
-    Info (12023): Found entity 1: lpm_divide_vcm File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_vcm.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_5nh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
-    Info (12023): Found entity 1: alt_u_div_g2f File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_g2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod6" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod6" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div4" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div4" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 91
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lbm.tdf
-    Info (12023): Found entity 1: lpm_divide_lbm File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_lbm.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_rlh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
-    Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_sve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod4" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod4" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 97
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod5" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod5" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div3" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div3" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 94
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_ibm.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_olh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_mve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod3" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod3" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Info (12134): Parameter "LPM_WIDTHN" = "5"
-    Info (12134): Parameter "LPM_WIDTHD" = "14"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m3m.tdf
-    Info (12023): Found entity 1: lpm_divide_m3m File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_m3m.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod2" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod2" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-    Info (12134): Parameter "LPM_WIDTHN" = "5"
-    Info (12134): Parameter "LPM_WIDTHD" = "10"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
-    Info (12023): Found entity 1: lpm_divide_i3m File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_i3m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_1nh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_1nh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_82f.tdf
-    Info (12023): Found entity 1: alt_u_div_82f File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_82f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div1" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div1" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 56
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_hbm.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_nlh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_kve.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod0" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod0" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 62
-    Info (12134): Parameter "LPM_WIDTHN" = "5"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
-    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_62m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_9kh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
-    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_ose.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Mod1" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Mod1" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-    Info (12134): Parameter "LPM_WIDTHN" = "5"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
-    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_82m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_dkh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
-    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_0te.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "textSelector:inst10|lpm_divide:Div0" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-Info (12133): Instantiated megafunction "textSelector:inst10|lpm_divide:Div0" with the following parameter: File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 59
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4am.tdf
-    Info (12023): Found entity 1: lpm_divide_4am File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/lpm_divide_4am.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/sign_div_unsign_akh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
-    Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/alt_u_div_qse.tdf Line: 22
-Warning (13012): Latch textSelector:inst10|current_score_digit[13] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[12] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[11] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[10] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[9] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[8] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[7] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[6] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[5] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[4] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[3] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[2] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[1] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_score_digit[0] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 88
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_lives_digit[0] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_lives_digit[1] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_lives_digit[2] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_lives_digit[3] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
-Warning (13012): Latch textSelector:inst10|current_lives_digit[4] has unsafe behavior File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/text.vhd Line: 53
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal VGA_SYNC:inst2|pixel_column[9] File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/vga_sync.vhd Line: 104
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[0]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 34
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[1]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 55
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[2]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 76
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[3]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 97
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[4]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 118
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[5]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 139
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[6]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 160
+        Warning (14320): Synthesized away node "char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|q_a[7]" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf Line: 181
 Info (13000): Registers with preset signals will power-up high File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated|ALTSYNCRAM" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf Line: 31
+Info (17049): 45 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated|ALTSYNCRAM" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_vai1.tdf Line: 31
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated|ALTSYNCRAM" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_l9h1.tdf Line: 31
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated|ALTSYNCRAM" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf Line: 31
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated|ALTSYNCRAM" File: C:/Users/zche508/Documents/flappy_bird/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_nhh1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
@@ -2329,17 +1683,28 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 3643 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw[9]"
+    Warning (15610): No output dependent on input pin "sw[8]"
+    Warning (15610): No output dependent on input pin "sw[7]"
+    Warning (15610): No output dependent on input pin "sw[6]"
+    Warning (15610): No output dependent on input pin "sw[5]"
+    Warning (15610): No output dependent on input pin "sw[4]"
+    Warning (15610): No output dependent on input pin "sw[3]"
+    Warning (15610): No output dependent on input pin "sw[2]"
+    Warning (15610): No output dependent on input pin "sw[1]"
+    Warning (15610): No output dependent on input pin "sw[0]"
+Info (21057): Implemented 1984 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2858 logic cells
-    Info (21064): Implemented 739 RAM segments
+    Info (21061): Implemented 1207 logic cells
+    Info (21064): Implemented 731 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 92 warnings
-    Info: Peak virtual memory: 5051 megabytes
-    Info: Processing ended: Mon May 27 13:25:31 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
+    Info: Peak virtual memory: 5004 megabytes
+    Info: Processing ended: Mon May 27 14:38:21 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:05
 
 
