@@ -128,7 +128,7 @@ cloud3_bottom_on <= '1' when (('0' & pixel_column <= '0' & cloud3_x_pos) and ('0
 clouds: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then
+	if (rising_edge(vert_sync) and vert_sync = '1') then
 	
 		-- reset the cloud positions
 		if (game_running = '1' and prev_game_running = '0') then

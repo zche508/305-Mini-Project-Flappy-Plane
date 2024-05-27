@@ -21,7 +21,7 @@ SIGNAL ball_y_pos					: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(24
 SiGNAL ball_x_pos					: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion				: std_logic_vector(9 DOWNTO 0);
 
-SIGNAL prev_mb1, mb1_clicked : std_logic;
+SIGNAL prev_mb1, mb1_clicked, prev_game_running : std_logic;
 
 -- Plane motion
 type motion_array is array (0 to 11) of std_logic_vector(9 DOWNTO 0);
@@ -100,55 +100,64 @@ begin
 end process mouse_click;
 			
 
-move_plane: process (vert_sync)
+move_ball: process (vert_sync)
 begin
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync) and vert_sync = '1' and game_running = '1') then
-		-------------------------------
-		---- UPDATES PLANE POSITION ---
-		-------------------------------
-		if (mb1_clicked = '1') then
-			ball_up_motion_counter <= 0;
-		end if;
-		
-		-- Updates the index to change the index of the "motion" of the ball
-		
-		if (ball_down_motion_counter <= 4) then
-			-- motion down case
-			if (ball_y_pos + ball_down_motion(ball_down_motion_counter) < CONV_STD_LOGIC_VECTOR(479,10)) then
-				ball_y_motion <= ball_down_motion(ball_down_motion_counter);
-			else
-				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+	if (rising_edge(vert_sync) and vert_sync = '1') then
+		if (game_running = '1') then
+			
+			-- resets ball y pos
+			if (prev_game_running = '0') then
+				ball_y_pos <= CONV_STD_LOGIC_VECTOR(150,10);
 			end if;
-			ball_down_motion_counter <= ball_down_motion_counter + 1;
-		else
-			if (ball_up_motion_counter = 11 and prev_ball_up_motion_counter = 10) then
-				ball_down_motion_counter <= 0;
-			end if;
-		end if;
 		
-		prev_ball_up_motion_counter <= ball_up_motion_counter;
-		if (ball_up_motion_counter <= 10) then
-			-- motion up case
-			if (ball_y_pos + ball_up_motion(ball_up_motion_counter) > size) then
-				ball_y_motion <= ball_up_motion(ball_up_motion_counter);
+			-------------------------------
+			---- UPDATES BALL POSITION ---
+			-------------------------------
+			if (mb1_clicked = '1') then
+				ball_up_motion_counter <= 0;
 			end if;
 			
-			ball_up_motion_counter <= ball_up_motion_counter + 1;
+			-- Updates the index to change the index of the "motion" of the ball
+			
+			if (ball_down_motion_counter <= 4) then
+				-- motion down case
+				if (ball_y_pos + ball_down_motion(ball_down_motion_counter) < CONV_STD_LOGIC_VECTOR(479,10)) then
+					ball_y_motion <= ball_down_motion(ball_down_motion_counter);
+				else
+					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+				end if;
+				ball_down_motion_counter <= ball_down_motion_counter + 1;
+			else
+				if (ball_up_motion_counter = 11 and prev_ball_up_motion_counter = 10) then
+					ball_down_motion_counter <= 0;
+				end if;
+			end if;
+			
+			prev_ball_up_motion_counter <= ball_up_motion_counter;
+			if (ball_up_motion_counter <= 10) then
+				-- motion up case
+				if (ball_y_pos + ball_up_motion(ball_up_motion_counter) > size) then
+					ball_y_motion <= ball_up_motion(ball_up_motion_counter);
+				end if;
+				
+				ball_up_motion_counter <= ball_up_motion_counter + 1;
+			end if;
+			
+			-----------------------------------------
+			-- UPDATING THE NEXT POSITION OF PLANE --
+			-----------------------------------------
+			if ((size + ball_y_pos + ball_y_motion < CONV_STD_LOGIC_VECTOR(479,10)) and (size < ball_y_pos + ball_y_motion)) then
+				ball_y_pos <= ball_y_pos + ball_y_motion;
+			end if;
+			
+			prev_mb1 <= mb1;
 		end if;
 		
-		-----------------------------------------
-		-- UPDATING THE NEXT POSITION OF PLANE --
-		-----------------------------------------
-		if ((size + ball_y_pos + ball_y_motion < CONV_STD_LOGIC_VECTOR(479,10)) or (size < ball_y_pos + ball_y_motion)) then
-			ball_y_pos <= ball_y_pos + ball_y_motion;
-		end if;
-		
-		prev_mb1 <= mb1;
-
+		prev_game_running <= game_running;
 	end if;
 
-end process move_plane;
+end process move_ball;
 
 
 tool_box: process (vert_sync)

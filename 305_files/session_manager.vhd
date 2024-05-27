@@ -51,6 +51,7 @@ end entity session_manager;
 architecture behaviour of session_manager is
 
 SIGNAL click_cooldown 											: integer RANGE 100 DOWNTO 0 := 0;
+SIGNAL invincibility_period 									: integer RANGE 127 DOWNTO 0 := 0;
 
 SIGNAL current_score 											: integer RANGE 10000 DOWNTO 0 := 0;
 SIGNAL current_lives 											: integer RANGE 100 DOWNTO 0 := 0;
@@ -85,7 +86,7 @@ begin
 		end if;
 		
 		-- click cooldown to detect one click so the menu buttons are not rapidly clicked.
-		if (click_cooldown <= 50) then
+		if (click_cooldown <= 45) then
 			click_cooldown <= click_cooldown + 1;
 		else
 			-- start game in training mode
@@ -97,6 +98,7 @@ begin
 				main_menu_on <= '0';
 				reset <= '1';
 				click_cooldown <= 0;
+				invincibility_period <= 0;
 			end if;
 			
 			-- start game in singleplayer mode
@@ -108,8 +110,10 @@ begin
 				main_menu_on <= '0';
 				reset <= '1';
 				click_cooldown <= 0;
+				invincibility_period <= 0;
 			end if;
 			
+			-- restarts game in in current gamemode
 			if (select_retry_mode = '1') then
 				if (prev_gamemode = "01") then
 					training_mode <= '1';
@@ -127,6 +131,7 @@ begin
 		
 			end if;
 			
+			-- goes back to main menu
 			if (select_homescreen_mode = '1') then
 				gameover_menu_on <= '0';
 				main_menu_on <= '1';
@@ -134,10 +139,16 @@ begin
 			end if;
 		end if;
 		if (game_running = '1') then
+			-- at the start of the game the player is invincible
+		
+			if (invincibility_period <= 120) then
+				invincibility_period <= invincibility_period + 1;
+			end if;
+		
 			--------------------
 			-- UPDATING SCORE --
 			--------------------
-
+			
 			-- Check that the plane is not touching the clouds in the x and y directions
 				-- If it is not touching then the score is updated by +1
 			if ((cloud1_x_pos -  cloud_drawing_width <= ball_x_pos and ball_x_pos <= cloud1_x_pos and 
@@ -172,7 +183,8 @@ begin
 			-- CHECK FOR COLLISION --
 			-------------------------
 		
-			if (((cloud1_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= cloud1_x_pos)) and 		
+			if (invincibility_period = 121 and
+				((cloud1_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= cloud1_x_pos)) and 		
 				(ball_y_pos <= top_clouds_y_pos + cloud1_top_height or bottom_clouds_y_pos - cloud1_bottom_height <= ball_y_pos + size)) or 
 					
 				(((cloud2_x_pos - cloud_drawing_width <= ball_x_pos and ball_x_pos <= cloud2_x_pos)) and 	 	
@@ -190,6 +202,8 @@ begin
 				-- if no more lives then game stops and game over menu is shown
 				if (current_lives = 1) then
 	
+					current_lives <= 0;
+	
 					if (training_mode = '1') then
 						prev_gamemode <= "01";
 					elsif (singleplayer_mode = '1') then
@@ -200,6 +214,7 @@ begin
 					gameover_menu_on <= '1';
 					training_mode <= '0';
 					singleplayer_mode <= '0';
+					click_cooldown <= 0;
 				else
 					-- Updates Score
 					current_lives <= current_lives - 1;
