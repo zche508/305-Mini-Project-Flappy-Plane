@@ -10,7 +10,8 @@ ENTITY menus IS
 		  cursor_x_pos, cursor_y_pos 											: IN std_logic_vector(9 DOWNTO 0);
         menu_on, cursor_on_out												: OUT std_logic;
         mode 																		: OUT std_logic_vector(1 DOWNTO 0); -- 00: Home, 01: Training, 10: Single Player
-		  select_training_mode, select_singleplayer_mode 				: OUT std_logic
+		  select_training_mode, select_singleplayer_mode 				: OUT std_logic;
+		  select_retry_mode, select_home_screen_mode 				: OUT std_logic
     );
 END ENTITY menus;
 
@@ -51,7 +52,7 @@ begin
 
 cursor_size <= CONV_STD_LOGIC_VECTOR(4,10);
 
-cursor_on <= '1' when (show_menu_screen = '1' and (cursor_x_pos <= pixel_column) and (pixel_column <= cursor_x_pos + cursor_size) and 	-- x_pos - size <= pixel_column <= x_pos + size
+cursor_on <= '1' when ((show_menu_screen = '1' or show_gameover_screen = '1') and (cursor_x_pos <= pixel_column) and (pixel_column <= cursor_x_pos + cursor_size) and 	-- x_pos - size <= pixel_column <= x_pos + size
 							(cursor_y_pos <= pixel_row) and (pixel_row <= cursor_y_pos + cursor_size))  else	-- y_pos - size <= pixel_row <= y_pos + size
 				'0';
 
@@ -81,7 +82,7 @@ box2_height	<= CONV_STD_LOGIC_VECTOR(50,10);
 box2_x_pos <= CONV_STD_LOGIC_VECTOR(200, 10);
 box2_y_pos <= CONV_STD_LOGIC_VECTOR(240, 10);
 
-box2_on <= '1' when (show_menu_screen = '1' and (box2_x_pos <= pixel_column) and (pixel_column <= box2_x_pos + box2_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
+box2_on <= '1' when ((show_menu_screen = '1' or show_gameover_screen = '1') and (box2_x_pos <= pixel_column) and (pixel_column <= box2_x_pos + box2_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
 							(box2_y_pos <= pixel_row) and (pixel_row <= box2_y_pos + box2_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 				'0';
 			
@@ -95,7 +96,7 @@ box3_height	<= CONV_STD_LOGIC_VECTOR(50,10);
 box3_x_pos <= CONV_STD_LOGIC_VECTOR(200, 10);
 box3_y_pos <= CONV_STD_LOGIC_VECTOR(320, 10);
 
-box3_on <= '1' when (show_menu_screen = '1' and (box3_x_pos <= pixel_column) and (pixel_column <= box3_x_pos + box3_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
+box3_on <= '1' when ((show_menu_screen = '1' or show_gameover_screen = '1') and (box3_x_pos <= pixel_column) and (pixel_column <= box3_x_pos + box3_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
 							(box3_y_pos <= pixel_row) and (pixel_row <= box3_y_pos + box3_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 				'0';
 
@@ -105,6 +106,16 @@ select_training_mode <= '1' when (show_menu_screen = '1' and mb1 = '1' and (box2
 								'0';
 
 select_singleplayer_mode <= '1' when (show_menu_screen = '1' and mb1 = '1' and (box3_x_pos <= cursor_x_pos) and (cursor_x_pos <= box3_x_pos + box3_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
+											(box3_y_pos <= cursor_y_pos) and (cursor_y_pos <= box3_y_pos + box3_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
+									'0';
+									
+-- Select Retry current gamemode									
+select_retry_mode <= '1' when (show_gameover_screen = '1' and mb1 = '1' and (box2_x_pos <= cursor_x_pos) and (cursor_x_pos <= box2_x_pos + box2_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
+										(box2_y_pos <= cursor_y_pos) and (cursor_y_pos <= box2_y_pos + box2_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
+								'0';
+								
+-- Select Home screen menu
+select_home_screen_mode <= '1' when (show_gameover_screen = '1' and mb1 = '1' and (box3_x_pos <= cursor_x_pos) and (cursor_x_pos <= box3_x_pos + box3_width) and 	-- x_pos - size <= pixel_column <= x_pos + size
 											(box3_y_pos <= cursor_y_pos) and (cursor_y_pos <= box3_y_pos + box3_height))  else	-- y_pos - size <= pixel_row <= y_pos + size
 									'0';
 

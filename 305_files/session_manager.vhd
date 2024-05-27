@@ -50,6 +50,8 @@ end entity session_manager;
 
 architecture behaviour of session_manager is
 
+SIGNAL click_cooldown 											: integer RANGE 100 DOWNTO 0 := 0;
+
 SIGNAL current_score 											: integer RANGE 10000 DOWNTO 0 := 0;
 SIGNAL current_lives 											: integer RANGE 100 DOWNTO 0 := 0;
 
@@ -58,6 +60,9 @@ SIGNAL collision, prev_collision								: std_logic;
 SIGNAL reset														: std_logic;
 SIGNAL game_running												: std_logic := '0';
 SIGNAL training_mode, singleplayer_mode					: std_logic := '0';
+
+-- 01(training mode), 10(singleplayer) 
+SIGNAL prev_gamemode												: std_logic_vector(1 downto 0);
 
 begin
 
@@ -79,24 +84,55 @@ begin
 			reset <= '0';
 		end if;
 		
-		if (select_training_mode = '1') then
-			game_running <= '1';
-			training_mode <= '1';
-			current_lives <= 5;
-			current_score <= 0;
-			main_menu_on <= '0';
-			reset <= '1';
-		end if;
+		-- click cooldown to detect one click so the menu buttons are not rapidly clicked.
+		if (click_cooldown <= 50) then
+			click_cooldown <= click_cooldown + 1;
+		else
+			-- start game in training mode
+			if (select_training_mode = '1') then
+				game_running <= '1';
+				training_mode <= '1';
+				current_lives <= 5;
+				current_score <= 0;
+				main_menu_on <= '0';
+				reset <= '1';
+				click_cooldown <= 0;
+			end if;
+			
+			-- start game in singleplayer mode
+			if (select_singleplayer_mode = '1') then
+				game_running <= '1';
+				singleplayer_mode <= '1';
+				current_lives <= 5;
+				current_score <= 0;
+				main_menu_on <= '0';
+				reset <= '1';
+				click_cooldown <= 0;
+			end if;
+			
+			if (select_retry_mode = '1') then
+				if (prev_gamemode = "01") then
+					training_mode <= '1';
+				elsif (prev_gamemode = "10") then
+					singleplayer_mode <= '1';
+				end if;
+				
+				game_running <= '1';
+				current_lives <= 5;
+				current_score <= 0;
+				main_menu_on <= '0';
+				gameover_menu_on <= '0';
+				reset <= '1';
+				click_cooldown <= 0;
 		
-		if (select_singleplayer_mode = '1') then
-			game_running <= '1';
-			singleplayer_mode <= '1';
-			current_lives <= 5;
-			current_score <= 0;
-			main_menu_on <= '0';
-			reset <= '1';
+			end if;
+			
+			if (select_homescreen_mode = '1') then
+				gameover_menu_on <= '0';
+				main_menu_on <= '1';
+				click_cooldown <= 0;
+			end if;
 		end if;
-	
 		if (game_running = '1') then
 			--------------------
 			-- UPDATING SCORE --
@@ -151,13 +187,21 @@ begin
 			
 			
 			if (collision = '1' and prev_collision = '0') then
-				-- Updates Score
+				-- if no more lives then game stops and game over menu is shown
 				if (current_lives = 1) then
+	
+					if (training_mode = '1') then
+						prev_gamemode <= "01";
+					elsif (singleplayer_mode = '1') then
+						prev_gamemode <= "10";
+					end if;
+					
 					game_running <= '0';
-					main_menu_on <= '1';
+					gameover_menu_on <= '1';
 					training_mode <= '0';
 					singleplayer_mode <= '0';
 				else
+					-- Updates Score
 					current_lives <= current_lives - 1;
 				end if;
 			end if;
@@ -166,13 +210,5 @@ begin
 		end if;
 	end if;
 end process current_session;
-
---
---start_game : process(pb1)
---begin
---	if (pb1'event and pb1 = '0') then	-- button is active low
---		game_running <= '1';
---	end if;
---end process start_game;
 
 end architecture behaviour;
