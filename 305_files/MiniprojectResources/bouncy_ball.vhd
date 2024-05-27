@@ -141,9 +141,9 @@ heart_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CO
 plane_x_size <= CONV_STD_LOGIC_VECTOR(42,10); -- 1 pixel offset
 plane_y_size <= CONV_STD_LOGIC_VECTOR(22,10);
 plane_x_pos <= CONV_STD_LOGIC_VECTOR(150, 11);
-plane_r <= plane_pixel_data(11 downto 8);
-plane_g <= plane_pixel_data(7 DOWNTO 4);
-plane_b <= plane_pixel_data(3 DOWNTO 0);
+plane_r <= plane_pixel_data(11 downto 8) when pixel_row >= CONV_STD_LOGIC_VECTOR(100,10) else "0000";
+plane_g <= plane_pixel_data(7 DOWNTO 4) when pixel_row >= CONV_STD_LOGIC_VECTOR(100,10) else "0000";
+plane_b <= plane_pixel_data(3 DOWNTO 0) when pixel_row >= CONV_STD_LOGIC_VECTOR(100,10) else "0000";
 --plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(480,10) and -- height
 --							CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
 --				'0';
@@ -153,7 +153,7 @@ plane_b <= plane_pixel_data(3 DOWNTO 0);
 --plane_on <= '1' when (pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + plane_y_size) AND 
 --					(pixel_column >= plane_x_pos - plane_shift) AND (pixel_column < plane_x_pos + plane_x_size - plane_shift) else
 --			'0';
-plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(200,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(300,10) and -- height
+plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(100,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(200,10) and -- height
 				CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
 				'0';
 
