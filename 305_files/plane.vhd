@@ -21,7 +21,7 @@ ARCHITECTURE SYN OF plane IS
 	SIGNAL rom_data	 : STD_LOGIC_VECTOR (239 DOWNTO 0); -- MIF width 
 	SIGNAL rom_address  : STD_LOGIC_VECTOR (7 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
 	SIGNAL pixel_data : STD_LOGIC_VECTOR (11 DOWNTO 0);
-
+	
 	COMPONENT altsyncram
 	GENERIC (
 		address_aclr_a			: STRING;
