@@ -54,9 +54,9 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "draw_plane" (rect 0 0 44 12)(font "Arial" ))
-		(text "draw_plane" (rect 21 91 65 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 1))
+		(text "plane_y_pos_out[9..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "plane_y_pos_out[9..0]" (rect 21 91 110 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
 		(pt 280 32)

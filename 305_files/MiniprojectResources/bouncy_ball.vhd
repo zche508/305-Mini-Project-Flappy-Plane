@@ -15,7 +15,7 @@ ENTITY bouncy_ball IS
 	  red, green, blue 			: OUT std_logic_vector(3 DOWNTO 0);
 	  score 							: OUT integer RANGE 10000 DOWNTO 0;
 	  lives 							: OUT integer RANGE 30 DOWNTO 0;
-	  draw_plane					: OUT std_logic
+	  plane_y_pos_out				: OUT std_logic_vector(9 DOWNTO 0)
 	);
 END bouncy_ball;
 
@@ -160,7 +160,7 @@ plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CO
 -- TRY THESE MAYBE??
 -- adding dummy lines before plane_pixel_data (probably least likely)
 -- pass ball_y_pos to plane.vhd (trying this one)
-draw_plane <= '1' when plane_y_pos <= pixel_row else '0';
+plane_y_pos_out <= ball_y_pos;
 
 
 -- TOOLBOX

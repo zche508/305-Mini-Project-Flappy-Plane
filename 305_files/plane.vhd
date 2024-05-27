@@ -11,7 +11,7 @@ ENTITY plane IS
 		character_address   : IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
 		font_row, font_col  : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		clock			   : IN STD_LOGIC;
-		draw_plane			: IN STD_LOGIC;
+		plane_y_pos_out	: IN std_logic_vector(9 DOWNTO 0);
 		rom_mux_output	  : OUT STD_LOGIC;
 		rom_pixel_data		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0) -- Output 12 bit pixel data for RGB values
 	);
@@ -20,7 +20,7 @@ END plane;
 ARCHITECTURE SYN OF plane IS
 
 	SIGNAL rom_data	 : STD_LOGIC_VECTOR (239 DOWNTO 0); -- MIF width 
-	SIGNAL rom_address  : STD_LOGIC_VECTOR (7 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
+	SIGNAL rom_address  : STD_LOGIC_VECTOR (9 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
 	SIGNAL pixel_data : STD_LOGIC_VECTOR (11 DOWNTO 0);
 	
 	COMPONENT altsyncram
@@ -42,7 +42,7 @@ ARCHITECTURE SYN OF plane IS
 	);
 	PORT (
 		clock0	   : IN STD_LOGIC;
-		address_a	: IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
+		address_a	: IN STD_LOGIC_VECTOR (9 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
 		q_a		  : OUT STD_LOGIC_VECTOR (239 DOWNTO 0) -- MIF width
 	);
 	END COMPONENT;
@@ -72,15 +72,18 @@ BEGIN
 		q_a => rom_data
 	);
 
-	rom_address <= character_address; -- removed "& font_row" for now idk what it does
+	rom_address <= character_address - plane_y_pos_out + CONV_STD_LOGIC_VECTOR(10,10) when
+						plane_y_pos_out > CONV_STD_LOGIC_VECTOR(0,10) and plane_y_pos_out < CONV_STD_LOGIC_VECTOR(480,10) else
+						character_address;
+	
+	-- TRY JUST DOING CONV_STD_LOGIC_VECTOR(100,10)			character_address + plane_y_pos_out
 	-- rom_mux_output <= rom_data(CONV_INTEGER(font_col) * 12 + 11);
 	
 	-- CHANGE BELOW LINE TO SMTH LIKE pixel_data when ball_y_pos (=) pixel_row else "000000000000"
 	-- and link some sort of std_logic from bouncy_ball that evaluates whether ball_y_pos = pixel_row
 	-- to here
 	-- ball_y_pos >= pixel_row or ball_y_pos <= pixel_row WHICH ONE???? ball_y_pos <= pixel_row maybe????? but inverted logic???
-	pixel_data <= "000000000000" when draw_plane = '0' else
-						rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
+	pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
 	rom_pixel_data <= pixel_data;
 	rom_mux_output <= '0' when pixel_data = "000000000000" else '1';
 	
