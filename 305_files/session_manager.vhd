@@ -200,7 +200,7 @@ begin
 			
 			if (collision = '1' and prev_collision = '0') then
 				-- if no more lives then game stops and game over menu is shown
-				if (current_lives = 1) then
+				if (current_lives = 1 or "0111000111" <= ball_y_pos) then
 	
 					current_lives <= 0;
 	
