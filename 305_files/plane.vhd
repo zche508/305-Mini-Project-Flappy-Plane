@@ -19,7 +19,7 @@ END plane;
 ARCHITECTURE SYN OF plane IS
 
 	SIGNAL rom_data	 : STD_LOGIC_VECTOR (239 DOWNTO 0); -- MIF width 
-	SIGNAL rom_address  : STD_LOGIC_VECTOR (10 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
+	SIGNAL rom_address  : STD_LOGIC_VECTOR (7 DOWNTO 0);   -- 8 bit address for 2^8 = 256 depth
 
 	COMPONENT altsyncram
 	GENERIC (
@@ -40,7 +40,7 @@ ARCHITECTURE SYN OF plane IS
 	);
 	PORT (
 		clock0	   : IN STD_LOGIC;
-		address_a	: IN STD_LOGIC_VECTOR (10 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
+		address_a	: IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
 		q_a		  : OUT STD_LOGIC_VECTOR (239 DOWNTO 0) -- MIF width
 	);
 	END COMPONENT;
@@ -60,8 +60,8 @@ BEGIN
 		operation_mode => "ROM",
 		outdata_aclr_a => "NONE",
 		outdata_reg_a => "UNREGISTERED",
-		widthad_a => 8, -- max depth from 2^8
-		width_a => 240, -- data/MIF width
+		widthad_a => 16, -- max depth from 2^8
+		width_a => 480, -- data/MIF width
 		width_byteena_a => 1
 	)
 	PORT MAP (
@@ -70,7 +70,7 @@ BEGIN
 		q_a => rom_data
 	);
 
-	rom_address <= character_address & font_row; -- removed "& font_row" for now idk what it does
+	rom_address <= character_address; -- removed "& font_row" for now idk what it does
 	rom_mux_output <= rom_data(CONV_INTEGER(font_col) * 12 + 11);
 	rom_pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
 	
