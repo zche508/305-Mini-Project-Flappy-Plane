@@ -100,7 +100,7 @@ SIGNAL plane_g						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_b						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_x_size				: std_logic_vector(9 DOWNTO 0);
 SIGNAL plane_y_size				: std_logic_vector(9 DOWNTO 0);
-SIGNAL plane_y_pos				: std_logic_vector(9 DOWNTO 0);
+SIGNAL plane_y_pos				: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(200, 10); -- 200 pixels down
 SiGNAL plane_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL plane_y_motion			: std_logic_vector(9 DOWNTO 0);
 
@@ -153,9 +153,7 @@ plane_b <= plane_pixel_data(3 DOWNTO 0);
 --plane_on <= '1' when (pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + plane_y_size) AND 
 --					(pixel_column >= plane_x_pos - plane_shift) AND (pixel_column < plane_x_pos + plane_x_size - plane_shift) else
 --			'0';
-plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(480,10) and -- height
-							('0' & plane_y_pos <= pixel_row + plane_y_size) and ('0' & pixel_row <= plane_y_pos + plane_y_size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
-			'0';
+plane_on <= '1' when CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10) else '0';
 
 -- TOOLBOX
 
@@ -243,7 +241,7 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 
 Red <=	--"1111" when ShowText = '1' else
 			heart_r when heart_on = '1' and showHeart = '1' else
-			plane_r when plane_on = '1' and showPlane = '1' else
+			plane_r when plane_on = '1' and showPlane = '1' and pixel_row <= plane_y_pos else
 			toolbox_r when toolbox_on = '1' and showToolbox = '1' else
 			clouds_r when clouds_on = '1' and showClouds = '1' else
 			"1111" when ball_on = '1' else

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Mon May 27 18:13:47 2024
+Mon May 27 19:02:36 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 27 18:13:46 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 27 19:02:36 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -236,14 +236,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 840                                                                   ;
+; Estimate of Logic utilization (ALMs needed) ; 827                                                                   ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 1195                                                                  ;
-;     -- 7 input functions                    ; 5                                                                     ;
-;     -- 6 input functions                    ; 471                                                                   ;
-;     -- 5 input functions                    ; 193                                                                   ;
-;     -- 4 input functions                    ; 113                                                                   ;
-;     -- <=3 input functions                  ; 413                                                                   ;
+; Combinational ALUT usage for logic          ; 1179                                                                  ;
+;     -- 7 input functions                    ; 10                                                                    ;
+;     -- 6 input functions                    ; 457                                                                   ;
+;     -- 5 input functions                    ; 185                                                                   ;
+;     -- 4 input functions                    ; 120                                                                   ;
+;     -- <=3 input functions                  ; 407                                                                   ;
 ;                                             ;                                                                       ;
 ; Dedicated logic registers                   ; 243                                                                   ;
 ;                                             ;                                                                       ;
@@ -258,8 +258,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 820                                                                   ;
-; Total fan-out                               ; 11990                                                                 ;
-; Average fan-out                             ; 5.30                                                                  ;
+; Total fan-out                               ; 11917                                                                 ;
+; Average fan-out                             ; 5.31                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -268,26 +268,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name       ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
-; |toplevel                                 ; 1195 (1)            ; 243 (0)                   ; 93568             ; 0          ; 45   ; 0            ; |toplevel                                                                               ; toplevel          ; work         ;
+; |toplevel                                 ; 1179 (1)            ; 243 (0)                   ; 93568             ; 0          ; 45   ; 0            ; |toplevel                                                                               ; toplevel          ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                         ; BCD_to_SevenSeg   ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                         ; BCD_to_SevenSeg   ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                   ; MOUSE             ; work         ;
-;    |VGA_SYNC:inst2|                       ; 70 (70)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                ; VGA_SYNC          ; work         ;
-;    |bouncy_ball:inst3|                    ; 427 (427)           ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                             ; bouncy_ball       ; work         ;
-;    |clouds:inst14|                        ; 166 (166)           ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14                                                                 ; clouds            ; work         ;
+;    |VGA_SYNC:inst2|                       ; 90 (90)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                ; VGA_SYNC          ; work         ;
+;    |bouncy_ball:inst3|                    ; 394 (394)           ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                             ; bouncy_ball       ; work         ;
+;    |clouds:inst14|                        ; 169 (169)           ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14                                                                 ; clouds            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component                                 ; altsyncram        ; work         ;
 ;          |altsyncram_vai1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated  ; altsyncram_vai1   ; work         ;
 ;    |heart:inst12|                         ; 49 (49)             ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12                                                                  ; heart             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component                                  ; altsyncram        ; work         ;
 ;          |altsyncram_c8h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 9216              ; 0          ; 0    ; 0            ; |toplevel|heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated   ; altsyncram_c8h1   ; work         ;
-;    |plane:inst11|                         ; 165 (165)           ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11                                                                  ; plane             ; work         ;
+;    |plane:inst11|                         ; 157 (157)           ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11                                                                  ; plane             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11|altsyncram:altsyncram_component                                  ; altsyncram        ; work         ;
 ;          |altsyncram_l9h1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated   ; altsyncram_l9h1   ; work         ;
 ;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                    ; pll2              ; pll2         ;
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                ; pll2_0002         ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                        ; altera_pll        ; work         ;
-;    |random_number_gen:inst8|              ; 48 (48)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                       ; random_number_gen ; work         ;
-;    |toolbox:inst13|                       ; 148 (148)           ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13                                                                ; toolbox           ; work         ;
+;    |random_number_gen:inst8|              ; 49 (49)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                       ; random_number_gen ; work         ;
+;    |toolbox:inst13|                       ; 149 (149)           ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13                                                                ; toolbox           ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13|altsyncram:altsyncram_component                                ; altsyncram        ; work         ;
 ;          |altsyncram_nhh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 22912             ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated ; altsyncram_nhh1   ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
@@ -404,9 +404,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------------------------------------------------------+
 ; bouncy_ball:inst3|plane_y_motion[0,1]        ; Stuck at GND due to stuck port data_in                ;
 ; bouncy_ball:inst3|ball_y_motion[0,1]         ; Stuck at GND due to stuck port data_in                ;
-; bouncy_ball:inst3|current_lives[0..4]        ; Lost fanout                                           ;
+; bouncy_ball:inst3|current_lives[0..3]        ; Lost fanout                                           ;
 ; bouncy_ball:inst3|cloud_motion_integer[0..4] ; Lost fanout                                           ;
-; bouncy_ball:inst3|current_lives[5,6]         ; Lost fanout                                           ;
+; bouncy_ball:inst3|current_lives[4..6]        ; Lost fanout                                           ;
 ; bouncy_ball:inst3|collision_buffer[0..8]     ; Lost fanout                                           ;
 ; bouncy_ball:inst3|current_score[0..13]       ; Lost fanout                                           ;
 ; bouncy_ball:inst3|score_time_buffer[0..8]    ; Lost fanout                                           ;
@@ -468,7 +468,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------+--------------------+-------------------------------------------------------------------------+
 ; Register name                      ; Reason for Removal ; Registers Removed due to This Register                                  ;
 +------------------------------------+--------------------+-------------------------------------------------------------------------+
-; bouncy_ball:inst3|current_lives[4] ; Lost Fanouts       ; bouncy_ball:inst3|current_lives[3], bouncy_ball:inst3|current_lives[5], ;
+; bouncy_ball:inst3|current_lives[3] ; Lost Fanouts       ; bouncy_ball:inst3|current_lives[4], bouncy_ball:inst3|current_lives[5], ;
 ;                                    ;                    ; bouncy_ball:inst3|current_lives[6]                                      ;
 +------------------------------------+--------------------+-------------------------------------------------------------------------+
 
@@ -505,6 +505,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[2] ; 5       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[7] ; 9       ;
 ; bouncy_ball:inst3|bottom_cloud3_x_pos[6] ; 10      ;
+; bouncy_ball:inst3|plane_y_pos[7]         ; 4       ;
+; bouncy_ball:inst3|plane_y_pos[6]         ; 5       ;
+; bouncy_ball:inst3|plane_y_pos[3]         ; 3       ;
 ; random_number_gen:inst8|current_state[8] ; 12      ;
 ; random_number_gen:inst8|current_state[6] ; 20      ;
 ; random_number_gen:inst8|current_state[4] ; 11      ;
@@ -516,7 +519,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; MOUSE:inst5|SHIFTOUT[6]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                  ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                  ; 1       ;
-; Total number of inverted registers = 23  ;         ;
+; Total number of inverted registers = 26  ;         ;
 +------------------------------------------+---------+
 
 
@@ -543,8 +546,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux1                        ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst6|SevenSeg_out[0]    ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_SevenSeg:inst7|SevenSeg_out[3]    ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[0]                ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux11                       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|blue[3]                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|bouncy_ball:inst3|red[3]                 ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux9                        ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|heart:inst12|Mux1                        ;
 ; 24:1               ; 8 bits    ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |toplevel|clouds:inst14|Mux4                       ;
 ; 29:1               ; 8 bits    ; 152 LEs       ; 152 LEs              ; 0 LEs                  ; No         ; |toplevel|plane:inst11|Mux0                        ;
@@ -1230,22 +1234,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 10                          ;
 ;     plain             ; 45                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1198                        ;
-;     arith             ; 176                         ;
-;         0 data inputs ; 5                           ;
-;         1 data inputs ; 99                          ;
+; arriav_lcell_comb     ; 1182                        ;
+;     arith             ; 159                         ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 83                          ;
 ;         2 data inputs ; 66                          ;
 ;         3 data inputs ; 6                           ;
-;     extend            ; 5                           ;
-;         7 data inputs ; 5                           ;
-;     normal            ; 1007                        ;
+;     extend            ; 10                          ;
+;         7 data inputs ; 10                          ;
+;     normal            ; 1003                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 85                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 93                          ;
 ;         3 data inputs ; 136                         ;
-;         4 data inputs ; 113                         ;
-;         5 data inputs ; 193                         ;
-;         6 data inputs ; 471                         ;
+;         4 data inputs ; 120                         ;
+;         5 data inputs ; 185                         ;
+;         6 data inputs ; 457                         ;
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
@@ -1254,7 +1258,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 731                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 6.51                        ;
+; Average LUT depth     ; 6.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1263,7 +1267,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -1273,7 +1277,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 27 18:13:03 2024
+    Info: Processing started: Mon May 27 19:01:07 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1418,67 +1422,67 @@ Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(101): object "pl
 Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(104): object "plane_x_pos" assigned a value but never read File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 104
 Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(115): object "toolbox_size" assigned a value but never read File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 115
 Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(125): object "clouds_size" assigned a value but never read File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(313): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 313
-Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(227) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 227
-Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(221) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 221
-Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(212) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 212
-Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(205) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 205
-Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(198) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 198
-Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
-Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(192) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 192
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(311): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 311
+Info (10041): Inferred latch for "bottom_cloud3_height[0]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[1]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[2]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[3]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[4]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[5]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[6]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[7]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[8]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "bottom_cloud3_height[9]" at bouncy_ball.vhd(225) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 225
+Info (10041): Inferred latch for "top_cloud3_height[0]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[1]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[2]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[3]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[4]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[5]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[6]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[7]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[8]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "top_cloud3_height[9]" at bouncy_ball.vhd(219) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 219
+Info (10041): Inferred latch for "bottom_cloud2_height[0]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[1]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[2]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[3]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[4]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[5]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[6]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[7]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[8]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "bottom_cloud2_height[9]" at bouncy_ball.vhd(210) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 210
+Info (10041): Inferred latch for "top_cloud2_height[0]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[1]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[2]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[3]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[4]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[5]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[6]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[7]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[8]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "top_cloud2_height[9]" at bouncy_ball.vhd(203) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 203
+Info (10041): Inferred latch for "bottom_cloud1_height[0]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[1]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[2]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[3]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[4]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[5]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[6]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[7]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[8]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "bottom_cloud1_height[9]" at bouncy_ball.vhd(196) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 196
+Info (10041): Inferred latch for "top_cloud1_height[0]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[1]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[2]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[3]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[4]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[5]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[6]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[7]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[8]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
+Info (10041): Inferred latch for "top_cloud1_height[9]" at bouncy_ball.vhd(190) File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 190
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
@@ -1649,8 +1653,8 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 45 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf Line: 31
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_nhh1.tdf Line: 31
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_vai1.tdf Line: 31
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_nhh1.tdf Line: 31
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_l9h1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
@@ -1697,17 +1701,17 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "sw[2]"
     Warning (15610): No output dependent on input pin "sw[1]"
     Warning (15610): No output dependent on input pin "sw[0]"
-Info (21057): Implemented 2042 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2026 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1265 logic cells
+    Info (21061): Implemented 1249 logic cells
     Info (21064): Implemented 731 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 4932 megabytes
-    Info: Processing ended: Mon May 27 18:13:47 2024
-    Info: Elapsed time: 00:00:44
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 4935 megabytes
+    Info: Processing ended: Mon May 27 19:02:36 2024
+    Info: Elapsed time: 00:01:29
+    Info: Total CPU time (on all processors): 00:01:18
 
 
