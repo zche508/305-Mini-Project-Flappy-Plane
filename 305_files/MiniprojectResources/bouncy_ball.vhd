@@ -103,10 +103,6 @@ SIGNAL plane_y_size				: std_logic_vector(9 DOWNTO 0);
 SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100, 10); -- 100 pixels down
 SiGNAL plane_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL plane_y_motion			: std_logic_vector(9 DOWNTO 0);
-TYPE plane_pixel_array IS ARRAY (0 TO 21, 0 TO 41) OF std_logic_vector(11 DOWNTO 0);
-SIGNAL plane_pixels : plane_pixel_array;
-signal plane_address : STD_LOGIC_VECTOR(9 downto 0);
-signal plane_rom_data : STD_LOGIC_VECTOR(11 downto 0);
 
 -- TOOLBOX
 
@@ -142,17 +138,9 @@ heart_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CO
 
 -- PLANE
 
-U0 : entity work.plane_rom
-		port map (
-			address => plane_address,
-			data_out => plane_rom_data
-		);
 plane_x_size <= CONV_STD_LOGIC_VECTOR(42,10); -- 1 pixel offset
 plane_y_size <= CONV_STD_LOGIC_VECTOR(22,10);
 plane_x_pos <= CONV_STD_LOGIC_VECTOR(150, 11);
---plane_r <= plane_pixel_data(11 downto 8) when pixel_row >= CONV_STD_LOGIC_VECTOR(100,10) else "0000";
---plane_g <= plane_pixel_data(7 DOWNTO 4) when pixel_row >= CONV_STD_LOGIC_VECTOR(100,10) else "0000";
---plane_b <= plane_pixel_data(3 DOWNTO 0) when pixel_row >= CONV_STD_LOGIC_VECTOR(100,10) else "0000";
 plane_r <= plane_pixel_data(11 downto 8);
 plane_g <= plane_pixel_data(7 DOWNTO 4);
 plane_b <= plane_pixel_data(3 DOWNTO 0);
@@ -165,36 +153,9 @@ plane_b <= plane_pixel_data(3 DOWNTO 0);
 --plane_on <= '1' when (pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + plane_y_size) AND 
 --					(pixel_column >= plane_x_pos - plane_shift) AND (pixel_column < plane_x_pos + plane_x_size - plane_shift) else
 --			'0';
---plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(480,10) and -- height
---				CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
---				'0';
-process(clk, reset)
-begin
-	if reset = '1' then
-		plane_on <= '0';
-		plane_r <= (others => '0');
-		plane_g <= (others => '0');
-		plane_b <= (others => '0');
-	elsif rising_edge(clk) then
-		-- Calculate address in ROM
-		plane_address <= std_logic_vector(unsigned(pixel_row) * 20 + unsigned(pixel_column)); -- Assuming 20 columns per row in the image
-
-		-- Check if the pixel is within the plane's boundaries
-		if ('0' & ball_x_pos <= '0' & pixel_column + plane_x_size) and ('0' & pixel_column <= '0' & ball_x_pos + plane_x_size) and
-			('0' & ball_y_pos <= '0' & pixel_row + plane_y_size) and ('0' & pixel_row <= '0' & ball_y_pos + plane_y_size) then
-			plane_on <= '1';
-			plane_r <= plane_rom_data(11 downto 8);
-			plane_g <= plane_rom_data(7 downto 4);
-			plane_b <= plane_rom_data(3 downto 0);
-		else
-			plane_on <= '0';
-			plane_r <= "0000";
-			plane_g <= "0000";
-			plane_b <= "0000";
-		end if;
-	end if;
-end process;
-
+plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+				CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
+				'0';
 
 -- TOOLBOX
 
