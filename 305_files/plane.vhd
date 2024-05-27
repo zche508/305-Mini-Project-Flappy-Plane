@@ -11,6 +11,7 @@ ENTITY plane IS
 		character_address   : IN STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bit address for 2^8 = 256 depth
 		font_row, font_col  : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		clock			   : IN STD_LOGIC;
+		draw_plane			: IN STD_LOGIC;
 		rom_mux_output	  : OUT STD_LOGIC;
 		rom_pixel_data		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0) -- Output 12 bit pixel data for RGB values
 	);
@@ -73,7 +74,13 @@ BEGIN
 
 	rom_address <= character_address; -- removed "& font_row" for now idk what it does
 	-- rom_mux_output <= rom_data(CONV_INTEGER(font_col) * 12 + 11);
-	pixel_data <= rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
+	
+	-- CHANGE BELOW LINE TO SMTH LIKE pixel_data when ball_y_pos (=) pixel_row else "000000000000"
+	-- and link some sort of std_logic from bouncy_ball that evaluates whether ball_y_pos = pixel_row
+	-- to here
+	-- ball_y_pos >= pixel_row or ball_y_pos <= pixel_row WHICH ONE???? ball_y_pos <= pixel_row maybe????? but inverted logic???
+	pixel_data <= "000000000000" when draw_plane = '0' else
+						rom_data(CONV_INTEGER(font_col) * 12 + 11 downto CONV_INTEGER(font_col) * 12);
 	rom_pixel_data <= pixel_data;
 	rom_mux_output <= '0' when pixel_data = "000000000000" else '1';
 	

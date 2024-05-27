@@ -184,6 +184,13 @@ refer to the applicable agreement for further details.
 		(text "lives[4..0]" (rect 181 91 219 103)(font "Arial" ))
 		(line (pt 240 96)(pt 224 96)(line_width 3))
 	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "draw_plane" (rect 0 0 44 12)(font "Arial" ))
+		(text "draw_plane" (rect 175 107 219 119)(font "Arial" ))
+		(line (pt 240 112)(pt 224 112)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 224 320)(line_width 1))
 	)

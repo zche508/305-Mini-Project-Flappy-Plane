@@ -14,7 +14,8 @@ ENTITY bouncy_ball IS
 	  clouds_pixel_data			: IN std_logic_vector(11 downto 0);
 	  red, green, blue 			: OUT std_logic_vector(3 DOWNTO 0);
 	  score 							: OUT integer RANGE 10000 DOWNTO 0;
-	  lives 							: OUT integer RANGE 30 DOWNTO 0
+	  lives 							: OUT integer RANGE 30 DOWNTO 0;
+	  draw_plane					: OUT std_logic
 	);
 END bouncy_ball;
 
@@ -22,7 +23,7 @@ architecture behavior of bouncy_ball is
 
 SIGNAL ball_on						: std_logic;
 SIGNAL size 						: std_logic_vector(9 DOWNTO 0);  
-SIGNAL ball_y_pos					: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10) - size;
+SIGNAL ball_y_pos					: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(200, 10) - size;
 SiGNAL ball_x_pos					: std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion				: std_logic_vector(9 DOWNTO 0);
 
@@ -101,7 +102,7 @@ SIGNAL plane_b						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_x_size				: std_logic_vector(9 DOWNTO 0);
 SIGNAL plane_y_size				: std_logic_vector(9 DOWNTO 0);
 SIGNAL plane_y_pos	 			: std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(100, 10); -- 100 pixels down
-SiGNAL plane_x_pos				: std_logic_vector(10 DOWNTO 0);
+SIGNAL plane_x_pos				: std_logic_vector(10 DOWNTO 0);
 SIGNAL plane_y_motion			: std_logic_vector(9 DOWNTO 0);
 
 -- TOOLBOX
@@ -153,9 +154,14 @@ plane_b <= plane_pixel_data(3 DOWNTO 0);
 --plane_on <= '1' when (pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + plane_y_size) AND 
 --					(pixel_column >= plane_x_pos - plane_shift) AND (pixel_column < plane_x_pos + plane_x_size - plane_shift) else
 --			'0';
-plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
+plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(480,10) and -- height
 				CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
 				'0';
+-- TRY THESE MAYBE??
+-- adding dummy lines before plane_pixel_data (probably least likely)
+-- pass ball_y_pos to plane.vhd (trying this one)
+draw_plane <= '1' when plane_y_pos <= pixel_row else '0';
+
 
 -- TOOLBOX
 
