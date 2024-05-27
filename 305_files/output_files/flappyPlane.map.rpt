@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Mon May 27 23:23:30 2024
+Tue May 28 00:26:07 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 27 23:23:29 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 28 00:26:06 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -220,15 +220,14 @@ refer to the applicable agreement for further details.
 ; altram.inc                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
 ; altdpram.inc                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
 ; db/altsyncram_d5g1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_d5g1.tdf               ;         ;
-; MiniprojectResources/tcgrom.mif      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/tcgrom.mif      ;         ;
 ; db/altsyncram_c8h1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf               ;         ;
-; spritesMIF/heart.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/heart.mif                 ;         ;
+; spritesmif/heart.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesmif/heart.mif                 ;         ;
 ; db/altsyncram_l9h1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_l9h1.tdf               ;         ;
-; spritesMIF/plane.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/plane.mif                 ;         ;
+; spritesmif/plane.mif                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesmif/plane.mif                 ;         ;
 ; db/altsyncram_nhh1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_nhh1.tdf               ;         ;
-; spritesMIF/toolbox.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/toolbox.mif               ;         ;
+; spritesmif/toolbox.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesmif/toolbox.mif               ;         ;
 ; db/altsyncram_vai1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_vai1.tdf               ;         ;
-; spritesMIF/cloud_lightning.mif       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/cloud_lightning.mif       ;         ;
+; spritesmif/cloud_lightning.mif       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesmif/cloud_lightning.mif       ;         ;
 +--------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -237,14 +236,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                 ;
 +---------------------------------------------+-----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 811                                                                   ;
+; Estimate of Logic utilization (ALMs needed) ; 799                                                                   ;
 ;                                             ;                                                                       ;
-; Combinational ALUT usage for logic          ; 1143                                                                  ;
+; Combinational ALUT usage for logic          ; 1129                                                                  ;
 ;     -- 7 input functions                    ; 13                                                                    ;
-;     -- 6 input functions                    ; 458                                                                   ;
-;     -- 5 input functions                    ; 194                                                                   ;
-;     -- 4 input functions                    ; 108                                                                   ;
-;     -- <=3 input functions                  ; 370                                                                   ;
+;     -- 6 input functions                    ; 447                                                                   ;
+;     -- 5 input functions                    ; 199                                                                   ;
+;     -- 4 input functions                    ; 110                                                                   ;
+;     -- <=3 input functions                  ; 360                                                                   ;
 ;                                             ;                                                                       ;
 ; Dedicated logic registers                   ; 233                                                                   ;
 ;                                             ;                                                                       ;
@@ -259,8 +258,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                       ;
 ; Maximum fan-out node                        ; pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 820                                                                   ;
-; Total fan-out                               ; 11834                                                                 ;
-; Average fan-out                             ; 5.38                                                                  ;
+; Total fan-out                               ; 11780                                                                 ;
+; Average fan-out                             ; 5.39                                                                  ;
 +---------------------------------------------+-----------------------------------------------------------------------+
 
 
@@ -269,12 +268,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name       ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+-------------------+--------------+
-; |toplevel                                 ; 1143 (1)            ; 233 (0)                   ; 93568             ; 0          ; 45   ; 0            ; |toplevel                                                                               ; toplevel          ; work         ;
+; |toplevel                                 ; 1129 (1)            ; 233 (0)                   ; 93568             ; 0          ; 45   ; 0            ; |toplevel                                                                               ; toplevel          ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst6                                                         ; BCD_to_SevenSeg   ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_SevenSeg:inst7                                                         ; BCD_to_SevenSeg   ; work         ;
 ;    |MOUSE:inst5|                          ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                   ; MOUSE             ; work         ;
 ;    |VGA_SYNC:inst2|                       ; 70 (70)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                ; VGA_SYNC          ; work         ;
-;    |bouncy_ball:inst3|                    ; 378 (378)           ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                             ; bouncy_ball       ; work         ;
+;    |bouncy_ball:inst3|                    ; 364 (364)           ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst3                                                             ; bouncy_ball       ; work         ;
 ;    |clouds:inst14|                        ; 162 (162)           ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14                                                                 ; clouds            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component                                 ; altsyncram        ; work         ;
 ;          |altsyncram_vai1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 30720             ; 0          ; 0    ; 0            ; |toplevel|clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated  ; altsyncram_vai1   ; work         ;
@@ -1228,7 +1227,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 10                          ;
 ;     plain             ; 45                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 1146                        ;
+; arriav_lcell_comb     ; 1132                        ;
 ;     arith             ; 151                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 83                          ;
@@ -1236,14 +1235,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 6                           ;
 ;     extend            ; 13                          ;
 ;         7 data inputs ; 13                          ;
-;     normal            ; 972                         ;
+;     normal            ; 958                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 66                          ;
-;         3 data inputs ; 137                         ;
-;         4 data inputs ; 108                         ;
-;         5 data inputs ; 194                         ;
-;         6 data inputs ; 458                         ;
+;         2 data inputs ; 57                          ;
+;         3 data inputs ; 136                         ;
+;         4 data inputs ; 110                         ;
+;         5 data inputs ; 199                         ;
+;         6 data inputs ; 447                         ;
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
@@ -1252,7 +1251,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 731                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 5.96                        ;
+; Average LUT depth     ; 5.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1261,7 +1260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:32     ;
+; Top            ; 00:00:33     ;
 +----------------+--------------+
 
 
@@ -1271,7 +1270,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 27 23:20:34 2024
+    Info: Processing started: Tue May 28 00:23:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1568,7 +1567,6 @@ Info (12133): Instantiated megafunction "heart:inst12|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c8h1.tdf
     Info (12023): Found entity 1: altsyncram_c8h1 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_c8h1" for hierarchy "heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (6) in the Memory Initialization File "C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/heart.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/heart.vhd Line: 51
 Info (12128): Elaborating entity "plane" for hierarchy "plane:inst11"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "plane:inst11|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 51
 Info (12130): Elaborated megafunction instantiation "plane:inst11|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 51
@@ -1590,7 +1588,6 @@ Info (12133): Instantiated megafunction "plane:inst11|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_l9h1.tdf
     Info (12023): Found entity 1: altsyncram_l9h1 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_l9h1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_l9h1" for hierarchy "plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (10) in the Memory Initialization File "C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/plane.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/plane.vhd Line: 51
 Info (12128): Elaborating entity "toolbox" for hierarchy "toolbox:inst13"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "toolbox:inst13|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 51
 Info (12130): Elaborated megafunction instantiation "toolbox:inst13|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 51
@@ -1612,8 +1609,6 @@ Info (12133): Instantiated megafunction "toolbox:inst13|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nhh1.tdf
     Info (12023): Found entity 1: altsyncram_nhh1 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_nhh1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_nhh1" for hierarchy "toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (113018): Width of data items in "toolbox.mif" is greater than the memory width. Truncating data items to fit in memory. File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/toolbox.mif Line: 6
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (15) in the Memory Initialization File "C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/toolbox.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 51
 Info (12128): Elaborating entity "clouds" for hierarchy "clouds:inst14"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "clouds:inst14|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 51
 Info (12130): Elaborated megafunction instantiation "clouds:inst14|altsyncram:altsyncram_component" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 51
@@ -1635,7 +1630,6 @@ Info (12133): Instantiated megafunction "clouds:inst14|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vai1.tdf
     Info (12023): Found entity 1: altsyncram_vai1 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_vai1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_vai1" for hierarchy "clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (40) in the Memory Initialization File "C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/spritesMIF/cloud_lightning.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 51
 Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
 Warning (12001): Port "q_a[179]" does not exist in entity definition of "altsyncram".  The port's range differs between the entity definition and its actual instantiation, "toolbox:inst13|altsyncram:altsyncram_component". File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 51
@@ -1654,9 +1648,9 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 45 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "heart:inst12|altsyncram:altsyncram_component|altsyncram_c8h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_c8h1.tdf Line: 31
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_l9h1.tdf Line: 31
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "toolbox:inst13|altsyncram:altsyncram_component|altsyncram_nhh1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_nhh1.tdf Line: 31
 Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "clouds:inst14|altsyncram:altsyncram_component|altsyncram_vai1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_vai1.tdf Line: 31
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "plane:inst11|altsyncram:altsyncram_component|altsyncram_l9h1:auto_generated|ALTSYNCRAM" File: C:/Users/Marc/Documents/GitHub/305-Mini-Project-Flappy-Plane/305_files/db/altsyncram_l9h1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -1702,17 +1696,17 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "sw[2]"
     Warning (15610): No output dependent on input pin "sw[1]"
     Warning (15610): No output dependent on input pin "sw[0]"
-Info (21057): Implemented 1990 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1976 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1213 logic cells
+    Info (21061): Implemented 1199 logic cells
     Info (21064): Implemented 731 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 83 warnings
-    Info: Peak virtual memory: 4914 megabytes
-    Info: Processing ended: Mon May 27 23:23:30 2024
-    Info: Elapsed time: 00:02:56
-    Info: Total CPU time (on all processors): 00:03:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 4938 megabytes
+    Info: Processing ended: Tue May 28 00:26:07 2024
+    Info: Elapsed time: 00:02:23
+    Info: Total CPU time (on all processors): 00:02:41
 
 

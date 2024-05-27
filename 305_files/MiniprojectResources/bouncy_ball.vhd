@@ -241,7 +241,7 @@ bottom_cloud3_on <= '1' when (('0' & pixel_column <= '0' & bottom_cloud3_x_pos) 
 
 Red <=	--"1111" when ShowText = '1' else
 			heart_r when heart_on = '1' and showHeart = '1' else
-			plane_r when showPlane = '1' and pixel_row <= plane_y_pos else
+			plane_r when showPlane = '1' and pixel_row >= plane_y_pos else
 			toolbox_r when toolbox_on = '1' and showToolbox = '1' else
 			clouds_r when clouds_on = '1' and showClouds = '1' else
 			"1111" when ball_on = '1' else
@@ -252,7 +252,7 @@ Red <=	--"1111" when ShowText = '1' else
 			
 Green <= --"1111" when ShowText = '1' else 
 			heart_g when heart_on = '1' and showHeart = '1' else
-			plane_g when showPlane = '1' and pixel_row <= plane_y_pos else
+			plane_g when showPlane = '1' and pixel_row >= plane_y_pos else
 			toolbox_g when toolbox_on = '1' and showToolbox = '1' else
 			clouds_g when clouds_on = '1' and showClouds = '1' else
 			"0000" when ball_on = '1' else
@@ -262,7 +262,7 @@ Green <= --"1111" when ShowText = '1' else
 			
 Blue <=  --"1111" when ShowText = '1' else 
 			heart_b when heart_on = '1' and showHeart = '1' else
-			plane_b when showPlane = '1' and pixel_row <= plane_y_pos else
+			plane_b when showPlane = '1' and pixel_row >= plane_y_pos else
 			toolbox_b when toolbox_on = '1' and showToolbox = '1' else
 			clouds_b when clouds_on = '1' and showClouds = '1' else
 			"0000" when ball_on = '1' else
