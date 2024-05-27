@@ -212,6 +212,27 @@ refer to the applicable agreement for further details.
 		(text "lives[4..0]" (rect 237 107 275 119)(font "Arial" ))
 		(line (pt 296 112)(pt 280 112)(line_width 3))
 	)
+	(port
+		(pt 296 128)
+		(output)
+		(text "difficulty1" (rect 0 0 36 12)(font "Arial" ))
+		(text "difficulty1" (rect 239 123 275 135)(font "Arial" ))
+		(line (pt 296 128)(pt 280 128)(line_width 1))
+	)
+	(port
+		(pt 296 144)
+		(output)
+		(text "difficulty2" (rect 0 0 37 12)(font "Arial" ))
+		(text "difficulty2" (rect 238 139 275 151)(font "Arial" ))
+		(line (pt 296 144)(pt 280 144)(line_width 1))
+	)
+	(port
+		(pt 296 160)
+		(output)
+		(text "difficulty3" (rect 0 0 37 12)(font "Arial" ))
+		(text "difficulty3" (rect 238 155 275 167)(font "Arial" ))
+		(line (pt 296 160)(pt 280 160)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 280 384)(line_width 1))
 	)

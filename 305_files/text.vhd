@@ -8,6 +8,10 @@ ENTITY textSelector IS
 	PORT(sw, pixel_row, pixel_column: in STD_LOGIC_VECTOR(9 DOWNTO 0);
 		score : in integer range 10000 downto 0; -- Score is has a max value of 16384 (14 bits)
 		lives : in integer range 30 downto 0; -- Score is has a max value of 16384 (14 bits)
+		
+		show_main_menu			: IN std_logic;
+		show_gameover_menu 	: IN std_logic;
+		
 		char_address : OUT std_logic_vector(5 downto 0);
 		text_row : OUT std_logic_vector(2 downto 0);
 		text_col : OUT std_logic_vector(2 downto 0));
@@ -188,39 +192,39 @@ begin
 	
 						"010100" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- T oct(24)
 											CONV_STD_LOGIC_VECTOR(32, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(64, 10) and
-											sw = "0000000001") else
+											show_main_menu = '1') else
 											
 						"010010" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- R oct(22)
 											CONV_STD_LOGIC_VECTOR(64, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(96, 10) and
-											sw = "0000000001") else	
+											show_main_menu = '1') else	
 											
 						"000001" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- A oct(01)
 											CONV_STD_LOGIC_VECTOR(96, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(128, 10) and
-											sw = "0000000001") else
+											show_main_menu = '1') else
 											
 						"001001" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- I oct(11)
 											CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10) and
-											sw = "0000000001") else	
+											show_main_menu = '1') else	
 											
 						"001110" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- N oct(16)
 											CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(192, 10) and
-											sw = "0000000001") else
+											show_main_menu = '1') else
 											
 						"001001" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- I oct(11)
 											CONV_STD_LOGIC_VECTOR(192, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(224, 10) and
-											sw = "0000000001") else	
+											show_main_menu = '1') else	
 											
 						"001110" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- N oct(16)
 											CONV_STD_LOGIC_VECTOR(224, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(256, 10) and
-											sw = "0000000001") else
+											show_main_menu = '1') else
 											
 						"000111" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- G oct(07)
 											CONV_STD_LOGIC_VECTOR(256, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(288, 10) and
-											sw = "0000000001") else
+											show_main_menu = '1') else
 											
 						"100000" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- " " oct(40)
 											CONV_STD_LOGIC_VECTOR(288, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(320, 10) and
-											sw = "0000000001") else											
+											show_main_menu = '1') else											
 											
 	---------------------------
 	-- Displays SINGLEPLAYER MODE--
@@ -228,55 +232,55 @@ begin
 	
 						"010011" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- S oct(23)
 											CONV_STD_LOGIC_VECTOR(32, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(64, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						"001001" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- I oct(11)
 											CONV_STD_LOGIC_VECTOR(64, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(96, 10) and
-											sw = "0000000010") else	
+											show_main_menu = '1') else	
 											
 						"001110" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- N oct(16)
 											CONV_STD_LOGIC_VECTOR(96, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(128, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						"000111" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- G oct(07)
 											CONV_STD_LOGIC_VECTOR(128, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(160, 10) and
-											sw = "0000000010") else	
+											show_main_menu = '1') else	
 											
 						"001100" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- L oct(14)
 											CONV_STD_LOGIC_VECTOR(160, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(192, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						"000101" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- E oct(05)
 											CONV_STD_LOGIC_VECTOR(192, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(224, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						"010000" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- P oct(20)
 											CONV_STD_LOGIC_VECTOR(224, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(256, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						"001100" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- L oct(14)
 											CONV_STD_LOGIC_VECTOR(256, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(288, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 						
 						"000001" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- A oct(01)
 											CONV_STD_LOGIC_VECTOR(288, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(320, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						"011001" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- Y oct(31)
 											CONV_STD_LOGIC_VECTOR(320, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(352, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 						
 						"000101" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- E oct(05)
 											CONV_STD_LOGIC_VECTOR(352, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(384, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 						
 						"010010" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- R oct(22)
 											CONV_STD_LOGIC_VECTOR(384, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(416, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 						
 						"100000" when (CONV_STD_LOGIC_VECTOR(32,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(64,10) and		-- " " oct(40)
 											CONV_STD_LOGIC_VECTOR(416, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(448, 10) and
-											sw = "0000000010") else
+											show_main_menu = '1') else
 											
 						
 											

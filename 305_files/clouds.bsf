@@ -26,22 +26,22 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "pb1" (rect 0 0 12 12)(font "Arial" ))
-		(text "pb1" (rect 21 27 33 39)(font "Arial" ))
+		(text "difficulty1" (rect 0 0 36 12)(font "Arial" ))
+		(text "difficulty1" (rect 21 27 57 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "pb2" (rect 0 0 14 12)(font "Arial" ))
-		(text "pb2" (rect 21 43 35 55)(font "Arial" ))
+		(text "difficulty2" (rect 0 0 37 12)(font "Arial" ))
+		(text "difficulty2" (rect 21 43 58 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "pb3" (rect 0 0 14 12)(font "Arial" ))
-		(text "pb3" (rect 21 59 35 71)(font "Arial" ))
+		(text "difficulty3" (rect 0 0 37 12)(font "Arial" ))
+		(text "difficulty3" (rect 21 59 58 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port

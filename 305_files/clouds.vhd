@@ -5,7 +5,7 @@ USE IEEE.STD_LOGIC_SIGNED.all;
 
 
 ENTITY clouds IS
-	PORT(	pb1, pb2, pb3, clk, vert_sync, game_running, reset: IN std_logic;
+	PORT(	difficulty1, difficulty2, difficulty3, clk, vert_sync, game_running, reset: IN std_logic;
 			pixel_row, pixel_column		: IN std_logic_vector(9 DOWNTO 0);
 			random_number					: IN std_logic_vector(8 DOWNTO 0);
 			
@@ -137,7 +137,7 @@ begin
 			cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(2*cloud_horizontal_spacing,11);
 		end if;
 		
-		prev_game_running <= game_running;
+--		prev_game_running <= game_running;
 		------------------------------------------
 		-- UPDATING THE NEXT POSITION OF CLOUDS --
 		------------------------------------------
@@ -187,13 +187,13 @@ begin
 		-- UPDATING GAME SPEED --
 		-------------------------
 				
-		if (pb1 = '0') then
+		if (difficulty1 = '1') then
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(2,11);
 			cloud_motion_integer <= 2;
-		elsif (pb2 = '0') then
+		elsif (difficulty2 = '1') then
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(3,11);
 			cloud_motion_integer <= 3;
-		elsif (pb3 = '0') then
+		elsif (difficulty3 = '1') then
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(4,11);
 			cloud_motion_integer <= 4;
 		end if;

@@ -39,8 +39,11 @@ entity session_manager is
 			main_menu_on						: OUT std_logic := '1';
 			gameover_menu_on					: OUT std_logic;
 			score									: OUT integer RANGE 10000 DOWNTO 0;
-			lives 								: OUT integer RANGE 30 DOWNTO 0
+			lives 								: OUT integer RANGE 30 DOWNTO 0;
 			
+			difficulty1							: OUT std_logic;
+			difficulty2							: OUT std_logic;
+			difficulty3							: OUT std_logic
 	);
 end entity session_manager;
 
@@ -54,6 +57,7 @@ SIGNAL allow_score_update, prev_allow_score_update		: std_logic;
 SIGNAL collision, prev_collision								: std_logic;
 SIGNAL reset														: std_logic;
 SIGNAL game_running												: std_logic := '0';
+SIGNAL training_mode, singleplayer_mode					: std_logic := '0';
 
 begin
 
@@ -61,6 +65,11 @@ score <= current_score;
 lives <= current_lives;
 game_running_out <= game_running;
 reset_out <= reset;
+
+difficulty1 <= '1' when (singleplayer_mode = '1' and 0 <= current_score and current_score <= 5) else 
+					'1' when (training_mode = '1' and 0 <= current_score) else '0';
+difficulty2 <= '1' when (singleplayer_mode = '1' and 6 <= current_score and current_score <= 10) else '0';
+difficulty3 <= '1' when (singleplayer_mode = '1' and 11 <= current_score) else '0';
 
 current_session : process(vert_sync)
 begin
@@ -70,9 +79,19 @@ begin
 			reset <= '0';
 		end if;
 		
+		if (select_training_mode = '1') then
+			game_running <= '1';
+			training_mode <= '1';
+			current_lives <= 5;
+			current_score <= 0;
+			main_menu_on <= '0';
+			reset <= '1';
+		end if;
+		
 		if (select_singleplayer_mode = '1') then
 			game_running <= '1';
-			current_lives <= 10;
+			singleplayer_mode <= '1';
+			current_lives <= 5;
 			current_score <= 0;
 			main_menu_on <= '0';
 			reset <= '1';
@@ -109,8 +128,10 @@ begin
 					current_Score <= current_score + 1;
 				end if;
 			end if;
-			
+
 			prev_allow_score_update <= allow_score_update;
+
+			
 			-------------------------
 			-- CHECK FOR COLLISION --
 			-------------------------
@@ -134,6 +155,8 @@ begin
 				if (current_lives = 1) then
 					game_running <= '0';
 					main_menu_on <= '1';
+					training_mode <= '0';
+					singleplayer_mode <= '0';
 				else
 					current_lives <= current_lives - 1;
 				end if;
