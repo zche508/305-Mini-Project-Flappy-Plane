@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappyPlane
-Tue May 28 10:44:37 2024
+Tue May 28 11:43:57 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -61,13 +61,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 28 10:44:37 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 28 11:43:57 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappyPlane                                 ;
 ; Top-level Entity Name           ; toplevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 284                                         ;
+; Total registers                 ; 311                                         ;
 ; Total pins                      ; 41                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -213,6 +213,7 @@ refer to the applicable agreement for further details.
 ; display_controller.vhd               ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/display_controller.vhd               ;         ;
 ; clouds.vhd                           ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd                           ;         ;
 ; session_manager.vhd                  ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/session_manager.vhd                  ;         ;
+; toolbox.vhd                          ; yes             ; User VHDL File                     ; C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd                          ;         ;
 ; altera_pll.v                         ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v                                                ;         ;
 ; altsyncram.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                              ;         ;
 ; stratix_ram_block.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                       ;         ;
@@ -250,16 +251,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1237                         ;
+; Estimate of Logic utilization (ALMs needed) ; 1309                         ;
 ;                                             ;                              ;
-; Combinational ALUT usage for logic          ; 2188                         ;
+; Combinational ALUT usage for logic          ; 2313                         ;
 ;     -- 7 input functions                    ; 4                            ;
-;     -- 6 input functions                    ; 270                          ;
-;     -- 5 input functions                    ; 173                          ;
-;     -- 4 input functions                    ; 367                          ;
-;     -- <=3 input functions                  ; 1374                         ;
+;     -- 6 input functions                    ; 289                          ;
+;     -- 5 input functions                    ; 202                          ;
+;     -- 4 input functions                    ; 371                          ;
+;     -- <=3 input functions                  ; 1447                         ;
 ;                                             ;                              ;
-; Dedicated logic registers                   ; 284                          ;
+; Dedicated logic registers                   ; 311                          ;
 ;                                             ;                              ;
 ; I/O pins                                    ; 41                           ;
 ; Total MLAB memory bits                      ; 0                            ;
@@ -271,8 +272,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                            ;
 ;                                             ;                              ;
 ; Maximum fan-out node                        ; VGA_SYNC:inst2|vert_sync_out ;
-; Maximum fan-out                             ; 108                          ;
-; Total fan-out                               ; 8561                         ;
+; Maximum fan-out                             ; 135                          ;
+; Total fan-out                               ; 9070                         ;
 ; Average fan-out                             ; 3.34                         ;
 +---------------------------------------------+------------------------------+
 
@@ -282,22 +283,22 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |toplevel                                 ; 2188 (1)            ; 284 (0)                   ; 4096              ; 0          ; 41   ; 0            ; |toplevel                                                                                                                    ; toplevel            ; work         ;
+; |toplevel                                 ; 2313 (1)            ; 311 (0)                   ; 4096              ; 0          ; 41   ; 0            ; |toplevel                                                                                                                    ; toplevel            ; work         ;
 ;    |BCD_to_7Seg:inst14|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_7Seg:inst14                                                                                                 ; BCD_to_7Seg         ; work         ;
 ;    |BCD_to_7Seg:inst7|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|BCD_to_7Seg:inst7                                                                                                  ; BCD_to_7Seg         ; work         ;
 ;    |MOUSE:inst5|                          ; 107 (107)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |toplevel|MOUSE:inst5                                                                                                        ; MOUSE               ; work         ;
-;    |VGA_SYNC:inst2|                       ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                     ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst13|                   ; 112 (112)           ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst13                                                                                                 ; bouncy_ball         ; work         ;
+;    |VGA_SYNC:inst2|                       ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|VGA_SYNC:inst2                                                                                                     ; VGA_SYNC            ; work         ;
+;    |bouncy_ball:inst13|                   ; 109 (109)           ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bouncy_ball:inst13                                                                                                 ; bouncy_ball         ; work         ;
 ;    |char_rom:inst9|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9                                                                                                     ; char_rom            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component                                                                     ; altsyncram          ; work         ;
 ;          |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |toplevel|char_rom:inst9|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                                      ; altsyncram_d5g1     ; work         ;
-;    |clouds:inst17|                        ; 250 (250)           ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|clouds:inst17                                                                                                      ; clouds              ; work         ;
-;    |menus:inst10|                         ; 69 (69)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|menus:inst10                                                                                                       ; menus               ; work         ;
+;    |clouds:inst17|                        ; 251 (251)           ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|clouds:inst17                                                                                                      ; clouds              ; work         ;
+;    |menus:inst10|                         ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|menus:inst10                                                                                                       ; menus               ; work         ;
 ;    |pll2:inst1|                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1                                                                                                         ; pll2                ; pll2         ;
 ;       |pll2_0002:pll2_inst|               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst                                                                                     ; pll2_0002           ; pll2         ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|pll2:inst1|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                             ; altera_pll          ; work         ;
-;    |random_number_gen:inst8|              ; 49 (49)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                            ; random_number_gen   ; work         ;
-;    |session_manager:inst11|               ; 157 (157)           ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|session_manager:inst11                                                                                             ; session_manager     ; work         ;
+;    |random_number_gen:inst8|              ; 48 (48)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|random_number_gen:inst8                                                                                            ; random_number_gen   ; work         ;
+;    |session_manager:inst11|               ; 166 (166)           ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|session_manager:inst11                                                                                             ; session_manager     ; work         ;
 ;    |textSelector:inst6|                   ; 1381 (324)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst6                                                                                                 ; textSelector        ; work         ;
 ;       |lpm_divide:Div0|                   ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst6|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_2am:auto_generated|  ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst6|lpm_divide:Div0|lpm_divide_2am:auto_generated                                                   ; lpm_divide_2am      ; work         ;
@@ -331,6 +332,7 @@ refer to the applicable agreement for further details.
 ;          |lpm_divide_65m:auto_generated|  ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst6|lpm_divide:Mod3|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
 ;             |sign_div_unsign_9nh:divider| ; 39 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst6|lpm_divide:Mod3|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
 ;                |alt_u_div_p2f:divider|    ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|textSelector:inst6|lpm_divide:Mod3|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_p2f:divider ; alt_u_div_p2f       ; work         ;
+;    |toolbox:inst3|                        ; 112 (112)           ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|toolbox:inst3                                                                                                      ; toolbox             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -472,8 +474,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; MOUSE:inst5|CHAROUT[2]                  ; Stuck at VCC due to stuck port data_in              ;
 ; MOUSE:inst5|CHAROUT[0,1]                ; Stuck at GND due to stuck port data_in              ;
 ; MOUSE:inst5|SHIFTOUT[10]                ; Stuck at VCC due to stuck port data_in              ;
-; clouds:inst17|cloud_motion[2..9]        ; Merged with clouds:inst17|cloud_motion[10]          ;
 ; bouncy_ball:inst13|ball_y_motion[5..9]  ; Merged with bouncy_ball:inst13|ball_y_motion[4]     ;
+; clouds:inst17|cloud_motion[2..9]        ; Merged with clouds:inst17|cloud_motion[10]          ;
 ; clouds:inst17|cloud_motion[10]          ; Stuck at VCC due to stuck port data_in              ;
 ; MOUSE:inst5|cursor_row[9]               ; Stuck at GND due to stuck port data_in              ;
 ; bouncy_ball:inst13|ball_y_pos[9]        ; Stuck at GND due to stuck port data_in              ;
@@ -488,12 +490,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 284   ;
+; Total registers                              ; 311   ;
 ; Number of registers using Synchronous Clear  ; 51    ;
-; Number of registers using Synchronous Load   ; 49    ;
+; Number of registers using Synchronous Load   ; 56    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 184   ;
+; Number of registers using Clock Enable       ; 197   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -503,13 +505,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------------+---------+
 ; Inverted Register                                 ; Fan out ;
 +---------------------------------------------------+---------+
-; session_manager:inst11|main_menu_on               ; 62      ;
-; clouds:inst17|cloud3_x_pos[8]                     ; 8       ;
-; clouds:inst17|cloud3_x_pos[7]                     ; 9       ;
-; clouds:inst17|cloud3_x_pos[6]                     ; 9       ;
-; clouds:inst17|cloud3_x_pos[5]                     ; 6       ;
-; clouds:inst17|cloud3_x_pos[4]                     ; 6       ;
-; clouds:inst17|cloud3_x_pos[2]                     ; 6       ;
+; session_manager:inst11|main_menu_on               ; 63      ;
+; toolbox:inst3|toolbox_pos_x[1]                    ; 6       ;
+; toolbox:inst3|toolbox_pos_x[9]                    ; 6       ;
+; toolbox:inst3|toolbox_pos_x[7]                    ; 5       ;
+; toolbox:inst3|toolbox_pos_x[6]                    ; 5       ;
+; toolbox:inst3|toolbox_pos_x[5]                    ; 5       ;
+; toolbox:inst3|toolbox_pos_x[3]                    ; 5       ;
+; toolbox:inst3|toolbox_pos_x[2]                    ; 5       ;
+; clouds:inst17|cloud3_x_pos[8]                     ; 10      ;
+; clouds:inst17|cloud3_x_pos[7]                     ; 11      ;
+; clouds:inst17|cloud3_x_pos[6]                     ; 11      ;
+; clouds:inst17|cloud3_x_pos[5]                     ; 8       ;
+; clouds:inst17|cloud3_x_pos[4]                     ; 8       ;
+; clouds:inst17|cloud3_x_pos[2]                     ; 8       ;
 ; clouds:inst17|cloud2_x_pos[7]                     ; 9       ;
 ; clouds:inst17|cloud2_x_pos[6]                     ; 11      ;
 ; clouds:inst17|cloud2_x_pos[5]                     ; 7       ;
@@ -536,7 +545,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; MOUSE:inst5|SHIFTOUT[6]                           ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[7]                           ; 1       ;
 ; MOUSE:inst5|SHIFTOUT[8]                           ; 1       ;
-; Total number of inverted registers = 33           ;         ;
+; Total number of inverted registers = 40           ;         ;
 +---------------------------------------------------+---------+
 
 
@@ -545,32 +554,34 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[2]               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[4]                      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |toplevel|bouncy_ball:inst13|ball_y_pos[1]               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_y_motion[4]            ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_y_motion[2]            ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|new_cursor_column[1]               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |toplevel|toolbox:inst3|toolbox_pos_x[0]                 ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |toplevel|VGA_SYNC:inst2|v_count[8]                      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |toplevel|bouncy_ball:inst13|ball_y_pos[7]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_y_motion[3]            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_y_motion[1]            ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[7]       ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |toplevel|session_manager:inst11|invincibility_period[6] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[9]                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[7]                      ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[1]                   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[2]                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_row[4]                      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[2]                   ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |toplevel|MOUSE:inst5|cursor_column[8]                   ;
 ; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |toplevel|session_manager:inst11|click_cooldown[6]       ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; Yes        ; |toplevel|session_manager:inst11|current_lives[3]        ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |toplevel|session_manager:inst11|current_score[8]        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|clouds:inst17|cloud_motion[1]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_down_motion_counter[1] ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |toplevel|session_manager:inst11|current_score[7]        ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; Yes        ; |toplevel|session_manager:inst11|current_lives[4]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |toplevel|toolbox:inst3|toolbox_pos_x[6]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|clouds:inst17|cloud_motion[10]                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_down_motion_counter[2] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |toplevel|bouncy_ball:inst13|ball_up_motion_counter[0]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[4]       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|current_lives_digit[1]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|display_controller:inst12|red_out              ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|current_score_digit[10]     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_7Seg:inst7|SevenSeg_out[5]              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_7Seg:inst14|SevenSeg_out[0]             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |toplevel|random_number_gen:inst8|current_state[8]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|current_lives_digit[3]      ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|current_score_digit[11]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_7Seg:inst7|SevenSeg_out[3]              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |toplevel|BCD_to_7Seg:inst14|SevenSeg_out[2]             ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|display_controller:inst12|green_out            ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|lives_character[2]          ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|score_character[2]          ;
-; 69:1               ; 3 bits    ; 138 LEs       ; 138 LEs              ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|char_address[1]             ;
+; 69:1               ; 3 bits    ; 138 LEs       ; 138 LEs              ; 0 LEs                  ; No         ; |toplevel|textSelector:inst6|char_address[0]             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
@@ -1100,36 +1111,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 284                         ;
+; arriav_ff             ; 311                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 103                         ;
+;     ENA               ; 109                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 32                          ;
 ;     ENA SCLR SLD      ; 5                           ;
-;     ENA SLD           ; 29                          ;
+;     ENA SLD           ; 36                          ;
 ;     SCLR              ; 10                          ;
 ;     SCLR SLD          ; 4                           ;
 ;     SLD               ; 11                          ;
-;     plain             ; 74                          ;
+;     plain             ; 88                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2192                        ;
-;     arith             ; 723                         ;
-;         0 data inputs ; 99                          ;
-;         1 data inputs ; 171                         ;
-;         2 data inputs ; 85                          ;
-;         3 data inputs ; 190                         ;
+; arriav_lcell_comb     ; 2317                        ;
+;     arith             ; 788                         ;
+;         0 data inputs ; 103                         ;
+;         1 data inputs ; 222                         ;
+;         2 data inputs ; 89                          ;
+;         3 data inputs ; 196                         ;
 ;         4 data inputs ; 171                         ;
 ;         5 data inputs ; 7                           ;
 ;     extend            ; 4                           ;
 ;         7 data inputs ; 4                           ;
-;     normal            ; 1411                        ;
+;     normal            ; 1471                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 454                         ;
-;         3 data inputs ; 315                         ;
-;         4 data inputs ; 196                         ;
-;         5 data inputs ; 166                         ;
-;         6 data inputs ; 270                         ;
+;         2 data inputs ; 460                         ;
+;         3 data inputs ; 317                         ;
+;         4 data inputs ; 200                         ;
+;         5 data inputs ; 195                         ;
+;         6 data inputs ; 289                         ;
 ;     shared            ; 54                          ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 40                          ;
@@ -1139,7 +1150,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 14.50                       ;
+; Average LUT depth     ; 13.91                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1148,7 +1159,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -1158,7 +1169,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 28 10:44:15 2024
+    Info: Processing started: Tue May 28 11:43:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappyPlane -c flappyPlane
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -1221,9 +1232,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file clouds.
     Info (12022): Found design unit 1: clouds-behavior File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 33
     Info (12023): Found entity 1: clouds File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file session_manager.vhd
-    Info (12022): Found design unit 1: session_manager-behaviour File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/session_manager.vhd Line: 51
+    Info (12022): Found design unit 1: session_manager-behaviour File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/session_manager.vhd Line: 56
     Info (12023): Found entity 1: session_manager File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/session_manager.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file toolbox.vhd
+    Info (12022): Found design unit 1: toolbox-behavior File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 23
+    Info (12023): Found entity 1: toolbox File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/toolbox.vhd Line: 9
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "toolbox_size"
+Warning (275080): Converted elements in bus name "toolbox_size" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "toolbox_size[9..0]" to "toolbox_size9..0"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst2"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst1"
 Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst1|pll2_0002:pll2_inst" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/pll2.vhd Line: 32
@@ -1301,22 +1318,7 @@ Warning (10036): Verilog HDL or VHDL warning at menus.vhd(27): object "box1_x_po
 Warning (10036): Verilog HDL or VHDL warning at menus.vhd(41): object "in_single_player" assigned a value but never read File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/menus.vhd Line: 41
 Warning (10036): Verilog HDL or VHDL warning at menus.vhd(42): object "in_training_mode" assigned a value but never read File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/menus.vhd Line: 42
 Info (12128): Elaborating entity "session_manager" for hierarchy "session_manager:inst11"
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst13"
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(92): signal "prev_mb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(94): signal "prev_mb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(96): signal "prev_mb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 96
-Warning (10631): VHDL Process Statement warning at bouncy_ball.vhd(88): inferring latch(es) for signal or variable "mb1_clicked", which holds its previous value in one or more paths through the process File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(166): signal "game_running" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 166
-Warning (10873): Using initial value X (don't care) for net "ball_up_motion[5]" at bouncy_ball.vhd(28) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
-Warning (10873): Using initial value X (don't care) for net "ball_up_motion[11]" at bouncy_ball.vhd(28) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
-Warning (10873): Using initial value X (don't care) for net "ball_down_motion[5..7]" at bouncy_ball.vhd(29) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 29
-Info (10041): Inferred latch for "mb1_clicked" at bouncy_ball.vhd(88) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 88
-Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 157
+Info (12128): Elaborating entity "toolbox" for hierarchy "toolbox:inst3"
 Info (12128): Elaborating entity "clouds" for hierarchy "clouds:inst17"
 Warning (10540): VHDL Signal Declaration warning at clouds.vhd(36): used explicit default value for signal "cloud_width" because signal was never assigned a value File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 36
 Warning (10540): VHDL Signal Declaration warning at clouds.vhd(37): used explicit default value for signal "cloud_drawing_width" because signal was never assigned a value File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 37
@@ -1386,6 +1388,21 @@ Info (10041): Inferred latch for "cloud1_top_height[7]" at clouds.vhd(86) File: 
 Info (10041): Inferred latch for "cloud1_top_height[8]" at clouds.vhd(86) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 86
 Info (10041): Inferred latch for "cloud1_top_height[9]" at clouds.vhd(86) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/clouds.vhd Line: 86
 Info (12128): Elaborating entity "random_number_gen" for hierarchy "random_number_gen:inst8"
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst13"
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(72): signal "prev_mb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(74): signal "prev_mb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(76): signal "prev_mb1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 76
+Warning (10631): VHDL Process Statement warning at bouncy_ball.vhd(68): inferring latch(es) for signal or variable "mb1_clicked", which holds its previous value in one or more paths through the process File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 68
+Warning (10873): Using initial value X (don't care) for net "ball_up_motion[5]" at bouncy_ball.vhd(28) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
+Warning (10873): Using initial value X (don't care) for net "ball_up_motion[11]" at bouncy_ball.vhd(28) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 28
+Warning (10873): Using initial value X (don't care) for net "ball_down_motion[5..7]" at bouncy_ball.vhd(29) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 29
+Info (10041): Inferred latch for "mb1_clicked" at bouncy_ball.vhd(68) File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/bouncy_ball.vhd Line: 68
+Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/mouse.vhd Line: 157
 Info (12128): Elaborating entity "char_rom" for hierarchy "char_rom:inst9"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "char_rom:inst9|altsyncram:altsyncram_component" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
 Info (12130): Elaborated megafunction instantiation "char_rom:inst9|altsyncram:altsyncram_component" File: C:/Users/zhife/Documents/Mini_Project/305-Mini-Project-Flappy-Plane/305_files/MiniprojectResources/char_rom.vhd Line: 51
@@ -1613,17 +1630,17 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "sw[2]"
     Warning (15610): No output dependent on input pin "sw[1]"
     Warning (15610): No output dependent on input pin "sw[0]"
-Info (21057): Implemented 2327 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2455 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 25 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2277 logic cells
+    Info (21061): Implemented 2405 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
-    Info: Peak virtual memory: 4949 megabytes
-    Info: Processing ended: Tue May 28 10:44:37 2024
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 113 warnings
+    Info: Peak virtual memory: 4936 megabytes
+    Info: Processing ended: Tue May 28 11:43:57 2024
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:38
 
 

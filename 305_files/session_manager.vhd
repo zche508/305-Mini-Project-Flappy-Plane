@@ -34,6 +34,11 @@ entity session_manager is
 			select_retry_mode					: IN std_logic;
 			select_homescreen_mode			: IN std_logic;
 			
+			toolbox_on 							: IN std_logic;
+			toolbox_size	 					: IN std_logic_vector(9 DOWNTO 0);
+			toolbox_pos_x						: IN std_logic_vector(9 DOWNTO 0);
+			toolbox_pos_y						: IN std_logic_vector(10 DOWNTO 0);	
+			
 			reset_out							: OUT std_logic;
 			game_running_out					: OUT std_logic;
 			main_menu_on						: OUT std_logic := '1';
@@ -61,6 +66,8 @@ SIGNAL collision, prev_collision								: std_logic;
 SIGNAL reset														: std_logic;
 SIGNAL game_running												: std_logic := '0';
 SIGNAL training_mode, singleplayer_mode					: std_logic := '0';
+
+SIGNAL toolbox_hit, pre_toolbox_hit							: std_logic;
 
 -- 01(training mode), 10(singleplayer) 
 SIGNAL prev_gamemode												: std_logic_vector(1 downto 0);
@@ -223,6 +230,21 @@ begin
 			
 			prev_collision <= collision;
 		end if;
+		
+		 -- Check for collision with the bird
+		 if ((ball_x_pos <= toolbox_pos_x and toolbox_pos_x <= ball_x_pos + size) and
+			  (ball_y_pos <= toolbox_pos_y and toolbox_pos_y <= ball_y_pos + size)) then 
+			  toolbox_hit <= '1';
+		 else
+			  toolbox_hit <= '0';
+		 end if;
+
+		 if (toolbox_hit = '1' and pre_toolbox_hit = '0') then
+				 current_lives <= current_lives + 1;
+		 end if;
+
+		 pre_toolbox_hit <= toolbox_hit;
+		 
 	end if;
 end process current_session;
 
