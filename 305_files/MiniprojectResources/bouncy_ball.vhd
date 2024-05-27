@@ -94,6 +94,7 @@ SIGNAL heart_size					: std_logic_vector(9 DOWNTO 0);
 -- PLANE
 
 SIGNAL plane_on					: std_logic;
+SIGNAL plane_shift				: std_logic_vector(7 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(127, 8);
 SIGNAL plane_r						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_g						: std_logic_vector(3 DOWNTO 0);
 SIGNAL plane_b						: std_logic_vector(3 DOWNTO 0);
@@ -146,8 +147,11 @@ plane_b <= plane_pixel_data(3 DOWNTO 0);
 --plane_on <= '1' when (CONV_STD_LOGIC_VECTOR(0,10) < pixel_row and	pixel_row < CONV_STD_LOGIC_VECTOR(100,10) and -- height
 --							CONV_STD_LOGIC_VECTOR(127, 10) < pixel_column and pixel_column < CONV_STD_LOGIC_VECTOR(168, 10)) else -- width
 --				'0';
-plane_on <= '1' when ( ('0' & plane_x_pos <= '0' & pixel_column + plane_x_size) and ('0' & pixel_column <= '0' & plane_x_pos + plane_x_size) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & plane_x_pos <= pixel_row + plane_y_size) and ('0' & pixel_row <= plane_x_pos + plane_y_size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+--plane_on <= '1' when ( ('0' & plane_x_pos <= '0' & pixel_column + plane_x_size) and ('0' & pixel_column <= '0' & plane_x_pos + plane_x_size) 	-- x_pos - size <= pixel_column <= x_pos + size
+--					and ('0' & plane_x_pos <= pixel_row + plane_y_size) and ('0' & pixel_row <= plane_x_pos + plane_y_size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
+--			'0';
+plane_on <= '1' when (pixel_row >= plane_y_pos) and (pixel_row < plane_y_pos + plane_y_size) AND 
+					(pixel_column >= plane_x_pos - plane_shift) AND (pixel_column < plane_x_pos + plane_x_size - plane_shift) else
 			'0';
 
 -- TOOLBOX
