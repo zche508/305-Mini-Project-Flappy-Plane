@@ -60,6 +60,9 @@ SIGNAL cloud3_top_height				: std_logic_vector(9 DOWNTO 0);
 SIGNAL cloud3_bottom_height			: std_logic_vector(9 DOWNTO 0);  
 SiGNAL cloud3_x_pos						: std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(2*cloud_horizontal_spacing,11);
 
+-- reset cloud position
+SIGNAL prev_game_running				: std_logic;   
+
 BEGIN
 
 cloud_drawing_width_out <= cloud_drawing_width;
@@ -128,7 +131,7 @@ begin
 	if (rising_edge(vert_sync)) then
 	
 		-- reset the cloud positions
-		if (reset = '1') then
+		if (game_running = '1' and prev_game_running = '0') then
 			-- CLOUD 1 
 			cloud1_x_pos <= CONV_STD_LOGIC_VECTOR(0,11);
 			-- CLOUD 2  
@@ -137,7 +140,7 @@ begin
 			cloud3_x_pos <= CONV_STD_LOGIC_VECTOR(2*cloud_horizontal_spacing,11);
 		end if;
 		
---		prev_game_running <= game_running;
+		prev_game_running <= game_running;
 		------------------------------------------
 		-- UPDATING THE NEXT POSITION OF CLOUDS --
 		------------------------------------------
@@ -194,7 +197,7 @@ begin
 			cloud_motion <= - CONV_STD_LOGIC_VECTOR(3,11);
 			cloud_motion_integer <= 3;
 		elsif (difficulty3 = '1') then
-			cloud_motion <= - CONV_STD_LOGIC_VECTOR(4,11);
+			cloud_motion <= - CONV_STD_LOGIC_VECTOR(5,11);
 			cloud_motion_integer <= 4;
 		end if;
 
