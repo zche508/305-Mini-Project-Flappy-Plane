@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon May 27 01:01:17 2024
+Analysis & Synthesis Status : Successful - Mon May 27 17:05:39 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : flappyPlane
-Top-level Entity Name : home_screen_block_diagram
+Top-level Entity Name : toplevel
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 170
-Total pins : 38
+Total registers : 290
+Total pins : 37
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 4,096
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
